@@ -1,0 +1,9 @@
+{
+  "*": {
+    "promptValues": {
+      "authorName": "Johan Girod",
+      "authorEmail": "johangirod@gmail.com",
+      "authorUrl": "https://vagalam.bike"
+    }
+  }
+}

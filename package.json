@@ -1,0 +1,16 @@
+{
+  "name": "vagalam",
+  "version": "0.0.0",
+  "description": "Cycling around the world",
+  "author": "Johan Girod <johangirod@gmail.com> (https://vagalam.bike)",
+  "keywords": [],
+  "dependencies": {
+    "react": "^15.4.2",
+    "vitaminjs": "^1.0.0"
+  },
+  "scripts": {
+    "start": "vitamin start",
+    "build": "vitamin build",
+    "serve": "vitamin serve"
+  }
+}
