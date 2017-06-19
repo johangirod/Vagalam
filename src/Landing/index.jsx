@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 import { withStyles } from 'vitaminjs'; 
 
-import Button from '../ui-element/Button'; 
+import LinkButton from '../ui-element/Button/Link'; 
 
 import backgroundImage from './background.jpg';
 import s from './style.css';
 
 const Landing = () => (
     <div>
-        <section style={{ backgroundImage: `url(${backgroundImage})` }} >
+        <section className={s.header} style={{ backgroundImage: `url(${backgroundImage})` }} >
             <header>
                 <h1> \Vag a lam\ </h1>
             </header>
         </section>
-        <section>
-            <Button> Découvrir mon voyage ! </Button>
+        <section className={s.body}>
+            <LinkButton href="/voyage"> Parcourir le voyage </LinkButton>
         </section>
     </div>
 );

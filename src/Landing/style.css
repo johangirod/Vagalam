@@ -1,9 +1,12 @@
-
 section {
+    display: flex;
+}
+
+section.header {
     background-size: cover;
     background-position: center;
-    height: 300px;
-    display: flex;
+    height: calc(100vh - 200px);
+    filter: contrast(200%);
 }
 
 header {
@@ -17,4 +20,10 @@ h1 {
     font-size: 72px;
     padding: 22px;
     font-weight: normal;
+}
+
+section.body {
+    align-items: center;
+    height: 200px;
+    justify-content: center;
 }
