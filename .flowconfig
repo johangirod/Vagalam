@@ -1,0 +1,10 @@
+[ignore]
+.*/build/.*
+.*/node_modules/serviceworker-webpack-plugin/src/index.spec.js
+.*/node_modules/styled-components/src/.*
+
+[include]
+
+[libs]
+
+[options]

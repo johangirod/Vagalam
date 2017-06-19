@@ -1,0 +1,17 @@
+section {
+    background-size: cover;
+    background-position: bottom;
+    height: calc(100vh - 40px);
+}
+
+header {
+    color: white;
+    font-family: 'Crimson Text', serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 72px;
+    padding: 22px;
+    font-weight: normal;
+}

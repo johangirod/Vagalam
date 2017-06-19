@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b3ccc0c9f13a2952369e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8fa1e4da22a33f83266a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -700,32 +700,43 @@ exports.locals = {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/style.css":
+/***/ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Landing/style.css":
 /* no static exports found */
 /* all exports used */
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./~/css-loader?{"minimize":false,"discardComments":{"removeAll":false},"importLoaders":1,"localIdentName":"[name]__[local]___[hash:base64:5]","modules":true}!./~/postcss-loader!./src/style.css ***!
-  \********************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?{"minimize":false,"discardComments":{"removeAll":false},"importLoaders":1,"localIdentName":"[name]__[local]___[hash:base64:5]","modules":true}!./~/postcss-loader!./src/Landing/style.css ***!
+  \****************************************************************************************************************************************************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "section {\n    background-size: cover;\n    background-position: bottom;\n    height: calc(100vh - 40px);\n}\n\nheader {\n    color: white;\n    font-family: 'Crimson Text', serif;\n}\n\nh1 {\n    margin: 0;\n    font-size: 72px;\n    padding: 22px;\n    font-weight: normal;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1}!./node_modules/postcss-loader/index.js!./src/style.global.css":
+/* no static exports found */
+/* all exports used */
+/*!*******************************************************************************************************************************************!*\
+  !*** ./~/css-loader?{"minimize":false,"discardComments":{"removeAll":false},"importLoaders":1}!./~/postcss-loader!./src/style.global.css ***!
+  \*******************************************************************************************************************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(/*! ../~/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(undefined);
 // imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Raleway);", ""]);
+
 
 // module
-exports.push([module.i, "body {\n\theight: 100%;\n\twidth: 100%;\n\tmargin: 0;\n}\n\n.style__app___8VL7- {\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t-webkit-box-orient: vertical;\n\t-webkit-box-direction: normal;\n\t    -ms-flex-direction: column;\n\t        flex-direction: column;\n\tfont-family: 'Raleway';\n}\n\n.style__header___3HvPQ {\n\tbackground-color: white;\n\twidth: 100%;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n}\n\n.style__name___22syh {\n\twidth: 50%;\n}\n\n.style__logo___FbxC8 {\n\twidth: 215px;\n\theight: 185px;\n}\n\n.style__message___2U8P8 {\n\tmax-width: 550px;\n\ttext-align: center;\n\tline-height: 32px;\n\tmargin-bottom: 50px;\n}\n\n.style__counter___3_1bX {\n    width: 30vw;\n    height: 100px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    border: 1px solid rgb(217, 165, 97);\n}\n\n.style__value___3GQ5k {\n    color: red;\n    font-weight: bold;\n}\n\n.style__button___1q1pV {\n    margin: 5px;\n}", ""]);
+exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -ms-text-size-adjust: 100%; /* 2 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers (opinionated).\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Add the correct display in IE 9-.\n */\n\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\n\nfigcaption,\nfigure,\nmain { /* 1 */\n  display: block;\n}\n\n/**\n * Add the correct margin in IE 8.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\n\na {\n  background-color: transparent; /* 1 */\n  -webkit-text-decoration-skip: objects; /* 2 */\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\n\nb,\nstrong {\n  font-weight: inherit;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font style in Android 4.3-.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Add the correct background and color in IE 9-.\n */\n\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\naudio,\nvideo {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in iOS 4-7.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Hide the overflow in IE.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nhtml [type=\"button\"], /* 1 */\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\n\ndetails, /* 1 */\nmenu {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Scripting\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\ncanvas {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in IE.\n */\n\ntemplate {\n  display: none;\n}\n\n/* Hidden\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10-.\n */\n\n[hidden] {\n  display: none;\n}", ""]);
 
 // exports
-exports.locals = {
-	"app": "style__app___8VL7-",
-	"header": "style__header___3HvPQ",
-	"name": "style__name___22syh",
-	"logo": "style__logo___FbxC8",
-	"message": "style__message___2U8P8",
-	"counter": "style__counter___3_1bX",
-	"value": "style__value___3GQ5k",
-	"button": "style__button___1q1pV"
-};
+
 
 /***/ }),
 
@@ -828,15 +839,15 @@ function toComment(sourceMap) {
 "use strict";
 
 
-var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 24);
+var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 22);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
-var _slicedToArray2 = __webpack_require__(/*! babel-runtime/helpers/slicedToArray */ 25);
+var _slicedToArray2 = __webpack_require__(/*! babel-runtime/helpers/slicedToArray */ 23);
 
 var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 23);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 21);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
@@ -987,29 +998,29 @@ module.exports = insertCss;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env__ = __webpack_require__(/*! babel-preset-env */ 20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env__ = __webpack_require__(/*! babel-preset-env */ 18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_preset_env__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react__ = __webpack_require__(/*! babel-preset-react */ 21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react__ = __webpack_require__(/*! babel-preset-react */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_preset_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__ = __webpack_require__(/*! babel-preset-stage-1 */ 22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__ = __webpack_require__(/*! babel-preset-stage-1 */ 20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__ = __webpack_require__(/*! babel-plugin-react-require */ 15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__ = __webpack_require__(/*! babel-plugin-react-require */ 13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__ = __webpack_require__(/*! babel-plugin-transform-export-default-name-forked */ 16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__ = __webpack_require__(/*! babel-plugin-transform-export-default-name-forked */ 14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__ = __webpack_require__(/*! babel-plugin-minify-replace */ 14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__ = __webpack_require__(/*! babel-plugin-minify-replace */ 12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__ = __webpack_require__(/*! babel-plugin-transform-node-env-inline */ 17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__ = __webpack_require__(/*! babel-plugin-transform-node-env-inline */ 15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__ = __webpack_require__(/*! babel-plugin-minify-dead-code-elimination */ 12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__ = __webpack_require__(/*! babel-plugin-minify-dead-code-elimination */ 10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__ = __webpack_require__(/*! babel-plugin-minify-guarded-expressions */ 13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__ = __webpack_require__(/*! babel-plugin-minify-guarded-expressions */ 11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__ = __webpack_require__(/*! babel-plugin-discard-module-references */ 11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__ = __webpack_require__(/*! babel-plugin-discard-module-references */ 9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-source */ 19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-source */ 17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-self */ 18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-self */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils__ = __webpack_require__(/*! ../utils */ "./node_modules/vitaminjs/config/utils/index.js");
 
@@ -1078,7 +1089,7 @@ module.exports = insertCss;
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = clientConfig;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__ = __webpack_require__(/*! lodash.mergewith */ 36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__ = __webpack_require__(/*! lodash.mergewith */ 34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack__ = __webpack_require__(/*! webpack */ 5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_webpack__);
@@ -1133,21 +1144,21 @@ function clientConfig(options) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = config;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webpack__ = __webpack_require__(/*! webpack */ 5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webpack___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_webpack__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__ = __webpack_require__(/*! case-sensitive-paths-webpack-plugin */ 26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__ = __webpack_require__(/*! case-sensitive-paths-webpack-plugin */ 24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__ = __webpack_require__(/*! react-dev-utils/WatchMissingNodeModulesPlugin */ 44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__ = __webpack_require__(/*! react-dev-utils/WatchMissingNodeModulesPlugin */ 42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__ = __webpack_require__(/*! postcss-omit-import-tilde */ 41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__ = __webpack_require__(/*! postcss-omit-import-tilde */ 39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import__ = __webpack_require__(/*! postcss-import */ 40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import__ = __webpack_require__(/*! postcss-import */ 38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_postcss_import__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url__ = __webpack_require__(/*! postcss-url */ 43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url__ = __webpack_require__(/*! postcss-url */ 41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_postcss_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__ = __webpack_require__(/*! postcss-cssnext */ 39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__ = __webpack_require__(/*! postcss-cssnext */ 37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__ = __webpack_require__(/*! postcss-browser-reporter */ 38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__ = __webpack_require__(/*! postcss-browser-reporter */ 36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter__ = __webpack_require__(/*! postcss-reporter */ 42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter__ = __webpack_require__(/*! postcss-reporter */ 40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_postcss_reporter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_path__ = __webpack_require__(/*! path */ 6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_path___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_path__);
@@ -1293,7 +1304,7 @@ function config(options) {
   \*************************************/
 /***/ (function(module, exports) {
 
-module.exports = { "server": { "buildPath": "/home/johan/Project/Vagalam/build", "filename": "server_bundle.js", "host": "localhost", "port": 3000 }, "basePath": "", "publicPath": "/assets", "servePublic": true, "client": { "buildPath": "/home/johan/Project/Vagalam/public", "filename": "client_bundle.[hash].js", "serviceWorker": false, "targetBrowsers": [">1%", "last 4 versions", "Firefox ESR", "not ie < 9"] }, "filesPath": "files", "rootElementId": "vitamin-app", "moduleMap": { "__app_modules__routes__": "/home/johan/Project/Vagalam/src/routes", "__app_modules__server_middlewares__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__server_ErrorPage__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/ErrorPage", "__app_modules__server_onError__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__server_layout__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/HTMLLayout", "__app_modules__server_createInitAction__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__redux_reducers__": "/home/johan/Project/Vagalam/src/reducers", "__app_modules__redux_middlewares__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__redux_enhancers__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__redux_stateSerializer__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/shared/defaultStateSerializer" } };
+module.exports = { "server": { "buildPath": "/home/johan/Project/Vagalam/build", "filename": "server_bundle.js", "host": "localhost", "port": 3000 }, "basePath": "", "publicPath": "/assets", "servePublic": true, "client": { "buildPath": "/home/johan/Project/Vagalam/public", "filename": "client_bundle.[hash].js", "serviceWorker": false, "targetBrowsers": [">1%", "last 4 versions", "Firefox ESR", "not ie < 9"] }, "filesPath": "files", "rootElementId": "vitamin-app", "moduleMap": { "__app_modules__routes__": "/home/johan/Project/Vagalam/src/routes", "__app_modules__server_middlewares__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__server_ErrorPage__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/ErrorPage", "__app_modules__server_onError__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__server_layout__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/HTMLLayout", "__app_modules__server_createInitAction__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__redux_reducers__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyObject", "__app_modules__redux_middlewares__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__redux_enhancers__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__redux_stateSerializer__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/shared/defaultStateSerializer" } };
 
 /***/ }),
 
@@ -1320,6 +1331,20 @@ module.exports = { "server": { "buildPath": "/home/johan/Project/Vagalam/build",
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ([]);
+
+/***/ }),
+
+/***/ "./node_modules/vitaminjs/config/utils/emptyObject.js":
+/* exports provided: default */
+/* all exports used */
+/*!*************************************************!*\
+  !*** ./~/vitaminjs/config/utils/emptyObject.js ***!
+  \*************************************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -1438,24 +1463,6 @@ function concat(left, right) {
 
 /***/ }),
 
-/***/ "./node_modules/vitaminjs/react-redux.js":
-/* exports provided: Provider, connectAdvanced, connect */
-/* exports used: connect */
-/*!************************************!*\
-  !*** ./~/vitaminjs/react-redux.js ***!
-  \************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux__ = __webpack_require__(/*! react-redux */ 8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react_redux__);
-/* unused harmony reexport Provider */
-/* unused harmony reexport connectAdvanced */
-/* harmony reexport (binding) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_0_react_redux__, "connect")) __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_react_redux__["connect"]; });
-
-
-/***/ }),
-
 /***/ "./node_modules/vitaminjs/react-router.js":
 /* exports provided: Link, IndexLink, withRouter, Route, Redirect, IndexRoute, IndexRedirect, PropTypes, browserHistory */
 /* exports used: Route */
@@ -1480,25 +1487,6 @@ function concat(left, right) {
 
 /***/ }),
 
-/***/ "./node_modules/vitaminjs/redux.js":
-/* exports provided: combineReducers, bindActionCreators, applyMiddleware, compose */
-/* exports used: compose */
-/*!******************************!*\
-  !*** ./~/vitaminjs/redux.js ***!
-  \******************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(/*! redux */ 9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
-/* unused harmony reexport combineReducers */
-/* unused harmony reexport bindActionCreators */
-/* unused harmony reexport applyMiddleware */
-/* harmony reexport (binding) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_0_redux__, "compose")) __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0_redux__["compose"]; });
-
-
-/***/ }),
-
 /***/ "./node_modules/vitaminjs/src/server/appMiddleware.js":
 /* exports provided: default */
 /* all exports used */
@@ -1509,11 +1497,11 @@ function concat(left, right) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose__ = __webpack_require__(/*! koa-compose */ 31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose__ = __webpack_require__(/*! koa-compose */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_koa_compose__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag__ = __webpack_require__(/*! koa-etag */ 33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag__ = __webpack_require__(/*! koa-etag */ 31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_etag__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__ = __webpack_require__(/*! koa-conditional-get */ 32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__ = __webpack_require__(/*! koa-conditional-get */ 30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__middlewares_errorHandler__ = __webpack_require__(/*! ./middlewares/errorHandler */ "./node_modules/vitaminjs/src/server/middlewares/errorHandler.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_modules_server_middlewares___ = __webpack_require__(/*! __app_modules__server_middlewares__ */ "./node_modules/vitaminjs/config/utils/emptyArray.js");
@@ -1560,7 +1548,7 @@ true && ((ctx, next) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape__ = __webpack_require__(/*! js-string-escape */ 29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape__ = __webpack_require__(/*! js-string-escape */ 27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_js_string_escape__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(/*! react-router */ 3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
@@ -2735,11 +2723,11 @@ const routesWithStore = typeof __WEBPACK_IMPORTED_MODULE_1__app_modules_routes__
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static__ = __webpack_require__(/*! koa-static */ 35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static__ = __webpack_require__(/*! koa-static */ 33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_static__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount__ = __webpack_require__(/*! koa-mount */ 34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount__ = __webpack_require__(/*! koa-mount */ 32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_koa_mount__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(/*! ../../../config */ "./node_modules/vitaminjs/config/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__config__);
@@ -2783,7 +2771,7 @@ const servePublic = __WEBPACK_IMPORTED_MODULE_1_koa_static___default()(__WEBPACK
 /* eslint-disable import/no-extraneous-dependencies */
 
 // used require instead of import, because optional default with import cause warnings
-const reducers = __webpack_require__(/*! __app_modules__redux_reducers__ */ "./src/reducers.js");
+const reducers = __webpack_require__(/*! __app_modules__redux_reducers__ */ "./node_modules/vitaminjs/config/utils/emptyObject.js");
 /* eslint-enable import/no-extraneous-dependencies */
 
 /* eslint-disable import/first */
@@ -2821,7 +2809,7 @@ const reducers = __webpack_require__(/*! __app_modules__redux_reducers__ */ "./s
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom_server___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom_server__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet__ = __webpack_require__(/*! react-helmet */ 1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_helmet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver__ = __webpack_require__(/*! react-resolver */ 45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver__ = __webpack_require__(/*! react-resolver */ 44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_resolver__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_modules_server_layout___ = __webpack_require__(/*! __app_modules__server_layout__ */ "./node_modules/vitaminjs/src/server/components/HTMLLayout.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config__ = __webpack_require__(/*! ../../config */ "./node_modules/vitaminjs/config/index.js");
@@ -2931,19 +2919,19 @@ const renderLayout = (_ref) => {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(/*! koa */ 30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(/*! koa */ 28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(/*! express */ 27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(/*! express */ 25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_express__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chalk__ = __webpack_require__(/*! chalk */ 4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chalk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_chalk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch__ = __webpack_require__(/*! node-fetch */ 37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch__ = __webpack_require__(/*! node-fetch */ 35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_node_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline__ = __webpack_require__(/*! readline */ 47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline__ = __webpack_require__(/*! readline */ 46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_readline__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__ = __webpack_require__(/*! http-graceful-shutdown */ 28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__ = __webpack_require__(/*! http-graceful-shutdown */ 26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__appMiddleware__ = __webpack_require__(/*! ./appMiddleware */ "./node_modules/vitaminjs/src/server/appMiddleware.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__config__ = __webpack_require__(/*! ../../config */ "./node_modules/vitaminjs/config/index.js");
@@ -3056,7 +3044,7 @@ __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown___default()(server, {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(/*! react-redux */ 8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(/*! react-redux */ 43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CSSProvider__ = __webpack_require__(/*! ./CSSProvider */ "./node_modules/vitaminjs/src/shared/components/CSSProvider.js");
 var _jsxFileName = '/home/johan/Project/Vagalam/node_modules/vitaminjs/src/shared/components/App.jsx',
@@ -3213,9 +3201,9 @@ if (typeof window !== 'undefined' && typeof window.devToolsExtension !== 'undefi
 "use strict";
 /* unused harmony export createRootReducer */
 /* harmony export (immutable) */ __webpack_exports__["a"] = create;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(/*! redux */ 9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(/*! redux */ 47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux__ = __webpack_require__(/*! react-router-redux */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux__ = __webpack_require__(/*! react-router-redux */ 45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__(/*! redux-thunk */ 48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_redux_thunk__);
@@ -3245,23 +3233,82 @@ function create(history, reducers, middlewares, initialState) {
 
 /***/ }),
 
-/***/ "./src/Counter.jsx":
+/***/ "./src/App.jsx":
 /* exports provided: default */
 /* exports used: default */
-/*!*************************!*\
-  !*** ./src/Counter.jsx ***!
-  \*************************/
+/*!*********************!*\
+  !*** ./src/App.jsx ***!
+  \*********************/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vitaminjs_react_redux__ = __webpack_require__(/*! vitaminjs/react-redux */ "./node_modules/vitaminjs/react-redux.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vitaminjs_redux__ = __webpack_require__(/*! vitaminjs/redux */ "./node_modules/vitaminjs/redux.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_css__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/Counter.jsx',
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_global_css__ = __webpack_require__(/*! ./style.global.css */ "./src/style.global.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_global_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_global_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vitaminjs_react_helmet__ = __webpack_require__(/*! vitaminjs/react-helmet */ "./node_modules/vitaminjs/react-helmet.js");
+var _jsxFileName = '/home/johan/Project/Vagalam/src/App.jsx',
+    _this = this;
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_2__style_global_css___default.a)(({ children }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    {
+        __source: {
+            fileName: _jsxFileName,
+            lineNumber: 7
+        },
+        __self: _this
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_vitaminjs_react_helmet__["a" /* default */], {
+        title: 'Vagalam',
+        meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+        link: [{ href: "https://fonts.googleapis.com/css?family=Crimson+Text", rel: 'stylesheet' }],
+        __source: {
+            fileName: _jsxFileName,
+            lineNumber: 8
+        },
+        __self: _this
+    }),
+    children
+)));
+
+/***/ }),
+
+/***/ "./src/Landing/background.jpg":
+/* no static exports found */
+/* exports used: default */
+/*!************************************!*\
+  !*** ./src/Landing/background.jpg ***!
+  \************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "files/82a95caef036f8f68d4823524d938f70.jpg";
+
+/***/ }),
+
+/***/ "./src/Landing/index.jsx":
+/* exports provided: default */
+/* exports used: default */
+/*!*******************************!*\
+  !*** ./src/Landing/index.jsx ***!
+  \*******************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__background_jpg__ = __webpack_require__(/*! ./background.jpg */ "./src/Landing/background.jpg");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__background_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__background_jpg__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Landing/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
+var _jsxFileName = '/home/johan/Project/Vagalam/src/Landing/index.jsx',
     _this = this;
 
 
@@ -3271,7 +3318,7 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Counter.jsx',
 
 
 
-const Counter = ({ value, onIncrement, onDecrement }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+const Landing = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
     {
         __source: {
@@ -3280,268 +3327,80 @@ const Counter = ({ value, onIncrement, onDecrement }) => __WEBPACK_IMPORTED_MODU
         },
         __self: _this
     },
-    ' Counter: ',
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'span',
-        { className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.value, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 8
-            },
-            __self: _this
-        },
-        value
-    ),
-    ' ',
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', {
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8
-        },
-        __self: _this
-    }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'button',
-        { className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.button, onClick: onIncrement, __source: {
+        'section',
+        { style: { backgroundImage: `url(${__WEBPACK_IMPORTED_MODULE_2__background_jpg___default.a})` }, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 9
             },
             __self: _this
         },
-        ' +1 '
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'button',
-        { className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.button, onClick: onDecrement, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 10
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'header',
+            {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 10
+                },
+                __self: _this
             },
-            __self: _this
-        },
-        ' -1 '
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'h1',
+                {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 11
+                    },
+                    __self: _this
+                },
+                ' \\Vag a lam\\ '
+            )
+        )
     )
 );
 
-Counter.propTypes = {
-    value: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].number.isRequired,
-    onIncrement: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func.isRequired,
-    onDecrement: __WEBPACK_IMPORTED_MODULE_0_react__["PropTypes"].func.isRequired
-};
-
-const mapStateToProps = ({ counter }) => ({ value: counter });
-const mapDispatchToProps = dispatch => ({
-    onIncrement: () => dispatch({ type: 'INCREMENT' }),
-    onDecrement: () => dispatch({ type: 'DECREMENT' })
-});
-
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_vitaminjs_redux__["a" /* compose */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_vitaminjs_react_redux__["a" /* connect */])(mapStateToProps, mapDispatchToProps), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_4__style_css___default.a))(Counter));
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Landing));
 
 /***/ }),
 
-/***/ "./src/Index.jsx":
-/* exports provided: default */
-/* exports used: default */
-/*!***********************!*\
-  !*** ./src/Index.jsx ***!
-  \***********************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vitaminjs_react_helmet__ = __webpack_require__(/*! vitaminjs/react-helmet */ "./node_modules/vitaminjs/react-helmet.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Counter__ = __webpack_require__(/*! ./Counter */ "./src/Counter.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__logo_png__ = __webpack_require__(/*! ./logo.png */ "./src/logo.png");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__logo_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__logo_png__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/Index.jsx',
-    _this = this;
-
-
-
-
-
-
-
-
-const Index = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.app, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8
-        },
-        __self: _this
-    },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_vitaminjs_react_helmet__["a" /* default */], {
-        title: 'VitaminJS',
-        meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9
-        },
-        __self: _this
-    }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.header, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 15
-            },
-            __self: _this
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: __WEBPACK_IMPORTED_MODULE_5__logo_png___default.a, alt: 'logo', className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.logo, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 16
-            },
-            __self: _this
-        })
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'p',
-        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.message, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 18
-            },
-            __self: _this
-        },
-        'Welcome !',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 20
-            },
-            __self: _this
-        }),
-        'Here you can see an example using ',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            { href: 'https://facebook.github.io/react/', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 21
-                },
-                __self: _this
-            },
-            'React'
-        ),
-        ' ',
-        'with an implementation of ',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            { href: 'http://redux.js.org/', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 22
-                },
-                __self: _this
-            },
-            'redux'
-        ),
-        '.',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 23
-            },
-            __self: _this
-        }),
-        'Take a look at',
-        ' ',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            { href: 'https://github.com/kriasoft/isomorphic-style-loader', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 25
-                },
-                __self: _this
-            },
-            'CSS Modules'
-        ),
-        ' for the style.',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 28
-            },
-            __self: _this
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            { href: 'https://github.com/nfl/react-helmet', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 29
-                },
-                __self: _this
-            },
-            'Helmet'
-        ),
-        ' ',
-        'is there to manage your head !',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 31
-            },
-            __self: _this
-        }),
-        'Try to make some changes and save to reload.'
-    ),
-    'Redux demo:',
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.counter, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 35
-            },
-            __self: _this
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Counter__["a" /* default */], {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 36
-            },
-            __self: _this
-        })
-    )
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Index));
-
-/***/ }),
-
-/***/ "./src/logo.png":
+/***/ "./src/Landing/style.css":
 /* no static exports found */
 /* exports used: default */
-/*!**********************!*\
-  !*** ./src/logo.png ***!
-  \**********************/
+/*!*******************************!*\
+  !*** ./src/Landing/style.css ***!
+  \*******************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "files/cc40432df7e479dd6f456e5a7b7f854c.png";
 
-/***/ }),
+    var content = __webpack_require__(/*! !../../~/css-loader??ref--1-1!../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Landing/style.css");
+    var insertCss = __webpack_require__(/*! ../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
 
-/***/ "./src/reducers.js":
-/* exports provided: counter */
-/* all exports used */
-/*!*************************!*\
-  !*** ./src/reducers.js ***!
-  \*************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-const counter = (state = 0, action) => {
-    switch (action.type) {
-        case 'INCREMENT':
-            return state + 1;
-        case 'DECREMENT':
-            return state - 1;
-        default:
-            return state;
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
     }
-};
-/* harmony export (immutable) */ __webpack_exports__["counter"] = counter;
 
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (module.hot && typeof window !== 'undefined' && window.document) {
+      var removeCss = function() {};
+      module.hot.accept(/*! !../../~/css-loader??ref--1-1!../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Landing/style.css", function() {
+        content = __webpack_require__(/*! !../../~/css-loader??ref--1-1!../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Landing/style.css");
+
+        if (typeof content === 'string') {
+          content = [[module.i, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
 
 /***/ }),
 
@@ -3557,31 +3416,42 @@ const counter = (state = 0, action) => {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_router__ = __webpack_require__(/*! vitaminjs/react-router */ "./node_modules/vitaminjs/react-router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Index__ = __webpack_require__(/*! ./Index */ "./src/Index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__App__ = __webpack_require__(/*! ./App */ "./src/App.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Landing__ = __webpack_require__(/*! ./Landing */ "./src/Landing/index.jsx");
 var _jsxFileName = '/home/johan/Project/Vagalam/src/routes.js';
 
 
 
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_router__["a" /* Route */], { path: '/', component: __WEBPACK_IMPORTED_MODULE_2__Index__["a" /* default */], __source: {
-        fileName: _jsxFileName,
-        lineNumber: 5
+
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_router__["a" /* Route */],
+    { component: __WEBPACK_IMPORTED_MODULE_2__App__["a" /* default */], __source: {
+            fileName: _jsxFileName,
+            lineNumber: 6
+        },
+        __self: this
     },
-    __self: this
-}));
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_router__["a" /* Route */], { path: '/', component: __WEBPACK_IMPORTED_MODULE_3__Landing__["a" /* default */], __source: {
+            fileName: _jsxFileName,
+            lineNumber: 7
+        },
+        __self: this
+    })
+));
 
 /***/ }),
 
-/***/ "./src/style.css":
+/***/ "./src/style.global.css":
 /* no static exports found */
 /* exports used: default */
-/*!***********************!*\
-  !*** ./src/style.css ***!
-  \***********************/
+/*!******************************!*\
+  !*** ./src/style.global.css ***!
+  \******************************/
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    var content = __webpack_require__(/*! !../~/css-loader??ref--1-1!../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/style.css");
+    var content = __webpack_require__(/*! !../~/css-loader??ref--0-1!../~/postcss-loader!./style.global.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1}!./node_modules/postcss-loader/index.js!./src/style.global.css");
     var insertCss = __webpack_require__(/*! ../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
 
     if (typeof content === 'string') {
@@ -3598,8 +3468,8 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/routes.js';
     // Only activated in browser context
     if (module.hot && typeof window !== 'undefined' && window.document) {
       var removeCss = function() {};
-      module.hot.accept(/*! !../~/css-loader??ref--1-1!../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/style.css", function() {
-        content = __webpack_require__(/*! !../~/css-loader??ref--1-1!../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/style.css");
+      module.hot.accept(/*! !../~/css-loader??ref--0-1!../~/postcss-loader!./style.global.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1}!./node_modules/postcss-loader/index.js!./src/style.global.css", function() {
+        content = __webpack_require__(/*! !../~/css-loader??ref--0-1!../~/postcss-loader!./style.global.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1}!./node_modules/postcss-loader/index.js!./src/style.global.css");
 
         if (typeof content === 'string') {
           content = [[module.i, content, '']];
@@ -3639,30 +3509,6 @@ module.exports = require("react-helmet");
 
 /***/ 10:
 /* no static exports found */
-/* exports used: parse */
-/*!**********************!*\
-  !*** external "url" ***!
-  \**********************/
-/***/ (function(module, exports) {
-
-module.exports = require("url");
-
-/***/ }),
-
-/***/ 11:
-/* no static exports found */
-/* exports used: default */
-/*!*********************************************************!*\
-  !*** external "babel-plugin-discard-module-references" ***!
-  \*********************************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-plugin-discard-module-references");
-
-/***/ }),
-
-/***/ 12:
-/* no static exports found */
 /* exports used: default */
 /*!************************************************************!*\
   !*** external "babel-plugin-minify-dead-code-elimination" ***!
@@ -3673,7 +3519,7 @@ module.exports = require("babel-plugin-minify-dead-code-elimination");
 
 /***/ }),
 
-/***/ 13:
+/***/ 11:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************************!*\
@@ -3685,7 +3531,7 @@ module.exports = require("babel-plugin-minify-guarded-expressions");
 
 /***/ }),
 
-/***/ 14:
+/***/ 12:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************!*\
@@ -3697,7 +3543,7 @@ module.exports = require("babel-plugin-minify-replace");
 
 /***/ }),
 
-/***/ 15:
+/***/ 13:
 /* no static exports found */
 /* exports used: default */
 /*!*********************************************!*\
@@ -3709,7 +3555,7 @@ module.exports = require("babel-plugin-react-require");
 
 /***/ }),
 
-/***/ 16:
+/***/ 14:
 /* no static exports found */
 /* exports used: default */
 /*!********************************************************************!*\
@@ -3721,7 +3567,7 @@ module.exports = require("babel-plugin-transform-export-default-name-forked");
 
 /***/ }),
 
-/***/ 17:
+/***/ 15:
 /* no static exports found */
 /* exports used: default */
 /*!*********************************************************!*\
@@ -3733,7 +3579,7 @@ module.exports = require("babel-plugin-transform-node-env-inline");
 
 /***/ }),
 
-/***/ 18:
+/***/ 16:
 /* no static exports found */
 /* exports used: default */
 /*!********************************************************!*\
@@ -3745,7 +3591,7 @@ module.exports = require("babel-plugin-transform-react-jsx-self");
 
 /***/ }),
 
-/***/ 19:
+/***/ 17:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************************!*\
@@ -3754,6 +3600,30 @@ module.exports = require("babel-plugin-transform-react-jsx-self");
 /***/ (function(module, exports) {
 
 module.exports = require("babel-plugin-transform-react-jsx-source");
+
+/***/ }),
+
+/***/ 18:
+/* no static exports found */
+/* exports used: default */
+/*!***********************************!*\
+  !*** external "babel-preset-env" ***!
+  \***********************************/
+/***/ (function(module, exports) {
+
+module.exports = require("babel-preset-env");
+
+/***/ }),
+
+/***/ 19:
+/* no static exports found */
+/* exports used: default */
+/*!*************************************!*\
+  !*** external "babel-preset-react" ***!
+  \*************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("babel-preset-react");
 
 /***/ }),
 
@@ -3772,30 +3642,6 @@ module.exports = require("isomorphic-style-loader/lib/withStyles");
 /***/ 20:
 /* no static exports found */
 /* exports used: default */
-/*!***********************************!*\
-  !*** external "babel-preset-env" ***!
-  \***********************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-preset-env");
-
-/***/ }),
-
-/***/ 21:
-/* no static exports found */
-/* exports used: default */
-/*!*************************************!*\
-  !*** external "babel-preset-react" ***!
-  \*************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-preset-react");
-
-/***/ }),
-
-/***/ 22:
-/* no static exports found */
-/* exports used: default */
 /*!***************************************!*\
   !*** external "babel-preset-stage-1" ***!
   \***************************************/
@@ -3805,7 +3651,7 @@ module.exports = require("babel-preset-stage-1");
 
 /***/ }),
 
-/***/ 23:
+/***/ 21:
 /* no static exports found */
 /* all exports used */
 /*!*****************************************************!*\
@@ -3817,7 +3663,7 @@ module.exports = require("babel-runtime/core-js/get-iterator");
 
 /***/ }),
 
-/***/ 24:
+/***/ 22:
 /* no static exports found */
 /* all exports used */
 /*!*******************************************************!*\
@@ -3829,7 +3675,7 @@ module.exports = require("babel-runtime/core-js/json/stringify");
 
 /***/ }),
 
-/***/ 25:
+/***/ 23:
 /* no static exports found */
 /* all exports used */
 /*!******************************************************!*\
@@ -3841,7 +3687,7 @@ module.exports = require("babel-runtime/helpers/slicedToArray");
 
 /***/ }),
 
-/***/ 26:
+/***/ 24:
 /* no static exports found */
 /* exports used: default */
 /*!******************************************************!*\
@@ -3853,7 +3699,7 @@ module.exports = require("case-sensitive-paths-webpack-plugin");
 
 /***/ }),
 
-/***/ 27:
+/***/ 25:
 /* no static exports found */
 /* exports used: default */
 /*!**************************!*\
@@ -3865,7 +3711,7 @@ module.exports = require("express");
 
 /***/ }),
 
-/***/ 28:
+/***/ 26:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************************!*\
@@ -3877,7 +3723,7 @@ module.exports = require("http-graceful-shutdown");
 
 /***/ }),
 
-/***/ 29:
+/***/ 27:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -3886,6 +3732,30 @@ module.exports = require("http-graceful-shutdown");
 /***/ (function(module, exports) {
 
 module.exports = require("js-string-escape");
+
+/***/ }),
+
+/***/ 28:
+/* no static exports found */
+/* exports used: default */
+/*!**********************!*\
+  !*** external "koa" ***!
+  \**********************/
+/***/ (function(module, exports) {
+
+module.exports = require("koa");
+
+/***/ }),
+
+/***/ 29:
+/* no static exports found */
+/* exports used: default */
+/*!******************************!*\
+  !*** external "koa-compose" ***!
+  \******************************/
+/***/ (function(module, exports) {
+
+module.exports = require("koa-compose");
 
 /***/ }),
 
@@ -3904,30 +3774,6 @@ module.exports = require("react-router");
 /***/ 30:
 /* no static exports found */
 /* exports used: default */
-/*!**********************!*\
-  !*** external "koa" ***!
-  \**********************/
-/***/ (function(module, exports) {
-
-module.exports = require("koa");
-
-/***/ }),
-
-/***/ 31:
-/* no static exports found */
-/* exports used: default */
-/*!******************************!*\
-  !*** external "koa-compose" ***!
-  \******************************/
-/***/ (function(module, exports) {
-
-module.exports = require("koa-compose");
-
-/***/ }),
-
-/***/ 32:
-/* no static exports found */
-/* exports used: default */
 /*!**************************************!*\
   !*** external "koa-conditional-get" ***!
   \**************************************/
@@ -3937,7 +3783,7 @@ module.exports = require("koa-conditional-get");
 
 /***/ }),
 
-/***/ 33:
+/***/ 31:
 /* no static exports found */
 /* exports used: default */
 /*!***************************!*\
@@ -3949,7 +3795,7 @@ module.exports = require("koa-etag");
 
 /***/ }),
 
-/***/ 34:
+/***/ 32:
 /* no static exports found */
 /* exports used: default */
 /*!****************************!*\
@@ -3961,7 +3807,7 @@ module.exports = require("koa-mount");
 
 /***/ }),
 
-/***/ 35:
+/***/ 33:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************!*\
@@ -3973,7 +3819,7 @@ module.exports = require("koa-static");
 
 /***/ }),
 
-/***/ 36:
+/***/ 34:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -3985,7 +3831,7 @@ module.exports = require("lodash.mergewith");
 
 /***/ }),
 
-/***/ 37:
+/***/ 35:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************!*\
@@ -3997,7 +3843,7 @@ module.exports = require("node-fetch");
 
 /***/ }),
 
-/***/ 38:
+/***/ 36:
 /* no static exports found */
 /* exports used: default */
 /*!*******************************************!*\
@@ -4009,7 +3855,7 @@ module.exports = require("postcss-browser-reporter");
 
 /***/ }),
 
-/***/ 39:
+/***/ 37:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************!*\
@@ -4018,6 +3864,30 @@ module.exports = require("postcss-browser-reporter");
 /***/ (function(module, exports) {
 
 module.exports = require("postcss-cssnext");
+
+/***/ }),
+
+/***/ 38:
+/* no static exports found */
+/* exports used: default */
+/*!*********************************!*\
+  !*** external "postcss-import" ***!
+  \*********************************/
+/***/ (function(module, exports) {
+
+module.exports = require("postcss-import");
+
+/***/ }),
+
+/***/ 39:
+/* no static exports found */
+/* exports used: default */
+/*!********************************************!*\
+  !*** external "postcss-omit-import-tilde" ***!
+  \********************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("postcss-omit-import-tilde");
 
 /***/ }),
 
@@ -4036,30 +3906,6 @@ module.exports = require("chalk");
 /***/ 40:
 /* no static exports found */
 /* exports used: default */
-/*!*********************************!*\
-  !*** external "postcss-import" ***!
-  \*********************************/
-/***/ (function(module, exports) {
-
-module.exports = require("postcss-import");
-
-/***/ }),
-
-/***/ 41:
-/* no static exports found */
-/* exports used: default */
-/*!********************************************!*\
-  !*** external "postcss-omit-import-tilde" ***!
-  \********************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("postcss-omit-import-tilde");
-
-/***/ }),
-
-/***/ 42:
-/* no static exports found */
-/* exports used: default */
 /*!***********************************!*\
   !*** external "postcss-reporter" ***!
   \***********************************/
@@ -4069,7 +3915,7 @@ module.exports = require("postcss-reporter");
 
 /***/ }),
 
-/***/ 43:
+/***/ 41:
 /* no static exports found */
 /* exports used: default */
 /*!******************************!*\
@@ -4081,7 +3927,7 @@ module.exports = require("postcss-url");
 
 /***/ }),
 
-/***/ 44:
+/***/ 42:
 /* no static exports found */
 /* exports used: default */
 /*!****************************************************************!*\
@@ -4093,7 +3939,19 @@ module.exports = require("react-dev-utils/WatchMissingNodeModulesPlugin");
 
 /***/ }),
 
-/***/ 45:
+/***/ 43:
+/* no static exports found */
+/* exports used: Provider */
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/***/ (function(module, exports) {
+
+module.exports = require("react-redux");
+
+/***/ }),
+
+/***/ 44:
 /* no static exports found */
 /* exports used: Resolver */
 /*!*********************************!*\
@@ -4105,7 +3963,7 @@ module.exports = require("react-resolver");
 
 /***/ }),
 
-/***/ 46:
+/***/ 45:
 /* no static exports found */
 /* exports used: routerReducer, routerMiddleware */
 /*!*************************************!*\
@@ -4117,7 +3975,7 @@ module.exports = require("react-router-redux");
 
 /***/ }),
 
-/***/ 47:
+/***/ 46:
 /* no static exports found */
 /* exports used: default */
 /*!***************************!*\
@@ -4126,6 +3984,18 @@ module.exports = require("react-router-redux");
 /***/ (function(module, exports) {
 
 module.exports = require("readline");
+
+/***/ }),
+
+/***/ 47:
+/* no static exports found */
+/* exports used: combineReducers, compose, applyMiddleware, createStore */
+/*!************************!*\
+  !*** external "redux" ***!
+  \************************/
+/***/ (function(module, exports) {
+
+module.exports = require("redux");
 
 /***/ }),
 
@@ -4229,25 +4099,25 @@ module.exports = require("react-dom/server");
 
 /***/ 8:
 /* no static exports found */
-/* exports used: Provider, connect */
-/*!******************************!*\
-  !*** external "react-redux" ***!
-  \******************************/
+/* exports used: parse */
+/*!**********************!*\
+  !*** external "url" ***!
+  \**********************/
 /***/ (function(module, exports) {
 
-module.exports = require("react-redux");
+module.exports = require("url");
 
 /***/ }),
 
 /***/ 9:
 /* no static exports found */
-/* exports used: compose, combineReducers, applyMiddleware, createStore */
-/*!************************!*\
-  !*** external "redux" ***!
-  \************************/
+/* exports used: default */
+/*!*********************************************************!*\
+  !*** external "babel-plugin-discard-module-references" ***!
+  \*********************************************************/
 /***/ (function(module, exports) {
 
-module.exports = require("redux");
+module.exports = require("babel-plugin-discard-module-references");
 
 /***/ })
 
