@@ -1,12 +1,15 @@
+
 section {
     background-size: cover;
-    background-position: bottom;
-    height: calc(100vh - 40px);
+    background-position: center;
+    height: 300px;
+    display: flex;
 }
 
 header {
     color: white;
     font-family: 'Crimson Text', serif;
+    align-self: flex-end;
 }
 
 h1 {
