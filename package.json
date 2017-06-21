@@ -5,11 +5,13 @@
   "author": "Johan Girod <johangirod@gmail.com> (https://vagalam.bike)",
   "keywords": [],
   "dependencies": {
+    "classnames": "^2.2.5",
     "mapbox-gl": "^0.38.0",
     "normalize.css": "^7.0.0",
     "react": "^15.4.2",
     "styled-components": "^2.1.0",
-    "vitaminjs": "^1.2.1"
+    "vitaminjs": "^1.2.1",
+    "wpapi": "^1.1.1"
   },
   "scripts": {
     "start": "vitamin start",

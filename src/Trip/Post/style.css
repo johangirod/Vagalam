@@ -1,0 +1,48 @@
+article {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+article > * {
+    flex: 1;
+}
+
+
+h1 {
+    font-family: 'Crimson Text', serif;
+}
+
+.date {
+    font-weight: bold;
+    color: gray;
+}
+.date::before {
+    content: 🕐;
+}
+
+.content {
+    overflow: auto;    
+    padding: 16px 32px;
+    background-color: white;
+    z-index: 1;
+}
+.body {
+    white-space: pre-line;
+    line-height: 1.3em;
+}
+
+.picture {
+    background-size: cover;
+    background-position: center;
+    animation: zoom-in 100s linear;
+}
+
+
+@keyframes zoom-in { 
+    from { 
+        transform: scale(1);
+    } 
+    to { 
+        transform: scale(1.5); 
+    }
+}

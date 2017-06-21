@@ -13,7 +13,7 @@ class Map extends Component {
         mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FuY2VhYiIsImEiOiJjajQ0OHZjZzgxOGY3MndzOTh6YTFjbmNyIn0.0pHsI5xrBMh9YMftXmLQKw';
         const map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/satellite-v9',
+            style: 'mapbox://styles/mapbox/satellite-streets-v10',
             zoom: 6,
             center: [2.35, 48.853],
         });
@@ -54,7 +54,7 @@ class Map extends Component {
     }
     render() { 
         return (
-            <div id='map' className={s.map}>
+            <div id='map' className={s.map} onKeyDown={this.handleKeyDown}>
                 <Helmet 
                     link={[{ href: 'https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css', rel: 'stylesheet' }]} 
                 />
