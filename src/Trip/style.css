@@ -9,32 +9,10 @@
     max-height: 100%;
     overflow: hidden;
 }
-.post {
-    position: absolute;
-    background: white;
-    z-index: 3;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    animation: zoom-out 0.7s;
-}
 .map {
     transition: transform 0.7s;
 }
 
 .map.zoom {
     transform: scale(4);
-}
-
-@keyframes zoom-out { 
-    from { 
-        transform: scale(0.01);
-        opacity: 0;
-    } 
-    to { 
-        transform: scale(1); 
-        opacity: 1;
-    }
 }

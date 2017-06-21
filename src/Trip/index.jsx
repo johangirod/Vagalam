@@ -3,6 +3,7 @@ import { withStyles } from 'vitaminjs';
 import classnames from 'classnames';
 import s from './style.css';
 import Map from './Map';
+import Modale from './Modale';
 import Details from './Details';
 import Post from './Post';
 
@@ -10,23 +11,25 @@ class Trip extends Component {
     constructor(props) {
         super(props);
         this.handleKeyDown = this.handleKeyDown.bind(this);
+        this.handleModalClose = this.handleModalClose.bind(this);
         this.state = { showPost: false }
     }
     handleKeyDown(e) {
         if (e.key === ' ') {
             this.setState(({ showPost }) => ({ showPost: !showPost }));
         }
-
+    }
+    handleModalClose() {
+        this.setState({ showPost: false });
     }
     render() {
         console.log(this.state.showPost)
         return <div className={s.layout} onKeyDown={this.handleKeyDown} >
-            { this.state.showPost ? 
-                <div className={s.post}>
-                    <Post
-                        title="A new beginning"
-                        date={new Date(2017, 6, 1)}
-                        content={`
+            <Modale isOpen={this.state.showPost} onClose={this.handleModalClose} >
+                <Post
+                    title="A new beginning"
+                    date={new Date(2017, 6, 1)}
+                    content={`
 <p>Partout s'étalait, se répandait, s'ébaudissait le peuple en vacances. C'était une de ces solennités sur lesquelles, pendant un long temps, comptent les saltimbanques, les faiseurs de tours, les montreurs d'animaux et les boutiquiers ambulants, pour compenser les mauvais temps de l'année.</p>
 <p>En ces jours-là il me semble que le peuple oublie tout, la douleur et le travail ; il devient pareil aux enfants. Pour les petits c'est un jour de congé, c'est l'horreur de l'école renvoyée à vingt-quatre heures. Pour les grands c'est un armistice conclu avec les puissances malfaisantes de la vie, un répit dans la contention et la lutte universelles.</p>
 <p>L'homme du monde lui-même et l'homme occupé de travaux spirituels échappent difficilement à l'influence de ce jubilé populaire. Ils absorbent, sans le vouloir, leur part de cette atmosphère d'insouciance. Pour moi, je ne manque jamais, en vrai Parisien, de passer la revue de toutes les baraques qui se pavanent à ces époques solennelles.</p>
@@ -38,11 +41,9 @@ class Trip extends Component {
 <p>Que faire ? A quoi bon demander à l'infortuné quelle curiosité, quelle merveille il avait à montrer dans ces ténèbres puantes, derrière son rideau déchiqueté ? En vérité, je n'osais; et dût la raison de ma timidité vous faire rire, j'avouerai que je craignais de l'humilier. Enfin, je venais de me résoudre à déposer en passant quelque argent sur une de ses planches, espérant qu'il devinerait mon intention, quand un grand reflux de peuple, causé par je ne sais quel trouble, m'entraîna loin de lui.</p>
 <p>Et, m'en retournant, obsédé par cette vision, je cherchai à analyser ma soudaine douleur, et je me dis : Je viens de voir l'image du vieil homme de lettres qui a survécu à la génération dont il fut le brillant amuseur ; du vieux poète sans amis, sans famille, sans enfants, dégradé par sa misère et par l'ingratitude publique et dans la baraque de qui le monde oublieux ne veut plus entrer !</p>
 `}
-                        pictureUrl="https://vagalamapi.files.wordpress.com/2017/06/dscf3713.jpg?quality=80&strip=info&w=900"
-                    />
-                </div>
-                : null
-            }
+                    pictureUrl="https://vagalamapi.files.wordpress.com/2017/06/dscf3713.jpg?quality=80&strip=info&w=900"
+                />
+            </Modale>
             <div className={classnames(s.map, { [s.zoom]: this.state.showPost }) } >
                 <Map />
             </div>
