@@ -30,19 +30,3 @@ h1 {
     white-space: pre-line;
     line-height: 1.3em;
 }
-
-.picture {
-    background-size: cover;
-    background-position: center;
-    animation: zoom-in 100s linear;
-}
-
-
-@keyframes zoom-in { 
-    from { 
-        transform: scale(1);
-    } 
-    to { 
-        transform: scale(1.5); 
-    }
-}

@@ -1,0 +1,28 @@
+.pictures {
+    position: relative;
+}
+.picture {
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: zoom-in 10s linear infinite alternate-reverse;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.7s;
+}
+
+.picture.show {
+    opacity: 1;
+}
+
+@keyframes zoom-in { 
+    from { 
+        transform: scale(1);
+    } 
+    to { 
+        transform: scale(1.2); 
+    }
+}

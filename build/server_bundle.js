@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2d55306cb8bfa21b383c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "adb15ce8daeb257ad14d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -791,6 +791,31 @@ exports.locals = {
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css":
+/* no static exports found */
+/* all exports used */
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./~/css-loader?{"minimize":false,"discardComments":{"removeAll":false},"importLoaders":1,"localIdentName":"[name]__[local]___[hash:base64:5]","modules":true}!./~/postcss-loader!./src/Trip/Post/Pictures/style.css ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".style__pictures___4EJ-o {\n    position: relative;\n}\n.style__picture___8AkzB {\n    background-size: cover;\n    background-position: center;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    -webkit-animation: style__zoom-in___1VlUx 10s linear infinite alternate-reverse;\n            animation: style__zoom-in___1VlUx 10s linear infinite alternate-reverse;\n    opacity: 0;\n    position: absolute;\n    transition: opacity 0.7s;\n}\n.style__picture___8AkzB.style__show___3bx1- {\n    opacity: 1;\n}\n@-webkit-keyframes style__zoom-in___1VlUx { \n    from { \n        -webkit-transform: scale(1); \n                transform: scale(1);\n    } \n    to { \n        -webkit-transform: scale(1.2); \n                transform: scale(1.2); \n    }\n}\n@keyframes style__zoom-in___1VlUx { \n    from { \n        -webkit-transform: scale(1); \n                transform: scale(1);\n    } \n    to { \n        -webkit-transform: scale(1.2); \n                transform: scale(1.2); \n    }\n}", ""]);
+
+// exports
+exports.locals = {
+	"pictures": "style__pictures___4EJ-o",
+	"picture": "style__picture___8AkzB",
+	"zoom-in": "style__zoom-in___1VlUx",
+	"show": "style__show___3bx1-"
+};
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/style.css":
 /* no static exports found */
 /* all exports used */
@@ -804,15 +829,13 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    height: 100vh;\n}\narticle > * {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n.style__date___2RhG4 {\n    font-weight: bold;\n    color: gray;\n}\n.style__date___2RhG4::before {\n    content: 🕐;\n}\n.style__content___3hSR- {\n    overflow: auto;    \n    padding: 16px 32px;\n    background-color: white;\n    z-index: 1;\n}\n.style__body___30xTl {\n    white-space: pre-line;\n    line-height: 1.3em;\n}\n.style__picture___1H2oW {\n    background-size: cover;\n    background-position: center;\n    -webkit-animation: style__zoom-in___egJhq 100s linear;\n            animation: style__zoom-in___egJhq 100s linear;\n}\n@-webkit-keyframes style__zoom-in___egJhq { \n    from { \n        -webkit-transform: scale(1); \n                transform: scale(1);\n    } \n    to { \n        -webkit-transform: scale(1.5); \n                transform: scale(1.5); \n    }\n}\n@keyframes style__zoom-in___egJhq { \n    from { \n        -webkit-transform: scale(1); \n                transform: scale(1);\n    } \n    to { \n        -webkit-transform: scale(1.5); \n                transform: scale(1.5); \n    }\n}", ""]);
+exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    height: 100vh;\n}\narticle > * {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n.style__date___2RhG4 {\n    font-weight: bold;\n    color: gray;\n}\n.style__date___2RhG4::before {\n    content: 🕐;\n}\n.style__content___3hSR- {\n    overflow: auto;    \n    padding: 16px 32px;\n    background-color: white;\n    z-index: 1;\n}\n.style__body___30xTl {\n    white-space: pre-line;\n    line-height: 1.3em;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"date": "style__date___2RhG4",
 	"content": "style__content___3hSR-",
-	"body": "style__body___30xTl",
-	"picture": "style__picture___1H2oW",
-	"zoom-in": "style__zoom-in___egJhq"
+	"body": "style__body___30xTl"
 };
 
 /***/ }),
@@ -3934,6 +3957,109 @@ class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 /***/ }),
 
+/***/ "./src/Trip/Post/Pictures/index.jsx":
+/* exports provided: default */
+/* exports used: default */
+/*!******************************************!*\
+  !*** ./src/Trip/Post/Pictures/index.jsx ***!
+  \******************************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Post/Pictures/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
+var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Post/Pictures/index.jsx';
+
+
+
+
+
+
+class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentPicture: 0
+        };
+    }
+    componentDidMount() {
+        setInterval(() => this.setState(({ currentPicture }) => ({
+            currentPicture: (currentPicture + 1) % this.props.pictures.length
+        })), 10000);
+    }
+    render() {
+        const { pictures } = this.props;
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 24
+                },
+                __self: this
+            },
+            pictures.map((picture, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
+                className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.picture, { [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.show]: this.state.currentPicture === i }),
+                style: { backgroundImage: `url(${picture})` },
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 27
+                },
+                __self: this
+            }))
+        );
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Pictures));
+
+/***/ }),
+
+/***/ "./src/Trip/Post/Pictures/style.css":
+/* no static exports found */
+/* exports used: default */
+/*!******************************************!*\
+  !*** ./src/Trip/Post/Pictures/style.css ***!
+  \******************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var content = __webpack_require__(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css");
+    var insertCss = __webpack_require__(/*! ../../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
+
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
+    }
+
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (module.hot && typeof window !== 'undefined' && window.document) {
+      var removeCss = function() {};
+      module.hot.accept(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css", function() {
+        content = __webpack_require__(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css");
+
+        if (typeof content === 'string') {
+          content = [[module.i, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
+
+/***/ }),
+
 /***/ "./src/Trip/Post/index.jsx":
 /* exports provided: default */
 /* exports used: default */
@@ -3946,8 +4072,9 @@ class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Post/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Pictures__ = __webpack_require__(/*! ./Pictures */ "./src/Trip/Post/Pictures/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Post/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
 var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Post/index.jsx',
     _this = this;
 
@@ -3955,26 +4082,27 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Post/index.jsx',
 
 
 
-const Post = ({ title, date, content, pictureUrl }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+
+const Post = ({ title, date, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'article',
     {
         __source: {
             fileName: _jsxFileName,
-            lineNumber: 5
+            lineNumber: 6
         },
         __self: _this
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.picture, style: { backgroundImage: `url(${pictureUrl})` }, __source: {
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Pictures__["a" /* default */], { pictures: pictures, __source: {
             fileName: _jsxFileName,
-            lineNumber: 6
+            lineNumber: 7
         },
         __self: _this
     }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.content, __source: {
+        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.content, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 7
+                lineNumber: 8
             },
             __self: _this
         },
@@ -3983,7 +4111,7 @@ const Post = ({ title, date, content, pictureUrl }) => __WEBPACK_IMPORTED_MODULE
             {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 8
+                    lineNumber: 9
                 },
                 __self: _this
             },
@@ -3994,15 +4122,15 @@ const Post = ({ title, date, content, pictureUrl }) => __WEBPACK_IMPORTED_MODULE
             {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 9
+                    lineNumber: 10
                 },
                 __self: _this
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'small',
-                { className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.date, __source: {
+                { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.date, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 10
+                        lineNumber: 11
                     },
                     __self: _this
                 },
@@ -4010,20 +4138,20 @@ const Post = ({ title, date, content, pictureUrl }) => __WEBPACK_IMPORTED_MODULE
             )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
-            className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.body,
+            className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.body,
             dangerouslySetInnerHTML: {
                 __html: content
             },
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 12
+                lineNumber: 13
             },
             __self: _this
         })
     )
 );
 
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_2__style_css___default.a)(Post));
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Post));
 
 /***/ }),
 
@@ -29264,7 +29392,7 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 <p>Que faire ? A quoi bon demander à l'infortuné quelle curiosité, quelle merveille il avait à montrer dans ces ténèbres puantes, derrière son rideau déchiqueté ? En vérité, je n'osais; et dût la raison de ma timidité vous faire rire, j'avouerai que je craignais de l'humilier. Enfin, je venais de me résoudre à déposer en passant quelque argent sur une de ses planches, espérant qu'il devinerait mon intention, quand un grand reflux de peuple, causé par je ne sais quel trouble, m'entraîna loin de lui.</p>
 <p>Et, m'en retournant, obsédé par cette vision, je cherchai à analyser ma soudaine douleur, et je me dis : Je viens de voir l'image du vieil homme de lettres qui a survécu à la génération dont il fut le brillant amuseur ; du vieux poète sans amis, sans famille, sans enfants, dégradé par sa misère et par l'ingratitude publique et dans la baraque de qui le monde oublieux ne veut plus entrer !</p>
 `,
-                    pictureUrl: 'https://vagalamapi.files.wordpress.com/2017/06/dscf3713.jpg?quality=80&strip=info&w=900',
+                    pictures: ["https://vagalamapi.files.wordpress.com/2017/06/dscf3713.jpg?quality=80&strip=info&w=900", "/assets/files/b2e24f6b7884a150397208cb09913252.jpg"],
                     __source: {
                         fileName: _jsxFileName,
                         lineNumber: 29
@@ -29276,14 +29404,14 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 'div',
                 { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.map, { [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.zoom]: this.state.showPost }), __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 47
+                        lineNumber: 50
                     },
                     __self: this
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Map__["a" /* default */], {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 48
+                        lineNumber: 51
                     },
                     __self: this
                 })
@@ -29291,7 +29419,7 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Details__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 50
+                    lineNumber: 53
                 },
                 __self: this
             })

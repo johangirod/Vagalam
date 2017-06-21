@@ -41,7 +41,10 @@ class Trip extends Component {
 <p>Que faire ? A quoi bon demander à l'infortuné quelle curiosité, quelle merveille il avait à montrer dans ces ténèbres puantes, derrière son rideau déchiqueté ? En vérité, je n'osais; et dût la raison de ma timidité vous faire rire, j'avouerai que je craignais de l'humilier. Enfin, je venais de me résoudre à déposer en passant quelque argent sur une de ses planches, espérant qu'il devinerait mon intention, quand un grand reflux de peuple, causé par je ne sais quel trouble, m'entraîna loin de lui.</p>
 <p>Et, m'en retournant, obsédé par cette vision, je cherchai à analyser ma soudaine douleur, et je me dis : Je viens de voir l'image du vieil homme de lettres qui a survécu à la génération dont il fut le brillant amuseur ; du vieux poète sans amis, sans famille, sans enfants, dégradé par sa misère et par l'ingratitude publique et dans la baraque de qui le monde oublieux ne veut plus entrer !</p>
 `}
-                    pictureUrl="https://vagalamapi.files.wordpress.com/2017/06/dscf3713.jpg?quality=80&strip=info&w=900"
+                    pictures={[
+                        "https://vagalamapi.files.wordpress.com/2017/06/dscf3713.jpg?quality=80&strip=info&w=900",
+                        "/assets/files/b2e24f6b7884a150397208cb09913252.jpg"
+                    ]}
                 />
             </Modale>
             <div className={classnames(s.map, { [s.zoom]: this.state.showPost }) } >

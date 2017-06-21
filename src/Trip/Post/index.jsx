@@ -1,9 +1,10 @@
 import { withStyles } from 'vitaminjs';
+import Pictures from './Pictures';
 import s from './style.css';
 
-const Post = ({ title, date, content, pictureUrl }) => 
+const Post = ({ title, date, content, pictures }) => 
     <article>
-        <div className={s.picture} style={{ backgroundImage: `url(${pictureUrl})` }} />
+        <Pictures pictures={pictures} />
         <div className={s.content} >
             <h1>{title}</h1>
             <p>
