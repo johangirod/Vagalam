@@ -6,6 +6,7 @@ import s from './style.css';
 class Modale extends Component {
     constructor(props) {
         super(props);
+        this.handleKeyDown = this.handleKeyDown.bind(this);
     } 
     handleKeyDown(e) {
         if (e.key === 'Escape') {
@@ -17,7 +18,7 @@ class Modale extends Component {
         return (
             <div 
                 className={classnames(s.modale, { [s.opened]: isOpen })}
-                handleKeyDown={this.handleKeyDown}
+                onKeyDown={this.handleKeyDown}
             >
                 <button 
                     className={s['close-button']}

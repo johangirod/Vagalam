@@ -26,6 +26,7 @@ class Pictures extends Component {
                     pictures.map((picture, i) => 
                         <div
                             className={classnames(s.picture, { [s.show]: this.state.currentPicture === i})}
+                            key={picture}
                             style={{ backgroundImage: `url(${picture})` }}
                         /> 
                     )

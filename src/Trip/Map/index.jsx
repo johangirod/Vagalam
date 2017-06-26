@@ -2,9 +2,8 @@ import Helmet from 'vitaminjs/react-helmet';
 import { Component } from 'react';
 import { withStyles } from 'vitaminjs'; 
 
-import veloscenie from '../bike_roads/veloscenie.json'
-import ev4 from '../bike_roads/ev4.json'
 import s from './style.css';
+import { path } from './data.js';
 
 class Map extends Component {
     componentDidMount() {
@@ -18,12 +17,13 @@ class Map extends Component {
             center: [2.35, 48.853],
         });
         map.on('load', () => {
+            console.log(path);  
             map.addLayer({
                 id: 'veloscenie',
                 type: 'line',
                 source: {
                     type: 'geojson',
-                    data: veloscenie,
+                    data: path,
                 },
                 layout: {
                     'line-join': 'round',
@@ -31,22 +31,6 @@ class Map extends Component {
                 },
                 paint: {
                     'line-color': '#2067d8',
-                    'line-width': 5,
-                },
-            });
-            map.addLayer({
-                id: 'ev4',
-                type: 'line',
-                source: {
-                    type: 'geojson',
-                    data: ev4,
-                },
-                layout: {
-                    'line-join': 'round',
-                    'line-cap': 'round',
-                },
-                paint: {
-                    'line-color': 'red',
                     'line-width': 5,
                 },
             });

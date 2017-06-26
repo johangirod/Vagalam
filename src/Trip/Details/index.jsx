@@ -6,7 +6,7 @@ import Pastille from '../../ui-element/Pastille';
 const Details = () => 
     <div className={s.container}>
         <Pastille value={1} unit="jour" />
-        <Pastille value={12} unit="km" />
+        <Pastille value={1209} unit="km" />
     </div>
 
 export default withStyles(s)(Details);

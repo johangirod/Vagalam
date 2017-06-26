@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "adb15ce8daeb257ad14d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7903334d3d4dee60d05d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -669,7 +669,7 @@ module.exports =
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(54)(__webpack_require__.s = 54);
+/******/ 	return hotCreateRequire(59)(__webpack_require__.s = 59);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -853,7 +853,7 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, ".style__layout___lBsfA > *:last-child {\n    position: absolute;\n    right: 0;\n    top: 0;\n}\n.style__layout___lBsfA {\n    position: relative;\n    max-width: 100%;\n    max-height: 100%;\n    overflow: hidden;\n}\n.style__map___1Y6_H {\n    transition: -webkit-transform 0.7s;\n    transition: transform 0.7s;\n    transition: transform 0.7s, -webkit-transform 0.7s;\n}\n.style__map___1Y6_H.style__zoom___1kgLD {\n    -webkit-transform: scale(4);\n        -ms-transform: scale(4);\n            transform: scale(4);\n}\n", ""]);
+exports.push([module.i, ".style__layout___lBsfA > *:last-child {\n    position: absolute;\n    right: 0;\n    top: 0;\n}\n.style__layout___lBsfA {\n    position: relative;\n    max-width: 100%;\n    max-height: 100%;\n    overflow: hidden;\n}\n.style__map___1Y6_H {\n    transition: -webkit-transform 0.7s;\n    transition: transform 0.7s;\n    transition: transform 0.7s, -webkit-transform 0.7s;\n}\n.style__map___1Y6_H.style__zoom___1kgLD {\n    -webkit-transform: scale(6);\n        -ms-transform: scale(6);\n            transform: scale(6);\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -899,7 +899,7 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__pastille___foiY7 {\n    border-radius: 100%;\n    background-color: white;\n    position: relative;\n    padding: 16px;\n    height: 2em;\n    width: 2em;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    transition: border-color 0.7s;\n    border: 2px solid black;\n}\n\n\n.style__pastille___foiY7 strong {\n    font-size: large;\n}\n\n\n.style__pastille___foiY7:hover {\n    border-color: transparent;\n    background-clip: padding-box;\n}\n\n\n.style__pastille___foiY7:hover::after {\n    position: absolute;\n    top: -2px;\n    bottom: -2px;\n    left: -2px;\n    right: -2px;\n    border-radius: 32px;\n    content: '';\n    z-index: -1;\n    background: linear-gradient(45deg,\n        rgba(255, 0, 0, 1) 0%,\n        rgba(255, 255, 0, 1) 15%,\n        rgba(0, 255, 0, 1) 30%,\n        rgba(0, 255, 255, 1) 50%,\n        rgba(0, 0, 255, 1) 65%,\n        rgba(255, 0, 255, 1) 80%,\n        rgba(255, 0, 0, 1) 100%\n    );\n    -webkit-animation: style__hue-rotate___15A0Z 2s linear infinite;\n            animation: style__hue-rotate___15A0Z 2s linear infinite;\n}\n\n\n@-webkit-keyframes style__hue-rotate___15A0Z { from { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter'); -webkit-filter: hue-rotate(0deg); filter: hue-rotate(0deg); } to { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter'); -webkit-filter:hue-rotate(360deg); filter:hue-rotate(360deg); }  }\n\n\n@keyframes style__hue-rotate___15A0Z { from { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter'); -webkit-filter: hue-rotate(0deg); filter: hue-rotate(0deg); } to { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter'); -webkit-filter:hue-rotate(360deg); filter:hue-rotate(360deg); }  }", ""]);
+exports.push([module.i, ".style__pastille___foiY7 {\n    border-radius: 100%;\n    background-color: white;\n    position: relative;\n    padding: 16px;\n    height: 2em;\n    width: 2em;\n    z-index: 1;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    transition: border-color 0.7s;\n    border: 3px solid black;\n}\n\n\n.style__pastille___foiY7 strong {\n    font-size: large;\n}\n\n\n.style__pastille___foiY7:hover {\n    border-color: transparent;\n    background-clip: padding-box;\n}\n\n\n.style__pastille___foiY7:hover::after {\n    position: absolute;\n    top: -3px;\n    bottom: -3px;\n    left: -3px;\n    right: -3px;\n    border-radius: 32px;\n    content: '';\n    z-index: 0;\n    background: linear-gradient(45deg,\n        rgba(255, 0, 0, 1) 0%,\n        rgba(255, 255, 0, 1) 15%,\n        rgba(0, 255, 0, 1) 30%,\n        rgba(0, 255, 255, 1) 50%,\n        rgba(0, 0, 255, 1) 65%,\n        rgba(255, 0, 255, 1) 80%,\n        rgba(255, 0, 0, 1) 100%\n    );\n    -webkit-animation: style__hue-rotate___15A0Z 2s linear infinite;\n            animation: style__hue-rotate___15A0Z 2s linear infinite;\n}\n\n\n@-webkit-keyframes style__hue-rotate___15A0Z { from { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter'); -webkit-filter: hue-rotate(0deg); filter: hue-rotate(0deg); } to { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter'); -webkit-filter:hue-rotate(360deg); filter:hue-rotate(360deg); }  }\n\n\n@keyframes style__hue-rotate___15A0Z { from { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter'); -webkit-filter: hue-rotate(0deg); filter: hue-rotate(0deg); } to { filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter'); -webkit-filter:hue-rotate(360deg); filter:hue-rotate(360deg); }  }", ""]);
 
 // exports
 exports.locals = {
@@ -1028,15 +1028,15 @@ function toComment(sourceMap) {
 "use strict";
 
 
-var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 23);
+var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 26);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
-var _slicedToArray2 = __webpack_require__(/*! babel-runtime/helpers/slicedToArray */ 24);
+var _slicedToArray2 = __webpack_require__(/*! babel-runtime/helpers/slicedToArray */ 27);
 
 var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 22);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 25);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
@@ -1187,29 +1187,29 @@ module.exports = insertCss;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env__ = __webpack_require__(/*! babel-preset-env */ 19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env__ = __webpack_require__(/*! babel-preset-env */ 22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_preset_env__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react__ = __webpack_require__(/*! babel-preset-react */ 20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react__ = __webpack_require__(/*! babel-preset-react */ 23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_preset_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__ = __webpack_require__(/*! babel-preset-stage-1 */ 21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__ = __webpack_require__(/*! babel-preset-stage-1 */ 24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__ = __webpack_require__(/*! babel-plugin-react-require */ 14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__ = __webpack_require__(/*! babel-plugin-react-require */ 17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__ = __webpack_require__(/*! babel-plugin-transform-export-default-name-forked */ 15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__ = __webpack_require__(/*! babel-plugin-transform-export-default-name-forked */ 18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__ = __webpack_require__(/*! babel-plugin-minify-replace */ 13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__ = __webpack_require__(/*! babel-plugin-minify-replace */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__ = __webpack_require__(/*! babel-plugin-transform-node-env-inline */ 16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__ = __webpack_require__(/*! babel-plugin-transform-node-env-inline */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__ = __webpack_require__(/*! babel-plugin-minify-dead-code-elimination */ 11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__ = __webpack_require__(/*! babel-plugin-minify-dead-code-elimination */ 14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__ = __webpack_require__(/*! babel-plugin-minify-guarded-expressions */ 12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__ = __webpack_require__(/*! babel-plugin-minify-guarded-expressions */ 15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__ = __webpack_require__(/*! babel-plugin-discard-module-references */ 10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__ = __webpack_require__(/*! babel-plugin-discard-module-references */ 13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-source */ 18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-source */ 21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-self */ 17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-self */ 20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils__ = __webpack_require__(/*! ../utils */ "./node_modules/vitaminjs/config/utils/index.js");
 
@@ -1278,11 +1278,11 @@ module.exports = insertCss;
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = clientConfig;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__ = __webpack_require__(/*! lodash.mergewith */ 35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__ = __webpack_require__(/*! lodash.mergewith */ 38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack__ = __webpack_require__(/*! webpack */ 5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack__ = __webpack_require__(/*! webpack */ 6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_webpack__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin__ = __webpack_require__(/*! serviceworker-webpack-plugin */ 51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin__ = __webpack_require__(/*! serviceworker-webpack-plugin */ 56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__webpack_config_common_js__ = __webpack_require__(/*! ./webpack.config.common.js */ "./node_modules/vitaminjs/config/build/webpack.config.common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils__ = __webpack_require__(/*! ../utils */ "./node_modules/vitaminjs/config/utils/index.js");
@@ -1331,23 +1331,23 @@ function clientConfig(options) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = config;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webpack__ = __webpack_require__(/*! webpack */ 5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webpack__ = __webpack_require__(/*! webpack */ 6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webpack___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_webpack__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__ = __webpack_require__(/*! case-sensitive-paths-webpack-plugin */ 25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__ = __webpack_require__(/*! case-sensitive-paths-webpack-plugin */ 28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__ = __webpack_require__(/*! react-dev-utils/WatchMissingNodeModulesPlugin */ 44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__ = __webpack_require__(/*! react-dev-utils/WatchMissingNodeModulesPlugin */ 49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__ = __webpack_require__(/*! postcss-omit-import-tilde */ 41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__ = __webpack_require__(/*! postcss-omit-import-tilde */ 44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import__ = __webpack_require__(/*! postcss-import */ 40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import__ = __webpack_require__(/*! postcss-import */ 43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_postcss_import__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url__ = __webpack_require__(/*! postcss-url */ 43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url__ = __webpack_require__(/*! postcss-url */ 46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_postcss_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__ = __webpack_require__(/*! postcss-cssnext */ 39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__ = __webpack_require__(/*! postcss-cssnext */ 42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__ = __webpack_require__(/*! postcss-browser-reporter */ 38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__ = __webpack_require__(/*! postcss-browser-reporter */ 41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter__ = __webpack_require__(/*! postcss-reporter */ 42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter__ = __webpack_require__(/*! postcss-reporter */ 45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_postcss_reporter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_path__ = __webpack_require__(/*! path */ 7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_path___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_path__);
@@ -1686,11 +1686,11 @@ function concat(left, right) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose__ = __webpack_require__(/*! koa-compose */ 30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose__ = __webpack_require__(/*! koa-compose */ 33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_koa_compose__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag__ = __webpack_require__(/*! koa-etag */ 32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag__ = __webpack_require__(/*! koa-etag */ 35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_etag__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__ = __webpack_require__(/*! koa-conditional-get */ 31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__ = __webpack_require__(/*! koa-conditional-get */ 34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__middlewares_errorHandler__ = __webpack_require__(/*! ./middlewares/errorHandler */ "./node_modules/vitaminjs/src/server/middlewares/errorHandler.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_modules_server_middlewares___ = __webpack_require__(/*! __app_modules__server_middlewares__ */ "./node_modules/vitaminjs/config/utils/emptyArray.js");
@@ -1737,7 +1737,7 @@ true && ((ctx, next) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape__ = __webpack_require__(/*! js-string-escape */ 28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape__ = __webpack_require__(/*! js-string-escape */ 31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_js_string_escape__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(/*! react-router */ 3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
@@ -2914,9 +2914,9 @@ const routesWithStore = typeof __WEBPACK_IMPORTED_MODULE_1__app_modules_routes__
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static__ = __webpack_require__(/*! koa-static */ 34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static__ = __webpack_require__(/*! koa-static */ 37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_static__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount__ = __webpack_require__(/*! koa-mount */ 33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount__ = __webpack_require__(/*! koa-mount */ 36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_koa_mount__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(/*! ../../../config */ "./node_modules/vitaminjs/config/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__config__);
@@ -2998,7 +2998,7 @@ const reducers = __webpack_require__(/*! __app_modules__redux_reducers__ */ "./n
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom_server___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom_server__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet__ = __webpack_require__(/*! react-helmet */ 1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_helmet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver__ = __webpack_require__(/*! react-resolver */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver__ = __webpack_require__(/*! react-resolver */ 51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_resolver__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_modules_server_layout___ = __webpack_require__(/*! __app_modules__server_layout__ */ "./node_modules/vitaminjs/src/server/components/HTMLLayout.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config__ = __webpack_require__(/*! ../../config */ "./node_modules/vitaminjs/config/index.js");
@@ -3110,17 +3110,17 @@ const renderLayout = (_ref) => {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(/*! koa */ 29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(/*! koa */ 32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(/*! express */ 26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(/*! express */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_express__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chalk__ = __webpack_require__(/*! chalk */ 4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chalk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_chalk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch__ = __webpack_require__(/*! node-fetch */ 37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch__ = __webpack_require__(/*! node-fetch */ 40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_node_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline__ = __webpack_require__(/*! readline */ 48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline__ = __webpack_require__(/*! readline */ 53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_readline__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__ = __webpack_require__(/*! http-graceful-shutdown */ 27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__ = __webpack_require__(/*! http-graceful-shutdown */ 30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__appMiddleware__ = __webpack_require__(/*! ./appMiddleware */ "./node_modules/vitaminjs/src/server/appMiddleware.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__config__ = __webpack_require__(/*! ../../config */ "./node_modules/vitaminjs/config/index.js");
@@ -3159,7 +3159,7 @@ if (true) {
 
     mountedServer.use((() => {
         const app = __WEBPACK_IMPORTED_MODULE_2_express___default()();
-        const webpack = __webpack_require__(/*! webpack */ 5);
+        const webpack = __webpack_require__(/*! webpack */ 6);
         const clientBuildConfig = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__config_build_webpack_config_client__["a" /* default */])(_extends({
             hot: true,
             dev: true
@@ -3168,7 +3168,7 @@ if (true) {
         const compiler = webpack(clientBuildConfig);
         let clientBuilt = false;
         const parsedPublicPath = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_url__["parse"])(__WEBPACK_IMPORTED_MODULE_8__config___default.a.publicPath).pathname || '';
-        app.use(__webpack_require__(/*! webpack-dev-middleware */ 52)(compiler, {
+        app.use(__webpack_require__(/*! webpack-dev-middleware */ 57)(compiler, {
             quiet: true,
             noInfo: true,
             publicPath: parsedPublicPath,
@@ -3183,7 +3183,7 @@ if (true) {
         }));
 
         const hmrPath = `${parsedPublicPath}/__webpack_hmr`;
-        app.use(__webpack_require__(/*! webpack-hot-middleware */ 53)(compiler, {
+        app.use(__webpack_require__(/*! webpack-hot-middleware */ 58)(compiler, {
             log: () => {},
             path: hmrPath,
             reload: true
@@ -3233,7 +3233,7 @@ __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown___default()(server, {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(/*! react-redux */ 45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(/*! react-redux */ 50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__CSSProvider__ = __webpack_require__(/*! ./CSSProvider */ "./node_modules/vitaminjs/src/shared/components/CSSProvider.js");
 var _jsxFileName = '/home/johan/Project/Vagalam/node_modules/vitaminjs/src/shared/components/App.jsx',
@@ -3390,11 +3390,11 @@ if (typeof window !== 'undefined' && typeof window.devToolsExtension !== 'undefi
 "use strict";
 /* unused harmony export createRootReducer */
 /* harmony export (immutable) */ __webpack_exports__["a"] = create;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(/*! redux */ 49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(/*! redux */ 54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux__ = __webpack_require__(/*! react-router-redux */ 47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux__ = __webpack_require__(/*! react-router-redux */ 52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__(/*! redux-thunk */ 50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__(/*! redux-thunk */ 55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_redux_thunk__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_modules_redux_enhancers___ = __webpack_require__(/*! __app_modules__redux_enhancers__ */ "./node_modules/vitaminjs/config/utils/emptyArray.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__devTools__ = __webpack_require__(/*! ./devTools */ "./node_modules/vitaminjs/src/shared/devTools.js");
@@ -3450,17 +3450,23 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/App.jsx',
     {
         __source: {
             fileName: _jsxFileName,
-            lineNumber: 7
+            lineNumber: 6
         },
         __self: _this
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_vitaminjs_react_helmet__["a" /* default */], {
         title: 'Vagalam',
-        meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
-        link: [{ href: "https://fonts.googleapis.com/css?family=Crimson+Text|Lato", rel: 'stylesheet' }],
+        meta: [{
+            name: 'viewport',
+            content: 'width=device-width, initial-scale=1'
+        }],
+        link: [{
+            href: 'https://fonts.googleapis.com/css?family=Crimson+Text|Lato',
+            rel: 'stylesheet'
+        }],
         __source: {
             fileName: _jsxFileName,
-            lineNumber: 8
+            lineNumber: 7
         },
         __self: _this
     }),
@@ -3653,7 +3659,7 @@ const Details = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElemen
         },
         __self: _this
     }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ui_element_Pastille__["a" /* default */], { value: 12, unit: 'km', __source: {
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__ui_element_Pastille__["a" /* default */], { value: 1209, unit: 'km', __source: {
             fileName: _jsxFileName,
             lineNumber: 9
         },
@@ -3706,502 +3712,12 @@ const Details = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElemen
 
 /***/ }),
 
-/***/ "./src/Trip/Map/index.jsx":
-/* exports provided: default */
-/* exports used: default */
-/*!********************************!*\
-  !*** ./src/Trip/Map/index.jsx ***!
-  \********************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_helmet__ = __webpack_require__(/*! vitaminjs/react-helmet */ "./node_modules/vitaminjs/react-helmet.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json__ = __webpack_require__(/*! ../bike_roads/veloscenie.json */ "./src/Trip/bike_roads/veloscenie.json");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json__ = __webpack_require__(/*! ../bike_roads/ev4.json */ "./src/Trip/bike_roads/ev4.json");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Map/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__style_css__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Map/index.jsx';
-
-
-
-
-
-
-
-
-
-class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
-    componentDidMount() {
-        // Only work client side
-        const mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ 36);
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FuY2VhYiIsImEiOiJjajQ0OHZjZzgxOGY3MndzOTh6YTFjbmNyIn0.0pHsI5xrBMh9YMftXmLQKw';
-        const map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/satellite-streets-v10',
-            zoom: 6,
-            center: [2.35, 48.853]
-        });
-        map.on('load', () => {
-            map.addLayer({
-                id: 'veloscenie',
-                type: 'line',
-                source: {
-                    type: 'geojson',
-                    data: __WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json___default.a
-                },
-                layout: {
-                    'line-join': 'round',
-                    'line-cap': 'round'
-                },
-                paint: {
-                    'line-color': '#2067d8',
-                    'line-width': 5
-                }
-            });
-            map.addLayer({
-                id: 'ev4',
-                type: 'line',
-                source: {
-                    type: 'geojson',
-                    data: __WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json___default.a
-                },
-                layout: {
-                    'line-join': 'round',
-                    'line-cap': 'round'
-                },
-                paint: {
-                    'line-color': 'red',
-                    'line-width': 5
-                }
-            });
-        });
-    }
-    render() {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { id: 'map', className: __WEBPACK_IMPORTED_MODULE_5__style_css___default.a.map, onKeyDown: this.handleKeyDown, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 57
-                },
-                __self: this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_helmet__["a" /* default */], {
-                link: [{ href: 'https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css', rel: 'stylesheet' }],
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 58
-                },
-                __self: this
-            })
-        );
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_5__style_css___default.a)(Map));
-
-/***/ }),
-
-/***/ "./src/Trip/Map/style.css":
-/* no static exports found */
-/* exports used: default */
-/*!********************************!*\
-  !*** ./src/Trip/Map/style.css ***!
-  \********************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-
-    var content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Map/style.css");
-    var insertCss = __webpack_require__(/*! ../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
-
-    if (typeof content === 'string') {
-      content = [[module.i, content, '']];
-    }
-
-    module.exports = content.locals || {};
-    module.exports._getContent = function() { return content; };
-    module.exports._getCss = function() { return content.toString(); };
-    module.exports._insertCss = function(options) { return insertCss(content, options) };
-    
-    // Hot Module Replacement
-    // https://webpack.github.io/docs/hot-module-replacement
-    // Only activated in browser context
-    if (module.hot && typeof window !== 'undefined' && window.document) {
-      var removeCss = function() {};
-      module.hot.accept(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Map/style.css", function() {
-        content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Map/style.css");
-
-        if (typeof content === 'string') {
-          content = [[module.i, content, '']];
-        }
-
-        removeCss = insertCss(content, { replace: true });
-      });
-      module.hot.dispose(function() { removeCss(); });
-    }
-  
-
-/***/ }),
-
-/***/ "./src/Trip/Modale/index.jsx":
-/* exports provided: default */
-/* exports used: default */
-/*!***********************************!*\
-  !*** ./src/Trip/Modale/index.jsx ***!
-  \***********************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Modale/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Modale/index.jsx';
-
-
-
-
-
-
-class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
-    constructor(props) {
-        super(props);
-    }
-    handleKeyDown(e) {
-        if (e.key === 'Escape') {
-            this.props.onClose();
-        }
-    }
-    render() {
-        const { onClose, children, isOpen } = this.props;
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            {
-                className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.modale, { [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.opened]: isOpen }),
-                handleKeyDown: this.handleKeyDown,
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 18
-                },
-                __self: this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'button',
-                {
-                    className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a['close-button'],
-                    'aria-label': 'Fermer',
-                    role: 'button',
-                    onClick: onClose,
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 22
-                    },
-                    __self: this
-                },
-                'X'
-            ),
-            children
-        );
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Modale));
-
-/***/ }),
-
-/***/ "./src/Trip/Modale/style.css":
-/* no static exports found */
-/* exports used: default */
-/*!***********************************!*\
-  !*** ./src/Trip/Modale/style.css ***!
-  \***********************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-
-    var content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Modale/style.css");
-    var insertCss = __webpack_require__(/*! ../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
-
-    if (typeof content === 'string') {
-      content = [[module.i, content, '']];
-    }
-
-    module.exports = content.locals || {};
-    module.exports._getContent = function() { return content; };
-    module.exports._getCss = function() { return content.toString(); };
-    module.exports._insertCss = function(options) { return insertCss(content, options) };
-    
-    // Hot Module Replacement
-    // https://webpack.github.io/docs/hot-module-replacement
-    // Only activated in browser context
-    if (module.hot && typeof window !== 'undefined' && window.document) {
-      var removeCss = function() {};
-      module.hot.accept(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Modale/style.css", function() {
-        content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Modale/style.css");
-
-        if (typeof content === 'string') {
-          content = [[module.i, content, '']];
-        }
-
-        removeCss = insertCss(content, { replace: true });
-      });
-      module.hot.dispose(function() { removeCss(); });
-    }
-  
-
-/***/ }),
-
-/***/ "./src/Trip/Post/Pictures/index.jsx":
-/* exports provided: default */
-/* exports used: default */
-/*!******************************************!*\
-  !*** ./src/Trip/Post/Pictures/index.jsx ***!
-  \******************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Post/Pictures/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Post/Pictures/index.jsx';
-
-
-
-
-
-
-class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentPicture: 0
-        };
-    }
-    componentDidMount() {
-        setInterval(() => this.setState(({ currentPicture }) => ({
-            currentPicture: (currentPicture + 1) % this.props.pictures.length
-        })), 10000);
-    }
-    render() {
-        const { pictures } = this.props;
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 24
-                },
-                __self: this
-            },
-            pictures.map((picture, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
-                className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.picture, { [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.show]: this.state.currentPicture === i }),
-                style: { backgroundImage: `url(${picture})` },
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 27
-                },
-                __self: this
-            }))
-        );
-    }
-}
-
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Pictures));
-
-/***/ }),
-
-/***/ "./src/Trip/Post/Pictures/style.css":
+/***/ "./src/Trip/Map/bike_roads/ev4.json":
 /* no static exports found */
 /* exports used: default */
 /*!******************************************!*\
-  !*** ./src/Trip/Post/Pictures/style.css ***!
+  !*** ./src/Trip/Map/bike_roads/ev4.json ***!
   \******************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-
-    var content = __webpack_require__(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css");
-    var insertCss = __webpack_require__(/*! ../../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
-
-    if (typeof content === 'string') {
-      content = [[module.i, content, '']];
-    }
-
-    module.exports = content.locals || {};
-    module.exports._getContent = function() { return content; };
-    module.exports._getCss = function() { return content.toString(); };
-    module.exports._insertCss = function(options) { return insertCss(content, options) };
-    
-    // Hot Module Replacement
-    // https://webpack.github.io/docs/hot-module-replacement
-    // Only activated in browser context
-    if (module.hot && typeof window !== 'undefined' && window.document) {
-      var removeCss = function() {};
-      module.hot.accept(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css", function() {
-        content = __webpack_require__(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css");
-
-        if (typeof content === 'string') {
-          content = [[module.i, content, '']];
-        }
-
-        removeCss = insertCss(content, { replace: true });
-      });
-      module.hot.dispose(function() { removeCss(); });
-    }
-  
-
-/***/ }),
-
-/***/ "./src/Trip/Post/index.jsx":
-/* exports provided: default */
-/* exports used: default */
-/*!*********************************!*\
-  !*** ./src/Trip/Post/index.jsx ***!
-  \*********************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Pictures__ = __webpack_require__(/*! ./Pictures */ "./src/Trip/Post/Pictures/index.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Post/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Post/index.jsx',
-    _this = this;
-
-
-
-
-
-
-const Post = ({ title, date, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'article',
-    {
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 6
-        },
-        __self: _this
-    },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Pictures__["a" /* default */], { pictures: pictures, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 7
-        },
-        __self: _this
-    }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.content, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 8
-            },
-            __self: _this
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h1',
-            {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 9
-                },
-                __self: _this
-            },
-            title
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 10
-                },
-                __self: _this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'small',
-                { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.date, __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 11
-                    },
-                    __self: _this
-                },
-                date.toLocaleDateString()
-            )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
-            className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.body,
-            dangerouslySetInnerHTML: {
-                __html: content
-            },
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 13
-            },
-            __self: _this
-        })
-    )
-);
-
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Post));
-
-/***/ }),
-
-/***/ "./src/Trip/Post/style.css":
-/* no static exports found */
-/* exports used: default */
-/*!*********************************!*\
-  !*** ./src/Trip/Post/style.css ***!
-  \*********************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-
-    var content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/style.css");
-    var insertCss = __webpack_require__(/*! ../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
-
-    if (typeof content === 'string') {
-      content = [[module.i, content, '']];
-    }
-
-    module.exports = content.locals || {};
-    module.exports._getContent = function() { return content; };
-    module.exports._getCss = function() { return content.toString(); };
-    module.exports._insertCss = function(options) { return insertCss(content, options) };
-    
-    // Hot Module Replacement
-    // https://webpack.github.io/docs/hot-module-replacement
-    // Only activated in browser context
-    if (module.hot && typeof window !== 'undefined' && window.document) {
-      var removeCss = function() {};
-      module.hot.accept(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/style.css", function() {
-        content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/style.css");
-
-        if (typeof content === 'string') {
-          content = [[module.i, content, '']];
-        }
-
-        removeCss = insertCss(content, { replace: true });
-      });
-      module.hot.dispose(function() { removeCss(); });
-    }
-  
-
-/***/ }),
-
-/***/ "./src/Trip/bike_roads/ev4.json":
-/* no static exports found */
-/* exports used: default */
-/*!**************************************!*\
-  !*** ./src/Trip/bike_roads/ev4.json ***!
-  \**************************************/
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -15718,12 +15234,12 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./src/Trip/bike_roads/veloscenie.json":
+/***/ "./src/Trip/Map/bike_roads/veloscenie.json":
 /* no static exports found */
 /* exports used: default */
-/*!*********************************************!*\
-  !*** ./src/Trip/bike_roads/veloscenie.json ***!
-  \*********************************************/
+/*!*************************************************!*\
+  !*** ./src/Trip/Map/bike_roads/veloscenie.json ***!
+  \*************************************************/
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -29313,6 +28829,510 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./src/Trip/Map/data.js":
+/* exports provided: path */
+/* exports used: path */
+/*!******************************!*\
+  !*** ./src/Trip/Map/data.js ***!
+  \******************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda__ = __webpack_require__(/*! ramda */ 48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ramda___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ramda__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__turf_meta__ = __webpack_require__(/*! @turf/meta */ 11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__turf_meta___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__turf_meta__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_helpers__ = __webpack_require__(/*! @turf/helpers */ 10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_helpers___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__turf_helpers__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json__ = __webpack_require__(/*! ./bike_roads/veloscenie.json */ "./src/Trip/Map/bike_roads/veloscenie.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json__ = __webpack_require__(/*! ./bike_roads/ev4.json */ "./src/Trip/Map/bike_roads/ev4.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json__);
+
+
+
+
+
+
+const path = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ramda__["pipe"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ramda__["map"])(__WEBPACK_IMPORTED_MODULE_1__turf_meta__["coordAll"]), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ramda__["reduce"])(__WEBPACK_IMPORTED_MODULE_0_ramda__["concat"], []), __WEBPACK_IMPORTED_MODULE_2__turf_helpers__["lineString"])([__WEBPACK_IMPORTED_MODULE_3__bike_roads_veloscenie_json___default.a, __WEBPACK_IMPORTED_MODULE_4__bike_roads_ev4_json___default.a]);
+/* harmony export (immutable) */ __webpack_exports__["a"] = path;
+
+
+/***/ }),
+
+/***/ "./src/Trip/Map/index.jsx":
+/* exports provided: default */
+/* exports used: default */
+/*!********************************!*\
+  !*** ./src/Trip/Map/index.jsx ***!
+  \********************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_helmet__ = __webpack_require__(/*! vitaminjs/react-helmet */ "./node_modules/vitaminjs/react-helmet.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Map/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__data_js__ = __webpack_require__(/*! ./data.js */ "./src/Trip/Map/data.js");
+var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Map/index.jsx';
+
+
+
+
+
+
+
+
+class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    componentDidMount() {
+        // Only work client side
+        const mapboxgl = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ 39);
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FuY2VhYiIsImEiOiJjajQ0OHZjZzgxOGY3MndzOTh6YTFjbmNyIn0.0pHsI5xrBMh9YMftXmLQKw';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/satellite-streets-v10',
+            zoom: 6,
+            center: [2.35, 48.853]
+        });
+        map.on('load', () => {
+            console.log(__WEBPACK_IMPORTED_MODULE_4__data_js__["a" /* path */]);
+            map.addLayer({
+                id: 'veloscenie',
+                type: 'line',
+                source: {
+                    type: 'geojson',
+                    data: __WEBPACK_IMPORTED_MODULE_4__data_js__["a" /* path */]
+                },
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#2067d8',
+                    'line-width': 5
+                }
+            });
+        });
+    }
+    render() {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { id: 'map', className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.map, onKeyDown: this.handleKeyDown, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 41
+                },
+                __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_vitaminjs_react_helmet__["a" /* default */], {
+                link: [{ href: 'https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css', rel: 'stylesheet' }],
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 42
+                },
+                __self: this
+            })
+        );
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Map));
+
+/***/ }),
+
+/***/ "./src/Trip/Map/style.css":
+/* no static exports found */
+/* exports used: default */
+/*!********************************!*\
+  !*** ./src/Trip/Map/style.css ***!
+  \********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Map/style.css");
+    var insertCss = __webpack_require__(/*! ../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
+
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
+    }
+
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (module.hot && typeof window !== 'undefined' && window.document) {
+      var removeCss = function() {};
+      module.hot.accept(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Map/style.css", function() {
+        content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Map/style.css");
+
+        if (typeof content === 'string') {
+          content = [[module.i, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
+
+/***/ }),
+
+/***/ "./src/Trip/Modale/index.jsx":
+/* exports provided: default */
+/* exports used: default */
+/*!***********************************!*\
+  !*** ./src/Trip/Modale/index.jsx ***!
+  \***********************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Modale/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
+var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Modale/index.jsx';
+
+
+
+
+
+
+class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    constructor(props) {
+        super(props);
+        this.handleKeyDown = this.handleKeyDown.bind(this);
+    }
+    handleKeyDown(e) {
+        if (e.key === 'Escape') {
+            this.props.onClose();
+        }
+    }
+    render() {
+        const { onClose, children, isOpen } = this.props;
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            {
+                className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.modale, { [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.opened]: isOpen }),
+                onKeyDown: this.handleKeyDown,
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 19
+                },
+                __self: this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'button',
+                {
+                    className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a['close-button'],
+                    'aria-label': 'Fermer',
+                    role: 'button',
+                    onClick: onClose,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 23
+                    },
+                    __self: this
+                },
+                'X'
+            ),
+            children
+        );
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Modale));
+
+/***/ }),
+
+/***/ "./src/Trip/Modale/style.css":
+/* no static exports found */
+/* exports used: default */
+/*!***********************************!*\
+  !*** ./src/Trip/Modale/style.css ***!
+  \***********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Modale/style.css");
+    var insertCss = __webpack_require__(/*! ../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
+
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
+    }
+
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (module.hot && typeof window !== 'undefined' && window.document) {
+      var removeCss = function() {};
+      module.hot.accept(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Modale/style.css", function() {
+        content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Modale/style.css");
+
+        if (typeof content === 'string') {
+          content = [[module.i, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
+
+/***/ }),
+
+/***/ "./src/Trip/Post/Pictures/index.jsx":
+/* exports provided: default */
+/* exports used: default */
+/*!******************************************!*\
+  !*** ./src/Trip/Post/Pictures/index.jsx ***!
+  \******************************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Post/Pictures/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
+var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Post/Pictures/index.jsx';
+
+
+
+
+
+
+class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentPicture: 0
+        };
+    }
+    componentDidMount() {
+        setInterval(() => this.setState(({ currentPicture }) => ({
+            currentPicture: (currentPicture + 1) % this.props.pictures.length
+        })), 10000);
+    }
+    render() {
+        const { pictures } = this.props;
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 24
+                },
+                __self: this
+            },
+            pictures.map((picture, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
+                className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.picture, { [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.show]: this.state.currentPicture === i }),
+                key: picture,
+                style: { backgroundImage: `url(${picture})` },
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 27
+                },
+                __self: this
+            }))
+        );
+    }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Pictures));
+
+/***/ }),
+
+/***/ "./src/Trip/Post/Pictures/style.css":
+/* no static exports found */
+/* exports used: default */
+/*!******************************************!*\
+  !*** ./src/Trip/Post/Pictures/style.css ***!
+  \******************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var content = __webpack_require__(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css");
+    var insertCss = __webpack_require__(/*! ../../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
+
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
+    }
+
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (module.hot && typeof window !== 'undefined' && window.document) {
+      var removeCss = function() {};
+      module.hot.accept(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css", function() {
+        content = __webpack_require__(/*! !../../../../~/css-loader??ref--1-1!../../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/Pictures/style.css");
+
+        if (typeof content === 'string') {
+          content = [[module.i, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
+
+/***/ }),
+
+/***/ "./src/Trip/Post/index.jsx":
+/* exports provided: default */
+/* exports used: default */
+/*!*********************************!*\
+  !*** ./src/Trip/Post/index.jsx ***!
+  \*********************************/
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Pictures__ = __webpack_require__(/*! ./Pictures */ "./src/Trip/Post/Pictures/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Post/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
+var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Post/index.jsx',
+    _this = this;
+
+
+
+
+
+
+const Post = ({ title, date, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'article',
+    {
+        __source: {
+            fileName: _jsxFileName,
+            lineNumber: 6
+        },
+        __self: _this
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Pictures__["a" /* default */], { pictures: pictures, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 7
+        },
+        __self: _this
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.content, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 8
+            },
+            __self: _this
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h1',
+            {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 9
+                },
+                __self: _this
+            },
+            title
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 10
+                },
+                __self: _this
+            },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'small',
+                { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.date, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 11
+                    },
+                    __self: _this
+                },
+                date.toLocaleDateString()
+            )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
+            className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.body,
+            dangerouslySetInnerHTML: {
+                __html: content
+            },
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 13
+            },
+            __self: _this
+        })
+    )
+);
+
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Post));
+
+/***/ }),
+
+/***/ "./src/Trip/Post/style.css":
+/* no static exports found */
+/* exports used: default */
+/*!*********************************!*\
+  !*** ./src/Trip/Post/style.css ***!
+  \*********************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+
+    var content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/style.css");
+    var insertCss = __webpack_require__(/*! ../../../~/isomorphic-style-loader/lib/insertCss.js */ "./node_modules/isomorphic-style-loader/lib/insertCss.js");
+
+    if (typeof content === 'string') {
+      content = [[module.i, content, '']];
+    }
+
+    module.exports = content.locals || {};
+    module.exports._getContent = function() { return content; };
+    module.exports._getCss = function() { return content.toString(); };
+    module.exports._insertCss = function(options) { return insertCss(content, options) };
+    
+    // Hot Module Replacement
+    // https://webpack.github.io/docs/hot-module-replacement
+    // Only activated in browser context
+    if (module.hot && typeof window !== 'undefined' && window.document) {
+      var removeCss = function() {};
+      module.hot.accept(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/style.css", function() {
+        content = __webpack_require__(/*! !../../../~/css-loader??ref--1-1!../../../~/postcss-loader!./style.css */ "./node_modules/css-loader/index.js?{\"minimize\":false,\"discardComments\":{\"removeAll\":false},\"importLoaders\":1,\"localIdentName\":\"[name]__[local]___[hash:base64:5]\",\"modules\":true}!./node_modules/postcss-loader/index.js!./src/Trip/Post/style.css");
+
+        if (typeof content === 'string') {
+          content = [[module.i, content, '']];
+        }
+
+        removeCss = insertCss(content, { replace: true });
+      });
+      module.hot.dispose(function() { removeCss(); });
+    }
+  
+
+/***/ }),
+
 /***/ "./src/Trip/index.jsx":
 /* exports provided: default */
 /* exports used: default */
@@ -29325,14 +29345,16 @@ module.exports = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Map__ = __webpack_require__(/*! ./Map */ "./src/Trip/Map/index.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Modale__ = __webpack_require__(/*! ./Modale */ "./src/Trip/Modale/index.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Details__ = __webpack_require__(/*! ./Details */ "./src/Trip/Details/index.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Post__ = __webpack_require__(/*! ./Post */ "./src/Trip/Post/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prismic_io__ = __webpack_require__(/*! prismic.io */ 47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prismic_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prismic_io__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Map__ = __webpack_require__(/*! ./Map */ "./src/Trip/Map/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Modale__ = __webpack_require__(/*! ./Modale */ "./src/Trip/Modale/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Details__ = __webpack_require__(/*! ./Details */ "./src/Trip/Details/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Post__ = __webpack_require__(/*! ./Post */ "./src/Trip/Post/index.jsx");
 var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/index.jsx';
 
 
@@ -29344,12 +29366,20 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/index.jsx';
 
 
 
+
+
+const getSleepingLocations = () => __WEBPACK_IMPORTED_MODULE_3_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query(__WEBPACK_IMPORTED_MODULE_3_prismic_io___default.a.Predicates.at('document.type', 'sleep_location')));
+// .then(response => console.log(response.results));
+
 class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     constructor(props) {
         super(props);
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.handleModalClose = this.handleModalClose.bind(this);
         this.state = { showPost: false };
+    }
+    componentDidMount() {
+        getSleepingLocations();
     }
     handleKeyDown(e) {
         if (e.key === ' ') {
@@ -29360,24 +29390,23 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         this.setState({ showPost: false });
     }
     render() {
-        console.log(this.state.showPost);
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.layout, onKeyDown: this.handleKeyDown, __source: {
+            { className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.layout, onKeyDown: this.handleKeyDown, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 27
+                    lineNumber: 37
                 },
                 __self: this
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_5__Modale__["a" /* default */],
+                __WEBPACK_IMPORTED_MODULE_6__Modale__["a" /* default */],
                 { isOpen: this.state.showPost, onClose: this.handleModalClose, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 28
+                        lineNumber: 38
                     },
                     __self: this
                 },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Post__["a" /* default */], {
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Post__["a" /* default */], {
                     title: 'A new beginning',
                     date: new Date(2017, 6, 1),
                     content: `
@@ -29395,31 +29424,31 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     pictures: ["https://vagalamapi.files.wordpress.com/2017/06/dscf3713.jpg?quality=80&strip=info&w=900", "/assets/files/b2e24f6b7884a150397208cb09913252.jpg"],
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 29
+                        lineNumber: 39
                     },
                     __self: this
                 })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.map, { [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.zoom]: this.state.showPost }), __source: {
+                { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_4__style_css___default.a.map, { [__WEBPACK_IMPORTED_MODULE_4__style_css___default.a.zoom]: this.state.showPost }), __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 50
+                        lineNumber: 60
                     },
                     __self: this
                 },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Map__["a" /* default */], {
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Map__["a" /* default */], {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 51
+                        lineNumber: 61
                     },
                     __self: this
                 })
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Details__["a" /* default */], {
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Details__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 53
+                    lineNumber: 63
                 },
                 __self: this
             })
@@ -29427,7 +29456,7 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Trip));
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_4__style_css___default.a)(Trip));
 
 /***/ }),
 
@@ -29773,6 +29802,30 @@ module.exports = require("react-helmet");
 
 /***/ 10:
 /* no static exports found */
+/* exports used: lineString */
+/*!********************************!*\
+  !*** external "@turf/helpers" ***!
+  \********************************/
+/***/ (function(module, exports) {
+
+module.exports = require("@turf/helpers");
+
+/***/ }),
+
+/***/ 11:
+/* no static exports found */
+/* exports used: coordAll */
+/*!*****************************!*\
+  !*** external "@turf/meta" ***!
+  \*****************************/
+/***/ (function(module, exports) {
+
+module.exports = require("@turf/meta");
+
+/***/ }),
+
+/***/ 13:
+/* no static exports found */
 /* exports used: default */
 /*!*********************************************************!*\
   !*** external "babel-plugin-discard-module-references" ***!
@@ -29783,7 +29836,7 @@ module.exports = require("babel-plugin-discard-module-references");
 
 /***/ }),
 
-/***/ 11:
+/***/ 14:
 /* no static exports found */
 /* exports used: default */
 /*!************************************************************!*\
@@ -29795,7 +29848,7 @@ module.exports = require("babel-plugin-minify-dead-code-elimination");
 
 /***/ }),
 
-/***/ 12:
+/***/ 15:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************************!*\
@@ -29807,7 +29860,7 @@ module.exports = require("babel-plugin-minify-guarded-expressions");
 
 /***/ }),
 
-/***/ 13:
+/***/ 16:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************!*\
@@ -29819,7 +29872,7 @@ module.exports = require("babel-plugin-minify-replace");
 
 /***/ }),
 
-/***/ 14:
+/***/ 17:
 /* no static exports found */
 /* exports used: default */
 /*!*********************************************!*\
@@ -29831,7 +29884,7 @@ module.exports = require("babel-plugin-react-require");
 
 /***/ }),
 
-/***/ 15:
+/***/ 18:
 /* no static exports found */
 /* exports used: default */
 /*!********************************************************************!*\
@@ -29843,7 +29896,7 @@ module.exports = require("babel-plugin-transform-export-default-name-forked");
 
 /***/ }),
 
-/***/ 16:
+/***/ 19:
 /* no static exports found */
 /* exports used: default */
 /*!*********************************************************!*\
@@ -29852,42 +29905,6 @@ module.exports = require("babel-plugin-transform-export-default-name-forked");
 /***/ (function(module, exports) {
 
 module.exports = require("babel-plugin-transform-node-env-inline");
-
-/***/ }),
-
-/***/ 17:
-/* no static exports found */
-/* exports used: default */
-/*!********************************************************!*\
-  !*** external "babel-plugin-transform-react-jsx-self" ***!
-  \********************************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-plugin-transform-react-jsx-self");
-
-/***/ }),
-
-/***/ 18:
-/* no static exports found */
-/* exports used: default */
-/*!**********************************************************!*\
-  !*** external "babel-plugin-transform-react-jsx-source" ***!
-  \**********************************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-plugin-transform-react-jsx-source");
-
-/***/ }),
-
-/***/ 19:
-/* no static exports found */
-/* exports used: default */
-/*!***********************************!*\
-  !*** external "babel-preset-env" ***!
-  \***********************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-preset-env");
 
 /***/ }),
 
@@ -29906,6 +29923,42 @@ module.exports = require("isomorphic-style-loader/lib/withStyles");
 /***/ 20:
 /* no static exports found */
 /* exports used: default */
+/*!********************************************************!*\
+  !*** external "babel-plugin-transform-react-jsx-self" ***!
+  \********************************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("babel-plugin-transform-react-jsx-self");
+
+/***/ }),
+
+/***/ 21:
+/* no static exports found */
+/* exports used: default */
+/*!**********************************************************!*\
+  !*** external "babel-plugin-transform-react-jsx-source" ***!
+  \**********************************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("babel-plugin-transform-react-jsx-source");
+
+/***/ }),
+
+/***/ 22:
+/* no static exports found */
+/* exports used: default */
+/*!***********************************!*\
+  !*** external "babel-preset-env" ***!
+  \***********************************/
+/***/ (function(module, exports) {
+
+module.exports = require("babel-preset-env");
+
+/***/ }),
+
+/***/ 23:
+/* no static exports found */
+/* exports used: default */
 /*!*************************************!*\
   !*** external "babel-preset-react" ***!
   \*************************************/
@@ -29915,7 +29968,7 @@ module.exports = require("babel-preset-react");
 
 /***/ }),
 
-/***/ 21:
+/***/ 24:
 /* no static exports found */
 /* exports used: default */
 /*!***************************************!*\
@@ -29927,7 +29980,7 @@ module.exports = require("babel-preset-stage-1");
 
 /***/ }),
 
-/***/ 22:
+/***/ 25:
 /* no static exports found */
 /* all exports used */
 /*!*****************************************************!*\
@@ -29939,7 +29992,7 @@ module.exports = require("babel-runtime/core-js/get-iterator");
 
 /***/ }),
 
-/***/ 23:
+/***/ 26:
 /* no static exports found */
 /* all exports used */
 /*!*******************************************************!*\
@@ -29951,7 +30004,7 @@ module.exports = require("babel-runtime/core-js/json/stringify");
 
 /***/ }),
 
-/***/ 24:
+/***/ 27:
 /* no static exports found */
 /* all exports used */
 /*!******************************************************!*\
@@ -29963,7 +30016,7 @@ module.exports = require("babel-runtime/helpers/slicedToArray");
 
 /***/ }),
 
-/***/ 25:
+/***/ 28:
 /* no static exports found */
 /* exports used: default */
 /*!******************************************************!*\
@@ -29975,7 +30028,7 @@ module.exports = require("case-sensitive-paths-webpack-plugin");
 
 /***/ }),
 
-/***/ 26:
+/***/ 29:
 /* no static exports found */
 /* exports used: default */
 /*!**************************!*\
@@ -29984,42 +30037,6 @@ module.exports = require("case-sensitive-paths-webpack-plugin");
 /***/ (function(module, exports) {
 
 module.exports = require("express");
-
-/***/ }),
-
-/***/ 27:
-/* no static exports found */
-/* exports used: default */
-/*!*****************************************!*\
-  !*** external "http-graceful-shutdown" ***!
-  \*****************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("http-graceful-shutdown");
-
-/***/ }),
-
-/***/ 28:
-/* no static exports found */
-/* exports used: default */
-/*!***********************************!*\
-  !*** external "js-string-escape" ***!
-  \***********************************/
-/***/ (function(module, exports) {
-
-module.exports = require("js-string-escape");
-
-/***/ }),
-
-/***/ 29:
-/* no static exports found */
-/* exports used: default */
-/*!**********************!*\
-  !*** external "koa" ***!
-  \**********************/
-/***/ (function(module, exports) {
-
-module.exports = require("koa");
 
 /***/ }),
 
@@ -30038,6 +30055,42 @@ module.exports = require("react-router");
 /***/ 30:
 /* no static exports found */
 /* exports used: default */
+/*!*****************************************!*\
+  !*** external "http-graceful-shutdown" ***!
+  \*****************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("http-graceful-shutdown");
+
+/***/ }),
+
+/***/ 31:
+/* no static exports found */
+/* exports used: default */
+/*!***********************************!*\
+  !*** external "js-string-escape" ***!
+  \***********************************/
+/***/ (function(module, exports) {
+
+module.exports = require("js-string-escape");
+
+/***/ }),
+
+/***/ 32:
+/* no static exports found */
+/* exports used: default */
+/*!**********************!*\
+  !*** external "koa" ***!
+  \**********************/
+/***/ (function(module, exports) {
+
+module.exports = require("koa");
+
+/***/ }),
+
+/***/ 33:
+/* no static exports found */
+/* exports used: default */
 /*!******************************!*\
   !*** external "koa-compose" ***!
   \******************************/
@@ -30047,7 +30100,7 @@ module.exports = require("koa-compose");
 
 /***/ }),
 
-/***/ 31:
+/***/ 34:
 /* no static exports found */
 /* exports used: default */
 /*!**************************************!*\
@@ -30059,7 +30112,7 @@ module.exports = require("koa-conditional-get");
 
 /***/ }),
 
-/***/ 32:
+/***/ 35:
 /* no static exports found */
 /* exports used: default */
 /*!***************************!*\
@@ -30071,7 +30124,7 @@ module.exports = require("koa-etag");
 
 /***/ }),
 
-/***/ 33:
+/***/ 36:
 /* no static exports found */
 /* exports used: default */
 /*!****************************!*\
@@ -30083,7 +30136,7 @@ module.exports = require("koa-mount");
 
 /***/ }),
 
-/***/ 34:
+/***/ 37:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************!*\
@@ -30095,7 +30148,7 @@ module.exports = require("koa-static");
 
 /***/ }),
 
-/***/ 35:
+/***/ 38:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -30107,7 +30160,7 @@ module.exports = require("lodash.mergewith");
 
 /***/ }),
 
-/***/ 36:
+/***/ 39:
 /* no static exports found */
 /* all exports used */
 /*!**********************************************!*\
@@ -30116,42 +30169,6 @@ module.exports = require("lodash.mergewith");
 /***/ (function(module, exports) {
 
 module.exports = require("mapbox-gl/dist/mapbox-gl.js");
-
-/***/ }),
-
-/***/ 37:
-/* no static exports found */
-/* exports used: default */
-/*!*****************************!*\
-  !*** external "node-fetch" ***!
-  \*****************************/
-/***/ (function(module, exports) {
-
-module.exports = require("node-fetch");
-
-/***/ }),
-
-/***/ 38:
-/* no static exports found */
-/* exports used: default */
-/*!*******************************************!*\
-  !*** external "postcss-browser-reporter" ***!
-  \*******************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("postcss-browser-reporter");
-
-/***/ }),
-
-/***/ 39:
-/* no static exports found */
-/* exports used: default */
-/*!**********************************!*\
-  !*** external "postcss-cssnext" ***!
-  \**********************************/
-/***/ (function(module, exports) {
-
-module.exports = require("postcss-cssnext");
 
 /***/ }),
 
@@ -30170,6 +30187,42 @@ module.exports = require("chalk");
 /***/ 40:
 /* no static exports found */
 /* exports used: default */
+/*!*****************************!*\
+  !*** external "node-fetch" ***!
+  \*****************************/
+/***/ (function(module, exports) {
+
+module.exports = require("node-fetch");
+
+/***/ }),
+
+/***/ 41:
+/* no static exports found */
+/* exports used: default */
+/*!*******************************************!*\
+  !*** external "postcss-browser-reporter" ***!
+  \*******************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("postcss-browser-reporter");
+
+/***/ }),
+
+/***/ 42:
+/* no static exports found */
+/* exports used: default */
+/*!**********************************!*\
+  !*** external "postcss-cssnext" ***!
+  \**********************************/
+/***/ (function(module, exports) {
+
+module.exports = require("postcss-cssnext");
+
+/***/ }),
+
+/***/ 43:
+/* no static exports found */
+/* exports used: default */
 /*!*********************************!*\
   !*** external "postcss-import" ***!
   \*********************************/
@@ -30179,7 +30232,7 @@ module.exports = require("postcss-import");
 
 /***/ }),
 
-/***/ 41:
+/***/ 44:
 /* no static exports found */
 /* exports used: default */
 /*!********************************************!*\
@@ -30191,7 +30244,7 @@ module.exports = require("postcss-omit-import-tilde");
 
 /***/ }),
 
-/***/ 42:
+/***/ 45:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -30203,7 +30256,7 @@ module.exports = require("postcss-reporter");
 
 /***/ }),
 
-/***/ 43:
+/***/ 46:
 /* no static exports found */
 /* exports used: default */
 /*!******************************!*\
@@ -30215,7 +30268,31 @@ module.exports = require("postcss-url");
 
 /***/ }),
 
-/***/ 44:
+/***/ 47:
+/* no static exports found */
+/* exports used: default */
+/*!*****************************!*\
+  !*** external "prismic.io" ***!
+  \*****************************/
+/***/ (function(module, exports) {
+
+module.exports = require("prismic.io");
+
+/***/ }),
+
+/***/ 48:
+/* no static exports found */
+/* exports used: pipe, map, reduce, concat */
+/*!************************!*\
+  !*** external "ramda" ***!
+  \************************/
+/***/ (function(module, exports) {
+
+module.exports = require("ramda");
+
+/***/ }),
+
+/***/ 49:
 /* no static exports found */
 /* exports used: default */
 /*!****************************************************************!*\
@@ -30227,7 +30304,19 @@ module.exports = require("react-dev-utils/WatchMissingNodeModulesPlugin");
 
 /***/ }),
 
-/***/ 45:
+/***/ 5:
+/* no static exports found */
+/* exports used: default */
+/*!*****************************!*\
+  !*** external "classnames" ***!
+  \*****************************/
+/***/ (function(module, exports) {
+
+module.exports = require("classnames");
+
+/***/ }),
+
+/***/ 50:
 /* no static exports found */
 /* exports used: Provider */
 /*!******************************!*\
@@ -30239,7 +30328,7 @@ module.exports = require("react-redux");
 
 /***/ }),
 
-/***/ 46:
+/***/ 51:
 /* no static exports found */
 /* exports used: Resolver */
 /*!*********************************!*\
@@ -30251,7 +30340,7 @@ module.exports = require("react-resolver");
 
 /***/ }),
 
-/***/ 47:
+/***/ 52:
 /* no static exports found */
 /* exports used: routerReducer, routerMiddleware */
 /*!*************************************!*\
@@ -30263,7 +30352,7 @@ module.exports = require("react-router-redux");
 
 /***/ }),
 
-/***/ 48:
+/***/ 53:
 /* no static exports found */
 /* exports used: default */
 /*!***************************!*\
@@ -30275,7 +30364,7 @@ module.exports = require("readline");
 
 /***/ }),
 
-/***/ 49:
+/***/ 54:
 /* no static exports found */
 /* exports used: combineReducers, compose, applyMiddleware, createStore */
 /*!************************!*\
@@ -30287,19 +30376,7 @@ module.exports = require("redux");
 
 /***/ }),
 
-/***/ 5:
-/* no static exports found */
-/* all exports used */
-/*!**************************!*\
-  !*** external "webpack" ***!
-  \**************************/
-/***/ (function(module, exports) {
-
-module.exports = require("webpack");
-
-/***/ }),
-
-/***/ 50:
+/***/ 55:
 /* no static exports found */
 /* exports used: default */
 /*!******************************!*\
@@ -30311,7 +30388,7 @@ module.exports = require("redux-thunk");
 
 /***/ }),
 
-/***/ 51:
+/***/ 56:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************************!*\
@@ -30323,7 +30400,7 @@ module.exports = require("serviceworker-webpack-plugin");
 
 /***/ }),
 
-/***/ 52:
+/***/ 57:
 /* no static exports found */
 /* all exports used */
 /*!*****************************************!*\
@@ -30335,7 +30412,7 @@ module.exports = require("webpack-dev-middleware");
 
 /***/ }),
 
-/***/ 53:
+/***/ 58:
 /* no static exports found */
 /* all exports used */
 /*!*****************************************!*\
@@ -30347,7 +30424,7 @@ module.exports = require("webpack-hot-middleware");
 
 /***/ }),
 
-/***/ 54:
+/***/ 59:
 /* no static exports found */
 /* all exports used */
 /*!**********************************************************************************!*\
@@ -30363,13 +30440,13 @@ module.exports = __webpack_require__(/*! /home/johan/Project/Vagalam/node_module
 
 /***/ 6:
 /* no static exports found */
-/* exports used: default */
-/*!*****************************!*\
-  !*** external "classnames" ***!
-  \*****************************/
+/* all exports used */
+/*!**************************!*\
+  !*** external "webpack" ***!
+  \**************************/
 /***/ (function(module, exports) {
 
-module.exports = require("classnames");
+module.exports = require("webpack");
 
 /***/ }),
 

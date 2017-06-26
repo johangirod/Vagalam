@@ -1,11 +1,19 @@
 import { Component } from 'react';
 import { withStyles } from 'vitaminjs';
 import classnames from 'classnames';
+import Prismic from 'prismic.io';
+
 import s from './style.css';
 import Map from './Map';
 import Modale from './Modale';
 import Details from './Details';
 import Post from './Post';
+
+
+const getSleepingLocations = () =>
+    Prismic.api('http://vagalam.prismic.io/api')
+        .then(api => api.query(Prismic.Predicates.at('document.type', 'sleep_location')))
+        // .then(response => console.log(response.results));
 
 class Trip extends Component {
     constructor(props) {
@@ -13,6 +21,9 @@ class Trip extends Component {
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.handleModalClose = this.handleModalClose.bind(this);
         this.state = { showPost: false }
+    }
+    componentDidMount() {
+        getSleepingLocations();
     }
     handleKeyDown(e) {
         if (e.key === ' ') {
@@ -23,7 +34,6 @@ class Trip extends Component {
         this.setState({ showPost: false });
     }
     render() {
-        console.log(this.state.showPost)
         return <div className={s.layout} onKeyDown={this.handleKeyDown} >
             <Modale isOpen={this.state.showPost} onClose={this.handleModalClose} >
                 <Post
