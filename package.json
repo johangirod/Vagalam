@@ -6,9 +6,11 @@
   "keywords": [],
   "dependencies": {
     "@turf/helpers": "^4.4.0",
+    "@turf/line-slice": "^4.4.0",
     "@turf/meta": "^4.4.0",
     "@turf/simplify": "^4.4.0",
     "classnames": "^2.2.5",
+    "color-convert": "^1.9.0",
     "mapbox-gl": "^0.38.0",
     "normalize.css": "^7.0.0",
     "prismic.io": "^3.5.7",

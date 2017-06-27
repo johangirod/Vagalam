@@ -18,13 +18,92 @@
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@mapbox/whoots-js/-/whoots-js-3.0.0.tgz#c1de4293081424da3ac30c23afa850af1019bb54"
 
+"@turf/bbox-polygon@^4.3.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/bbox-polygon/-/bbox-polygon-4.4.0.tgz#40b17ed063f0722e7407dcd6fad03bfce57b5a15"
+  dependencies:
+    "@turf/helpers" "^4.4.0"
+
+"@turf/bbox@^3.10.5":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@turf/bbox/-/bbox-3.14.0.tgz#cee5f396dde78aca9cede05e1122db18bc504635"
+  dependencies:
+    "@turf/meta" "^3.14.0"
+
+"@turf/bearing@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/bearing/-/bearing-4.4.0.tgz#b8519dd2e60397206b3329e52371b11dc0b777ed"
+  dependencies:
+    "@turf/invariant" "^4.4.0"
+
+"@turf/destination@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/destination/-/destination-4.4.0.tgz#22759e888f60d2fbd111b551be3a4d12e3fa46e8"
+  dependencies:
+    "@turf/helpers" "^4.4.0"
+    "@turf/invariant" "^4.4.0"
+
+"@turf/distance@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/distance/-/distance-4.4.0.tgz#6101f5951caf4e7ee5c006540900574af2f106bd"
+  dependencies:
+    "@turf/helpers" "^4.4.0"
+    "@turf/invariant" "^4.4.0"
+
+"@turf/helpers@^3.10.5":
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-3.13.0.tgz#d06078a1464cf56cdb7ea624ea1e13a71b88b806"
+
 "@turf/helpers@^4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-4.4.0.tgz#c83112f7fbe6ed183c7c0c2f776481b94d1cbd01"
 
+"@turf/invariant@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/invariant/-/invariant-4.4.0.tgz#aac0afb840ae40908f9c80393f416222dcf79c32"
+
+"@turf/line-intersect@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/line-intersect/-/line-intersect-4.4.0.tgz#aa6040a456737a3a5098d538b4bb20d051845195"
+  dependencies:
+    "@turf/helpers" "^4.4.0"
+    "@turf/invariant" "^4.4.0"
+    "@turf/line-segment" "^4.4.0"
+    "@turf/meta" "^4.4.0"
+    geojson-rbush "^1.0.1"
+
+"@turf/line-segment@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/line-segment/-/line-segment-4.4.0.tgz#660fc0bdced64334c38d55c5a562800c67ffa3ec"
+  dependencies:
+    "@turf/helpers" "^4.4.0"
+    "@turf/invariant" "^4.4.0"
+    "@turf/meta" "^4.4.0"
+
+"@turf/line-slice@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/line-slice/-/line-slice-4.4.0.tgz#f9364377a70c8ec53416c5cd5dc43df56a4be365"
+  dependencies:
+    "@turf/helpers" "^4.4.0"
+    "@turf/point-on-line" "^4.4.0"
+
+"@turf/meta@^3.10.5", "@turf/meta@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-3.14.0.tgz#8d3050c1a0f44bf406a633b6bd28c510f7bcee27"
+
 "@turf/meta@^4.4.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-4.4.0.tgz#4fa25d4cc0525bd4cdbaf4ff68a6f8ae81f1975f"
+
+"@turf/point-on-line@^4.4.0":
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/@turf/point-on-line/-/point-on-line-4.4.0.tgz#81a71fb6a8b781e27b512c2a6be017a4ba647ff6"
+  dependencies:
+    "@turf/bearing" "^4.4.0"
+    "@turf/destination" "^4.4.0"
+    "@turf/distance" "^4.4.0"
+    "@turf/helpers" "^4.4.0"
+    "@turf/line-intersect" "^4.4.0"
 
 "@turf/simplify@^4.4.0":
   version "4.4.0"
@@ -1320,7 +1399,7 @@ color-convert@^0.5.3:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-0.5.3.tgz#bdb6c69ce660fadffe0b0007cc447e1b9f7282bd"
 
-color-convert@^1.3.0:
+color-convert@^1.3.0, color-convert@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/color-convert/-/color-convert-1.9.0.tgz#1accf97dd739b983bf994d56fec8f95853641b7a"
   dependencies:
@@ -2275,6 +2354,16 @@ geojson-area@0.1.0:
   resolved "https://registry.yarnpkg.com/geojson-area/-/geojson-area-0.1.0.tgz#d48d807082cfadf4a78df1349be50f38bf1894ae"
   dependencies:
     wgs84 "0.0.0"
+
+geojson-rbush@^1.0.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/geojson-rbush/-/geojson-rbush-1.1.0.tgz#f6c1ac12f8030c890d410b6b0fdeb92a0b3ac318"
+  dependencies:
+    "@turf/bbox" "^3.10.5"
+    "@turf/bbox-polygon" "^4.3.0"
+    "@turf/helpers" "^3.10.5"
+    "@turf/meta" "^3.10.5"
+    rbush "^2.0.1"
 
 geojson-rewind@^0.1.0:
   version "0.1.0"
@@ -4404,6 +4493,12 @@ randombytes@^2.0.0, randombytes@^2.0.1:
 range-parser@^1.0.3, range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
+
+rbush@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/rbush/-/rbush-2.0.1.tgz#4cfaca28c3064bc0ee75431a1b79990e875eefa9"
+  dependencies:
+    quickselect "^1.0.0"
 
 rc@^1.1.7:
   version "1.2.1"

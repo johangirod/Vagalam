@@ -1,6 +1,7 @@
 import Helmet from 'vitaminjs/react-helmet';
 import { Component } from 'react';
 import { withStyles } from 'vitaminjs'; 
+import convert from 'color-convert';
 
 import s from './style.css';
 import { path } from './data.js';
@@ -16,24 +17,24 @@ class Map extends Component {
             zoom: 6,
             center: [2.35, 48.853],
         });
+        console.log(this.props.stepLines);
         map.on('load', () => {
-            console.log(path);  
-            map.addLayer({
-                id: 'veloscenie',
+            this.props.stepLines.map((stepLine, i) => map.addLayer({
+                id: `step-${i}`,
                 type: 'line',
                 source: {
                     type: 'geojson',
-                    data: path,
+                    data: stepLine,
                 },
                 layout: {
                     'line-join': 'round',
                     'line-cap': 'round',
                 },
                 paint: {
-                    'line-color': '#2067d8',
                     'line-width': 5,
+                    'line-color': `#${convert.hsl.hex(360*i/this.props.stepLines.length, 100, 50)}`,
                 },
-            });
+            }));
         });
     }
     render() { 

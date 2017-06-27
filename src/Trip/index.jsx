@@ -2,18 +2,31 @@ import { Component } from 'react';
 import { withStyles } from 'vitaminjs';
 import classnames from 'classnames';
 import Prismic from 'prismic.io';
+import { pipe, map } from 'ramda';
+import { point } from '@turf/helpers';
 
 import s from './style.css';
 import Map from './Map';
 import Modale from './Modale';
 import Details from './Details';
 import Post from './Post';
+import { getStepLines } from './data';
 
 
-const getSleepingLocations = () =>
+const getSleepingPoints = () =>
     Prismic.api('http://vagalam.prismic.io/api')
-        .then(api => api.query(Prismic.Predicates.at('document.type', 'sleep_location')))
-        // .then(response => console.log(response.results));
+        .then(api => api.query(
+            Prismic.Predicates.at('document.type', 'sleep_location'),
+            { orderings : '[my.sleep_location.day_number]', pageSize: 50 },
+        ))
+        .then(pipe(
+            response => response.results,
+            map(result => {
+                const { longitude, latitude } = result.data['sleep_location.location'].value;
+                return point([longitude, latitude]);
+            }),
+        ))
+;
 
 class Trip extends Component {
     constructor(props) {
@@ -23,7 +36,9 @@ class Trip extends Component {
         this.state = { showPost: false }
     }
     componentDidMount() {
-        getSleepingLocations();
+        getSleepingPoints().then(sleepingPoints => this.setState({
+            stepLines: getStepLines(sleepingPoints),
+        }));
     }
     handleKeyDown(e) {
         if (e.key === ' ') {
@@ -58,7 +73,7 @@ class Trip extends Component {
                 />
             </Modale>
             <div className={classnames(s.map, { [s.zoom]: this.state.showPost }) } >
-                <Map />
+                <Map stepLines={this.state.stepLines} />
             </div>
             <Details />
         </div>
