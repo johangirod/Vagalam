@@ -14,18 +14,13 @@ const pathLineString = pipe(
 
 const STARTPOINT = [2.3736243, 48.8840297, 0];
 
-// console.log(pathLineString);
 export const getStepLines = pipe(
     prepend(point(STARTPOINT)),
     map(repeat(__, 2)),
     unnest,
     slice(1, -1),
     aperture(2),
-    map(([startPoint, endPoint]) => {
-        console.log(startPoint, endPoint, pathLineString);
-        return lineSlice(startPoint, endPoint, pathLineString);
-    }),
-    x => (console.log('last', x), x),
+    map(([startPoint, endPoint]) => 
+        lineSlice(startPoint, endPoint, pathLineString)
+    ),
 )
-
-// export const getStepLines = () => [pathLineString];
