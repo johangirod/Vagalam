@@ -1,26 +1,22 @@
-import { Component } from 'react';
 import { withStyles } from 'vitaminjs';
-import classnames from 'classnames';
 import Prismic from 'prismic.io';
-import { pipe, map, compose, concat, find, where, gt, __, pathSatisfies } from 'ramda';
-import { point } from '@turf/helpers';
-import { injectState, provideState } from 'freactal';
+import { compose } from 'ramda';
+import { injectState, provideState, softUpdate } from 'freactal';
 import s from './style.css';
 import Map from './Map';
-import Modale from './Modale';
 import Details from './Details';
-import Post from './Post';
-import { getStepLines } from './data';
-
 
 const getSleepLocationsAfter = date =>
     Prismic.api('http://vagalam.prismic.io/api')
-        .then(api => api.query([
-                Prismic.Predicates.at('document.type', 'sleep_location'),
-                Prismic.Predicates.dateAfter('my.sleep_location.date', date)
-            ],
-            { orderings : '[my.sleep_location.date]', pageSize: 10 },
-        ))
+        .then(api =>
+            api.query(
+                [
+                    Prismic.Predicates.at('document.type', 'sleep_location'),
+                    Prismic.Predicates.dateAfter('my.sleep_location.date', date),
+                ],
+                { orderings: '[my.sleep_location.date]', pageSize: 10 },
+            ),
+        )
         .then(response => response.results);
 
 const FIRST_DAY_DATE = new Date(2017, 4, 28);
@@ -32,43 +28,41 @@ const withSleepLocations = provideState({
         sleepLocations: [],
     }),
     effects: {
-        fetchSleepLocations: (effects, date) => getSleepLocationsAfter(date) 
-            .then(newSleepLocations => state => ({
+        fetchSleepLocations: (effects, date) =>
+            getSleepLocationsAfter(date).then(newSleepLocations => state => ({
                 ...state,
-                sleepLocations: state.sleepLocations.concat(newSleepLocations)
+                sleepLocations: state.sleepLocations.concat(newSleepLocations),
             })),
-        goToNextDay: effects => state => {
+        goToNextDay: effects => (state) => {
             // TODO: case when no more sleeplocation exists
-            const nextLocation = state.sleepLocations.find(sleepLocation => 
-                (new Date(sleepLocation.data['sleep_location.date'].value)) > state.currentDate,
+            const nextLocation = state.sleepLocations.find(
+                sleepLocation =>
+                    new Date(sleepLocation.data['sleep_location.date'].value) > state.currentDate,
             );
             if (!nextLocation) {
-                effects
-                    .fetchSleepLocations(state.currentDate)
-                    .then(effects.goToNextDay);
+                effects.fetchSleepLocations(state.currentDate).then(effects.goToNextDay);
                 return state;
             }
-            return ({
+            return {
                 ...state,
                 currentSleepLocation: nextLocation,
                 currentDate: new Date(nextLocation.data['sleep_location.date'].value),
-            });
+            };
+        },
+        initialize: (effects) => {
+            effects.fetchSleepLocations(FIRST_DAY_DATE);
         },
     },
 });
 
 const Trip = ({ effects }) => {
-    const handleKeyDown = e => (e.key === ' ') && effects.goToNextDay();
-    return ( 
-        <div className={s.layout} onKeyDown={handleKeyDown} >
-            <Map /> 
+    const handleKeyDown = e => e.key === ' ' && effects.goToNextDay();
+    return (
+        <div className={s.layout} onKeyDown={handleKeyDown}>
+            <Map />
             <Details />
         </div>
     );
 };
 
-export default compose(
-    withSleepLocations,
-    injectState,
-    withStyles(s),
-)(Trip);
+export default compose(withSleepLocations, injectState, withStyles(s))(Trip);
