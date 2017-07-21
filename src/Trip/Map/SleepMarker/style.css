@@ -1,5 +1,6 @@
 .icon {
     animation: swirl-in-fwd 0.4s ease-out both;
+    animation-delay: 0.3s;
     padding: 4px;
     border: 1px black solid;
     border-radius: 100%;

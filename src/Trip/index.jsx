@@ -1,6 +1,6 @@
 import { withStyles } from 'vitaminjs';
 import Prismic from 'prismic.io';
-import { compose } from 'ramda';
+import { compose, last } from 'ramda';
 import { injectState, provideState, softUpdate } from 'freactal';
 import s from './style.css';
 import Map from './Map';
@@ -26,13 +26,35 @@ const withSleepLocations = provideState({
         currentSleepLocation: null,
         currentDate: FIRST_DAY_DATE,
         sleepLocations: [],
+        isFetching: false,
     }),
     effects: {
-        fetchSleepLocations: (effects, date) =>
-            getSleepLocationsAfter(date).then(newSleepLocations => state => ({
+        fetchSleepLocations: (effects, date, isFetching, cb) => {
+            if (isFetching) {
+                return state => state;
+            }
+            return effects
+                .setFetching(true)
+                .then(() => getSleepLocationsAfter(date))
+                .then(locations => effects.setFetching(false).then(() => locations))
+                .then(effects.updateSleepLocations)
+                .then(cb)
+                .then(() => state => state);
+        },
+        updateSleepLocations: (effects, sleepLocations) => (state) => {
+            const previousLastDayNumber = state.sleepLocations.length
+                ? last(state.sleepLocations).data['sleep_location.day_number'].value
+                : 0;
+            const fetchedFirstDayNumber = sleepLocations[0].data['sleep_location.day_number'].value;
+            if (previousLastDayNumber >= fetchedFirstDayNumber) {
+                return state;
+            }
+            return {
                 ...state,
-                sleepLocations: state.sleepLocations.concat(newSleepLocations),
-            })),
+                sleepLocations: state.sleepLocations.concat(sleepLocations),
+            };
+        },
+        setFetching: softUpdate((_, isFetching) => ({ isFetching })),
         goToNextDay: effects => (state) => {
             // TODO: case when no more sleeplocation exists
             const nextLocation = state.sleepLocations.find(
@@ -40,7 +62,11 @@ const withSleepLocations = provideState({
                     new Date(sleepLocation.data['sleep_location.date'].value) > state.currentDate,
             );
             if (!nextLocation) {
-                effects.fetchSleepLocations(state.currentDate).then(effects.goToNextDay);
+                effects.fetchSleepLocations(
+                    state.currentDate,
+                    state.isFetching,
+                    effects.goToNextDay,
+                );
                 return state;
             }
             return {
@@ -49,8 +75,9 @@ const withSleepLocations = provideState({
                 currentDate: new Date(nextLocation.data['sleep_location.date'].value),
             };
         },
-        initialize: (effects) => {
-            effects.fetchSleepLocations(FIRST_DAY_DATE);
+        initialize: effects => (state) => {
+            effects.fetchSleepLocations(state.currentDate, state.isFetching);
+            return state;
         },
     },
 });

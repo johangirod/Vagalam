@@ -34,6 +34,7 @@ const withSleepPoints = provideState({
     },
     computed: {
         displayedSleepPoints: ({ sleepLocations, currentSleepLocation }) =>
+            console.log(sleepLocations) ||
             sleepLocations
                 .slice(0, sleepLocations.indexOf(currentSleepLocation) + 1)
                 .map((sleepLocation) => {
