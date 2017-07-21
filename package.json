@@ -1,31 +1,37 @@
 {
-  "name": "vagalam",
-  "version": "0.0.0",
-  "description": "Cycling around the world",
-  "author": "Johan Girod <johangirod@gmail.com> (https://vagalam.bike)",
-  "keywords": [],
-  "dependencies": {
-    "@turf/helpers": "^4.4.0",
-    "@turf/line-slice": "^4.4.0",
-    "@turf/meta": "^4.4.0",
-    "@turf/simplify": "^4.4.0",
-    "classnames": "^2.2.5",
-    "color-convert": "^1.9.0",
-    "freactal": "^1.1.0",
-    "mapbox-gl": "^0.38.0",
-    "normalize.css": "^7.0.0",
-    "prismic.io": "^3.5.7",
-    "ramda": "^0.24.1",
-    "react": "^15.4.2",
-    "vitaminjs": "^1.2.1"
-  },
-  "scripts": {
-    "start": "vitamin start",
-    "build": "vitamin build",
-    "serve": "vitamin serve"
-  },
-  "devDependencies": {
-    "eslint": "^4.0.0",
-    "flow-bin": "^0.48.0"
-  }
+    "name": "vagalam",
+    "version": "0.0.0",
+    "description": "Cycling around the world",
+    "author": "Johan Girod <johangirod@gmail.com> (https://vagalam.bike)",
+    "keywords": [],
+    "dependencies": {
+        "@turf/helpers": "^4.4.0",
+        "@turf/line-slice": "^4.4.0",
+        "@turf/meta": "^4.4.0",
+        "@turf/simplify": "^4.4.0",
+        "classnames": "^2.2.5",
+        "color-convert": "^1.9.0",
+        "freactal": "^1.1.0",
+        "immutable": "^3.8.1",
+        "mapbox-gl": "^0.38.0",
+        "normalize.css": "^7.0.0",
+        "prismic.io": "^3.5.7",
+        "ramda": "^0.24.1",
+        "react": "^15.4.2",
+        "react-mapbox-gl": "^2.1.0",
+        "vitaminjs": "https://github.com/johangirod/vitaminjs#master"
+    },
+    "scripts": {
+        "start": "vitamin start",
+        "build": "vitamin build",
+        "serve": "vitamin serve"
+    },
+    "devDependencies": {
+        "eslint": "^3.19.0",
+        "eslint-config-airbnb": "^15.0.2",
+        "eslint-plugin-import": "^2.7.0",
+        "eslint-plugin-jsx-a11y": "^5.1.1",
+        "eslint-plugin-react": "^7.1.0",
+        "flow-bin": "^0.48.0"
+    }
 }

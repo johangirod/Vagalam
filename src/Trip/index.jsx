@@ -54,7 +54,6 @@ const withSleepLocations = provideState({
                 currentDate: new Date(nextLocation.data['sleep_location.date'].value),
             });
         },
-        initialize: effect => effect.goToNextDay(),
     },
 });
 
