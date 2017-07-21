@@ -6,12 +6,14 @@ import s from './style.css';
 import Icon from './Icon';
 
 const Marker = ({ state: { zoom } }) => {
-    const size = zoom > 7 ? '24px' : '12px';
+    const size = zoom > 8 ? 24 : zoom > 6 ? 12 : /* otherwise */ 4;
     return (
         <div
             style={{
-                height: size,
-                width: size,
+                height: `${size}px`,
+                width: `${size}px`,
+                padding: `${size / 6}px`,
+                borderColor: zoom > 7 ? 'black' : 'transparent',
             }}
             className={s.icon}
         >

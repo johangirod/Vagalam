@@ -5,7 +5,7 @@
     border: 1px black solid;
     border-radius: 100%;
     background-color: white;
-    transition: all 0.3s;
+    transition: height 0.3s, width 0.3s, padding 0.3s;
 }
 
 /* ----------------------------------------------

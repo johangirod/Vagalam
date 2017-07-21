@@ -9,6 +9,7 @@
     "rules": {
         "indent": ["error", 4],
         "no-confusing-arrow": "off",
+        "no-nested-ternary": "off",
         "import/extensions": ["error", "never"],
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],

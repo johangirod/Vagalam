@@ -4,11 +4,11 @@ import { compose, last } from 'ramda';
 import { provideState, injectState, softUpdate } from 'freactal';
 
 import SleepMarker from './SleepMarker';
-import { STARTING_POINT } from './data';
+import { STARTING_POINT, getLine } from './data';
 import s from './style.css';
 import config from '../../config';
 
-const Mapbox = new Proxy(
+let Mapbox = new Proxy(
     {},
     {
         get: (target, name) => target[name] || (() => null),
@@ -17,14 +17,17 @@ const Mapbox = new Proxy(
 
 if (IS_CLIENT) {
     // eslint-disable-next-line global-require
-    const { default: ReactMapboxGl, Marker } = require('react-mapbox-gl');
-    Mapbox.Map = ReactMapboxGl({
+    Mapbox = require('react-mapbox-gl');
+    Mapbox.Map = Mapbox.default({
         accessToken: config.mapboxAccessToken,
     });
-    Mapbox.Marker = Marker;
 }
 
 const INITIAL_ZOOM = [10];
+const getCoordinates = (sleepLocation) => {
+    const { longitude, latitude } = sleepLocation.data['sleep_location.location'].value;
+    return [longitude, latitude];
+};
 const withSleepPoints = provideState({
     initialState: () => ({
         zoom: INITIAL_ZOOM,
@@ -34,19 +37,13 @@ const withSleepPoints = provideState({
     },
     computed: {
         displayedSleepPoints: ({ sleepLocations, currentSleepLocation }) =>
-            console.log(sleepLocations) ||
             sleepLocations
                 .slice(0, sleepLocations.indexOf(currentSleepLocation) + 1)
-                .map((sleepLocation) => {
-                    const { longitude, latitude } = sleepLocation.data[
-                        'sleep_location.location'
-                    ].value;
-                    return [longitude, latitude];
-                }),
+                .map(getCoordinates),
     },
 });
 
-const Map = ({ state: { displayedSleepPoints }, effects: { updateMap } }) =>
+const Map = ({ state: { displayedSleepPoints, currentSleepLocation }, effects: { updateMap } }) =>
     (<Mapbox.Map
         center={last(displayedSleepPoints) || STARTING_POINT}
         containerStyle={{
@@ -59,6 +56,20 @@ const Map = ({ state: { displayedSleepPoints }, effects: { updateMap } }) =>
         onStyleLoad={updateMap}
         movingMethod="easeTo"
     >
+        {currentSleepLocation
+            ? <Mapbox.GeoJSONLayer
+                data={getLine(getCoordinates(currentSleepLocation))}
+                lineLayout={{
+                    'line-join': 'round',
+                    'line-cap': 'round',
+                }}
+                linePaint={{
+                    'line-color': 'white',
+                    'line-opacity': 0.8,
+                    'line-width': 2,
+                }}
+            />
+            : null}
         {displayedSleepPoints.map(sleepPoint =>
             (<Mapbox.Marker key={sleepPoint.join()} coordinates={sleepPoint} anchor="center">
                 <SleepMarker />
