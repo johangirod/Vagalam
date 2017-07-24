@@ -1,5 +1,5 @@
 {
-    "extends": "airbnb",
+    "extends": ["airbnb", "plugin:flowtype/recommended"],
     "env": {
         "browser": true,
         "commonjs": true,
@@ -11,12 +11,15 @@
         "no-confusing-arrow": "off",
         "no-nested-ternary": "off",
         "import/extensions": ["error", "never"],
+        "import/prefer-default-export": "off",
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
         "react/react-in-jsx-scope": "off",
-        "react/style-prop-object": "off" // this will be checked by flow
+        "react/style-prop-object": "off",
+        "react/prop-types": "off"
     },
     "globals": {
         "IS_CLIENT": false
-    }
+    },
+    "plugins": ["flowtype"]
 }

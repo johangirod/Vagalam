@@ -1,10 +1,16 @@
-import { withStyles } from 'vitaminjs';
+// @flow
+import type { LineString2D } from 'flow-geojson';
 
+import { withStyles } from 'vitaminjs';
+import lineDistance from '@turf/line-distance';
+import lineSliceAlong from '@turf/line-slice-along';
+import { Motion, spring } from 'react-motion';
+import { connect } from 'react-redux';
 import { compose, last } from 'ramda';
 import { provideState, injectState, softUpdate } from 'freactal';
-
+import selectors from './selectors';
+import type { SleepLocation } from '../types';
 import SleepMarker from './SleepMarker';
-import { STARTING_POINT, getLine } from './data';
 import s from './style.css';
 import config from '../../config';
 
@@ -24,28 +30,29 @@ if (IS_CLIENT) {
 }
 
 const INITIAL_ZOOM = [10];
-const getCoordinates = (sleepLocation) => {
-    const { longitude, latitude } = sleepLocation.data['sleep_location.location'].value;
-    return [longitude, latitude];
-};
-const withSleepPoints = provideState({
+const withMapZoomControl = provideState({
     initialState: () => ({
         zoom: INITIAL_ZOOM,
     }),
     effects: {
         updateMap: softUpdate((_, map) => ({ zoom: map.getZoom() })),
     },
-    computed: {
-        displayedSleepPoints: ({ sleepLocations, currentSleepLocation }) =>
-            sleepLocations
-                .slice(0, sleepLocations.indexOf(currentSleepLocation) + 1)
-                .map(getCoordinates),
-    },
 });
 
-const Map = ({ state: { displayedSleepPoints, currentSleepLocation }, effects: { updateMap } }) =>
+const Map = ({
+    effects: { updateMap },
+    displayedTripLineString,
+    displayedSleepLocations,
+}: {
+    displayedTripLineString: ?LineString2D,
+    displayedSleepLocations: Array<SleepLocation>,
+}) =>
     (<Mapbox.Map
-        center={last(displayedSleepPoints) || STARTING_POINT}
+        center={
+            displayedSleepLocations.length
+                ? last(displayedSleepLocations).coordinates
+                : [2.3738311, 48.8841141]
+        }
         containerStyle={{
             height: '100%',
         }}
@@ -56,24 +63,43 @@ const Map = ({ state: { displayedSleepPoints, currentSleepLocation }, effects: {
         onStyleLoad={updateMap}
         movingMethod="easeTo"
     >
-        {currentSleepLocation
-            ? <Mapbox.GeoJSONLayer
-                data={getLine(getCoordinates(currentSleepLocation))}
-                lineLayout={{
-                    'line-join': 'round',
-                    'line-cap': 'round',
+        {displayedTripLineString
+            ? <Motion
+                defaultStyle={{ distance: 0 }}
+                style={{
+                    distance: spring(lineDistance(displayedTripLineString), {
+                        stiffness: 42,
+                        damping: 19,
+                        precision: 1,
+                    }),
                 }}
-                linePaint={{
-                    'line-color': 'white',
-                    'line-opacity': 0.8,
-                    'line-width': 2,
-                }}
-            />
+            >
+                {({ distance }) =>
+                      distance > 0
+                          ? <Mapbox.GeoJSONLayer
+                              data={lineSliceAlong(displayedTripLineString, 0, distance)}
+                              lineLayout={{
+                                  'line-join': 'round',
+                                  'line-cap': 'round',
+                              }}
+                              linePaint={{
+                                  'line-color': 'white',
+                                  'line-opacity': 0.8,
+                                  'line-width': 2,
+                              }}
+                          />
+                          : null}
+            </Motion>
             : null}
-        {displayedSleepPoints.map(sleepPoint =>
-            (<Mapbox.Marker key={sleepPoint.join()} coordinates={sleepPoint} anchor="center">
+        {displayedSleepLocations.map(sleepLocation =>
+            (<Mapbox.Marker
+                key={sleepLocation.coordinates.join()}
+                coordinates={sleepLocation.coordinates}
+                anchor="center"
+            >
                 <SleepMarker />
             </Mapbox.Marker>),
         )}
     </Mapbox.Map>);
-export default compose(withSleepPoints, injectState, withStyles(s))(Map);
+
+export default compose(withMapZoomControl, injectState, connect(selectors), withStyles(s))(Map);

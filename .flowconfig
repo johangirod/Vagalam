@@ -2,6 +2,8 @@
 .*/build/.*
 .*/node_modules/serviceworker-webpack-plugin/src/index.spec.js
 .*/node_modules/styled-components/src/.*
+.*/node_modules/mapbox-gl/src/.*
+.*/node_modules/unflowify/test/.*
 
 [include]
 

@@ -1,18 +1,12 @@
-import { injectState } from 'freactal';
-import { withStyles } from 'vitaminjs';
+import { connect } from 'react-redux';
+import selectors from './selectors';
 import s from './style.css';
-import { compose } from 'ramda';
 import Pastille from '../../ui-element/Pastille';
 
-
-
-const Details = ({ state: { currentSleepLocation }}) => 
-    <div className={s.container}>
-        <Pastille 
-            value={currentSleepLocation ? currentSleepLocation.data['sleep_location.day_number'].value : '...'} 
-            unit="jour" 
-        />
+const Details = ({ currentDayNumber }) =>
+    (<div className={s.container}>
+        <Pastille value={currentDayNumber || ''} unit="jour" />
         <Pastille value={1209} unit="km" />
-    </div>
+    </div>);
 
-export default compose(injectState, withStyles(s))(Details);
+export default connect(selectors)(Details);
