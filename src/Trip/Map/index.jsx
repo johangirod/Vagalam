@@ -29,7 +29,7 @@ if (IS_CLIENT) {
     });
 }
 
-const INITIAL_ZOOM = [10];
+const INITIAL_ZOOM = [9];
 const withMapZoomControl = provideState({
     initialState: () => ({
         zoom: INITIAL_ZOOM,

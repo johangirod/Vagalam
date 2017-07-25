@@ -1,6 +1,6 @@
 // @flow
 
-type Coordinates = [number, number];
+export type Coordinates = [number, number];
 export type SleepLocation = {
     +date: Date,
     +dayNumber: number,

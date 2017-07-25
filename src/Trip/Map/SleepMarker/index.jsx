@@ -6,6 +6,9 @@ import s from './style.css';
 import Icon from './Icon';
 
 const Marker = ({ state: { zoom } }) => {
+    if (zoom < 4) {
+        return null;
+    }
     const size = zoom > 8 ? 24 : zoom > 6 ? 12 : /* otherwise */ 4;
     return (
         <div

@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cef25a4d744c2235eb9a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "52a1afefd1b596362ec3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -3578,7 +3578,7 @@ const Details = ({ currentDayNumber }) => __WEBPACK_IMPORTED_MODULE_0_react___de
         },
         __self: _this
     },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ui_element_Pastille__["a" /* default */], { value: currentDayNumber || '', unit: 'jour', __source: {
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ui_element_Pastille__["a" /* default */], { value: currentDayNumber || '...', unit: 'jour', __source: {
             fileName: _jsxFileName,
             lineNumber: 8
         },
@@ -3612,7 +3612,7 @@ const Details = ({ currentDayNumber }) => __WEBPACK_IMPORTED_MODULE_0_react___de
 
 
 
-const currentDayNumberSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_1__selectors__["a" /* sleepLocationsSelector */], __WEBPACK_IMPORTED_MODULE_1__selectors__["b" /* currentSleepLocationIndexSelector */], (sleepLocations, currentSleepLocationIndex) => sleepLocations.length ? sleepLocations[Math.min(currentSleepLocationIndex, sleepLocations.length - 1)].dayNumber : null);
+const currentDayNumberSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_1__selectors__["a" /* sleepLocationsSelector */], __WEBPACK_IMPORTED_MODULE_1__selectors__["b" /* currentSleepLocationIndexSelector */], (sleepLocations, currentSleepLocationIndex) => sleepLocations.length && currentSleepLocationIndex >= 0 ? sleepLocations[Math.min(currentSleepLocationIndex, sleepLocations.length - 1)].dayNumber : null);
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createStructuredSelector"])({
     currentDayNumber: currentDayNumberSelector
 }));
@@ -3841,6 +3841,9 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Map/SleepMarker/index.j
 
 
 const Marker = ({ state: { zoom } }) => {
+    if (zoom < 4) {
+        return null;
+    }
     const size = zoom > 8 ? 24 : zoom > 6 ? 12 : /* otherwise */4;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
@@ -3854,14 +3857,14 @@ const Marker = ({ state: { zoom } }) => {
             className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.icon,
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 11
+                lineNumber: 14
             },
             __self: _this
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Icon__["a" /* default */], {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 20
+                lineNumber: 23
             },
             __self: _this
         })
@@ -3966,7 +3969,7 @@ let Mapbox = new Proxy({}, {
     get: (target, name) => target[name] || (() => null)
 });
 
-const INITIAL_ZOOM = [10];
+const INITIAL_ZOOM = [9];
 const withMapZoomControl = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_freactal__["provideState"])({
     initialState: () => ({
         zoom: INITIAL_ZOOM
@@ -4075,12 +4078,13 @@ const Map = ({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ramda___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ramda__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_helpers__ = __webpack_require__(/*! @turf/helpers */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_helpers___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__turf_helpers__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_line_slice__ = __webpack_require__(/*! @turf/line-slice */ 18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_line_slice___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__turf_line_slice__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__turf_bezier__ = __webpack_require__(/*! @turf/bezier */ 15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__turf_bezier___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__turf_bezier__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectors__ = __webpack_require__(/*! ../selectors */ "./src/Trip/selectors.js");
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_meta__ = __webpack_require__(/*! @turf/meta */ 70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_meta___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__turf_meta__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__turf_line_slice__ = __webpack_require__(/*! @turf/line-slice */ 18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__turf_line_slice___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__turf_line_slice__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__turf_bezier__ = __webpack_require__(/*! @turf/bezier */ 15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__turf_bezier___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__turf_bezier__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__selectors__ = __webpack_require__(/*! ../selectors */ "./src/Trip/selectors.js");
 
 
 
@@ -4093,21 +4097,28 @@ const Map = ({
 
 const TRIP_STARTING_POINT = [2.3738311, 48.8841141];
 
-const wholeTripLineStringSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_5__selectors__["a" /* sleepLocationsSelector */], sleepLocations => {
+function bezierCoord(resolution, coordinates) {
+    return coordinates.length ? __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__turf_meta__["coordAll"])(__WEBPACK_IMPORTED_MODULE_5__turf_bezier___default()(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__turf_helpers__["lineString"])(coordinates), resolution, 0.6)) : coordinates;
+}
+
+const SMOOTH_LINE_NUMBER = 15;
+const wholeTripLineStringSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_6__selectors__["a" /* sleepLocationsSelector */], sleepLocations => {
     if (!sleepLocations.length) {
         return null;
     }
     const coordinates = [TRIP_STARTING_POINT, ...sleepLocations.map(sleepLocation => sleepLocation.coordinates)];
-    return __WEBPACK_IMPORTED_MODULE_4__turf_bezier___default()(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__turf_helpers__["lineString"])(coordinates));
+    const [roughLine, smoothLine] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ramda__["splitAt"])(-SMOOTH_LINE_NUMBER, coordinates);
+
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__turf_helpers__["lineString"])([...bezierCoord(5000, roughLine), ...bezierCoord(20000, smoothLine)]);
 });
 
-const displayedSleepLocationsSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_5__selectors__["a" /* sleepLocationsSelector */], __WEBPACK_IMPORTED_MODULE_5__selectors__["b" /* currentSleepLocationIndexSelector */], (sleepLocations, currentSleepLocationIndex) => sleepLocations.slice(0, currentSleepLocationIndex + 1));
+const displayedSleepLocationsSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_6__selectors__["a" /* sleepLocationsSelector */], __WEBPACK_IMPORTED_MODULE_6__selectors__["b" /* currentSleepLocationIndexSelector */], (sleepLocations, currentSleepLocationIndex) => sleepLocations.slice(0, currentSleepLocationIndex + 1));
 
 const displayedTripLineStringSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createSelector"])(wholeTripLineStringSelector, displayedSleepLocationsSelector, (tripLineString, sleepLocations) => {
     if (!tripLineString || !sleepLocations.length) {
         return null;
     }
-    return __WEBPACK_IMPORTED_MODULE_3__turf_line_slice___default()(TRIP_STARTING_POINT, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ramda__["last"])(sleepLocations), tripLineString);
+    return __WEBPACK_IMPORTED_MODULE_4__turf_line_slice___default()(TRIP_STARTING_POINT, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ramda__["last"])(sleepLocations), tripLineString);
 });
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createStructuredSelector"])({
@@ -4199,14 +4210,14 @@ function addSleepLocations(sleepLocations) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = goToNextDay;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(/*! rxjs/Observable */ 60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(/*! rxjs/add/operator/map */ 63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(/*! rxjs/add/operator/map */ 64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_filter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__ = __webpack_require__(/*! rxjs/add/operator/startWith */ 65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_mergeAll__ = __webpack_require__(/*! rxjs/add/operator/mergeAll */ 64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_mergeAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_mergeAll__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_exhaust__ = __webpack_require__(/*! rxjs/add/operator/exhaust */ 62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_exhaust___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_exhaust__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_fromPromise__ = __webpack_require__(/*! rxjs/add/observable/fromPromise */ 61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ramda__ = __webpack_require__(/*! ramda */ 2);
@@ -4231,7 +4242,7 @@ function addSleepLocations(sleepLocations) {
 
 const TRIP_FIRST_DAY = new Date(2017, 4, 28);
 
-const fetchSleepLocationsAfter = date => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_7_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query([__WEBPACK_IMPORTED_MODULE_7_prismic_io___default.a.Predicates.at('document.type', 'sleep_location'), __WEBPACK_IMPORTED_MODULE_7_prismic_io___default.a.Predicates.dateAfter('my.sleep_location.date', date)], { orderings: '[my.sleep_location.date]', pageSize: 1 })).then(response => response.results.map(apiSleepLocation => {
+const fetchSleepLocationsAfter = date => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_7_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query([__WEBPACK_IMPORTED_MODULE_7_prismic_io___default.a.Predicates.at('document.type', 'sleep_location'), __WEBPACK_IMPORTED_MODULE_7_prismic_io___default.a.Predicates.dateAfter('my.sleep_location.date', date)], { orderings: '[my.sleep_location.date]', pageSize: 10 })).then(response => response.results.map(apiSleepLocation => {
     const { longitude, latitude } = apiSleepLocation.data['sleep_location.location'].value;
     return {
         date: new Date(apiSleepLocation.data['sleep_location.date'].value),
@@ -4244,11 +4255,11 @@ function goToNextDay(action$, store) {
     return action$.ofType('app/trip/GO_TO_NEXT_SLEEP_LOCATION').map(() => {
         const { sleepLocations, currentSleepLocationIndex } = store.getState().app.trip;
         const lastSleepLocation = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_ramda__["last"])(sleepLocations);
-        if (lastSleepLocation && currentSleepLocationIndex >= sleepLocations.length) {
+        if (lastSleepLocation && currentSleepLocationIndex >= sleepLocations.length - 1) {
             return fetchSleepLocationsAfter(lastSleepLocation.date);
         }
         return null;
-    }).filter(Boolean).startWith(fetchSleepLocationsAfter(TRIP_FIRST_DAY)).mergeAll().map(__WEBPACK_IMPORTED_MODULE_8__actions__["b" /* addSleepLocations */]);
+    }).filter(Boolean).startWith(fetchSleepLocationsAfter(TRIP_FIRST_DAY)).exhaust().map(__WEBPACK_IMPORTED_MODULE_8__actions__["b" /* addSleepLocations */]);
 }
 
 /***/ }),
@@ -4332,7 +4343,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 const initialState = {
     sleepLocations: [],
-    currentSleepLocationIndex: 0
+    currentSleepLocationIndex: -1
 };
 
 
@@ -4924,7 +4935,7 @@ module.exports = require("@turf/line-slice-along");
 
 /***/ 2:
 /* no static exports found */
-/* exports used: compose, last */
+/* exports used: compose, last, splitAt */
 /*!************************!*\
   !*** external "ramda" ***!
   \************************/
@@ -5487,6 +5498,17 @@ module.exports = require("rxjs/add/observable/fromPromise");
 
 /***/ 62:
 /* no static exports found */
+/*!********************************************!*\
+  !*** external "rxjs/add/operator/exhaust" ***!
+  \********************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs/add/operator/exhaust");
+
+/***/ }),
+
+/***/ 63:
+/* no static exports found */
 /*!*******************************************!*\
   !*** external "rxjs/add/operator/filter" ***!
   \*******************************************/
@@ -5496,7 +5518,7 @@ module.exports = require("rxjs/add/operator/filter");
 
 /***/ }),
 
-/***/ 63:
+/***/ 64:
 /* no static exports found */
 /*!****************************************!*\
   !*** external "rxjs/add/operator/map" ***!
@@ -5504,17 +5526,6 @@ module.exports = require("rxjs/add/operator/filter");
 /***/ (function(module, exports) {
 
 module.exports = require("rxjs/add/operator/map");
-
-/***/ }),
-
-/***/ 64:
-/* no static exports found */
-/*!*********************************************!*\
-  !*** external "rxjs/add/operator/mergeAll" ***!
-  \*********************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("rxjs/add/operator/mergeAll");
 
 /***/ }),
 
@@ -5588,6 +5599,18 @@ module.exports = __webpack_require__(/*! /home/johan/Project/Vagalam/node_module
 /***/ (function(module, exports) {
 
 module.exports = require("chalk");
+
+/***/ }),
+
+/***/ 70:
+/* no static exports found */
+/* exports used: coordAll */
+/*!*****************************!*\
+  !*** external "@turf/meta" ***!
+  \*****************************/
+/***/ (function(module, exports) {
+
+module.exports = require("@turf/meta");
 
 /***/ }),
 

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/startWith';
-import 'rxjs/add/operator/mergeAll';
+import 'rxjs/add/operator/exhaust';
 import 'rxjs/add/observable/fromPromise';
 
 import type { ActionsObservable } from 'redux-observable';
@@ -29,7 +29,7 @@ const fetchSleepLocationsAfter: Date => Observable<Array<SleepLocation>> = date 
                         Prismic.Predicates.at('document.type', 'sleep_location'),
                         Prismic.Predicates.dateAfter('my.sleep_location.date', date),
                     ]: Array<PredicateQuery>),
-                    { orderings: '[my.sleep_location.date]', pageSize: 1 },
+                    { orderings: '[my.sleep_location.date]', pageSize: 10 },
                 ),
             )
             .then(response =>
@@ -55,13 +55,13 @@ export default function goToNextDay(
         .map(() => {
             const { sleepLocations, currentSleepLocationIndex } = store.getState().app.trip;
             const lastSleepLocation = last(sleepLocations);
-            if (lastSleepLocation && currentSleepLocationIndex >= sleepLocations.length) {
+            if (lastSleepLocation && currentSleepLocationIndex >= sleepLocations.length - 1) {
                 return fetchSleepLocationsAfter(lastSleepLocation.date);
             }
             return null;
         })
         .filter(Boolean)
         .startWith(fetchSleepLocationsAfter(TRIP_FIRST_DAY))
-        .mergeAll()
+        .exhaust()
         .map(addSleepLocations);
 }

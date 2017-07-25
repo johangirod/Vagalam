@@ -8,7 +8,7 @@ const currentDayNumberSelector: State => ?number = createSelector(
     sleepLocationsSelector,
     currentSleepLocationIndexSelector,
     (sleepLocations, currentSleepLocationIndex) =>
-        sleepLocations.length
+        sleepLocations.length && currentSleepLocationIndex >= 0
             ? sleepLocations[Math.min(currentSleepLocationIndex, sleepLocations.length - 1)]
                   .dayNumber
             : null,

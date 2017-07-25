@@ -3,7 +3,7 @@ import type { State, Action } from './types';
 
 const initialState = {
     sleepLocations: [],
-    currentSleepLocationIndex: 0,
+    currentSleepLocationIndex: -1,
 };
 
 export default function (state: State = initialState, action: Action): State {
