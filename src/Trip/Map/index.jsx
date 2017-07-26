@@ -1,4 +1,5 @@
 // @flow
+
 import type { LineString2D } from 'flow-geojson';
 
 import { withStyles } from 'vitaminjs';
@@ -9,8 +10,8 @@ import { connect } from 'react-redux';
 import { compose, last } from 'ramda';
 import { provideState, injectState, softUpdate } from 'freactal';
 import selectors from './selectors';
-import type { SleepLocation } from '../types';
-import SleepMarker from './SleepMarker';
+import type { MapPoint } from '../types';
+import MapPointMarker from './MapPointMarker';
 import s from './style.css';
 import config from '../../config';
 
@@ -42,64 +43,64 @@ const withMapZoomControl = provideState({
 const Map = ({
     effects: { updateMap },
     displayedTripLineString,
-    displayedSleepLocations,
+    currentPath,
 }: {
     displayedTripLineString: ?LineString2D,
-    displayedSleepLocations: Array<SleepLocation>,
-}) =>
-    (<Mapbox.Map
-        center={
-            displayedSleepLocations.length
-                ? last(displayedSleepLocations).coordinates
-                : [2.3738311, 48.8841141]
-        }
-        containerStyle={{
-            height: '100%',
-        }}
-        zoom={INITIAL_ZOOM}
-        mapboxApiAccessToken={config.mapboxAccessToken}
-        style="mapbox://styles/mapbox/satellite-v9"
-        onMove={updateMap}
-        onStyleLoad={updateMap}
-        movingMethod="easeTo"
-    >
-        {displayedTripLineString
-            ? <Motion
-                defaultStyle={{ distance: 0 }}
-                style={{
-                    distance: spring(lineDistance(displayedTripLineString), {
-                        stiffness: 42,
-                        damping: 19,
-                        precision: 1,
-                    }),
-                }}
-            >
-                {({ distance }) =>
-                      distance > 0
-                          ? <Mapbox.GeoJSONLayer
-                              data={lineSliceAlong(displayedTripLineString, 0, distance)}
-                              lineLayout={{
-                                  'line-join': 'round',
-                                  'line-cap': 'round',
-                              }}
-                              linePaint={{
-                                  'line-color': 'white',
-                                  'line-opacity': 0.8,
-                                  'line-width': 2,
-                              }}
-                          />
-                          : null}
-            </Motion>
-            : null}
-        {displayedSleepLocations.map(sleepLocation =>
-            (<Mapbox.Marker
-                key={sleepLocation.coordinates.join()}
-                coordinates={sleepLocation.coordinates}
-                anchor="center"
-            >
-                <SleepMarker />
-            </Mapbox.Marker>),
-        )}
-    </Mapbox.Map>);
+    currentPath: Array<MapPoint>,
+}) => {
+    const currentMapPoint = last(currentPath);
+    return (
+        <Mapbox.Map
+            center={currentMapPoint ? currentMapPoint.coordinates : [2.3738311, 48.8841141]}
+            containerStyle={{
+                height: '100%',
+            }}
+            zoom={INITIAL_ZOOM}
+            mapboxApiAccessToken={config.mapboxAccessToken}
+            style="mapbox://styles/mapbox/satellite-v9"
+            onMove={updateMap}
+            onStyleLoad={updateMap}
+            movingMethod="easeTo"
+        >
+            {displayedTripLineString
+                ? <Motion
+                    defaultStyle={{ distance: 0 }}
+                    style={{
+                        distance: spring(lineDistance(displayedTripLineString), {
+                            stiffness: 42,
+                            damping: 19,
+                            precision: 1,
+                        }),
+                    }}
+                >
+                    {({ distance }) =>
+                          distance > 0
+                              ? <Mapbox.GeoJSONLayer
+                                  data={lineSliceAlong(displayedTripLineString, 0, distance)}
+                                  lineLayout={{
+                                      'line-join': 'round',
+                                      'line-cap': 'round',
+                                  }}
+                                  linePaint={{
+                                      'line-color': 'white',
+                                      'line-opacity': 0.8,
+                                      'line-width': 2,
+                                  }}
+                              />
+                              : null}
+                </Motion>
+                : null}
+            {currentPath.map(mapPoint =>
+                (<Mapbox.Marker
+                    key={mapPoint.coordinates.join()}
+                    coordinates={mapPoint.coordinates}
+                    anchor="center"
+                >
+                    <MapPointMarker type={mapPoint.type} />
+                </Mapbox.Marker>),
+            )}
+        </Mapbox.Map>
+    );
+};
 
 export default compose(withMapZoomControl, injectState, connect(selectors), withStyles(s))(Map);
