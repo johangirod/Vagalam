@@ -1,21 +1,10 @@
 // @flow
-export type Picture = {
-    +id: string,
-    +url: string,
-};
+import type { State as PostsState, Action as PostsAction } from './Posts/types';
 export type Coordinates = [number, number];
 
-opaque type PostId = string;
+export type PostId = string;
 export opaque type SleepLocationId = string;
 export opaque type PointOfInterestId = string;
-export type Post = {
-    +id: PostId,
-    +type: 'Article' | 'Gallery',
-    +title: ?string,
-    +shortDescription: ?string,
-    +pictures: ?Array<Picture>,
-    +content: ?string,
-};
 
 export type SleepLocation = {
     +id: SleepLocationId,
@@ -41,7 +30,7 @@ export type FetchingStatusState<TypeId> = {
     lastFetchedId: ?TypeId,
 };
 export type State = {
-    +posts: { [PostId]: Post },
+    +posts: PostsState,
     +path: Array<MapPoint>,
     +currentMapPointId: ?MapPointId,
     +fetchingStatus: {
@@ -64,4 +53,4 @@ export type GoToNextStepAction = {
     type: 'app/trip/GO_TO_NEXT_STEP',
 };
 
-export type Action = AddFetchedSleepLocationsAction | AddFetchedPointsOfInterestAction | GoToNextStepAction;
+export type Action = AddFetchedSleepLocationsAction | AddFetchedPointsOfInterestAction | GoToNextStepAction | PostsAction;

@@ -1,7 +1,10 @@
 // @flow
+// $FlowFixMe: ramda flow typed API not up to date (ascend not present)
 import { prop, nth, last, defaultTo, ascend } from 'ramda';
 import { combineReducers } from 'redux';
 import pipeReducers from '../shared/pipeReducers';
+import postsReducer from './Posts/reducer';
+
 import type {
     Action,
     FetchingStatusState,
@@ -85,7 +88,7 @@ export default pipeReducers(
             pointsOfInterest: pointsOfInterestFetchStatusReducer,
         }),
         currentMapPointId: defaultTo(null),
-        posts: defaultTo({}),
+        posts: postsReducer,
     }),
     currentMapPointIdReducer,
 );

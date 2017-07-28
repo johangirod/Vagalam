@@ -9,13 +9,22 @@ import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/merge';
 
 import type { ActionsObservable } from 'redux-observable';
-import type { Store } from 'redux';
+import { combineEpics } from 'redux-observable';
+import type { MiddlewareAPI as Store } from 'redux';
 import Prismic from 'prismic.io';
 
+import postsEpic from './Posts/epic';
 import type { Action, SleepLocationId, PointOfInterestId } from './types';
-import type { State } from '../rootTypes';
+import type { State as RootState, Action as RootAction } from '../rootTypes';
 import { addFetchedPointsOfInterest, addFetchedSleepLocations } from './actions';
 
+const getPostId: (string, any) => ?string = (type, apiResponse) => {
+    const post =
+        apiResponse.data[`${type}.post`] ||
+        apiResponse.data[`${type}.pictures`] ||
+        apiResponse.data[`${type}.link`];
+    return post ? post.value.document.id : null;
+};
 const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
     Observable.fromPromise(
         Prismic.api('http://vagalam.prismic.io/api')
@@ -38,7 +47,7 @@ const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
                         dayNumber: apiSleepLocation.data['sleep_location.day_number'].value,
                         coordinates: [longitude, latitude],
                         id: apiSleepLocation.id,
-                        postId: null,
+                        postId: getPostId('sleep_location', apiSleepLocation),
                         type: 'sleep_location',
                     };
                 }),
@@ -65,7 +74,7 @@ const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = i
                         date: new Date(apiPointOfInterest.data['point_of_interest.datetime'].value),
                         coordinates: [longitude, latitude],
                         id: apiPointOfInterest.id,
-                        postId: null,
+                        postId: getPostId('point_of_interest', apiPointOfInterest),
                         type: 'point_of_interest',
                     };
                 }),
@@ -73,9 +82,9 @@ const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = i
             .then(addFetchedPointsOfInterest),
     );
 
-export default function goToNextStep(
-    action$: ActionsObservable<Action>,
-    store: Store<State, Action>,
+function goToNextStepEpic(
+    action$: ActionsObservable<RootAction>,
+    store: Store<RootState, RootAction>,
 ): Observable<Action> {
     return action$.ofType('app/trip/GO_TO_NEXT_STEP').startWith('').mergeMap(() => {
         const {
@@ -92,3 +101,5 @@ export default function goToNextStep(
         return Observable.merge(...request$Array);
     });
 }
+
+export default combineEpics(goToNextStepEpic, postsEpic);
