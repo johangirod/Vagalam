@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import selectors from './selectors';
 import s from './style.css';
-import Pastille from '../../ui-element/Pastille';
+import Pastille from '../../shared/ui-element/Pastille';
 
 const Details = ({ currentDayNumber }) =>
     (<div className={s.container}>

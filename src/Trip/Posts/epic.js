@@ -10,7 +10,7 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/bufferTime';
 import 'rxjs/add/operator/do';
 import Prismic from 'prismic.io';
-
+import PrismicDOM from 'prismic-dom';
 import type { Action as RootAction } from '../../rootTypes';
 import type { Action, Post } from './types';
 import type { PostId } from '../types';
@@ -27,8 +27,12 @@ function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
             postsApi.map(postApi => ({
                 id: postApi.id,
                 type: postApi.type === 'post' ? 'Article' : 'Gallery',
-                title: postApi.data['post.title'] && postApi.data['post.title'].value,
-                content: postApi.data['post.content'] && postApi.data['post.content'].value,
+                title:
+                    postApi.data['post.title'] &&
+                    PrismicDOM.RichText.asText(postApi.data['post.title'].value),
+                content:
+                    postApi.data['post.content'] &&
+                    PrismicDOM.RichText.asHtml(postApi.data['post.content'].value),
                 pictures: [],
             })),
         );

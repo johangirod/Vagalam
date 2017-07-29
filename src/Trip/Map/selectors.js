@@ -10,7 +10,7 @@ import bezier from '@turf/bezier';
 
 import type { Coordinates } from '../types';
 import { currentPathSelector, pathSelector } from '../selectors';
-import type { State } from '../../rootTypes';
+import type { Selector } from '../../rootTypes';
 
 const TRIP_STARTING_POINT = [2.3738311, 48.8841141];
 
@@ -21,7 +21,7 @@ function bezierCoord(resolution: number, coordinates: Array<Coordinates>): Array
 }
 
 const SMOOTH_LINE_NUMBER = 15;
-const wholeTripLineStringSelector: State => ?LineString2D = createSelector(pathSelector, (path) => {
+const wholeTripLineStringSelector: Selector<?LineString2D> = createSelector(pathSelector, (path) => {
     const coordinates = [TRIP_STARTING_POINT, ...path.map(prop('coordinates'))];
     if (coordinates.length < 2) {
         return null;
@@ -30,7 +30,7 @@ const wholeTripLineStringSelector: State => ?LineString2D = createSelector(pathS
     return lineString([...bezierCoord(5000, roughLine), ...bezierCoord(20000, smoothLine)]);
 });
 
-const displayedTripLineStringSelector: State => ?LineString2D = createSelector(
+const displayedTripLineStringSelector: Selector<?LineString2D> = createSelector(
     wholeTripLineStringSelector,
     currentPathSelector,
     (tripLineString, currentPath) => {

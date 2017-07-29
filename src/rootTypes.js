@@ -9,3 +9,5 @@ export type State = {
 };
 
 export type Action = TripAction;
+
+export type Selector<Type> = State => Type;

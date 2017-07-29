@@ -4692,6 +4692,10 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
+prismic-dom@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/prismic-dom/-/prismic-dom-1.2.8.tgz#0e100b09255709b409603d28b8f4efe68a3895fc"
+
 prismic.io@^3.5.7:
   version "3.5.7"
   resolved "https://registry.yarnpkg.com/prismic.io/-/prismic.io-3.5.7.tgz#bc0538bfc2c165a262e6963047c9f95bf8384dff"

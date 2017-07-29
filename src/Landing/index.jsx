@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import { withStyles } from 'vitaminjs'; 
+// @flow
+import { withStyles } from 'vitaminjs';
 
-import LinkButton from '../ui-element/Button/Link'; 
+import LinkButton from '../shared/ui-element/Button/Link';
 
 import backgroundImage from './background.jpg';
 import s from './style.css';
 
-const Landing = () => (
-    <div>
-        <section className={s.header} style={{ backgroundImage: `url(${backgroundImage})` }} >
+const Landing = () =>
+    (<div>
+        <section className={s.header} style={{ backgroundImage: `url(${backgroundImage})` }}>
             <header>
                 <h1> \Vag a lam\ </h1>
             </header>
@@ -16,7 +16,6 @@ const Landing = () => (
         <section className={s.body}>
             <LinkButton href="/voyage"> Parcourir le voyage </LinkButton>
         </section>
-    </div>
-);
+    </div>);
 
 export default withStyles(s)(Landing);
