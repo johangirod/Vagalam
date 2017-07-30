@@ -8,17 +8,22 @@ import { goToNextStep } from './actions';
 import s from './style.css';
 import Map from './Map';
 import Posts from './Posts';
+import FrameLayout from '../shared/ui-element/FrameLayout';
 import Details from './Details';
 
 // eslint-disable-next-line no-shadow
 const Trip = ({ goToNextStep }) => {
     const handleKeyDown = e => e.key === ' ' && goToNextStep();
     return (
-        <div className={s.layout} role="presentation" onKeyDown={handleKeyDown}>
+        <FrameLayout
+            top="vagalam"
+            bottom={<Details />}
+            onKeyDown={handleKeyDown}
+            role="presentation"
+        >
             <Map />
-            <Details />
             <Posts />
-        </div>
+        </FrameLayout>
     );
 };
 

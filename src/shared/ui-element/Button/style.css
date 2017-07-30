@@ -1,20 +1,20 @@
 a {
     position: relative;
     border-radius: 32px;
-    border: 2px solid black;
+    border: 2px solid white;
     display: inline-block;
     text-decoration: none;
     color: black;
     font-size: large;
     padding: 12px 32px;
     background: white;
-    transition: border-color 0.7s;
+    transition: border-color 1s;
+    background-clip: padding-box;
 }
 a:hover {
     border-color: transparent;
-    background-clip: padding-box;
 }
-a:hover::after {
+a::after {
     position: absolute;
     top: -2px;
     bottom: -2px;
@@ -23,7 +23,8 @@ a:hover::after {
     border-radius: 32px;
     content: '';
     z-index: -1;
-    background: linear-gradient(45deg,
+    background: linear-gradient(
+        45deg,
         rgba(255, 0, 0, 1) 0%,
         rgba(255, 255, 0, 1) 15%,
         rgba(0, 255, 0, 1) 30%,
@@ -35,4 +36,11 @@ a:hover::after {
     animation: hue-rotate 1s linear infinite;
 }
 
-@keyframes hue-rotate { from { filter: hue-rotate(0deg); } to { filter:hue-rotate(360deg); }  }
+@keyframes hue-rotate {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}

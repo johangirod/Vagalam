@@ -1,9 +1,10 @@
 import { withStyles } from 'vitaminjs';
-import s from './style.global.css';
 import Helmet from 'vitaminjs/react-helmet';
+import s from './style.global.css';
+import TopBar from './TopBar';
 
 export default withStyles(s)(({ children }) =>
-    <div>
+    (<div>
         <Helmet
             title="Vagalam"
             meta={[
@@ -14,12 +15,11 @@ export default withStyles(s)(({ children }) =>
             ]}
             link={[
                 {
-                    href:
-                        'https://fonts.googleapis.com/css?family=Crimson+Text|Lato',
+                    href: 'https://fonts.googleapis.com/css?family=Crimson+Text|Lato',
                     rel: 'stylesheet',
                 },
             ]}
         />
         {children}
-    </div>,
+    </div>),
 );

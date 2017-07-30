@@ -1,12 +1,14 @@
 import { connect } from 'react-redux';
+import { withStyles } from 'vitaminjs';
+import { compose } from 'ramda';
 import selectors from './selectors';
 import s from './style.css';
-import Pastille from '../../shared/ui-element/Pastille';
 
 const Details = ({ currentDayNumber }) =>
-    (<div className={s.container}>
-        <Pastille value={currentDayNumber || '...'} unit="jour" />
-        <Pastille value={1209} unit="km" />
-    </div>);
+    currentDayNumber
+        ? <span>
+              Jour {currentDayNumber}
+        </span>
+        : <em className={s['press-space']}> Appuyez sur Espace pour commencer </em>;
 
-export default connect(selectors)(Details);
+export default compose(connect(selectors), withStyles(s))(Details);
