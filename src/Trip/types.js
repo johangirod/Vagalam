@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 import type { State as PostsState, Action as PostsAction } from './Posts/types';
 export type Coordinates = [number, number];
 

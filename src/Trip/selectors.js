@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 import { createSelector } from 'reselect';
 import { pipe } from 'ramda';
 import type { Selector } from '../rootTypes';

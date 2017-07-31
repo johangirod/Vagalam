@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 
 import type { LineString2D } from 'flow-geojson';
 import { createSelector, createStructuredSelector } from 'reselect';

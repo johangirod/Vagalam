@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 
 /** Compose reducers into one */
 type Reducer<State, Action> = (State, Action) => State;

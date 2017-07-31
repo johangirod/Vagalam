@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 import type { Action, State } from './types';
 
 export default function postsReducer(state: State = {}, action: Action): State {

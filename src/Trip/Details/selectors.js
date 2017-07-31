@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 
 import { createStructuredSelector, createSelector } from 'reselect';
 import { last } from 'ramda';

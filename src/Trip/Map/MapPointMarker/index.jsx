@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 import { injectState } from 'freactal';
 import { withStyles } from 'vitaminjs';
 import { compose } from 'ramda';

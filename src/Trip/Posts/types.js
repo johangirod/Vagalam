@@ -1,4 +1,5 @@
-// @flow
+/* @flow */
+
 import type { PostId } from '../types';
 
 export opaque type Picture = string;

@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/merge';
@@ -8,14 +8,12 @@ import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/merge';
 
-import type { ActionsObservable } from 'redux-observable';
 import { combineEpics } from 'redux-observable';
-import type { MiddlewareAPI as Store } from 'redux';
 import Prismic from 'prismic.io';
 
 import postsEpic from './Posts/epic';
 import type { Action, SleepLocationId, PointOfInterestId } from './types';
-import type { State as RootState, Action as RootAction } from '../rootTypes';
+import type { Epic } from '../rootTypes';
 import { addFetchedPointsOfInterest, addFetchedSleepLocations } from './actions';
 
 const getPostId: (string, any) => ?string = (type, apiResponse) => {
@@ -82,11 +80,8 @@ const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = i
             .then(addFetchedPointsOfInterest),
     );
 
-function goToNextStepEpic(
-    action$: ActionsObservable<RootAction>,
-    store: Store<RootState, RootAction>,
-): Observable<Action> {
-    return action$.ofType('app/trip/GO_TO_NEXT_STEP').startWith('').mergeMap(() => {
+const goToNextStepEpic: Epic<Action> = (action$, store) =>
+    action$.ofType('app/trip/GO_TO_NEXT_STEP').startWith('').mergeMap(() => {
         const {
             currentMapPointId,
             fetchingStatus: { sleepLocations, pointsOfInterest },
@@ -100,6 +95,5 @@ function goToNextStepEpic(
         }
         return Observable.merge(...request$Array);
     });
-}
 
 export default combineEpics(goToNextStepEpic, postsEpic);

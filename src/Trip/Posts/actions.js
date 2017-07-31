@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 import type { AddFetchedPostsAction, Post } from './types';
 
 export function addFetchedPosts(posts: Array<Post>): AddFetchedPostsAction {

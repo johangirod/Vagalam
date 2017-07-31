@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 
 import { Component } from 'react';
 import { withStyles } from 'vitaminjs';
@@ -6,18 +6,19 @@ import type { Children } from 'react';
 import classnames from 'classnames';
 import s from './style.css';
 
+type PropType = { onClose: () => void, isOpened?: boolean, children: Children };
 class Modale extends Component {
-    constructor(props: { onClose: () => void, isOpened?: boolean, children: Children }) {
-        super(props);
-        this.handleKeyDown = this.handleKeyDown.bind(this);
-    }
-    handleKeyDown(e) {
+    static defaultProps = {
+        isOpened: true,
+    };
+    props: PropType;
+    handleKeyDown = (e: SyntheticKeyboardEvent) => {
         if (e.key === 'Escape') {
             this.props.onClose();
         }
-    }
+    };
     render() {
-        const { onClose, children, isOpened = true } = this.props;
+        const { onClose, children, isOpened } = this.props;
         return (
             <div
                 role="presentation"

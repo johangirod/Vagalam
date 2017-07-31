@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
 import { prop, nth, last, defaultTo, ascend } from 'ramda';
 import { combineReducers } from 'redux';

@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b41888b0d7abb7583956"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d03e00556f0c113d7022"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -4607,7 +4607,6 @@ function addFetchedPosts(posts) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = epic;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(/*! rxjs/Observable */ 17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_fromPromise__ = __webpack_require__(/*! rxjs/add/observable/fromPromise */ 18);
@@ -4642,9 +4641,6 @@ function addFetchedPosts(posts) {
 
 
 
-
-
-
 function fetchPosts(postIds) {
     return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.Predicates.in('document.id', postIds), {}))).map(response => response.results).map(postsApi => postsApi.map(postApi => ({
         id: postApi.id,
@@ -4655,12 +4651,11 @@ function fetchPosts(postIds) {
     })));
 }
 
-// TODO : batch by group to prevent many requests
-function epic($action) {
-    return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].merge($action.ofType('app/trip/ADD_FETCHED_SLEEP_LOCATIONS').map(({ sleepLocations }) => sleepLocations), $action.ofType('app/trip/ADD_FETCHED_POINTS_OF_INTEREST').map(({ pointsOfInterest }) => pointsOfInterest)).mergeMap(resources => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].of(...resources.map(({ postId }) => postId))).filter(Boolean)
-    // $FlowFixMe: rxJS flow typed API not up to date
-    .bufferTime(2000, 2000, 10).filter(postIds => postIds.length).mergeMap(fetchPosts).map(__WEBPACK_IMPORTED_MODULE_10__actions__["a" /* addFetchedPosts */]);
-}
+const fetchPostsEpic = $action => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].merge($action.ofType('app/trip/ADD_FETCHED_SLEEP_LOCATIONS').map(({ sleepLocations }) => sleepLocations), $action.ofType('app/trip/ADD_FETCHED_POINTS_OF_INTEREST').map(({ pointsOfInterest }) => pointsOfInterest)).mergeMap(resources => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].of(...resources.map(({ postId }) => postId))).filter(Boolean)
+// $FlowFixMe: rxJS flow typed API not up to date
+.bufferTime(2000, 2000, 10).filter(postIds => postIds.length).mergeMap(fetchPosts).map(__WEBPACK_IMPORTED_MODULE_10__actions__["a" /* addFetchedPosts */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (fetchPostsEpic);
 
 /***/ }),
 
@@ -4693,22 +4688,20 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Posts/index.jsx',
 
 
 
-const PostOverlay = ({
-    currentPost,
-    // eslint-disable-next-line no-shadow
-    goToNextStep
-}) => currentPost ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+
+// eslint-disable-next-line no-shadow
+const PostOverlay = ({ currentPost, goToNextStep }) => currentPost ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_5__shared_ui_element_Modale__["a" /* default */],
     { onClose: goToNextStep, __source: {
             fileName: _jsxFileName,
-            lineNumber: 18
+            lineNumber: 17
         },
         __self: _this
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Post__["a" /* default */], _extends({}, currentPost, {
         __source: {
             fileName: _jsxFileName,
-            lineNumber: 19
+            lineNumber: 18
         },
         __self: _this
     }))
@@ -4861,7 +4854,6 @@ function addFetchedPointsOfInterest(pointsOfInterest) {
 
 
 
-
 const getPostId = (type, apiResponse) => {
     const post = apiResponse.data[`${type}.post`] || apiResponse.data[`${type}.pictures`] || apiResponse.data[`${type}.link`];
     return post ? post.value.document.id : null;
@@ -4899,22 +4891,20 @@ const fetchPointOfInterestsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observ
     };
 })).then(__WEBPACK_IMPORTED_MODULE_10__actions__["c" /* addFetchedPointsOfInterest */]));
 
-function goToNextStepEpic(action$, store) {
-    return action$.ofType('app/trip/GO_TO_NEXT_STEP').startWith('').mergeMap(() => {
-        const {
-            currentMapPointId,
-            fetchingStatus: { sleepLocations, pointsOfInterest }
-        } = store.getState().app.trip;
-        const request$Array = [];
-        if (sleepLocations.nextFetchTrigger === currentMapPointId) {
-            request$Array.push(fetchSleepLocationsAfter(sleepLocations.lastFetchedId));
-        }
-        if (pointsOfInterest.nextFetchTrigger === currentMapPointId) {
-            request$Array.push(fetchPointOfInterestsAfter(pointsOfInterest.lastFetchedId));
-        }
-        return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].merge(...request$Array);
-    });
-}
+const goToNextStepEpic = (action$, store) => action$.ofType('app/trip/GO_TO_NEXT_STEP').startWith('').mergeMap(() => {
+    const {
+        currentMapPointId,
+        fetchingStatus: { sleepLocations, pointsOfInterest }
+    } = store.getState().app.trip;
+    const request$Array = [];
+    if (sleepLocations.nextFetchTrigger === currentMapPointId) {
+        request$Array.push(fetchSleepLocationsAfter(sleepLocations.lastFetchedId));
+    }
+    if (pointsOfInterest.nextFetchTrigger === currentMapPointId) {
+        request$Array.push(fetchPointOfInterestsAfter(pointsOfInterest.lastFetchedId));
+    }
+    return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].merge(...request$Array);
+});
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_redux_observable__["combineEpics"])(goToNextStepEpic, __WEBPACK_IMPORTED_MODULE_9__Posts_epic__["a" /* default */]));
 
@@ -4958,6 +4948,17 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/index.jsx',
 
 
 
+function goFullScreen() {
+    const doc = window.document;
+    const docEl = doc.documentElement;
+
+    const requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+
+    if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+        requestFullScreen.call(docEl);
+    }
+}
+
 // eslint-disable-next-line no-shadow
 const Trip = ({ goToNextStep }) => {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -4967,29 +4968,34 @@ const Trip = ({ goToNextStep }) => {
             bottom: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__Details__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 20
+                    lineNumber: 45
                 },
                 __self: _this
             }),
-            onKeyDown: e => e.key === ' ' && goToNextStep(),
+            onKeyDown: e => {
+                if (e.key === ' ') {
+                    goFullScreen();
+                    goToNextStep();
+                }
+            },
             role: 'presentation',
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 18
+                lineNumber: 43
             },
             __self: _this
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__Map__["a" /* default */], {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 24
+                lineNumber: 49
             },
             __self: _this
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Posts__["a" /* default */], {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 25
+                lineNumber: 50
             },
             __self: _this
         })
@@ -5357,9 +5363,7 @@ const LinkButton = (_ref) => {
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'a',
-        _extends({
-            href: href
-        }, props, {
+        _extends({ href: href }, props, {
             __source: {
                 fileName: _jsxFileName,
                 lineNumber: 6
@@ -5557,17 +5561,18 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/shared/ui-element/Modale/ind
 
 
 class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
-    constructor(props) {
-        super(props);
-        this.handleKeyDown = this.handleKeyDown.bind(this);
+    constructor(...args) {
+        var _temp;
+
+        return _temp = super(...args), this.handleKeyDown = e => {
+            if (e.key === 'Escape') {
+                this.props.onClose();
+            }
+        }, _temp;
     }
-    handleKeyDown(e) {
-        if (e.key === 'Escape') {
-            this.props.onClose();
-        }
-    }
+
     render() {
-        const { onClose, children, isOpened = true } = this.props;
+        const { onClose, children, isOpened } = this.props;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             {
@@ -5576,7 +5581,7 @@ class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 onKeyDown: this.handleKeyDown,
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 22
+                    lineNumber: 23
                 },
                 __self: this
             },
@@ -5584,7 +5589,7 @@ class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 'button',
                 { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a['close-button'], 'aria-label': 'Fermer', onClick: onClose, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 27
+                        lineNumber: 28
                     },
                     __self: this
                 },
@@ -5595,6 +5600,9 @@ class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     }
 }
 
+Modale.defaultProps = {
+    isOpened: true
+};
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Modale));
 
 /***/ }),

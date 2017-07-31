@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 import { withStyles } from 'vitaminjs';
 
 import LinkButton from '../shared/ui-element/Button/Link';

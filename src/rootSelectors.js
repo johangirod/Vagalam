@@ -1,4 +1,4 @@
-// @flow
+/* @flow */
 
 import type { Selector } from './rootTypes';
 import type { State as TripState } from './Trip/types';
