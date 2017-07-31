@@ -5,7 +5,6 @@ import { compose } from 'ramda';
 
 import s from './style.css';
 import TentIcon from './TentIcon';
-import MapIcon from './MapIcon';
 
 const Marker = ({
     state: { zoom },
@@ -14,7 +13,7 @@ const Marker = ({
     state: { zoom: number },
     type: 'point_of_interest' | 'sleep_location',
 }) => {
-    if (zoom < 4) {
+    if (zoom < 4 || type === 'point_of_interest') {
         return null;
     }
     const size = zoom > 8 ? 24 : zoom > 6 ? 12 : /* otherwise */ 4;
@@ -25,13 +24,11 @@ const Marker = ({
                 width: `${size}px`,
                 padding: `${size / 6}px`,
                 borderColor: zoom > 7 ? 'black' : 'transparent',
-                backgroundColor: type === 'point_of_interest' ? 'red' : 'white',
+                backgroundColor: 'white',
             }}
             className={s.icon}
         >
-            {type === 'sleep_location'
-                ? <TentIcon />
-                : type === 'point_of_interest' ? <MapIcon /> : null}
+            {type === 'sleep_location' ? <TentIcon /> : null}
         </div>
     );
 };

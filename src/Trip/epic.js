@@ -17,10 +17,7 @@ import type { Epic } from '../rootTypes';
 import { addFetchedPointsOfInterest, addFetchedSleepLocations } from './actions';
 
 const getPostId: (string, any) => ?string = (type, apiResponse) => {
-    const post =
-        apiResponse.data[`${type}.post`] ||
-        apiResponse.data[`${type}.pictures`] ||
-        apiResponse.data[`${type}.link`];
+    const post = apiResponse.data[`${type}.post`];
     return post ? post.value.document.id : null;
 };
 const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>

@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d03e00556f0c113d7022"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "99d697a648ac6f0a1ca9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -804,14 +804,14 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n}\n.style__picture___33lmx {\n    background-size: cover;\n    background-position: center;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    -webkit-animation: style__zoom-in___2i0LU 10s linear infinite alternate-reverse;\n            animation: style__zoom-in___2i0LU 10s linear infinite alternate-reverse;\n    opacity: 0;\n    position: absolute;\n    transition: opacity 0.7s;\n}\n.style__picture___33lmx.style__show___2gnB6 {\n    opacity: 1;\n}\n@-webkit-keyframes style__zoom-in___2i0LU { \n    from { \n        -webkit-transform: scale(1); \n                transform: scale(1);\n    } \n    to { \n        -webkit-transform: scale(1.2); \n                transform: scale(1.2); \n    }\n}\n@keyframes style__zoom-in___2i0LU { \n    from { \n        -webkit-transform: scale(1); \n                transform: scale(1);\n    } \n    to { \n        -webkit-transform: scale(1.2); \n                transform: scale(1.2); \n    }\n}", ""]);
+exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n}\n.style__picture___33lmx {\n    background-size: cover;\n    background-position: center;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    /*animation: zoom-in 10s linear infinite alternate-reverse;*/\n    opacity: 0;\n    position: absolute;\n    transition: opacity 0.7s;\n}\n.style__picture___33lmx.style__show___2gnB6 {\n    opacity: 1;\n}\n@-webkit-keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n@keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"pictures": "style__pictures___3HFbl",
 	"picture": "style__picture___33lmx",
-	"zoom-in": "style__zoom-in___2i0LU",
-	"show": "style__show___2gnB6"
+	"show": "style__show___2gnB6",
+	"zoom-in": "style__zoom-in___2i0LU"
 };
 
 /***/ }),
@@ -829,11 +829,10 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n}\narticle > * {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n.style__date___2bYjL {\n    font-weight: bold;\n    color: gray;\n}\n.style__date___2bYjL::before {\n    content: 🕐;\n}\n.style__content___2Li1p {\n    overflow: auto;\n    padding: 16px 32px;\n    background-color: white;\n    max-width: 600px;\n    margin: auto;\n    z-index: 1;\n}\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.4em;\n}\np {\n    margin-bottom: 1em;\n}\n", ""]);
+exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\narticle > * {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n.style__content___2Li1p {\n    overflow: auto;\n    padding: 16px 32px;\n    background-color: white;\n    max-height: calc(100% - 32px);\n    max-width: 600px;\n    z-index: 1;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.5em;\n}\np {\n    margin-bottom: 1em;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"date": "style__date___2bYjL",
 	"content": "style__content___2Li1p",
 	"body": "style__body___1twJ5"
 };
@@ -920,7 +919,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__modale___2ddo9 {\n    position: absolute;\n    background: white;\n    z-index: 3;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    overflow: hidden;\n    -webkit-transform: scale(0);\n        -ms-transform: scale(0);\n            transform: scale(0);\n}\n\n.style__modale___2ddo9.style__opened___16LEl {\n    -webkit-animation: style__scale-in-center___ROI7b 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)\n        both;\n            animation: style__scale-in-center___ROI7b 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940)\n        both;\n    -webkit-animation-delay: 2s;\n            animation-delay: 2s;\n}\n\n.style__close-button___1ow_E {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 16px;\n    z-index: 2;\n    margin-right: 8px;\n    background: transparent;\n    border: none;\n    display: block;\n    font-size: large;\n    cursor: pointer;\n}\n\n/* ----------------------------------------------\n * Generated by Animista on 2017-7-29 14:29:31\n * w: http://animista.net, t: @cssanimista\n * ---------------------------------------------- */\n\n/**\n * ----------------------------------------\n * animation scale-in-center\n * ----------------------------------------\n */\n\n@-webkit-keyframes style__scale-in-center___ROI7b {\n    0% {\n        -webkit-transform: scale(0);\n                transform: scale(0);\n        opacity: 1;\n    }\n    100% {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n        opacity: 1;\n    }\n}\n\n@keyframes style__scale-in-center___ROI7b {\n    0% {\n        -webkit-transform: scale(0);\n                transform: scale(0);\n        opacity: 1;\n    }\n    100% {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n        opacity: 1;\n    }\n}\n", ""]);
+exports.push([module.i, ".style__modale___2ddo9 {\n    position: absolute;\n    z-index: 3;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    overflow: hidden;\n    -webkit-transform: scale(0);\n        -ms-transform: scale(0);\n            transform: scale(0);\n}\n\n.style__modale___2ddo9.style__opened___16LEl {\n    -webkit-animation: style__scale-in-center___ROI7b 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940)\n        both;\n            animation: style__scale-in-center___ROI7b 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940)\n        both;\n    -webkit-animation-delay: 2s;\n            animation-delay: 2s;\n}\n\n.style__close-button___1ow_E {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 16px;\n    z-index: 2;\n    margin-right: 8px;\n    background: transparent;\n    border: none;\n    display: block;\n    font-size: large;\n    cursor: pointer;\n}\n\n/* ----------------------------------------------\n * Generated by Animista on 2017-7-29 14:29:31\n * w: http://animista.net, t: @cssanimista\n * ---------------------------------------------- */\n\n/**\n * ----------------------------------------\n * animation scale-in-center\n * ----------------------------------------\n */\n\n@-webkit-keyframes style__scale-in-center___ROI7b {\n    0% {\n        -webkit-transform: scale(0);\n                transform: scale(0);\n        opacity: 0;\n    }\n    100% {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n        opacity: 1;\n    }\n}\n\n@keyframes style__scale-in-center___ROI7b {\n    0% {\n        -webkit-transform: scale(0);\n                transform: scale(0);\n        opacity: 0;\n    }\n    100% {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n        opacity: 1;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3743,96 +3742,6 @@ const currentDayNumberSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE
 
 /***/ }),
 
-/***/ "./src/Trip/Map/MapPointMarker/MapIcon.jsx":
-/* exports provided: default */
-/* exports used: default */
-/*!*************************************************!*\
-  !*** ./src/Trip/Map/MapPointMarker/MapIcon.jsx ***!
-  \*************************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-var _jsxFileName = "/home/johan/Project/Vagalam/src/Trip/Map/MapPointMarker/MapIcon.jsx",
-    _this = this;
-
-
-/* harmony default export */ __webpack_exports__["a"] = (function mapIcon() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "svg",
-        {
-            xmlns: "http://www.w3.org/2000/svg",
-            version: "1.1",
-            x: "0px",
-            y: "0px",
-            viewBox: "0 0 100 125",
-            enableBackground: "new 0 0 100 100",
-            xmlSpace: "preserve",
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 2
-            },
-            __self: _this
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "g",
-            { display: "none", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 11
-                },
-                __self: _this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("rect", {
-                x: "-1134",
-                y: "-848.38",
-                display: "inline",
-                fill: "#000000",
-                stroke: "#000000",
-                strokeWidth: "1.0255",
-                strokeMiterlimit: "10",
-                width: "1370",
-                height: "1329.38",
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 12
-                },
-                __self: _this
-            })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "g",
-            {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 24
-                },
-                __self: _this
-            },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", { d: "M48.894,56.089c1.56,0,3.12-0.594,4.308-1.78c1.151-1.151,1.785-2.681,1.785-4.309s-0.634-3.157-1.784-4.308   c-1.151-1.151-2.681-1.785-4.309-1.785s-3.157,0.634-4.308,1.785c-2.375,2.375-2.375,6.24,0,8.615   C45.773,55.495,47.334,56.089,48.894,56.089z M47.415,48.521c0.395-0.396,0.92-0.613,1.479-0.613s1.084,0.218,1.479,0.614   c0.396,0.395,0.613,0.92,0.613,1.479s-0.218,1.084-0.613,1.479v0.001c-0.816,0.814-2.143,0.814-2.959,0   C46.599,50.664,46.599,49.336,47.415,48.521z", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 25
-                },
-                __self: _this
-            }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", { d: "M77.252,21.642c-15.637-15.637-41.08-15.637-56.717,0s-15.637,41.08,0,56.717c7.818,7.818,18.089,11.728,28.358,11.728   s20.54-3.909,28.358-11.728C92.889,62.722,92.889,37.278,77.252,21.642z M73.568,74.675c-13.605,13.607-35.744,13.607-49.35,0   c-13.606-13.605-13.606-35.744,0-49.35c6.803-6.804,15.738-10.205,24.675-10.205s17.872,3.401,24.675,10.205   C87.175,38.931,87.175,61.069,73.568,74.675z", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 26
-                },
-                __self: _this
-            }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("path", { d: "M71.168,27.726C65.217,21.776,57.307,18.5,48.894,18.5s-16.323,3.276-22.274,9.226c-12.281,12.282-12.281,32.266,0,44.548   c5.95,5.95,13.86,9.227,22.274,9.227c8.413,0,16.323-3.276,22.273-9.226C83.448,59.992,83.449,40.008,71.168,27.726z M28.033,29.14   c5.573-5.571,12.981-8.64,20.86-8.64c7.827,0,15.188,3.031,20.748,8.533l-32.396,9.32l-9.319,32.395   C16.535,59.237,16.569,40.605,28.033,29.14z M64.105,34.788l-6.797,23.627l-23.626,6.796l6.796-23.626L64.105,34.788z    M69.753,70.86c-5.572,5.571-12.98,8.64-20.859,8.64c-7.828,0-15.188-3.031-20.748-8.534l32.395-9.319l9.32-32.395   C81.252,40.763,81.218,59.394,69.753,70.86z", __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 27
-                },
-                __self: _this
-            })
-        )
-    );
-});
-
-/***/ }),
-
 /***/ "./src/Trip/Map/MapPointMarker/TentIcon.jsx":
 /* exports provided: default */
 /* exports used: default */
@@ -4002,10 +3911,8 @@ var _jsxFileName = "/home/johan/Project/Vagalam/src/Trip/Map/MapPointMarker/Tent
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Map/MapPointMarker/style.css");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__TentIcon__ = __webpack_require__(/*! ./TentIcon */ "./src/Trip/Map/MapPointMarker/TentIcon.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__MapIcon__ = __webpack_require__(/*! ./MapIcon */ "./src/Trip/Map/MapPointMarker/MapIcon.jsx");
 var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Map/MapPointMarker/index.jsx',
     _this = this;
-
 
 
 
@@ -4019,7 +3926,7 @@ const Marker = ({
     state: { zoom },
     type
 }) => {
-    if (zoom < 4) {
+    if (zoom < 4 || type === 'point_of_interest') {
         return null;
     }
     const size = zoom > 8 ? 24 : zoom > 6 ? 12 : /* otherwise */4;
@@ -4031,25 +3938,19 @@ const Marker = ({
                 width: `${size}px`,
                 padding: `${size / 6}px`,
                 borderColor: zoom > 7 ? 'black' : 'transparent',
-                backgroundColor: type === 'point_of_interest' ? 'red' : 'white'
+                backgroundColor: 'white'
             },
             className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.icon,
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 22
+                lineNumber: 21
             },
             __self: _this
         },
         type === 'sleep_location' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__TentIcon__["a" /* default */], {
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 33
-            },
-            __self: _this
-        }) : type === 'point_of_interest' ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__MapIcon__["a" /* default */], {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 34
+                lineNumber: 31
             },
             __self: _this
         }) : null
@@ -4499,11 +4400,14 @@ const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react
         },
         __self: _this
     }) : null,
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    content ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.content, __source: {
+        {
+            className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.content,
+            style: { alignSelf: pictures.length ? 'stretch' : 'center' },
+            __source: {
                 fileName: _jsxFileName,
-                lineNumber: 10
+                lineNumber: 11
             },
             __self: _this
         },
@@ -4512,7 +4416,7 @@ const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react
             {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 11
+                    lineNumber: 15
                 },
                 __self: _this
             },
@@ -4525,11 +4429,11 @@ const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react
             },
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 14
+                lineNumber: 18
             },
             __self: _this
         })
-    )
+    ) : null
 );
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Post));
@@ -4644,10 +4548,10 @@ function addFetchedPosts(posts) {
 function fetchPosts(postIds) {
     return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.Predicates.in('document.id', postIds), {}))).map(response => response.results).map(postsApi => postsApi.map(postApi => ({
         id: postApi.id,
-        type: postApi.type === 'post' ? 'Article' : 'Gallery',
+        type: postApi.data['post.content'] ? 'Article' : 'Gallery',
         title: postApi.data['post.title'] && __WEBPACK_IMPORTED_MODULE_9_prismic_dom___default.a.RichText.asText(postApi.data['post.title'].value),
         content: postApi.data['post.content'] && __WEBPACK_IMPORTED_MODULE_9_prismic_dom___default.a.RichText.asHtml(postApi.data['post.content'].value),
-        pictures: []
+        pictures: postApi.data['post.pictures'] ? postApi.data['post.pictures'].value.map(value => value.picture.value.main.url) : []
     })));
 }
 
@@ -4855,7 +4759,7 @@ function addFetchedPointsOfInterest(pointsOfInterest) {
 
 
 const getPostId = (type, apiResponse) => {
-    const post = apiResponse.data[`${type}.post`] || apiResponse.data[`${type}.pictures`] || apiResponse.data[`${type}.link`];
+    const post = apiResponse.data[`${type}.post`];
     return post ? post.value.document.id : null;
 };
 const fetchSleepLocationsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.Predicates.at('document.type', 'sleep_location'), {

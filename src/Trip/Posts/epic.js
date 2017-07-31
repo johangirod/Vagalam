@@ -24,14 +24,16 @@ function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
         .map(postsApi =>
             postsApi.map(postApi => ({
                 id: postApi.id,
-                type: postApi.type === 'post' ? 'Article' : 'Gallery',
+                type: postApi.data['post.content'] ? 'Article' : 'Gallery',
                 title:
                     postApi.data['post.title'] &&
                     PrismicDOM.RichText.asText(postApi.data['post.title'].value),
                 content:
                     postApi.data['post.content'] &&
                     PrismicDOM.RichText.asHtml(postApi.data['post.content'].value),
-                pictures: [],
+                pictures: postApi.data['post.pictures']
+                    ? postApi.data['post.pictures'].value.map(value => value.picture.value.main.url)
+                    : [],
             })),
         );
 }
