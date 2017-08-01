@@ -14,6 +14,9 @@ import type { Action, Post } from './types';
 import type { PostId } from '../types';
 import { addFetchedPosts } from './actions';
 
+const proxyWithGoogleImageResizer = pictureUrl =>
+    `https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=${pictureUrl}&container=focus&resize_h=1080&refresh=31536000`;
+
 function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
     return Observable.fromPromise(
         Prismic.api('http://vagalam.prismic.io/api').then(api =>
@@ -32,7 +35,9 @@ function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
                     postApi.data['post.content'] &&
                     PrismicDOM.RichText.asHtml(postApi.data['post.content'].value),
                 pictures: postApi.data['post.pictures']
-                    ? postApi.data['post.pictures'].value.map(value => value.picture.value.main.url)
+                    ? postApi.data['post.pictures'].value.map(value =>
+                          proxyWithGoogleImageResizer(value.picture.value.main.url),
+                      )
                     : [],
             })),
         );

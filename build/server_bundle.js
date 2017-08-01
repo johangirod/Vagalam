@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "99d697a648ac6f0a1ca9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a3830de8e7bdb06769e7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -3515,7 +3515,8 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Landing/index.jsx',
 
 const Landing = () => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_3__shared_ui_element_FrameLayout__["a" /* default */],
-    { style: { backgroundColor: '#232a16' }, __source: {
+    {
+        __source: {
             fileName: _jsxFileName,
             lineNumber: 11
         },
@@ -4545,13 +4546,15 @@ function addFetchedPosts(posts) {
 
 
 
+const proxyWithGoogleImageResizer = pictureUrl => `https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=${pictureUrl}&container=focus&resize_h=1080&refresh=31536000`;
+
 function fetchPosts(postIds) {
     return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.Predicates.in('document.id', postIds), {}))).map(response => response.results).map(postsApi => postsApi.map(postApi => ({
         id: postApi.id,
         type: postApi.data['post.content'] ? 'Article' : 'Gallery',
         title: postApi.data['post.title'] && __WEBPACK_IMPORTED_MODULE_9_prismic_dom___default.a.RichText.asText(postApi.data['post.title'].value),
         content: postApi.data['post.content'] && __WEBPACK_IMPORTED_MODULE_9_prismic_dom___default.a.RichText.asHtml(postApi.data['post.content'].value),
-        pictures: postApi.data['post.pictures'] ? postApi.data['post.pictures'].value.map(value => value.picture.value.main.url) : []
+        pictures: postApi.data['post.pictures'] ? postApi.data['post.pictures'].value.map(value => proxyWithGoogleImageResizer(value.picture.value.main.url)) : []
     })));
 }
 
