@@ -3,6 +3,7 @@
 import { withStyles } from 'vitaminjs';
 import { compose } from 'ramda';
 import { connect } from 'react-redux';
+import { Component } from 'react';
 
 import { goToNextStep } from './actions';
 import s from './style.css';
@@ -31,25 +32,46 @@ function goFullScreen() {
     }
 }
 
+type PropType = {
+    goToNextStep: () => {},
+};
 // eslint-disable-next-line no-shadow
-const Trip = ({ goToNextStep }) => {
-    const handleKeyDown = (e) => {
+class Trip extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isMapCurrentlyAnimated: false,
+        };
+    }
+    props: PropType;
+    handleKeyDown = (e) => {
         if (e.key === ' ') {
             goFullScreen();
-            goToNextStep();
+            this.props.goToNextStep();
         }
     };
-    return (
-        <FrameLayout
-            top="vagalam"
-            bottom={<Details />}
-            onKeyDown={handleKeyDown}
-            role="presentation"
-        >
-            <Map />
-            <Posts />
-        </FrameLayout>
-    );
-};
+    handleAnimationEnd = () => {
+        this.setState({ isMapCurrentlyAnimated: false });
+    };
+    handleAnimationStart = () => {
+        this.setState({ isMapCurrentlyAnimated: true });
+    };
+    render() {
+        return (
+            <FrameLayout
+                top="vagalam"
+                bottom={<Details />}
+                onKeyDown={this.handleKeyDown}
+                role="presentation"
+            >
+                <Map
+                    onAnimationEnd={this.handleAnimationEnd}
+                    onAnimationStart={this.handleAnimationStart}
+                />
+                {this.state.isMapCurrentlyAnimated ? null : <Posts />}
+            </FrameLayout>
+        );
+    }
+}
 
 export default compose(connect(null, { goToNextStep }), withStyles(s))(Trip);

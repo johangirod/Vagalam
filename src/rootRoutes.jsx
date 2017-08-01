@@ -1,11 +1,17 @@
+import { persistStore } from 'redux-persist';
 import { Route } from 'vitaminjs/react-router';
 import App from './App';
 import Trip from './Trip';
 import Landing from './Landing';
 
-export default (
-    <Route component={App}>
-        <Route path="/" component={Landing} />
-        <Route path="/voyage" component={Trip} />
-    </Route>
-);
+export default (store) => {
+    if (IS_CLIENT) {
+        persistStore(store);
+    }
+    return (
+        <Route component={App}>
+            <Route path="/" component={Landing} />
+            <Route path="/voyage" component={Trip} />
+        </Route>
+    );
+};

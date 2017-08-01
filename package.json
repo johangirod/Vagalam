@@ -26,6 +26,7 @@
         "react-redux": "^5.0.5",
         "redux": "^3.7.2",
         "redux-observable": "^0.14.1",
+        "redux-persist": "^4.8.3",
         "reselect": "^3.0.1",
         "rxjs": "5.x.x",
         "vitaminjs": "https://github.com/johangirod/vitaminjs#master"

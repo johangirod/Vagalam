@@ -2,6 +2,7 @@
     "routes": "./src/rootRoutes",
     "redux": {
         "reducers": "./src/rootReducers",
-        "middlewares": "./src/middlewares"
+        "middlewares": "./src/middlewares",
+        "enhancers": "./src/storeEnhancers"
     } 
 }
