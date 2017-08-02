@@ -45,8 +45,12 @@ type PropType = {
     currentPath: Array<MapPoint>,
     onAnimationEnd: () => void,
     onAnimationStart: () => void,
+    style: ?{ [string]: string | 0 },
 };
 class Map extends Component {
+    static defaultProps = {
+        style: {},
+    };
     constructor(props) {
         super(props);
         this.state = {
@@ -69,13 +73,14 @@ class Map extends Component {
     };
     props: PropType;
     render() {
-        const { effects: { updateMap }, displayedTripLineString, currentPath } = this.props;
+        const { effects: { updateMap }, displayedTripLineString, currentPath, style } = this.props;
         const currentMapPoint = last(currentPath);
         return (
             <Mapbox.Map
                 center={currentMapPoint ? currentMapPoint.coordinates : [2.3738311, 48.8841141]}
                 containerStyle={{
                     height: '100%',
+                    ...style,
                 }}
                 zoom={INITIAL_ZOOM}
                 mapboxApiAccessToken={config.mapboxAccessToken}
@@ -89,8 +94,8 @@ class Map extends Component {
                         defaultStyle={{ distance: 0 }}
                         style={{
                             distance: spring(lineDistance(displayedTripLineString), {
-                                stiffness: 42,
-                                damping: 19,
+                                stiffness: 170,
+                                damping: 40,
                                 precision: 1,
                             }),
                         }}
