@@ -20,7 +20,8 @@
         "react/prop-types": "off"
     },
     "globals": {
-        "IS_CLIENT": false
+        "IS_CLIENT": false,
+        "IS_SERVER": false
     },
     "plugins": ["flowtype"]
 }

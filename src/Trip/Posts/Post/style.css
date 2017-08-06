@@ -21,6 +21,7 @@ h1 {
     z-index: 1;
     flex: 1;
 }
+
 .body {
     white-space: pre-line;
     line-height: 1.5em;

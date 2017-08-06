@@ -96,7 +96,7 @@ class Map extends Component {
                         style={{
                             distance: spring(lineDistance(displayedTripLineString), {
                                 stiffness: 170,
-                                damping: 40,
+                                damping: 55,
                                 precision: 1,
                             }),
                         }}

@@ -1,9 +1,10 @@
-a {
+.button {
     position: relative;
     border-radius: 32px;
-    border: 2px solid white;
+    border: 2px solid black;
     display: inline-block;
     text-decoration: none;
+    cursor: pointer;
     color: black;
     font-size: large;
     padding: 12px 32px;
@@ -11,10 +12,10 @@ a {
     transition: border-color 1s;
     background-clip: padding-box;
 }
-a:hover {
+.button:hover {
     border-color: transparent;
 }
-a::after {
+.button::after {
     position: absolute;
     top: -2px;
     bottom: -2px;
