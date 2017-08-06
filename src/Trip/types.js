@@ -29,6 +29,8 @@ export type FetchingStatusState<TypeId> = {
     nextFetchTrigger: ?MapPointId,
     lastFetchedId: ?TypeId,
 };
+
+export type CurrentAnimationType = 'Map' | 'Post' | null;
 export type State = {
     +posts: PostsState,
     +path: Array<MapPoint>,
@@ -37,6 +39,7 @@ export type State = {
         sleepLocations: FetchingStatusState<SleepLocationId>,
         pointsOfInterest: FetchingStatusState<PointOfInterestId>,
     },
+    currentAnimation: CurrentAnimationType;
 };
 
 export type AddFetchedSleepLocationsAction = {
@@ -53,4 +56,8 @@ export type GoToNextStepAction = {
     type: 'app/trip/GO_TO_NEXT_STEP',
 };
 
-export type Action = AddFetchedSleepLocationsAction | AddFetchedPointsOfInterestAction | GoToNextStepAction | PostsAction;
+export type NotifyAnimationEndAction = {
+    type: 'app/trip/CURRENT_ANIMATION_ENDED',
+};
+
+export type Action = AddFetchedSleepLocationsAction | AddFetchedPointsOfInterestAction | GoToNextStepAction | PostsAction | NotifyAnimationEndAction;

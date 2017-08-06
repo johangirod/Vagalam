@@ -1,1 +1,6 @@
-
+.map {
+    transition: transform 1s;
+}
+.zoom-in {
+    transform: scale(3);
+}

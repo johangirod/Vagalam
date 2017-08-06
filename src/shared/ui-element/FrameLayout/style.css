@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    transition: background-color .5s;
     padding: 0 48px;
 }
 

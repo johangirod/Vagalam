@@ -3,6 +3,7 @@ import type {
     GoToNextStepAction,
     AddFetchedSleepLocationsAction,
     AddFetchedPointsOfInterestAction,
+    NotifyAnimationEndAction,
     SleepLocation,
     PointOfInterest,
 } from './types';
@@ -28,5 +29,11 @@ export function addFetchedPointsOfInterest(
     return {
         type: 'app/trip/ADD_FETCHED_POINTS_OF_INTEREST',
         pointsOfInterest,
+    };
+}
+
+export function notifyAnimationEnd(): NotifyAnimationEndAction {
+    return {
+        type: 'app/trip/CURRENT_ANIMATION_ENDED',
     };
 }

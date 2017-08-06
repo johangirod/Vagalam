@@ -4,9 +4,10 @@ import { withStyles } from 'vitaminjs';
 import { compose } from 'ramda';
 import { connect } from 'react-redux';
 import { Component } from 'react';
-import { Motion, spring } from 'react-motion';
+import classnames from 'classnames';
 
 import { goToNextStep } from './actions';
+import { hasFullScreenPostSelector } from './Posts/selectors';
 import s from './style.css';
 import Map from './Map';
 import CurrentPost from './Posts';
@@ -35,16 +36,10 @@ function goFullScreen() {
 
 type PropType = {
     goToNextStep: () => {},
+    hasFullScreenPost: boolean,
 };
 // eslint-disable-next-line no-shadow
 class Trip extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isMapCurrentlyAnimated: false,
-            isPostDisplayed: false,
-        };
-    }
     props: PropType;
     handleKeyDown = (e) => {
         if (e.key === ' ') {
@@ -52,64 +47,23 @@ class Trip extends Component {
             this.props.goToNextStep();
         }
     };
-    handleAnimationEnd = () => {
-        setTimeout(() => this.setState({ isMapCurrentlyAnimated: false }), 500);
-    };
-    handleAnimationStart = () => {
-        this.setState({ isMapCurrentlyAnimated: true });
-    };
-    handlePostEnter = () => {
-        this.setState({ isPostDisplayed: true });
-    };
-    handlePostLeave = () => {
-        this.setState({ isPostDisplayed: false });
-    };
-    isCurrentPostVisible = () => this.state.isPostDisplayed && !this.state.isMapCurrentlyAnimated;
     render() {
         return (
             <FrameLayout
                 top="vagalam"
                 bottom={<Details />}
                 onKeyDown={this.handleKeyDown}
+                frameBackgroundColor={this.props.hasFullScreenPost ? 'black' : 'white'}
                 role="presentation"
             >
-                <Motion
-                    style={{
-                        mapTransformScale: spring(this.isCurrentPostVisible() ? 2 : 1),
-                        postTransformScale: spring(this.isCurrentPostVisible() ? 1 : 0),
-                        postOpacity: spring(this.isCurrentPostVisible() ? 1 : 0),
-                    }}
-                >
-                    {({ mapTransformScale, postOpacity, postTransformScale }) =>
-                        (<div style={{ height: '100%', overflow: 'hidden' }}>
-                            <Map
-                                style={{
-                                    transform: `scale(${mapTransformScale})`,
-                                }}
-                                onAnimationEnd={this.handleAnimationEnd}
-                                onAnimationStart={this.handleAnimationStart}
-                            />
-                            <div
-                                style={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                    transform: `scale(${postTransformScale})`,
-                                    opacity: postOpacity,
-                                }}
-                            >
-                                <CurrentPost
-                                    onEnter={this.handlePostEnter}
-                                    onLeave={this.handlePostLeave}
-                                />
-                            </div>
-                        </div>)}
-                </Motion>
+                <Map />
+                <CurrentPost />
             </FrameLayout>
         );
     }
 }
 
-export default compose(connect(null, { goToNextStep }), withStyles(s))(Trip);
+export default compose(
+    connect(state => ({ hasFullScreenPost: hasFullScreenPostSelector(state) }), { goToNextStep }),
+    withStyles(s),
+)(Trip);

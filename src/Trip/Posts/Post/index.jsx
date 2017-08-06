@@ -1,4 +1,5 @@
 /* @flow */
+
 import { withStyles } from 'vitaminjs';
 import Pictures from '../Pictures';
 import s from './style.css';

@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 import { compose, last } from 'ramda';
 import { provideState, injectState, softUpdate } from 'freactal';
 import selectors from './selectors';
+import { notifyAnimationEnd } from '../actions';
 import type { MapPoint } from '../types';
 import MapPointMarker from './MapPointMarker';
 import s from './style.css';
@@ -32,6 +33,7 @@ if (IS_CLIENT) {
 }
 
 const INITIAL_ZOOM = [9];
+const STYLE_URL = 'mapbox://styles/ganceab/cj60tjdxq0asi2rppfum27wau';
 const withMapZoomControl = provideState({
     initialState: () => ({
         zoom: INITIAL_ZOOM,
@@ -43,9 +45,8 @@ const withMapZoomControl = provideState({
 type PropType = {
     displayedTripLineString: ?LineString2D,
     currentPath: Array<MapPoint>,
-    onAnimationEnd: () => void,
-    onAnimationStart: () => void,
     style: ?{ [string]: string | 0 },
+    onAnimationEnd: () => void,
 };
 class Map extends Component {
     static defaultProps = {
@@ -64,12 +65,12 @@ class Map extends Component {
             this.props.currentPath.length !== nextProps.currentPath.length
         ) {
             this.setState({ isMapCurrentlyAnimated: true });
-            this.props.onAnimationStart();
         }
     }
     handleAnimatonEnd = () => {
         this.setState({ isMapCurrentlyAnimated: false });
-        this.props.onAnimationEnd();
+        // Waiting for marker to appear
+        setTimeout(this.props.onAnimationEnd, 300);
     };
     props: PropType;
     render() {
@@ -84,7 +85,7 @@ class Map extends Component {
                 }}
                 zoom={INITIAL_ZOOM}
                 mapboxApiAccessToken={config.mapboxAccessToken}
-                style="mapbox://styles/mapbox/satellite-v9"
+                style={STYLE_URL}
                 onMove={updateMap}
                 onStyleLoad={updateMap}
                 movingMethod="easeTo"
@@ -134,4 +135,11 @@ class Map extends Component {
     }
 }
 
-export default compose(withMapZoomControl, injectState, connect(selectors), withStyles(s))(Map);
+export default compose(
+    withMapZoomControl,
+    injectState,
+    connect(selectors, {
+        onAnimationEnd: notifyAnimationEnd,
+    }),
+    withStyles(s),
+)(Map);

@@ -1,9 +1,19 @@
 /* @flow */
 import { withStyles } from 'vitaminjs';
+import type { Children } from 'react';
 import s from './style.css';
 
-const FrameLayout = ({ top, bottom, children, ...otherProps }) =>
-    (<div className={s.layout} {...otherProps}>
+type PropType = {
+    top: Element,
+    bottom: Element,
+    frameBackgroundColor?: string,
+    children: Children,
+};
+
+const FrameLayout = (
+    { top, bottom, children, frameBackgroundColor = 'white', ...otherProps }: PropType = {},
+) =>
+    (<div className={s.layout} {...otherProps} style={{ backgroundColor: frameBackgroundColor }}>
         <div className={s.top}>
             {top}
         </div>

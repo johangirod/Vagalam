@@ -1,4 +1,5 @@
 /* @flow */
+
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
 import { prop, nth, last, defaultTo, ascend } from 'ramda';
 import { combineReducers } from 'redux';
@@ -10,6 +11,7 @@ import type {
     FetchingStatusState,
     MapPoint,
     PointOfInterestId,
+    CurrentAnimationType,
     State,
     SleepLocationId,
 } from './types';
@@ -80,6 +82,17 @@ function currentMapPointIdReducer(state: State, action: Action): State {
     }
 }
 
+function currentAnimationReducer(state: CurrentAnimationType = null, action: Action) {
+    switch (action.type) {
+    case 'app/trip/GO_TO_NEXT_STEP':
+        return 'Map';
+    case 'app/trip/CURRENT_ANIMATION_ENDED':
+        return null;
+    default:
+        return state;
+    }
+}
+
 export default pipeReducers(
     combineReducers({
         path: pathReducer,
@@ -89,6 +102,7 @@ export default pipeReducers(
         }),
         currentMapPointId: defaultTo(null),
         posts: postsReducer,
+        currentAnimation: currentAnimationReducer,
     }),
     currentMapPointIdReducer,
 );
