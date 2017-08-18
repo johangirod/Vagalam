@@ -1,4 +1,4 @@
-.modale {
+.overlay {
     position: absolute;
     z-index: 3;
     top: 0;
@@ -9,7 +9,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
 }
 
 .close-button {
@@ -18,14 +17,29 @@
     right: 0;
     padding: 16px;
     z-index: 2;
-    margin-right: 8px;
-    background: transparent;
     border: none;
     display: block;
     font-size: large;
+    background-color: transparent;
     cursor: pointer;
 }
 
+.fullscreen .close-button {
+    right: -44px;
+    color: white;
+}
+
+.modale {
+    position: relative;
+    max-width: 600px;
+    max-height: 100%;
+}
+
+.fullscreen {
+    max-width: none;
+    flex: 1;
+    width: 100%;
+}
 .enter {
     opacity: 0.01;
     transform: scale(0.01);
@@ -33,7 +47,7 @@
 .enter-active {
     opacity: 1;
     transform: scale(1);
-    transition: opacity .5s, transform .5s;
+    transition: opacity .8s, transform .8s;
 }
 
 .leave {

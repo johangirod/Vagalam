@@ -8,7 +8,7 @@ export opaque type PointOfInterestId = string;
 
 export type SleepLocation = {
     +id: SleepLocationId,
-    +date: Date,
+    +date: string,
     +coordinates: Coordinates,
     +dayNumber: number,
     +postId: ?PostId,
@@ -17,7 +17,7 @@ export type SleepLocation = {
 
 export type PointOfInterest = {
     +id: PointOfInterestId,
-    +date: Date,
+    +date: string,
     +coordinates: Coordinates,
     +postId: ?PostId,
     +type: 'point_of_interest',    

@@ -1,5 +1,6 @@
 .pictures {
     position: relative;
+    height: 100%;
 }
 .picture {
     background-size: cover;

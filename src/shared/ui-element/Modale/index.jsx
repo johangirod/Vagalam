@@ -1,15 +1,25 @@
 /* @flow */
 
 import { Component } from 'react';
+import classnames from 'classnames';
 import { CSSTransitionGroup } from 'react-transition-group';
 import { withStyles } from 'vitaminjs';
+
 import type { Children } from 'react';
 import s from './style.css';
 
-type PropType = { onClose: () => void, children: Children, isOpened?: boolean };
+type PropType = {
+    children: Children,
+    fullScreen?: boolean,
+    onClose?: () => void,
+    isOpened?: boolean,
+};
+
 class Modale extends Component {
     static defaultProps = {
         isOpened: true,
+        fullScreen: false,
+        onClose: () => {},
     };
     constructor(props) {
         super(props);
@@ -33,15 +43,18 @@ class Modale extends Component {
     props: PropType;
     handleKeyDown = (e: SyntheticKeyboardEvent) => {
         if (e.key === 'Escape') {
-            this.props.onClose();
-            this.setState({ isOpened: false });
+            this.handleClose();
         }
     };
+    handleClose = () => {
+        this.props.onClose();
+        this.setState({ isOpened: false });
+    };
     render() {
-        const { onClose, children } = this.props;
+        const { children, fullScreen } = this.props;
         return (
             <CSSTransitionGroup
-                transitionEnterTimeout={500}
+                transitionEnterTimeout={800}
                 transitionLeaveTimeout={500}
                 transitionName={{
                     enter: s.enter,
@@ -51,15 +64,17 @@ class Modale extends Component {
                 }}
             >
                 {this.state.isOpened
-                    ? <div role="presentation" className={s.modale} onKeyDown={this.handleKeyDown}>
-                        <button
-                            className={s['close-button']}
-                            aria-label="Fermer"
-                            onClick={onClose}
-                        >
-                              X
-                          </button>
-                        {children}
+                    ? <div role="presentation" className={s.overlay} onKeyDown={this.handleKeyDown}>
+                        <div className={classnames(s.modale, { [s.fullscreen]: fullScreen })}>
+                            <button
+                                className={s['close-button']}
+                                aria-label="Fermer"
+                                onClick={this.handleClose}
+                            >
+                                  X
+                              </button>
+                            {children}
+                        </div>
                     </div>
                     : null}
             </CSSTransitionGroup>

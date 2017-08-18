@@ -11,7 +11,7 @@ type PropType = {
 };
 
 const PostOverlay = ({ currentPost }: PropType) =>
-    (<Modale isOpened={!!currentPost}>
+    (<Modale isOpened={!!currentPost} fullScreen={currentPost && !!currentPost.pictures.length}>
         <Post {...currentPost} />
     </Modale>);
 

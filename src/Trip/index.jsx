@@ -11,7 +11,7 @@ import s from './style.css';
 import Map from './Map';
 import CurrentPost from './Posts';
 import FrameLayout from '../shared/ui-element/FrameLayout';
-import FullScreenModale from '../shared/FullScreenModale';
+import FullScreenModale from '../shared/FullScreenModale/index';
 import Details from './Details';
 
 type PropType = {
@@ -35,9 +35,9 @@ class Trip extends Component {
                 frameBackgroundColor={this.props.hasFullScreenPost ? 'black' : 'white'}
                 role="presentation"
             >
-                <FullScreenModale />
                 <Map />
                 <CurrentPost />
+                <FullScreenModale />
             </FrameLayout>
         );
     }

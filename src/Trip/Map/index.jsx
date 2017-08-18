@@ -9,7 +9,7 @@ import lineSliceAlong from '@turf/line-slice-along';
 import { Motion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { compose, last } from 'ramda';
-import { provideState, injectState, softUpdate } from 'freactal';
+import { provideState, injectState, update } from 'freactal';
 import selectors from './selectors';
 import { notifyAnimationEnd } from '../actions';
 import type { MapPoint } from '../types';
@@ -39,7 +39,7 @@ const withMapZoomControl = provideState({
         zoom: INITIAL_ZOOM,
     }),
     effects: {
-        updateMap: softUpdate((_, map) => ({ zoom: map.getZoom() })),
+        updateMap: update((_, map) => ({ zoom: map.getZoom() })),
     },
 });
 type PropType = {

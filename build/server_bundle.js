@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2364b3a23dd29ddfcbaa"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "352c53dc13c9c0bc0b8f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -669,7 +669,7 @@ module.exports =
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return hotCreateRequire(80)(__webpack_require__.s = 80);
+/******/ 	return hotCreateRequire(79)(__webpack_require__.s = 79);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -804,7 +804,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n}\n.style__picture___33lmx {\n    background-size: cover;\n    background-position: center;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    /*animation: zoom-in 10s linear infinite alternate-reverse;*/\n    opacity: 0;\n    position: absolute;\n    transition: opacity 0.7s;\n}\n.style__picture___33lmx.style__show___2gnB6 {\n    opacity: 1;\n}\n@-webkit-keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n@keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n", ""]);
+exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n    height: 100%;\n}\n.style__picture___33lmx {\n    background-size: cover;\n    background-position: center;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    /*animation: zoom-in 10s linear infinite alternate-reverse;*/\n    opacity: 0;\n    position: absolute;\n    transition: opacity 0.7s;\n}\n.style__picture___33lmx.style__show___2gnB6 {\n    opacity: 1;\n}\n@-webkit-keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n@keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -829,10 +829,11 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\narticle > * {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n.style__content___2Li1p {\n    overflow: auto;\n    padding: 16px 32px;\n    background-color: white;\n    max-height: calc(100% - 32px);\n    max-width: 600px;\n    z-index: 1;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.5em;\n}\np {\n    margin-bottom: 1em;\n}\n", ""]);
+exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    overflow: hidden;\n    background-color: white;\n}\n\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n\n.style__pictures___4FB4g {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    transition: all .5s;\n    cursor: pointer;\n}\n\n.style__pictures___4FB4g:hover {\n    -webkit-box-flex: 2;\n        -ms-flex: 2;\n            flex: 2;\n}\n\n.style__content___2Li1p {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    overflow: auto;\n    padding: 16px 32px;\n    max-height: calc(100% - 32px);\n    min-width: 50%;\n    max-width: 600px;\n    z-index: 1;\n    -webkit-box-flex: 2;\n        -ms-flex: 2;\n            flex: 2;\n}\n\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.5em;\n}\n\np {\n    margin-bottom: 1em;\n}\n", ""]);
 
 // exports
 exports.locals = {
+	"pictures": "style__pictures___4FB4g",
 	"content": "style__content___2Li1p",
 	"body": "style__body___1twJ5"
 };
@@ -875,7 +876,7 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__modale___oN5LA {\n    background-color: white;\n    text-align: center;\n    max-width: 600px;\n    padding: 20px;\n}\n", ""]);
+exports.push([module.i, ".style__modale___oN5LA {\n    text-align: center;\n    background-color: white;\n    padding: 40px;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -945,12 +946,14 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__modale___2ddo9 {\n    position: absolute;\n    z-index: 3;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    overflow: hidden;\n}\n\n.style__close-button___1ow_E {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 16px;\n    z-index: 2;\n    margin-right: 8px;\n    background: transparent;\n    border: none;\n    display: block;\n    font-size: large;\n    cursor: pointer;\n}\n\n.style__enter___1TsM6 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n}\n\n.style__enter-active___cOvkb {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n    transition: opacity .5s, -webkit-transform .5s;\n    transition: opacity .5s, transform .5s;\n    transition: opacity .5s, transform .5s, -webkit-transform .5s;\n}\n\n.style__leave___24Fs2 {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n}\n\n.style__leave-active___3bda8 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n    transition: opacity .5s, -webkit-transform .5s;\n    transition: opacity .5s, transform .5s;\n    transition: opacity .5s, transform .5s, -webkit-transform .5s;\n}\n", ""]);
+exports.push([module.i, ".style__overlay___1F4_X {\n    position: absolute;\n    z-index: 3;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n\n.style__close-button___1ow_E {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 16px;\n    z-index: 2;\n    border: none;\n    display: block;\n    font-size: large;\n    background-color: transparent;\n    cursor: pointer;\n}\n\n.style__fullscreen___1XD0i .style__close-button___1ow_E {\n    right: -44px;\n    color: white;\n}\n\n.style__modale___2ddo9 {\n    position: relative;\n    max-width: 600px;\n    max-height: 100%;\n}\n\n.style__fullscreen___1XD0i {\n    max-width: none;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    width: 100%;\n}\n\n.style__enter___1TsM6 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n}\n\n.style__enter-active___cOvkb {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n    transition: opacity .8s, -webkit-transform .8s;\n    transition: opacity .8s, transform .8s;\n    transition: opacity .8s, transform .8s, -webkit-transform .8s;\n}\n\n.style__leave___24Fs2 {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n}\n\n.style__leave-active___3bda8 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n    transition: opacity .5s, -webkit-transform .5s;\n    transition: opacity .5s, transform .5s;\n    transition: opacity .5s, transform .5s, -webkit-transform .5s;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modale": "style__modale___2ddo9",
+	"overlay": "style__overlay___1F4_X",
 	"close-button": "style__close-button___1ow_E",
+	"fullscreen": "style__fullscreen___1XD0i",
+	"modale": "style__modale___2ddo9",
 	"enter": "style__enter___1TsM6",
 	"enter-active": "style__enter-active___cOvkb",
 	"leave": "style__leave___24Fs2",
@@ -972,7 +975,7 @@ exports = module.exports = __webpack_require__(/*! ../~/css-loader/lib/css-base.
 
 
 // module
-exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -ms-text-size-adjust: 100%; /* 2 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers (opinionated).\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Add the correct display in IE 9-.\n */\n\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\n\nfigcaption,\nfigure,\nmain { /* 1 */\n  display: block;\n}\n\n/**\n * Add the correct margin in IE 8.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\n\na {\n  background-color: transparent; /* 1 */\n  -webkit-text-decoration-skip: objects; /* 2 */\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\n\nb,\nstrong {\n  font-weight: inherit;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font style in Android 4.3-.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Add the correct background and color in IE 9-.\n */\n\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\naudio,\nvideo {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in iOS 4-7.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Hide the overflow in IE.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nhtml [type=\"button\"], /* 1 */\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\n\ndetails, /* 1 */\nmenu {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Scripting\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\ncanvas {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in IE.\n */\n\ntemplate {\n  display: none;\n}\n\n/* Hidden\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10-.\n */\n\n[hidden] {\n  display: none;\n}\n\n* {\n    font-family: 'Lato', sans-serif;\n}\n\np { \n    margin: 0;\n}", ""]);
+exports.push([module.i, "/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */\n\n/* Document\n   ========================================================================== */\n\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in\n *    IE on Windows Phone and in iOS.\n */\n\nhtml {\n  line-height: 1.15; /* 1 */\n  -ms-text-size-adjust: 100%; /* 2 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/* Sections\n   ========================================================================== */\n\n/**\n * Remove the margin in all browsers (opinionated).\n */\n\nbody {\n  margin: 0;\n}\n\n/**\n * Add the correct display in IE 9-.\n */\n\narticle,\naside,\nfooter,\nheader,\nnav,\nsection {\n  display: block;\n}\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in IE.\n */\n\nfigcaption,\nfigure,\nmain { /* 1 */\n  display: block;\n}\n\n/**\n * Add the correct margin in IE 8.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\n\nhr {\n  box-sizing: content-box; /* 1 */\n  height: 0; /* 1 */\n  overflow: visible; /* 2 */\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\npre {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\n\na {\n  background-color: transparent; /* 1 */\n  -webkit-text-decoration-skip: objects; /* 2 */\n}\n\n/**\n * 1. Remove the bottom border in Chrome 57- and Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\n\nabbr[title] {\n  border-bottom: none; /* 1 */\n  text-decoration: underline; /* 2 */\n  text-decoration: underline dotted; /* 2 */\n}\n\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\n\nb,\nstrong {\n  font-weight: inherit;\n}\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\n\nb,\nstrong {\n  font-weight: bolder;\n}\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\n\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace; /* 1 */\n  font-size: 1em; /* 2 */\n}\n\n/**\n * Add the correct font style in Android 4.3-.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Add the correct background and color in IE 9-.\n */\n\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n\n/**\n * Add the correct font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsup {\n  top: -0.5em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\naudio,\nvideo {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in iOS 4-7.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Remove the border on images inside links in IE 10-.\n */\n\nimg {\n  border-style: none;\n}\n\n/**\n * Hide the overflow in IE.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * 1. Change the font styles in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: sans-serif; /* 1 */\n  font-size: 100%; /* 1 */\n  line-height: 1.15; /* 1 */\n  margin: 0; /* 2 */\n}\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\n\nbutton,\ninput { /* 1 */\n  overflow: visible;\n}\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\n\nbutton,\nselect { /* 1 */\n  text-transform: none;\n}\n\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\n\nbutton,\nhtml [type=\"button\"], /* 1 */\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n}\n\n/**\n * Remove the inner border and padding in Firefox.\n */\n\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\n\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n\n/**\n * Correct the padding in Firefox.\n */\n\nfieldset {\n  padding: 0.35em 0.75em 0.625em;\n}\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\n\nlegend {\n  box-sizing: border-box; /* 1 */\n  color: inherit; /* 2 */\n  display: table; /* 1 */\n  max-width: 100%; /* 1 */\n  padding: 0; /* 3 */\n  white-space: normal; /* 1 */\n}\n\n/**\n * 1. Add the correct display in IE 9-.\n * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\n\nprogress {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Remove the default vertical scrollbar in IE.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n\n[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  outline-offset: -2px; /* 2 */\n}\n\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.\n */\n\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n\n::-webkit-file-upload-button {\n  -webkit-appearance: button; /* 1 */\n  font: inherit; /* 2 */\n}\n\n/* Interactive\n   ========================================================================== */\n\n/*\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n */\n\ndetails, /* 1 */\nmenu {\n  display: block;\n}\n\n/*\n * Add the correct display in all browsers.\n */\n\nsummary {\n  display: list-item;\n}\n\n/* Scripting\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 9-.\n */\n\ncanvas {\n  display: inline-block;\n}\n\n/**\n * Add the correct display in IE.\n */\n\ntemplate {\n  display: none;\n}\n\n/* Hidden\n   ========================================================================== */\n\n/**\n * Add the correct display in IE 10-.\n */\n\n[hidden] {\n  display: none;\n}\n\nbody {\n    box-sizing: border-box;\n}\n\n* {\n    font-family: 'Lato', sans-serif;\n    box-sizing: inherit;\n}\n\np {\n    margin: 0;\n}\n", ""]);
 
 // exports
 
@@ -1307,7 +1310,7 @@ module.exports = insertCss;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack__ = __webpack_require__(/*! webpack */ 10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_webpack__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin__ = __webpack_require__(/*! serviceworker-webpack-plugin */ 77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin__ = __webpack_require__(/*! serviceworker-webpack-plugin */ 76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_serviceworker_webpack_plugin__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__webpack_config_common_js__ = __webpack_require__(/*! ./webpack.config.common.js */ "./node_modules/vitaminjs/config/build/webpack.config.common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils__ = __webpack_require__(/*! ../utils */ "./node_modules/vitaminjs/config/utils/index.js");
@@ -1518,7 +1521,7 @@ function config(options) {
   \*************************************/
 /***/ (function(module, exports) {
 
-module.exports = { "server": { "buildPath": "/home/johan/Project/Vagalam/build", "filename": "server_bundle.js", "host": "localhost", "port": 3000 }, "basePath": "", "publicPath": "/assets", "servePublic": true, "client": { "buildPath": "/home/johan/Project/Vagalam/public", "filename": "client_bundle.[hash].js", "serviceWorker": false, "targetBrowsers": [">1%", "last 4 versions", "Firefox ESR", "not ie < 9"] }, "webpack": { "alias": {} }, "filesPath": "files", "rootElementId": "vitamin-app", "moduleMap": { "__app_modules__routes__": "/home/johan/Project/Vagalam/src/rootRoutes", "__app_modules__server_middlewares__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__server_ErrorPage__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/ErrorPage", "__app_modules__server_onError__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__server_layout__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/HTMLLayout", "__app_modules__server_createInitAction__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__redux_reducers__": "/home/johan/Project/Vagalam/src/rootReducers", "__app_modules__redux_middlewares__": "/home/johan/Project/Vagalam/src/middlewares", "__app_modules__redux_enhancers__": "/home/johan/Project/Vagalam/src/storeEnhancers", "__app_modules__redux_stateSerializer__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/shared/defaultStateSerializer" } };
+module.exports = { "server": { "buildPath": "/home/johan/Project/Vagalam/build", "filename": "server_bundle.js", "host": "localhost", "port": 3000 }, "basePath": "", "publicPath": "/assets", "servePublic": true, "client": { "buildPath": "/home/johan/Project/Vagalam/public", "filename": "client_bundle.[hash].js", "serviceWorker": false, "targetBrowsers": [">1%", "last 4 versions", "Firefox ESR", "not ie < 9"] }, "webpack": { "alias": {} }, "filesPath": "files", "rootElementId": "vitamin-app", "moduleMap": { "__app_modules__routes__": "/home/johan/Project/Vagalam/src/rootRoutes", "__app_modules__server_middlewares__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__server_ErrorPage__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/ErrorPage", "__app_modules__server_onError__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__server_layout__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/components/HTMLLayout", "__app_modules__server_createInitAction__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/defaultFunction", "__app_modules__redux_reducers__": "/home/johan/Project/Vagalam/src/rootReducers", "__app_modules__redux_middlewares__": "/home/johan/Project/Vagalam/src/middlewares", "__app_modules__redux_enhancers__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/emptyArray", "__app_modules__redux_stateSerializer__": "/home/johan/Project/Vagalam/node_modules/vitaminjs/src/shared/defaultStateSerializer" } };
 
 /***/ }),
 
@@ -3185,7 +3188,7 @@ if (true) {
         const compiler = webpack(clientBuildConfig);
         let clientBuilt = false;
         const parsedPublicPath = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_url__["parse"])(__WEBPACK_IMPORTED_MODULE_8__config___default.a.publicPath).pathname || '';
-        app.use(__webpack_require__(/*! webpack-dev-middleware */ 78)(compiler, {
+        app.use(__webpack_require__(/*! webpack-dev-middleware */ 77)(compiler, {
             quiet: true,
             noInfo: true,
             publicPath: parsedPublicPath,
@@ -3200,7 +3203,7 @@ if (true) {
         }));
 
         const hmrPath = `${parsedPublicPath}/__webpack_hmr`;
-        app.use(__webpack_require__(/*! webpack-hot-middleware */ 79)(compiler, {
+        app.use(__webpack_require__(/*! webpack-hot-middleware */ 78)(compiler, {
             log: () => {},
             path: hmrPath,
             reload: true
@@ -3417,9 +3420,9 @@ if (typeof window !== 'undefined' && typeof window.devToolsExtension !== 'undefi
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux__ = __webpack_require__(/*! react-router-redux */ 63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__(/*! redux-thunk */ 67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__(/*! redux-thunk */ 66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_redux_thunk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_modules_redux_enhancers___ = __webpack_require__(/*! __app_modules__redux_enhancers__ */ "./src/storeEnhancers.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_modules_redux_enhancers___ = __webpack_require__(/*! __app_modules__redux_enhancers__ */ "./node_modules/vitaminjs/config/utils/emptyArray.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__devTools__ = __webpack_require__(/*! ./devTools */ "./node_modules/vitaminjs/src/shared/devTools.js");
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -4094,7 +4097,7 @@ const withMapZoomControl = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_fre
         zoom: INITIAL_ZOOM
     }),
     effects: {
-        updateMap: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_freactal__["softUpdate"])((_, map) => ({ zoom: map.getZoom() }))
+        updateMap: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7_freactal__["update"])((_, map) => ({ zoom: map.getZoom() }))
     }
 });
 
@@ -4203,7 +4206,7 @@ Map.defaultProps = {
     style: {}
 };
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_ramda__["compose"])(withMapZoomControl, __WEBPACK_IMPORTED_MODULE_7_freactal__["injectState"], __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_react_redux__["connect"])(__WEBPACK_IMPORTED_MODULE_8__selectors__["a" /* default */], {
-    onAnimationEnd: __WEBPACK_IMPORTED_MODULE_9__actions__["notifyAnimationEnd"]
+    onAnimationEnd: __WEBPACK_IMPORTED_MODULE_9__actions__["b" /* notifyAnimationEnd */]
 }), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_11__style_css___default.a))(Map));
 
 /***/ }),
@@ -4453,12 +4456,21 @@ const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react
         },
         __self: _this
     },
-    pictures.length ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Pictures__["a" /* default */], { pictures: pictures, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 10
+    pictures.length ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 11
+            },
+            __self: _this
         },
-        __self: _this
-    }) : null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Pictures__["a" /* default */], { pictures: pictures, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 12
+            },
+            __self: _this
+        })
+    ) : null,
     content ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         {
@@ -4466,7 +4478,7 @@ const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react
             style: { alignSelf: pictures.length ? 'stretch' : 'center' },
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 12
+                lineNumber: 17
             },
             __self: _this
         },
@@ -4475,7 +4487,7 @@ const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react
             {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 16
+                    lineNumber: 21
                 },
                 __self: _this
             },
@@ -4488,7 +4500,7 @@ const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react
             },
             __source: {
                 fileName: _jsxFileName,
-                lineNumber: 19
+                lineNumber: 24
             },
             __self: _this
         })
@@ -4574,17 +4586,17 @@ function addFetchedPosts(posts) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_fromPromise__ = __webpack_require__(/*! rxjs/add/observable/fromPromise */ 18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__ = __webpack_require__(/*! rxjs/add/observable/of */ 70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__ = __webpack_require__(/*! rxjs/add/observable/of */ 69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_mergeMap__ = __webpack_require__(/*! rxjs/add/operator/mergeMap */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(/*! rxjs/add/operator/map */ 74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(/*! rxjs/add/operator/map */ 73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime__ = __webpack_require__(/*! rxjs/add/operator/bufferTime */ 71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime__ = __webpack_require__(/*! rxjs/add/operator/bufferTime */ 70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__ = __webpack_require__(/*! rxjs/add/operator/do */ 72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__ = __webpack_require__(/*! rxjs/add/operator/do */ 71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prismic_io__ = __webpack_require__(/*! prismic.io */ 14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prismic_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_prismic_io__);
@@ -4656,7 +4668,7 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Posts/index.jsx',
 
 const PostOverlay = ({ currentPost }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_5__shared_ui_element_Modale__["a" /* default */],
-    { isOpened: !!currentPost, __source: {
+    { isOpened: !!currentPost, fullScreen: currentPost && !!currentPost.pictures.length, __source: {
             fileName: _jsxFileName,
             lineNumber: 14
         },
@@ -4745,7 +4757,7 @@ const hasFullScreenPostSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODUL
 /***/ }),
 
 /***/ "./src/Trip/actions.js":
-/* exports provided: goToNextStep, addFetchedSleepLocations, addFetchedPointsOfInterest */
+/* exports provided: goToNextStep, addFetchedSleepLocations, addFetchedPointsOfInterest, notifyAnimationEnd */
 /* exports used: goToNextStep, notifyAnimationEnd, addFetchedSleepLocations, addFetchedPointsOfInterest */
 /*!*****************************!*\
   !*** ./src/Trip/actions.js ***!
@@ -4756,6 +4768,7 @@ const hasFullScreenPostSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODUL
 /* harmony export (immutable) */ __webpack_exports__["a"] = goToNextStep;
 /* harmony export (immutable) */ __webpack_exports__["c"] = addFetchedSleepLocations;
 /* harmony export (immutable) */ __webpack_exports__["d"] = addFetchedPointsOfInterest;
+/* harmony export (immutable) */ __webpack_exports__["b"] = notifyAnimationEnd;
 
 
 function goToNextStep() {
@@ -4779,6 +4792,12 @@ function addFetchedPointsOfInterest(pointsOfInterest) {
     };
 }
 
+function notifyAnimationEnd() {
+    return {
+        type: 'app/trip/CURRENT_ANIMATION_ENDED'
+    };
+}
+
 /***/ }),
 
 /***/ "./src/Trip/epic.js":
@@ -4792,17 +4811,17 @@ function addFetchedPointsOfInterest(pointsOfInterest) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(/*! rxjs/Observable */ 17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_merge__ = __webpack_require__(/*! rxjs/add/operator/merge */ 75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_merge__ = __webpack_require__(/*! rxjs/add/operator/merge */ 74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_merge__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_mergeMap__ = __webpack_require__(/*! rxjs/add/operator/mergeMap */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__ = __webpack_require__(/*! rxjs/add/operator/startWith */ 76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__ = __webpack_require__(/*! rxjs/add/operator/startWith */ 75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_fromPromise__ = __webpack_require__(/*! rxjs/add/observable/fromPromise */ 18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_empty__ = __webpack_require__(/*! rxjs/add/observable/empty */ 68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_empty__ = __webpack_require__(/*! rxjs/add/observable/empty */ 67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_empty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_empty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_merge__ = __webpack_require__(/*! rxjs/add/observable/merge */ 69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_merge__ = __webpack_require__(/*! rxjs/add/observable/merge */ 68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_merge__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_redux_observable__ = __webpack_require__(/*! redux-observable */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_redux_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_redux_observable__);
@@ -4838,7 +4857,7 @@ const fetchSleepLocationsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observab
     const endOfDay = new Date(apiSleepLocation.data['sleep_location.date'].value);
     endOfDay.setHours(23, 59, 59, 999);
     return {
-        date: endOfDay,
+        date: endOfDay.toISOString(),
         dayNumber: apiSleepLocation.data['sleep_location.day_number'].value,
         coordinates: [longitude, latitude],
         id: apiSleepLocation.id,
@@ -4854,7 +4873,7 @@ const fetchPointOfInterestsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observ
 })).then(response => response.results.map(apiPointOfInterest => {
     const { longitude, latitude } = apiPointOfInterest.data['point_of_interest.location'].value;
     return {
-        date: new Date(apiPointOfInterest.data['point_of_interest.datetime'].value),
+        date: apiPointOfInterest.data['point_of_interest.datetime'].value,
         coordinates: [longitude, latitude],
         id: apiPointOfInterest.id,
         postId: getPostId('point_of_interest', apiPointOfInterest),
@@ -4862,7 +4881,7 @@ const fetchPointOfInterestsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observ
     };
 })).then(__WEBPACK_IMPORTED_MODULE_10__actions__["d" /* addFetchedPointsOfInterest */]));
 
-const goToNextStepEpic = (action$, store) => action$.ofType('app/trip/GO_TO_NEXT_STEP').startWith('').mergeMap(() => {
+const goToNextStepEpic = (action$, store) => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].merge(action$.ofType('app/trip/GO_TO_NEXT_STEP'), action$.ofType('persist/REHYDRATE')).mergeMap(() => {
     const {
         currentMapPointId,
         fetchingStatus: { sleepLocations, pointsOfInterest }
@@ -4904,7 +4923,7 @@ const goToNextStepEpic = (action$, store) => action$.ofType('app/trip/GO_TO_NEXT
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Map__ = __webpack_require__(/*! ./Map */ "./src/Trip/Map/index.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Posts__ = __webpack_require__(/*! ./Posts */ "./src/Trip/Posts/index.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__shared_ui_element_FrameLayout__ = __webpack_require__(/*! ../shared/ui-element/FrameLayout */ "./src/shared/ui-element/FrameLayout/index.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_FullScreenModale__ = __webpack_require__(/*! ../shared/FullScreenModale */ "./src/shared/FullScreenModale/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__shared_FullScreenModale_index__ = __webpack_require__(/*! ../shared/FullScreenModale/index */ "./src/shared/FullScreenModale/index.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__Details__ = __webpack_require__(/*! ./Details */ "./src/Trip/Details/index.jsx");
 var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/index.jsx';
 
@@ -4955,21 +4974,21 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 },
                 __self: this
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__shared_FullScreenModale__["a" /* default */], {
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Map__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 38
                 },
                 __self: this
             }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Map__["a" /* default */], {
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Posts__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 39
                 },
                 __self: this
             }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Posts__["a" /* default */], {
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__shared_FullScreenModale_index__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 40
@@ -5236,10 +5255,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+let appReducer = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
+    trip: __WEBPACK_IMPORTED_MODULE_1__Trip_reducer__["a" /* default */]
+});
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-    app: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux__["combineReducers"])({
-        trip: __WEBPACK_IMPORTED_MODULE_1__Trip_reducer__["a" /* default */]
-    })
+    app: appReducer
 });
 
 /***/ }),
@@ -5310,12 +5331,12 @@ const tripSelector = state => state.app.trip;
 
 /***/ }),
 
-/***/ "./src/shared/FullScreenModale/index.js":
+/***/ "./src/shared/FullScreenModale/index.jsx":
 /* exports provided: default */
 /* exports used: default */
-/*!**********************************************!*\
-  !*** ./src/shared/FullScreenModale/index.js ***!
-  \**********************************************/
+/*!***********************************************!*\
+  !*** ./src/shared/FullScreenModale/index.jsx ***!
+  \***********************************************/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5324,7 +5345,7 @@ const tripSelector = state => state.app.trip;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_css__ = __webpack_require__(/*! ./style.css */ "./src/shared/FullScreenModale/style.css");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_css__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/shared/FullScreenModale/index.js';
+var _jsxFileName = '/home/johan/Project/Vagalam/src/shared/FullScreenModale/index.jsx';
 
 
 
@@ -5654,12 +5675,15 @@ const FrameLayout = (_ref = {}) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_transition_group__ = __webpack_require__(/*! react-transition-group */ 64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_transition_group___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_transition_group__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/shared/ui-element/Modale/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames__ = __webpack_require__(/*! classnames */ 11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_classnames__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_transition_group__ = __webpack_require__(/*! react-transition-group */ 64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_transition_group___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_transition_group__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css__ = __webpack_require__(/*! ./style.css */ "./src/shared/ui-element/Modale/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_css__);
 var _jsxFileName = '/home/johan/Project/Vagalam/src/shared/ui-element/Modale/index.jsx';
+
 
 
 
@@ -5673,9 +5697,13 @@ class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
         this.handleKeyDown = e => {
             if (e.key === 'Escape') {
-                this.props.onClose();
-                this.setState({ isOpened: false });
+                this.handleClose();
             }
+        };
+
+        this.handleClose = () => {
+            this.props.onClose();
+            this.setState({ isOpened: false });
         };
 
         this.state = {
@@ -5692,56 +5720,67 @@ class Modale extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     }
 
     render() {
-        const { onClose, children } = this.props;
+        const { children, fullScreen } = this.props;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_transition_group__["CSSTransitionGroup"],
+            __WEBPACK_IMPORTED_MODULE_2_react_transition_group__["CSSTransitionGroup"],
             {
-                transitionEnterTimeout: 500,
+                transitionEnterTimeout: 800,
                 transitionLeaveTimeout: 500,
                 transitionName: {
-                    enter: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.enter,
-                    enterActive: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a['enter-active'],
-                    leave: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.leave,
-                    leaveActive: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a['leave-active']
+                    enter: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.enter,
+                    enterActive: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a['enter-active'],
+                    leave: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.leave,
+                    leaveActive: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a['leave-active']
                 },
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 43
+                    lineNumber: 56
                 },
                 __self: this
             },
             this.state.isOpened ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { role: 'presentation', className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.modale, onKeyDown: this.handleKeyDown, __source: {
+                { role: 'presentation', className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.overlay, onKeyDown: this.handleKeyDown, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 54
+                        lineNumber: 67
                     },
                     __self: this
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'button',
-                    {
-                        className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a['close-button'],
-                        'aria-label': 'Fermer',
-                        onClick: onClose,
-                        __source: {
+                    'div',
+                    { className: __WEBPACK_IMPORTED_MODULE_1_classnames___default()(__WEBPACK_IMPORTED_MODULE_4__style_css___default.a.modale, { [__WEBPACK_IMPORTED_MODULE_4__style_css___default.a.fullscreen]: fullScreen }), __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 55
+                            lineNumber: 68
                         },
                         __self: this
                     },
-                    'X'
-                ),
-                children
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'button',
+                        {
+                            className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a['close-button'],
+                            'aria-label': 'Fermer',
+                            onClick: this.handleClose,
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 69
+                            },
+                            __self: this
+                        },
+                        'X'
+                    ),
+                    children
+                )
             ) : null
         );
     }
 }
 
 Modale.defaultProps = {
-    isOpened: true
+    isOpened: true,
+    fullScreen: false,
+    onClose: () => {}
 };
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Modale));
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_4__style_css___default.a)(Modale));
 
 /***/ }),
 
@@ -5783,23 +5822,6 @@ Modale.defaultProps = {
       module.hot.dispose(function() { removeCss(); });
     }
   
-
-/***/ }),
-
-/***/ "./src/storeEnhancers.js":
-/* exports provided: default */
-/* exports used: default */
-/*!*******************************!*\
-  !*** ./src/storeEnhancers.js ***!
-  \*******************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux_persist__ = __webpack_require__(/*! redux-persist */ 66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux_persist___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux_persist__);
-
-
-/* harmony default export */ __webpack_exports__["a"] = ([__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_redux_persist__["autoRehydrate"])()]);
 
 /***/ }),
 
@@ -5894,7 +5916,7 @@ module.exports = require("classnames");
 
 /***/ 12:
 /* no static exports found */
-/* exports used: provideState, softUpdate, injectState */
+/* exports used: provideState, update, injectState */
 /*!***************************!*\
   !*** external "freactal" ***!
   \***************************/
@@ -6600,18 +6622,6 @@ module.exports = require("readline");
 
 /***/ 66:
 /* no static exports found */
-/* exports used: autoRehydrate */
-/*!********************************!*\
-  !*** external "redux-persist" ***!
-  \********************************/
-/***/ (function(module, exports) {
-
-module.exports = require("redux-persist");
-
-/***/ }),
-
-/***/ 67:
-/* no static exports found */
 /* exports used: default */
 /*!******************************!*\
   !*** external "redux-thunk" ***!
@@ -6622,7 +6632,7 @@ module.exports = require("redux-thunk");
 
 /***/ }),
 
-/***/ 68:
+/***/ 67:
 /* no static exports found */
 /*!********************************************!*\
   !*** external "rxjs/add/observable/empty" ***!
@@ -6633,7 +6643,7 @@ module.exports = require("rxjs/add/observable/empty");
 
 /***/ }),
 
-/***/ 69:
+/***/ 68:
 /* no static exports found */
 /*!********************************************!*\
   !*** external "rxjs/add/observable/merge" ***!
@@ -6641,6 +6651,17 @@ module.exports = require("rxjs/add/observable/empty");
 /***/ (function(module, exports) {
 
 module.exports = require("rxjs/add/observable/merge");
+
+/***/ }),
+
+/***/ 69:
+/* no static exports found */
+/*!*****************************************!*\
+  !*** external "rxjs/add/observable/of" ***!
+  \*****************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs/add/observable/of");
 
 /***/ }),
 
@@ -6658,17 +6679,6 @@ module.exports = require("reselect");
 
 /***/ 70:
 /* no static exports found */
-/*!*****************************************!*\
-  !*** external "rxjs/add/observable/of" ***!
-  \*****************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("rxjs/add/observable/of");
-
-/***/ }),
-
-/***/ 71:
-/* no static exports found */
 /*!***********************************************!*\
   !*** external "rxjs/add/operator/bufferTime" ***!
   \***********************************************/
@@ -6678,7 +6688,7 @@ module.exports = require("rxjs/add/operator/bufferTime");
 
 /***/ }),
 
-/***/ 72:
+/***/ 71:
 /* no static exports found */
 /*!***************************************!*\
   !*** external "rxjs/add/operator/do" ***!
@@ -6689,7 +6699,7 @@ module.exports = require("rxjs/add/operator/do");
 
 /***/ }),
 
-/***/ 73:
+/***/ 72:
 /* no static exports found */
 /*!*******************************************!*\
   !*** external "rxjs/add/operator/filter" ***!
@@ -6700,7 +6710,7 @@ module.exports = require("rxjs/add/operator/filter");
 
 /***/ }),
 
-/***/ 74:
+/***/ 73:
 /* no static exports found */
 /*!****************************************!*\
   !*** external "rxjs/add/operator/map" ***!
@@ -6711,7 +6721,7 @@ module.exports = require("rxjs/add/operator/map");
 
 /***/ }),
 
-/***/ 75:
+/***/ 74:
 /* no static exports found */
 /*!******************************************!*\
   !*** external "rxjs/add/operator/merge" ***!
@@ -6722,7 +6732,7 @@ module.exports = require("rxjs/add/operator/merge");
 
 /***/ }),
 
-/***/ 76:
+/***/ 75:
 /* no static exports found */
 /*!**********************************************!*\
   !*** external "rxjs/add/operator/startWith" ***!
@@ -6733,7 +6743,7 @@ module.exports = require("rxjs/add/operator/startWith");
 
 /***/ }),
 
-/***/ 77:
+/***/ 76:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************************!*\
@@ -6745,7 +6755,7 @@ module.exports = require("serviceworker-webpack-plugin");
 
 /***/ }),
 
-/***/ 78:
+/***/ 77:
 /* no static exports found */
 /* all exports used */
 /*!*****************************************!*\
@@ -6757,7 +6767,7 @@ module.exports = require("webpack-dev-middleware");
 
 /***/ }),
 
-/***/ 79:
+/***/ 78:
 /* no static exports found */
 /* all exports used */
 /*!*****************************************!*\
@@ -6766,6 +6776,20 @@ module.exports = require("webpack-dev-middleware");
 /***/ (function(module, exports) {
 
 module.exports = require("webpack-hot-middleware");
+
+/***/ }),
+
+/***/ 79:
+/* no static exports found */
+/* all exports used */
+/*!**********************************************************************************!*\
+  !*** multi ./~/vitaminjs/config/utils/hot.js ./~/vitaminjs/src/server/server.js ***!
+  \**********************************************************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! /home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/hot.js */"./node_modules/vitaminjs/config/utils/hot.js");
+module.exports = __webpack_require__(/*! /home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/server.js */"./node_modules/vitaminjs/src/server/server.js");
+
 
 /***/ }),
 
@@ -6778,20 +6802,6 @@ module.exports = require("webpack-hot-middleware");
 /***/ (function(module, exports) {
 
 module.exports = require("chalk");
-
-/***/ }),
-
-/***/ 80:
-/* no static exports found */
-/* all exports used */
-/*!**********************************************************************************!*\
-  !*** multi ./~/vitaminjs/config/utils/hot.js ./~/vitaminjs/src/server/server.js ***!
-  \**********************************************************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! /home/johan/Project/Vagalam/node_modules/vitaminjs/config/utils/hot.js */"./node_modules/vitaminjs/config/utils/hot.js");
-module.exports = __webpack_require__(/*! /home/johan/Project/Vagalam/node_modules/vitaminjs/src/server/server.js */"./node_modules/vitaminjs/src/server/server.js");
-
 
 /***/ }),
 

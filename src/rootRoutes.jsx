@@ -1,5 +1,5 @@
-import { persistStore } from 'redux-persist';
 import { Route } from 'vitaminjs/react-router';
+import { persistStore } from 'redux-persist';
 import App from './App';
 import Trip from './Trip';
 import Landing from './Landing';

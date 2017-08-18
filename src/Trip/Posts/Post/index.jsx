@@ -7,7 +7,12 @@ import type { Post as PostType } from '../types';
 
 const Post = ({ title, content, pictures }: PostType) =>
     (<article>
-        {pictures.length ? <Pictures pictures={pictures} /> : null}
+        {pictures.length
+            ? <div className={s.pictures}>
+                <Pictures pictures={pictures} />
+            </div>
+            : null}
+
         {content
             ? <div
                 className={s.content}

@@ -38,7 +38,7 @@ const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
                     const endOfDay = new Date(apiSleepLocation.data['sleep_location.date'].value);
                     endOfDay.setHours(23, 59, 59, 999);
                     return {
-                        date: endOfDay,
+                        date: endOfDay.toISOString(),
                         dayNumber: apiSleepLocation.data['sleep_location.day_number'].value,
                         coordinates: [longitude, latitude],
                         id: apiSleepLocation.id,
@@ -66,7 +66,7 @@ const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = i
                         'point_of_interest.location'
                     ].value;
                     return {
-                        date: new Date(apiPointOfInterest.data['point_of_interest.datetime'].value),
+                        date: apiPointOfInterest.data['point_of_interest.datetime'].value,
                         coordinates: [longitude, latitude],
                         id: apiPointOfInterest.id,
                         postId: getPostId('point_of_interest', apiPointOfInterest),
@@ -78,7 +78,10 @@ const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = i
     );
 
 const goToNextStepEpic: Epic<Action> = (action$, store) =>
-    action$.ofType('app/trip/GO_TO_NEXT_STEP').startWith('').mergeMap(() => {
+    Observable.merge(
+        action$.ofType('app/trip/GO_TO_NEXT_STEP'),
+        action$.ofType('persist/REHYDRATE'),
+    ).mergeMap(() => {
         const {
             currentMapPointId,
             fetchingStatus: { sleepLocations, pointsOfInterest },
