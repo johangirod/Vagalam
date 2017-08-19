@@ -39,6 +39,9 @@ function sleepLocationsFetchStatusReducer(
 ) {
     switch (action.type) {
     case 'app/trip/ADD_FETCHED_SLEEP_LOCATIONS':
+        if (!action.pointsOfInterest.length) {
+            return { nextFetchTrigger: null, ...state };
+        }
         const lastSleepLocation = last(action.sleepLocations);
         const penultimateSleepLocation = nth(-2, action.sleepLocations);
         return {

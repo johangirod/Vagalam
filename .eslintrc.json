@@ -11,6 +11,7 @@
         "no-confusing-arrow": "off",
         "no-nested-ternary": "off",
         "no-case-declarations": "off",
+        "no-mixed-operators": "off",
         "import/extensions": ["error", "never"],
         "import/prefer-default-export": "off",
         "react/jsx-indent": ["error", 4],

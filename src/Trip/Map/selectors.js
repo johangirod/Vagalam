@@ -20,14 +20,14 @@ function bezierCoord(resolution: number, coordinates: Array<Coordinates>): Array
         : coordinates;
 }
 
-const SMOOTH_LINE_NUMBER = 15;
+const SMOOTH_LINE_NUMBER = 20;
 const wholeTripLineStringSelector: Selector<?LineString2D> = createSelector(pathSelector, (path) => {
     const coordinates = [TRIP_STARTING_POINT, ...path.map(prop('coordinates'))];
     if (coordinates.length < 2) {
         return null;
     }
     const [roughLine, smoothLine] = splitAt(-SMOOTH_LINE_NUMBER, coordinates);
-    return lineString([...bezierCoord(5000, roughLine), ...bezierCoord(20000, smoothLine)]);
+    return lineString([...roughLine, ...bezierCoord(20000, smoothLine)]);
 });
 
 const displayedTripLineStringSelector: Selector<?LineString2D> = createSelector(
