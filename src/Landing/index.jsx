@@ -8,10 +8,14 @@ import FrameLayout from '../shared/ui-element/FrameLayout';
 import backgroundImage from './background3.jpg';
 import s from './style.css';
 
+const SPRING_CONFIG = {
+    stiffness: 80,
+    damping: 80,
+};
 const calculateMouseCloseness = (
     element: HTMLElement,
     mouse: MouseEvent,
-    treshold: Number = 200,
+    treshold: number = 200,
 ) => {
     const { top, bottom, left, right } = element.getBoundingClientRect();
     const horizontalDistance =
@@ -25,7 +29,6 @@ const calculateMouseCloseness = (
     const distance = Math.sqrt(verticalDistance ** 2 + horizontalDistance ** 2);
     return 1 - Math.min(distance, treshold) / treshold;
 };
-
 class Landing extends Component {
     constructor(props) {
         super(props);
@@ -35,7 +38,8 @@ class Landing extends Component {
         };
     }
     componentDidMount() {
-        setInterval(() => this.setState(state => ({ glowCycle: 1 - state.glowCycle })), 1000);
+        setInterval(() => this.setState({ glowCycle: 1 }), 1000);
+        setInterval(() => this.setState({ glowCycle: 0 }), 600);
     }
     registerCTARef = (CTARef) => {
         this.CTARef = CTARef;
@@ -43,29 +47,29 @@ class Landing extends Component {
     handleMouseMove = (mouseEvent: MouseEvent) => {
         this.setState({ CTACloseness: calculateMouseCloseness(this.CTARef, mouseEvent) });
     };
+    handleMouseOut = () => {
+        this.setState({ CTACloseness: 0 });
+    };
     render() {
         return (
             <FrameLayout>
-                <section onMouseMove={this.handleMouseMove} className={s.header}>
+                <section
+                    onMouseMove={this.handleMouseMove}
+                    className={s.header}
+                    onMouseOut={this.handleMouseOut}
+                >
                     <Motion
                         style={{
-                            grayscale: spring((1 - this.state.CTACloseness) * 100),
-                            glowOffset: spring(
-                                this.state.CTACloseness === 1 ? this.state.glowCycle * 50 : 0,
-                                {
-                                    stiffness: 80,
-                                    damping: 80,
-                                },
-                            ),
+                            saturate: spring(this.state.CTACloseness * 100, SPRING_CONFIG),
+                            glowOffset: spring(this.state.glowCycle * 50, SPRING_CONFIG),
                         }}
                     >
-                        {({ grayscale, glowOffset }) =>
+                        {({ saturate, glowOffset }) =>
                             (<div
                                 className={s.background}
                                 style={{
                                     backgroundImage: `url(${backgroundImage})`,
-                                    filter: `grayscale(${grayscale}%) saturate(${100 +
-                                        glowOffset}%) contrast(90%)`,
+                                    filter: `saturate(${saturate + glowOffset}%) contrast(90%)`,
                                 }}
                             />)}
                     </Motion>

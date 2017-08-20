@@ -4,6 +4,7 @@
 .*/node_modules/styled-components/src/.*
 .*/node_modules/mapbox-gl/src/.*
 .*/node_modules/unflowify/test/.*
+.*/node_modules/redux-persist/.*
 
 [include]
 

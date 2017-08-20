@@ -3,6 +3,8 @@
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
 import { prop, nth, last, defaultTo, ascend } from 'ramda';
 import { combineReducers } from 'redux';
+import { createBlacklistFilter } from 'redux-persist-transform-filter';
+
 import pipeReducers from '../shared/pipeReducers';
 import postsReducer from './Posts/reducer';
 
@@ -39,9 +41,6 @@ function sleepLocationsFetchStatusReducer(
 ) {
     switch (action.type) {
     case 'app/trip/ADD_FETCHED_SLEEP_LOCATIONS':
-        if (!action.pointsOfInterest.length) {
-            return { nextFetchTrigger: null, ...state };
-        }
         const lastSleepLocation = last(action.sleepLocations);
         const penultimateSleepLocation = nth(-2, action.sleepLocations);
         return {
@@ -85,6 +84,23 @@ function currentMapPointIdReducer(state: State, action: Action): State {
     }
 }
 
+function userArrivedToLastPointReducer(state: State, action: Action): State {
+    switch (action.type) {
+    case 'app/trip/GO_TO_NEXT_STEP':
+        const lastMapPoint = last(state.path);
+        return {
+            ...state,
+            userArrivedToLastPoint:
+                    !!lastMapPoint &&
+                    state.currentMapPointId === lastMapPoint.id &&
+                    !state.fetchingStatus.sleepLocations.nextFetchTrigger &&
+                    !state.fetchingStatus.pointsOfInterest.nextFetchTrigger,
+        };
+    default:
+        return state;
+    }
+}
+
 function currentAnimationReducer(state: CurrentAnimationType = null, action: Action) {
     switch (action.type) {
     case 'app/trip/GO_TO_NEXT_STEP':
@@ -96,7 +112,7 @@ function currentAnimationReducer(state: CurrentAnimationType = null, action: Act
     }
 }
 
-export default pipeReducers(
+let tripReducer = pipeReducers(
     combineReducers({
         path: pathReducer,
         fetchingStatus: combineReducers({
@@ -106,6 +122,24 @@ export default pipeReducers(
         currentMapPointId: defaultTo(null),
         posts: postsReducer,
         currentAnimation: currentAnimationReducer,
+        userArrivedToLastPoint: defaultTo(false),
     }),
+    userArrivedToLastPointReducer,
     currentMapPointIdReducer,
 );
+
+if (IS_CLIENT) {
+    const storage = require('redux-persist/es/storage').default;
+    const { persistReducer } = require('redux-persist');
+    tripReducer = persistReducer({ key: 'app::trip', storage }, tripReducer);
+}
+
+const immutableTripReducer = tripReducer;
+export default immutableTripReducer;
+export const reduxPersistTransforms = [
+    createBlacklistFilter(
+        'app::trip',
+        ['currentAnimation', 'userArrivedToLastPoint'],
+        ['currentAnimation', 'userArrivedToLastPoint'],
+    ),
+];

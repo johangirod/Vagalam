@@ -1,18 +1,12 @@
 // @flow
 
 import { combineReducers } from 'redux';
-import TripReducer from './Trip/reducer';
-
-let appReducer = combineReducers({
-    trip: TripReducer,
-});
-
-if (IS_CLIENT) {
-    const storage = require('redux-persist/es/storage').default;
-    const { persistReducer } = require('redux-persist');
-    appReducer = persistReducer({ key: 'app', storage }, appReducer);
-}
+import TripReducer, { reduxPersistTransforms as reduxPersistTripTransforms } from './Trip/reducer';
 
 export default {
-    app: appReducer,
+    app: combineReducers({
+        trip: TripReducer,
+    }),
 };
+
+export const reduxPersistTransforms = [...reduxPersistTripTransforms];

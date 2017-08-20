@@ -12,6 +12,7 @@ import Map from './Map';
 import CurrentPost from './Posts';
 import FrameLayout from '../shared/ui-element/FrameLayout';
 import FullScreenModale from '../shared/FullScreenModale/index';
+import LastPointModale from './LastPointModale/index';
 import Details from './Details';
 
 type PropType = {
@@ -37,6 +38,7 @@ class Trip extends Component {
             >
                 <Map />
                 <CurrentPost />
+                <LastPointModale />
                 <FullScreenModale />
             </FrameLayout>
         );
@@ -44,6 +46,11 @@ class Trip extends Component {
 }
 
 export default compose(
-    connect(state => ({ hasFullScreenPost: hasFullScreenPostSelector(state) }), { goToNextStep }),
+    connect(
+        state => ({
+            hasFullScreenPost: hasFullScreenPostSelector(state),
+        }),
+        { goToNextStep },
+    ),
     withStyles(s),
 )(Trip);

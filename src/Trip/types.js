@@ -1,5 +1,6 @@
 /* @flow */
 import type { State as PostsState, Action as PostsAction } from './Posts/types';
+
 export type Coordinates = [number, number];
 
 export type PostId = string;
@@ -20,14 +21,14 @@ export type PointOfInterest = {
     +date: string,
     +coordinates: Coordinates,
     +postId: ?PostId,
-    +type: 'point_of_interest',    
+    +type: 'point_of_interest',
 };
 
 export type MapPoint = PointOfInterest | SleepLocation;
 export type MapPointId = PointOfInterestId | SleepLocationId;
 export type FetchingStatusState<TypeId> = {
-    nextFetchTrigger: ?MapPointId,
-    lastFetchedId: ?TypeId,
+    +nextFetchTrigger: ?MapPointId,
+    +lastFetchedId: ?TypeId,
 };
 
 export type CurrentAnimationType = 'Map' | 'Post' | null;
@@ -39,7 +40,8 @@ export type State = {
         sleepLocations: FetchingStatusState<SleepLocationId>,
         pointsOfInterest: FetchingStatusState<PointOfInterestId>,
     },
-    currentAnimation: CurrentAnimationType;
+    +currentAnimation: CurrentAnimationType,
+    +userArrivedToLastPoint: boolean,
 };
 
 export type AddFetchedSleepLocationsAction = {
@@ -60,4 +62,8 @@ export type NotifyAnimationEndAction = {
     type: 'app/trip/CURRENT_ANIMATION_ENDED',
 };
 
-export type Action = AddFetchedSleepLocationsAction | AddFetchedPointsOfInterestAction | GoToNextStepAction | PostsAction | NotifyAnimationEndAction;
+export type Action = AddFetchedSleepLocationsAction
+    | AddFetchedPointsOfInterestAction
+    | GoToNextStepAction
+    | PostsAction
+    | NotifyAnimationEndAction;

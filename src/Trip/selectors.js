@@ -12,6 +12,10 @@ export const currentAnimationSelector: Selector<CurrentAnimationType> = pipe(
     tripSelector,
     trip => trip.currentAnimation,
 );
+export const userArrivedToLastPointSelector: Selector<boolean> = pipe(
+    tripSelector,
+    trip => trip.userArrivedToLastPoint,
+);
 export const currentPathSelector: Selector<Array<MapPoint>> = createSelector(
     pathSelector,
     ({ app: { trip: { currentMapPointId } } }) => currentMapPointId,
