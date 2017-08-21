@@ -21,5 +21,4 @@
     align-self: center;
     max-width: calc(100vh * (4896 / 3264));
     position: relative;
-    border: 1px solid black;
 }
