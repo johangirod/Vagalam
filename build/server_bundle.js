@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4d0703984b8461397e95"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "82ca245d8f3bb503f7f4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -760,13 +760,15 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__modale___2VLn5 {\n    background-color: white;\n    padding: 16px 32px;\n    max-width: 600px;\n}\n\n.style__form___3RWuo {\n    margin-top: 32px;\n    margin-bottom: 16px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n\n.style__input___1tkDb {\n    border: 1px solid black;\n    height: 32px;\n    padding: 4px 16px;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__submit___2JB7z {\n    background-color: black;\n    color: white;\n    text-transform: uppercase;\n    border: none;\n    font-family: inherit;\n}\n", ""]);
+exports.push([module.i, ".style__modale___2VLn5 {\n    background-color: white;\n    padding: 16px 32px;\n    max-width: 600px;\n}\n\n.style__form___3RWuo {\n    margin-top: 32px;\n    margin-bottom: 16px;\n}\n\n.style__input___1tkDb {\n    border: 1px solid black;\n    height: 48px;\n    font-size: large;\n    padding: 4px 16px;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__input-container___12Ae4 {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n\n.style__label___1XD-8 {\n    display: block;\n    font-weight: bold;\n    margin-bottom: 4px;\n}\n\n.style__submit___2JB7z {\n    background-color: black;\n    color: white;\n    padding: 4px 8px;\n    text-transform: uppercase;\n    border: none;\n    font-family: inherit;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"modale": "style__modale___2VLn5",
 	"form": "style__form___3RWuo",
 	"input": "style__input___1tkDb",
+	"input-container": "style__input-container___12Ae4",
+	"label": "style__label___1XD-8",
 	"submit": "style__submit___2JB7z"
 };
 
@@ -3947,21 +3949,40 @@ const LastPointModale = ({ isOpened, visitorAlreadyLeftEmail, onVisitorSubmitEma
                 },
                 __self: _this
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.input, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 25
-                },
-                __self: _this
-            }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'button',
-                { type: 'submit', className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.submit, __source: {
+                'label',
+                { htmlFor: 'email', className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.label, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 26
+                        lineNumber: 25
                     },
                     __self: _this
                 },
-                'Suivre'
+                'Email'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a['input-container'], __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 28
+                    },
+                    __self: _this
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', { className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.input, id: 'email', type: 'email', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 29
+                    },
+                    __self: _this
+                }),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { type: 'submit', className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.submit, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 30
+                        },
+                        __self: _this
+                    },
+                    'Suivre'
+                )
             )
         ) : null
     )

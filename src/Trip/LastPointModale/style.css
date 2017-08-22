@@ -7,17 +7,26 @@
 .form {
     margin-top: 32px;
     margin-bottom: 16px;
-    display: flex;
 }
 .input {
     border: 1px solid black;
-    height: 32px;
+    height: 48px;
+    font-size: large;
     padding: 4px 16px;
     flex: 1;
+}
+.input-container {
+    display: flex;
+}
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
 }
 .submit {
     background-color: black;
     color: white;
+    padding: 4px 8px;
     text-transform: uppercase;
     border: none;
     font-family: inherit;

@@ -22,10 +22,15 @@ const LastPointModale = ({ isOpened, visitorAlreadyLeftEmail, onVisitorSubmitEma
             </p>
             {!visitorAlreadyLeftEmail
                 ? <form className={s.form} onSubmit={onVisitorSubmitEmail}>
-                    <input className={s.input} />
-                    <button type="submit" className={s.submit}>
-                          Suivre
-                      </button>
+                    <label htmlFor="email" className={s.label}>
+                          Email
+                      </label>
+                    <div className={s['input-container']}>
+                        <input className={s.input} id="email" type="email" />
+                        <button type="submit" className={s.submit}>
+                              Suivre
+                          </button>
+                    </div>
                 </form>
                 : null}
         </div>
