@@ -3,7 +3,6 @@
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
 import { prop, nth, last, defaultTo, ascend } from 'ramda';
 import { combineReducers } from 'redux';
-import { createBlacklistFilter } from 'redux-persist-transform-filter';
 
 import pipeReducers from '../shared/pipeReducers';
 import postsReducer from './Posts/reducer';
@@ -131,15 +130,21 @@ let tripReducer = pipeReducers(
 if (IS_CLIENT) {
     const storage = require('redux-persist/es/storage').default;
     const { persistReducer } = require('redux-persist');
-    tripReducer = persistReducer({ key: 'app::trip', storage }, tripReducer);
+    tripReducer = persistReducer(
+        {
+            key: 'app::trip',
+            transforms: [
+                {
+                    out: (outboundState, key) =>
+                        key === 'userArrivedToLastPoint' ? false : outboundState,
+                    in: inboundState => inboundState,
+                },
+            ],
+            storage,
+        },
+        tripReducer,
+    );
 }
 
 const immutableTripReducer = tripReducer;
 export default immutableTripReducer;
-export const reduxPersistTransforms = [
-    createBlacklistFilter(
-        'app::trip',
-        ['currentAnimation', 'userArrivedToLastPoint'],
-        ['currentAnimation', 'userArrivedToLastPoint'],
-    ),
-];

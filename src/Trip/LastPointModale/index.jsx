@@ -10,8 +10,9 @@ import s from './style.css';
 type PropType = {
     isOpened: boolean,
     visitorAlreadyLeftEmail: boolean,
+    onVisitorSubmitEmail: any => void,
 };
-const LastPointModale = ({ isOpened, visitorAlreadyLeftEmail }: PropType) =>
+const LastPointModale = ({ isOpened, visitorAlreadyLeftEmail, onVisitorSubmitEmail }: PropType) =>
     (<Modale isOpened={isOpened}>
         <div className={s.modale}>
             <h3>To be continuous...</h3>
@@ -20,8 +21,11 @@ const LastPointModale = ({ isOpened, visitorAlreadyLeftEmail }: PropType) =>
                 aventures. Laisse ton mail, wesh
             </p>
             {!visitorAlreadyLeftEmail
-                ? <form>
-                    <input />
+                ? <form className={s.form} onSubmit={onVisitorSubmitEmail}>
+                    <input className={s.input} />
+                    <button type="submit" className={s.submit}>
+                          Suivre
+                      </button>
                 </form>
                 : null}
         </div>
@@ -30,7 +34,10 @@ const LastPointModale = ({ isOpened, visitorAlreadyLeftEmail }: PropType) =>
 export default compose(
     connect(state => ({
         isOpened: userArrivedToLastPointSelector(state),
-        visitorAlreadyLeftEmail: () => false,
+        visitorAlreadyLeftEmail: false,
+        onVisitorSubmitEmail: (e) => {
+            console.log('yeaaaa', e);
+        },
     })),
     withStyles(s),
 )(LastPointModale);

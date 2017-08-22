@@ -28,7 +28,6 @@
         "redux": "^3.7.2",
         "redux-observable": "^0.14.1",
         "redux-persist": "next",
-        "redux-persist-transform-filter": "^0.0.15",
         "reselect": "^3.0.1",
         "rxjs": "5.x.x",
         "vitaminjs": "https://github.com/johangirod/vitaminjs#master"

@@ -1,7 +1,7 @@
 // @flow
 
 import { combineReducers } from 'redux';
-import TripReducer, { reduxPersistTransforms as reduxPersistTripTransforms } from './Trip/reducer';
+import TripReducer from './Trip/reducer';
 
 export default {
     app: combineReducers({
@@ -9,4 +9,3 @@ export default {
     }),
 };
 
-export const reduxPersistTransforms = [...reduxPersistTripTransforms];
