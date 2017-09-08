@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/merge';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/startWith';
+import 'rxjs/add/operator/filter';
 import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/merge';
@@ -80,7 +81,7 @@ const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = i
 const goToNextStepEpic: Epic<Action> = (action$, store) =>
     Observable.merge(
         action$.ofType('app/trip/GO_TO_NEXT_STEP'),
-        action$.ofType('persist/REHYDRATE'),
+        action$.ofType('persist/REHYDRATE').filter(action => action.key === 'app::trip'),
     ).mergeMap(() => {
         const {
             currentMapPointId,

@@ -20,7 +20,7 @@ function bezierCoord(resolution: number, coordinates: Array<Coordinates>): Array
         : coordinates;
 }
 
-const SMOOTH_LINE_NUMBER = 20;
+const SMOOTH_LINE_NUMBER = 25;
 const wholeTripLineStringSelector: Selector<?LineString2D> = createSelector(pathSelector, (path) => {
     const coordinates = [TRIP_STARTING_POINT, ...path.map(prop('coordinates'))];
     if (coordinates.length < 2) {

@@ -1,0 +1,32 @@
+.form {
+    z-index: 2;
+}
+.input {
+    border: 1px solid black;
+    height: 48px;
+    font-size: large;
+    padding: 4px 16px;
+    flex: 1;
+}
+.input-container {
+    display: flex;
+}
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.select {
+    background: none;
+    border: none;
+    border-bottom: 1px dashed black;
+    padding-bottom: 1px;
+}
+.submit {
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    border: none;
+    font-family: inherit;
+}

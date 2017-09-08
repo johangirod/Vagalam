@@ -16,14 +16,14 @@ const Marker = ({
     if (zoom < 4 || type === 'point_of_interest') {
         return null;
     }
-    const size = zoom > 8 ? 24 : zoom > 6 ? 12 : /* otherwise */ 4;
+    const size = zoom > 7 ? 24 : zoom > 6 ? 12 : /* otherwise */ 4;
     return (
         <div
             style={{
                 height: `${size}px`,
                 width: `${size}px`,
                 padding: `${size / 6}px`,
-                borderColor: zoom > 7 ? 'black' : 'transparent',
+                borderColor: zoom > 6 ? 'black' : 'transparent',
                 backgroundColor: 'white',
             }}
             className={s.icon}

@@ -5,7 +5,7 @@ import { Motion, spring } from 'react-motion';
 import LinkButton from '../shared/ui-element/Button/Link';
 import FrameLayout from '../shared/ui-element/FrameLayout';
 
-import backgroundImage from './background3.jpg';
+import backgroundImage from './background4.jpg';
 import s from './style.css';
 
 const SPRING_CONFIG = {
@@ -61,7 +61,10 @@ class Landing extends Component {
                     <Motion
                         style={{
                             saturate: spring(this.state.CTACloseness * 100, SPRING_CONFIG),
-                            glowOffset: spring(this.state.glowCycle * 50, SPRING_CONFIG),
+                            glowOffset: spring(
+                                this.state.CTACloseness > 0 ? this.state.glowCycle * 50 : 0,
+                                SPRING_CONFIG,
+                            ),
                         }}
                     >
                         {({ saturate, glowOffset }) =>
@@ -69,7 +72,7 @@ class Landing extends Component {
                                 className={s.background}
                                 style={{
                                     backgroundImage: `url(${backgroundImage})`,
-                                    filter: `saturate(${saturate + glowOffset}%) contrast(90%)`,
+                                    filter: `saturate(${saturate + glowOffset}%)`,
                                 }}
                             />)}
                     </Motion>

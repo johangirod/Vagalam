@@ -24,9 +24,14 @@
     cursor: pointer;
 }
 
+.close-button:hover {
+    font-weight: bold;
+}
+
 .fullscreen .close-button {
     right: -44px;
     color: white;
+    top: -2px;
 }
 
 .modale {
@@ -39,6 +44,7 @@
 .fullscreen {
     max-width: none;
     flex: 1;
+    border: 2px solid white;
     width: 100%;
 }
 .enter {
@@ -48,7 +54,7 @@
 .enter-active {
     opacity: 1;
     transform: scale(1);
-    transition: opacity .8s, transform .8s;
+    transition: opacity 0.8s, transform 0.8s;
 }
 
 .leave {
@@ -59,5 +65,5 @@
 .leave-active {
     opacity: 0.01;
     transform: scale(0.01);
-    transition: opacity .5s, transform .5s;
+    transition: opacity 0.5s, transform 0.5s;
 }

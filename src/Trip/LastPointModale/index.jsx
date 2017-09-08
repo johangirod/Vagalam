@@ -5,44 +5,34 @@ import { connect } from 'react-redux';
 import { compose } from 'ramda';
 import { userArrivedToLastPointSelector } from '../selectors';
 import Modale from '../../shared/ui-element/Modale';
+import EmailForm from '../../shared/Visitor/EmailForm';
+import { emailSelector } from '../../shared/Visitor/selectors';
 import s from './style.css';
 
 type PropType = {
     isOpened: boolean,
-    visitorAlreadyLeftEmail: boolean,
-    onVisitorSubmitEmail: any => void,
+    visitorEmail: ?string,
 };
-const LastPointModale = ({ isOpened, visitorAlreadyLeftEmail, onVisitorSubmitEmail }: PropType) =>
-    (<Modale isOpened={isOpened}>
+const LastPointModale = ({ isOpened, visitorEmail }: PropType) => (
+    <Modale isOpened={isOpened}>
         <div className={s.modale}>
-            <h3>To be continuous...</h3>
+            <h3>Le voyage continue...</h3>
             <p>
-                Le voyage continue! Ce blog est alimenté en continue, au fur et à mesure de mes
-                aventures. Laisse ton mail, wesh
+                Qui sait quelle sera la prochaine étape ? Le blog est mis à jour en continu,
+                n'hésites pas à revenir d'ici quelques jours pour suivre les nouvelles aventures !
             </p>
-            {!visitorAlreadyLeftEmail
-                ? <form className={s.form} onSubmit={onVisitorSubmitEmail}>
-                    <label htmlFor="email" className={s.label}>
-                          Email
-                      </label>
-                    <div className={s['input-container']}>
-                        <input className={s.input} id="email" type="email" />
-                        <button type="submit" className={s.submit}>
-                              Suivre
-                          </button>
-                    </div>
-                </form>
-                : null}
+            {!visitorEmail ? (
+                <p>Tu peux aussi laisser ton email pour être prévenu quand il y a du nouveau.</p>
+            ) : null}
+            <EmailForm />
         </div>
-    </Modale>);
+    </Modale>
+);
 
 export default compose(
     connect(state => ({
         isOpened: userArrivedToLastPointSelector(state),
-        visitorAlreadyLeftEmail: false,
-        onVisitorSubmitEmail: (e) => {
-            console.log('yeaaaa', e);
-        },
+        visitorEmail: emailSelector(state),
     })),
     withStyles(s),
 )(LastPointModale);

@@ -32,7 +32,7 @@ if (IS_CLIENT) {
     });
 }
 
-const INITIAL_ZOOM = [9];
+const INITIAL_ZOOM = [8];
 const STYLE_URL = 'mapbox://styles/ganceab/cj60tjdxq0asi2rppfum27wau';
 const withMapZoomControl = provideState({
     initialState: () => ({
@@ -90,8 +90,8 @@ class Map extends Component {
                 onStyleLoad={updateMap}
                 movingMethod="easeTo"
             >
-                {displayedTripLineString
-                    ? <Motion
+                {displayedTripLineString ? (
+                    <Motion
                         defaultStyle={{ distance: 0 }}
                         style={{
                             distance: spring(lineDistance(displayedTripLineString), {
@@ -103,33 +103,33 @@ class Map extends Component {
                         onRest={this.handleAnimatonEnd}
                     >
                         {({ distance }) =>
-                              distance > 0
-                                  ? <Mapbox.GeoJSONLayer
-                                      data={lineSliceAlong(displayedTripLineString, 0, distance)}
-                                      lineLayout={{
-                                          'line-join': 'round',
-                                          'line-cap': 'round',
-                                      }}
-                                      linePaint={{
-                                          'line-color': 'white',
-                                          'line-opacity': 0.8,
-                                          'line-width': 2,
-                                      }}
-                                  />
-                                  : null}
+                            distance > 0 ? (
+                                <Mapbox.GeoJSONLayer
+                                    data={lineSliceAlong(displayedTripLineString, 0, distance)}
+                                    lineLayout={{
+                                        'line-join': 'round',
+                                        'line-cap': 'round',
+                                    }}
+                                    linePaint={{
+                                        'line-color': 'white',
+                                        'line-opacity': 0.8,
+                                        'line-width': 2,
+                                    }}
+                                />
+                            ) : null}
                     </Motion>
-                    : null}
+                ) : null}
                 {currentPath
                     .slice(0, this.state.isMapCurrentlyAnimated ? -1 : currentPath.length)
-                    .map(mapPoint =>
-                        (<Mapbox.Marker
+                    .map(mapPoint => (
+                        <Mapbox.Marker
                             key={mapPoint.coordinates.join()}
                             coordinates={mapPoint.coordinates}
                             anchor="center"
                         >
                             <MapPointMarker type={mapPoint.type} />
-                        </Mapbox.Marker>),
-                    )}
+                        </Mapbox.Marker>
+                    ))}
             </Mapbox.Map>
         );
     }

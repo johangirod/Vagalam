@@ -130,7 +130,7 @@ let tripReducer = pipeReducers(
 if (IS_CLIENT) {
     const storage = require('redux-persist/es/storage').default;
     const { persistReducer } = require('redux-persist');
-    tripReducer = persistReducer(
+    const persistedTripReducer = persistReducer(
         {
             key: 'app::trip',
             transforms: [
@@ -144,6 +144,11 @@ if (IS_CLIENT) {
         },
         tripReducer,
     );
+    // @TODO workaround because redux-persist@v5 returns undefined if the config keys do not match
+    tripReducer = (state, action) => {
+        const newTripState = persistedTripReducer(state, action);
+        return typeof newTripState === 'undefined' ? state : newTripState;
+    };
 }
 
 const immutableTripReducer = tripReducer;
