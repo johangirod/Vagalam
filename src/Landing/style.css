@@ -18,13 +18,17 @@ header {
     font-family: 'Crimson Text', serif;
     flex: 1;
     z-index: 1;
+    margin: 32px;
 }
 
 h1 {
     margin: 0;
-    font-size: 72px;
-    padding: 22px;
-    font-weight: normal;
+    margin-bottom: 8px;
+    font-size: 82px;
+}
+h2 {
+    margin: 0;
+    font-size: 20px;
 }
 
 .cta {

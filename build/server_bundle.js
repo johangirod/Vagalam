@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "53aafa962903e318031d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d61ddd4913494b2bd876"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -713,7 +713,7 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, "section.style__header___La0Pw {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    height: 100%;\n    position: relative;\n}\n.style__background___2Myi_ {\n    background-size: cover;\n    background-position: center;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n}\nheader {\n    color: white;\n    font-family: 'Crimson Text', serif;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    z-index: 1;\n}\nh1 {\n    margin: 0;\n    font-size: 72px;\n    padding: 22px;\n    font-weight: normal;\n}\n.style__cta___2Aax1 {\n    text-align: center;\n    -ms-flex-item-align: flex-center;\n        align-self: flex-center;\n    margin: 32px;\n    z-index: 1;\n}\n", ""]);
+exports.push([module.i, "section.style__header___La0Pw {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    height: 100%;\n    position: relative;\n}\n.style__background___2Myi_ {\n    background-size: cover;\n    background-position: center;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n}\nheader {\n    color: white;\n    font-family: 'Crimson Text', serif;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    z-index: 1;\n    margin: 32px;\n}\nh1 {\n    margin: 0;\n    margin-bottom: 8px;\n    font-size: 82px;\n}\nh2 {\n    margin: 0;\n    font-size: 20px;\n}\n.style__cta___2Aax1 {\n    text-align: center;\n    -ms-flex-item-align: flex-center;\n        align-self: flex-center;\n    margin: 32px;\n    z-index: 1;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -948,7 +948,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__button___1Hi-V {\n    position: relative;\n    border-radius: 32px;\n    border: 2px solid black;\n    display: inline-block;\n    text-decoration: none;\n    cursor: pointer;\n    color: black;\n    font-size: large;\n    padding: 12px 32px;\n    background: white;\n    transition: border-color 1s;\n    background-clip: padding-box;\n}\n.style__button___1Hi-V:hover {\n    border-color: transparent;\n}\n.style__button___1Hi-V::after {\n    position: absolute;\n    top: -2px;\n    bottom: -2px;\n    left: -2px;\n    right: -2px;\n    border-radius: 32px;\n    content: '';\n    z-index: -1;\n    background: linear-gradient(\n        45deg,\n        rgba(255, 0, 0, 1) 0%,\n        rgba(255, 255, 0, 1) 15%,\n        rgba(0, 255, 0, 1) 30%,\n        rgba(0, 255, 255, 1) 50%,\n        rgba(0, 0, 255, 1) 65%,\n        rgba(255, 0, 255, 1) 80%,\n        rgba(255, 0, 0, 1) 100%\n    );\n    -webkit-animation: style__hue-rotate___j9SqY 1s linear infinite;\n            animation: style__hue-rotate___j9SqY 1s linear infinite;\n}\n@-webkit-keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg);\n                filter: hue-rotate(0deg);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg);\n                filter: hue-rotate(360deg);\n    }\n}\n@keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg);\n                filter: hue-rotate(0deg);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg);\n                filter: hue-rotate(360deg);\n    }\n}\n", ""]);
+exports.push([module.i, ".style__button___1Hi-V {\n    position: relative;\n    border-radius: 32px;\n    border: 2px solid white;\n    display: inline-block;\n    text-decoration: none;\n    cursor: pointer;\n    color: white;\n    font-size: large;\n    padding: 12px 32px;\n    font-weight: bold;\n    transition: border-color 1s;\n    background: black;\n    background-clip: padding-box;\n}\n.style__button___1Hi-V:hover {\n    border-color: transparent;\n}\n.style__button___1Hi-V::after {\n    position: absolute;\n    top: -2px;\n    bottom: -2px;\n    left: -2px;\n    right: -2px;\n    border-radius: 32px;\n    content: '';\n    z-index: -1;\n    background: linear-gradient(\n        45deg,\n        rgba(255, 0, 0, 1) 0%,\n        rgba(255, 255, 0, 1) 15%,\n        rgba(0, 255, 0, 1) 30%,\n        rgba(0, 255, 255, 1) 50%,\n        rgba(0, 0, 255, 1) 65%,\n        rgba(255, 0, 255, 1) 80%,\n        rgba(255, 0, 0, 1) 100%\n    );\n    -webkit-animation: style__hue-rotate___j9SqY 1s linear infinite;\n            animation: style__hue-rotate___j9SqY 1s linear infinite;\n}\n@-webkit-keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg);\n                filter: hue-rotate(0deg);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg);\n                filter: hue-rotate(360deg);\n    }\n}\n@keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg);\n                filter: hue-rotate(0deg);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg);\n                filter: hue-rotate(360deg);\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3605,13 +3605,6 @@ const SPRING_CONFIG = {
     stiffness: 80,
     damping: 80
 };
-const calculateMouseCloseness = (element, mouse, treshold = 200) => {
-    const { top, bottom, left, right } = element.getBoundingClientRect();
-    const horizontalDistance = mouse.clientX < left ? left - mouse.clientX : mouse.clientX > right ? mouse.clientX - right : 0;
-    const verticalDistance = mouse.clientY < top ? top - mouse.clientY : mouse.clientY > bottom ? mouse.clientY - bottom : 0;
-    const distance = Math.sqrt(Math.pow(verticalDistance, 2) + Math.pow(horizontalDistance, 2));
-    return 1 - Math.min(distance, treshold) / treshold;
-};
 class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     constructor(props) {
         super(props);
@@ -3620,16 +3613,16 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             this.CTARef = CTARef;
         };
 
-        this.handleMouseMove = mouseEvent => {
-            this.setState({ CTACloseness: calculateMouseCloseness(this.CTARef, mouseEvent) });
+        this.handleMouseEnter = () => {
+            this.setState({ mouseOverCTA: true });
         };
 
         this.handleMouseOut = () => {
-            this.setState({ CTACloseness: 0 });
+            this.setState({ mouseOverCTA: false });
         };
 
         this.state = {
-            CTACloseness: 0,
+            mouseOverCTA: false,
             glowCycle: 0
         };
     }
@@ -3641,22 +3634,17 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_4__shared_ui_element_FrameLayout__["a" /* default */],
-            {
-                __source: {
+            { freeRatio: true, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 55
+                    lineNumber: 38
                 },
                 __self: this
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'section',
-                {
-                    onMouseMove: this.handleMouseMove,
-                    className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.header,
-                    onMouseOut: this.handleMouseOut,
-                    __source: {
+                { className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.header, onMouseOut: this.handleMouseOut, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 56
+                        lineNumber: 39
                     },
                     __self: this
                 },
@@ -3664,12 +3652,12 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     __WEBPACK_IMPORTED_MODULE_2_react_motion__["Motion"],
                     {
                         style: {
-                            saturate: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_react_motion__["spring"])(this.state.CTACloseness * 100, SPRING_CONFIG),
-                            glowOffset: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_react_motion__["spring"])(this.state.CTACloseness > 0 ? this.state.glowCycle * 50 : 0, SPRING_CONFIG)
+                            saturate: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_react_motion__["spring"])(this.state.mouseOverCTA ? 100 : 0, SPRING_CONFIG),
+                            glowOffset: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_react_motion__["spring"])(this.state.mouseOverCTA ? this.state.glowCycle * 50 : 0, SPRING_CONFIG)
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 61
+                            lineNumber: 40
                         },
                         __self: this
                     },
@@ -3681,7 +3669,7 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 71
+                            lineNumber: 50
                         },
                         __self: this
                     })
@@ -3691,7 +3679,7 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 79
+                            lineNumber: 59
                         },
                         __self: this
                     },
@@ -3700,18 +3688,33 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 80
+                                lineNumber: 60
                             },
                             __self: this
                         },
-                        ' \\Vag a lam\\ '
+                        ' \\Vagalam\\ '
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'h2',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 61
+                            },
+                            __self: this
+                        },
+                        ' Le blog int\xE9ractif de mon tour du monde \xE0 v\xE9lo '
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    { className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.cta, __source: {
+                    {
+                        className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.cta,
+                        onMouseEnter: this.handleMouseEnter,
+                        onMouseOut: this.handleMouseOut,
+                        __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 82
+                            lineNumber: 63
                         },
                         __self: this
                     },
@@ -3719,7 +3722,7 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                         __WEBPACK_IMPORTED_MODULE_3__shared_ui_element_Button_Link__["a" /* default */],
                         { registerRef: this.registerCTARef, href: '/voyage', __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 83
+                                lineNumber: 68
                             },
                             __self: this
                         },
@@ -6247,14 +6250,20 @@ function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in ob
 
 
 const FrameLayout = (_ref = {}) => {
-    let { top, bottom, children, frameBackgroundColor = 'white' } = _ref,
-        otherProps = _objectWithoutProperties(_ref, ['top', 'bottom', 'children', 'frameBackgroundColor']);
+    let {
+        top,
+        bottom,
+        children,
+        frameBackgroundColor = 'white',
+        freeRatio = false
+    } = _ref,
+        otherProps = _objectWithoutProperties(_ref, ['top', 'bottom', 'children', 'frameBackgroundColor', 'freeRatio']);
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         _extends({ className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.layout }, otherProps, { style: { backgroundColor: frameBackgroundColor }, __source: {
                 fileName: _jsxFileName,
-                lineNumber: 16
+                lineNumber: 24
             },
             __self: _this
         }),
@@ -6262,7 +6271,7 @@ const FrameLayout = (_ref = {}) => {
             'div',
             { className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.top, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 17
+                    lineNumber: 25
                 },
                 __self: _this
             },
@@ -6270,9 +6279,9 @@ const FrameLayout = (_ref = {}) => {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.inside, __source: {
+            { className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.inside, style: freeRatio ? { maxWidth: 'none' } : {}, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 20
+                    lineNumber: 26
                 },
                 __self: _this
             },
@@ -6282,7 +6291,7 @@ const FrameLayout = (_ref = {}) => {
             'div',
             { className: __WEBPACK_IMPORTED_MODULE_2__style_css___default.a.bottom, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 23
+                    lineNumber: 29
                 },
                 __self: _this
             },

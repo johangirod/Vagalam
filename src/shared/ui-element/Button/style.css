@@ -1,15 +1,16 @@
 .button {
     position: relative;
     border-radius: 32px;
-    border: 2px solid black;
+    border: 2px solid white;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    color: black;
+    color: white;
     font-size: large;
     padding: 12px 32px;
-    background: white;
+    font-weight: bold;
     transition: border-color 1s;
+    background: black;
     background-clip: padding-box;
 }
 .button:hover {

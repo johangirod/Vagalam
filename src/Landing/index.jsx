@@ -12,28 +12,11 @@ const SPRING_CONFIG = {
     stiffness: 80,
     damping: 80,
 };
-const calculateMouseCloseness = (
-    element: HTMLElement,
-    mouse: MouseEvent,
-    treshold: number = 200,
-) => {
-    const { top, bottom, left, right } = element.getBoundingClientRect();
-    const horizontalDistance =
-        mouse.clientX < left
-            ? left - mouse.clientX
-            : mouse.clientX > right ? mouse.clientX - right : 0;
-    const verticalDistance =
-        mouse.clientY < top
-            ? top - mouse.clientY
-            : mouse.clientY > bottom ? mouse.clientY - bottom : 0;
-    const distance = Math.sqrt(verticalDistance ** 2 + horizontalDistance ** 2);
-    return 1 - Math.min(distance, treshold) / treshold;
-};
 class Landing extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            CTACloseness: 0,
+            mouseOverCTA: false,
             glowCycle: 0,
         };
     }
@@ -44,42 +27,44 @@ class Landing extends Component {
     registerCTARef = (CTARef) => {
         this.CTARef = CTARef;
     };
-    handleMouseMove = (mouseEvent: MouseEvent) => {
-        this.setState({ CTACloseness: calculateMouseCloseness(this.CTARef, mouseEvent) });
+    handleMouseEnter = () => {
+        this.setState({ mouseOverCTA: true });
     };
     handleMouseOut = () => {
-        this.setState({ CTACloseness: 0 });
+        this.setState({ mouseOverCTA: false });
     };
     render() {
         return (
-            <FrameLayout>
-                <section
-                    onMouseMove={this.handleMouseMove}
-                    className={s.header}
-                    onMouseOut={this.handleMouseOut}
-                >
+            <FrameLayout freeRatio>
+                <section className={s.header} onMouseOut={this.handleMouseOut}>
                     <Motion
                         style={{
-                            saturate: spring(this.state.CTACloseness * 100, SPRING_CONFIG),
+                            saturate: spring(this.state.mouseOverCTA ? 100 : 0, SPRING_CONFIG),
                             glowOffset: spring(
-                                this.state.CTACloseness > 0 ? this.state.glowCycle * 50 : 0,
+                                this.state.mouseOverCTA ? this.state.glowCycle * 50 : 0,
                                 SPRING_CONFIG,
                             ),
                         }}
                     >
-                        {({ saturate, glowOffset }) =>
-                            (<div
+                        {({ saturate, glowOffset }) => (
+                            <div
                                 className={s.background}
                                 style={{
                                     backgroundImage: `url(${backgroundImage})`,
                                     filter: `saturate(${saturate + glowOffset}%)`,
                                 }}
-                            />)}
+                            />
+                        )}
                     </Motion>
                     <header>
-                        <h1> \Vag a lam\ </h1>
+                        <h1> \Vagalam\ </h1>
+                        <h2> Le blog intéractif de mon tour du monde à vélo </h2>
                     </header>
-                    <div className={s.cta}>
+                    <div
+                        className={s.cta}
+                        onMouseEnter={this.handleMouseEnter}
+                        onMouseOut={this.handleMouseOut}
+                    >
                         <LinkButton registerRef={this.registerCTARef} href="/voyage">
                             Parcourir le voyage
                         </LinkButton>
