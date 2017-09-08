@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b586f9370b0e24ee1d92"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9f11fcff5fc38d5be6af"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -853,7 +853,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    overflow: hidden;\n    background-color: white;\n}\n\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n\n.style__pictures___4FB4g {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__content___2Li1p {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    overflow: auto;\n    padding: 16px 32px;\n    max-height: calc(100% - 32px);\n    z-index: 1;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.5em;\n}\n\np {\n    margin-bottom: 1em;\n}\n", ""]);
+exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    overflow: hidden;\n    background-color: white;\n}\n\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n\n.style__pictures___4FB4g {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__content___2Li1p {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    overflow: auto;\n    padding: 16px 32px;\n    max-height: 100%;\n    z-index: 1;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.5em;\n}\n\np {\n    margin-bottom: 1em;\n}\n", ""]);
 
 // exports
 exports.locals = {
