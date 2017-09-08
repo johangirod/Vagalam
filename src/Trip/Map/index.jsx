@@ -81,6 +81,7 @@ class Map extends Component {
                 center={currentMapPoint ? currentMapPoint.coordinates : [2.3738311, 48.8841141]}
                 containerStyle={{
                     height: '100%',
+                    backgroundColor: 'black',
                     ...style,
                 }}
                 zoom={INITIAL_ZOOM}

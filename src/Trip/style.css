@@ -4,3 +4,27 @@
 .zoom-in {
     transform: scale(3);
 }
+.brand {
+    text-decoration: none;
+    color: black;
+    font-family: 'Crimson Text', serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+.brand::before {
+    content: '\\';
+}
+.brand::after {
+    content: '\\';
+}
+.brand::after,
+.brand::before {
+    display: inline-block;
+    transition: transform 0.8s;
+}
+.brand:hover::after {
+    transform: translateX(10px);
+}
+.brand:hover::before {
+    transform: translateX(-10px);
+}

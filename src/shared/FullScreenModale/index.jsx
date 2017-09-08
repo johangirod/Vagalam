@@ -62,15 +62,16 @@ class FullScreenPopup extends Component {
                 onClose={this.handleModaleClose}
             >
                 <div className={s.modale} role="presentation" onKeyDown={this.handleKeyDown}>
-                    <h3>Plein écran, plein la vue</h3>
                     <p>
-                        Pour profiter un max des manifiques photos, je conseille la navigation en
-                        plein écran (vous pourrez revenir en mode normal à tout moment en appuyant
-                        sur <code>ESC</code>)
+                        Pour une meilleur experience, je conseille la navigation en plein écran.
+                        Vous pourrez revenir en mode normal à tout moment en appuyant sur la touche{' '}
+                        <i>Echap</i>.
                     </p>
-                    <Button onClick={this.handleGoFullScreen} style={{ margin: '40px' }}>
-                        Passer en plein écran
-                    </Button>
+                    <div className={s['button-container']}>
+                        <Button onClick={this.handleGoFullScreen} style={{ margin: '16px' }}>
+                            Activer le plein écran
+                        </Button>
+                    </div>
                 </div>
             </Modale>
         );

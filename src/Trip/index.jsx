@@ -30,7 +30,11 @@ class Trip extends Component {
     render() {
         return (
             <FrameLayout
-                top="vagalam"
+                top={
+                    <a href={'/'} className={s.brand}>
+                        Vagalam
+                    </a>
+                }
                 bottom={<Details />}
                 onKeyDown={this.handleKeyDown}
                 frameBackgroundColor={this.props.hasFullScreenPost ? 'black' : 'white'}

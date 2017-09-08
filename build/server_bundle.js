@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d61ddd4913494b2bd876"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "56c84001d96958b2c312"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -737,10 +737,11 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__press-space___1BylT {\n    -webkit-animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n            animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n}\n\n@-webkit-keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n", ""]);
+exports.push([module.i, ".style__details___2zN8J {\n    font-family: 'Crimson Text', serif;\n    font-size: 20px;\n}\n\n.style__press-space___1BylT {\n    -webkit-animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n            animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n}\n\n@-webkit-keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
+	"details": "style__details___2zN8J",
 	"press-space": "style__press-space___1BylT",
 	"fade-in": "style__fade-in___tfnob"
 };
@@ -876,12 +877,13 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, ".style__map___1Y6_H {\n    transition: -webkit-transform 1s;\n    transition: transform 1s;\n    transition: transform 1s, -webkit-transform 1s;\n}\n.style__zoom-in___oJPGi {\n    -webkit-transform: scale(3);\n        -ms-transform: scale(3);\n            transform: scale(3);\n}\n", ""]);
+exports.push([module.i, ".style__map___1Y6_H {\n    transition: -webkit-transform 1s;\n    transition: transform 1s;\n    transition: transform 1s, -webkit-transform 1s;\n}\n.style__zoom-in___oJPGi {\n    -webkit-transform: scale(3);\n        -ms-transform: scale(3);\n            transform: scale(3);\n}\n.style__brand___2yABU {\n    text-decoration: none;\n    color: black;\n    font-family: 'Crimson Text', serif;\n    font-weight: bold;\n    font-size: 22px;\n}\n.style__brand___2yABU::before {\n    content: '\\\\';\n}\n.style__brand___2yABU::after {\n    content: '\\\\';\n}\n.style__brand___2yABU::after,\n.style__brand___2yABU::before {\n    display: inline-block;\n    transition: -webkit-transform 0.8s;\n    transition: transform 0.8s;\n    transition: transform 0.8s, -webkit-transform 0.8s;\n}\n.style__brand___2yABU:hover::after {\n    -webkit-transform: translateX(10px);\n        -ms-transform: translateX(10px);\n            transform: translateX(10px);\n}\n.style__brand___2yABU:hover::before {\n    -webkit-transform: translateX(-10px);\n        -ms-transform: translateX(-10px);\n            transform: translateX(-10px);\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"map": "style__map___1Y6_H",
-	"zoom-in": "style__zoom-in___oJPGi"
+	"zoom-in": "style__zoom-in___oJPGi",
+	"brand": "style__brand___2yABU"
 };
 
 /***/ }),
@@ -899,11 +901,12 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__modale___oN5LA {\n    text-align: center;\n    background-color: white;\n    padding: 32px;\n}\n", ""]);
+exports.push([module.i, ".style__modale___oN5LA {\n    background-color: white;\n    padding: 32px;\n}\n.style__button-container___3GOoV {\n    text-align: center;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"modale": "style__modale___oN5LA"
+	"modale": "style__modale___oN5LA",
+	"button-container": "style__button-container___3GOoV"
 };
 
 /***/ }),
@@ -3809,8 +3812,7 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Details/index.jsx',
 
 const Details = ({ currentDayNumber }) => currentDayNumber ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'span',
-    {
-        __source: {
+    { className: __WEBPACK_IMPORTED_MODULE_5__style_css___default.a.details, __source: {
             fileName: _jsxFileName,
             lineNumber: 9
         },
@@ -3822,7 +3824,7 @@ const Details = ({ currentDayNumber }) => currentDayNumber ? __WEBPACK_IMPORTED_
     'em',
     { className: __WEBPACK_IMPORTED_MODULE_5__style_css___default.a['press-space'], __source: {
             fileName: _jsxFileName,
-            lineNumber: 12
+            lineNumber: 11
         },
         __self: _this
     },
@@ -3963,7 +3965,7 @@ const LastPointModale = ({ isOpened, visitorEmail }) => __WEBPACK_IMPORTED_MODUL
                 },
                 __self: _this
             },
-            'Le voyage continue...'
+            'Le blog s\'arr\xEAte ici...'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
@@ -3974,7 +3976,7 @@ const LastPointModale = ({ isOpened, visitorEmail }) => __WEBPACK_IMPORTED_MODUL
                 },
                 __self: _this
             },
-            'Qui sait quelle sera la prochaine \xE9tape ? Le blog est mis \xE0 jour en continu, n\'h\xE9sites pas \xE0 revenir d\'ici quelques jours pour suivre les nouvelles aventures !'
+            'Mais pas le voyage ! Ce blog est mis \xE0 jour en continu, n\'h\xE9sites pas \xE0 revenir d\'ici quelques jours pour suivre les nouvelles aventures !'
         ),
         !visitorEmail ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
@@ -4400,7 +4402,8 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             {
                 center: currentMapPoint ? currentMapPoint.coordinates : [2.3738311, 48.8841141],
                 containerStyle: _extends({
-                    height: '100%'
+                    height: '100%',
+                    backgroundColor: 'black'
                 }, style),
                 zoom: INITIAL_ZOOM,
                 mapboxApiAccessToken: __WEBPACK_IMPORTED_MODULE_12__config__["a" /* default */].mapboxAccessToken,
@@ -4428,7 +4431,7 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     onRest: this.handleAnimatonEnd,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 94
+                        lineNumber: 95
                     },
                     __self: this
                 },
@@ -4445,7 +4448,7 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 107
+                        lineNumber: 108
                     },
                     __self: this
                 }) : null
@@ -4458,13 +4461,13 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     anchor: 'center',
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 125
+                        lineNumber: 126
                     },
                     __self: this
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__MapPointMarker__["a" /* default */], { type: mapPoint.type, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 130
+                        lineNumber: 131
                     },
                     __self: this
                 })
@@ -5233,11 +5236,20 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_9__shared_ui_element_FrameLayout__["a" /* default */],
             {
-                top: 'vagalam',
+                top: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'a',
+                    { href: '/', className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.brand, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 34
+                        },
+                        __self: this
+                    },
+                    'Vagalam'
+                ),
                 bottom: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__Details__["a" /* default */], {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 34
+                        lineNumber: 38
                     },
                     __self: this
                 }),
@@ -5253,28 +5265,28 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Map__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 39
+                    lineNumber: 43
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Posts__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 40
+                    lineNumber: 44
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__LastPointModale_index__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 41
+                    lineNumber: 45
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__shared_FullScreenModale_index__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 42
+                    lineNumber: 46
                 },
                 __self: this
             })

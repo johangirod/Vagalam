@@ -1,5 +1,7 @@
 .modale {
-    text-align: center;
     background-color: white;
     padding: 32px;
+}
+.button-container {
+    text-align: center;
 }

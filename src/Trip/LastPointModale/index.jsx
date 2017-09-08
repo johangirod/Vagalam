@@ -16,10 +16,10 @@ type PropType = {
 const LastPointModale = ({ isOpened, visitorEmail }: PropType) => (
     <Modale isOpened={isOpened}>
         <div className={s.modale}>
-            <h3>Le voyage continue...</h3>
+            <h3>Le blog s'arrête ici...</h3>
             <p>
-                Qui sait quelle sera la prochaine étape ? Le blog est mis à jour en continu,
-                n'hésites pas à revenir d'ici quelques jours pour suivre les nouvelles aventures !
+                Mais pas le voyage ! Ce blog est mis à jour en continu, n'hésites pas à revenir
+                d'ici quelques jours pour suivre les nouvelles aventures !
             </p>
             {!visitorEmail ? (
                 <p>Tu peux aussi laisser ton email pour être prévenu quand il y a du nouveau.</p>
