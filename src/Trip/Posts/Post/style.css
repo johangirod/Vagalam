@@ -13,12 +13,6 @@ h1 {
 
 .pictures {
     flex: 1;
-    transition: all .5s;
-    cursor: pointer;
-}
-
-.pictures:hover {
-    flex: 2;
 }
 
 .content {
@@ -26,10 +20,8 @@ h1 {
     overflow: auto;
     padding: 16px 32px;
     max-height: calc(100% - 32px);
-    min-width: 50%;
-    max-width: 600px;
     z-index: 1;
-    flex: 2;
+    flex: 1;
 }
 
 .body {

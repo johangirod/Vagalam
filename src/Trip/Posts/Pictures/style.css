@@ -5,6 +5,7 @@
 .picture {
     background-size: cover;
     background-position: center;
+    cursor: pointer;
     top: 0;
     bottom: 0;
     left: 0;
