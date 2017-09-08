@@ -11,17 +11,27 @@ class Pictures extends Component {
         };
     }
     componentDidMount() {
-        setInterval(this.goToNextPicture, 8000);
+        this.resetInterval();
     }
+    resetInterval = () => {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+        }
+        this.intervalId = setInterval(this.goToNextPicture, 10000);
+    };
     goToNextPicture = () => {
         this.setState(({ currentPicture }) => ({
             currentPicture: (currentPicture + 1) % this.props.pictures.length,
         }));
     };
+    handleClickOnPicture = () => {
+        this.goToNextPicture();
+        this.resetInterval();
+    };
     render() {
         const { pictures } = this.props;
         return (
-            <div className={s.pictures} onClick={this.goToNextPicture}>
+            <div className={s.pictures} onClick={this.handleClickOnPicture}>
                 {pictures.map((picture, i) => (
                     <div
                         className={classnames(s.picture, {

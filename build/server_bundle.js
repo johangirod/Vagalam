@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9f11fcff5fc38d5be6af"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0f27458e299160bbad2a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -828,14 +828,13 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n    height: 100%;\n}\n.style__picture___33lmx {\n    background-size: cover;\n    background-position: center;\n    cursor: pointer;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    /*animation: zoom-in 10s linear infinite alternate-reverse;*/\n    opacity: 0;\n    position: absolute;\n    transition: opacity 0.7s;\n}\n.style__picture___33lmx.style__show___2gnB6 {\n    opacity: 1;\n}\n@-webkit-keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n@keyframes style__zoom-in___2i0LU {\n    from {\n        -webkit-transform: scale(1);\n                transform: scale(1);\n    }\n    to {\n        -webkit-transform: scale(1.2);\n                transform: scale(1.2);\n    }\n}\n", ""]);
+exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n    height: 100%;\n}\n.style__picture___33lmx {\n    background-size: cover;\n    background-position: center;\n    cursor: pointer;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    /*animation: zoom-in 10s linear infinite alternate-reverse;*/\n    opacity: 0;\n    position: absolute;\n    transition: opacity 1s;\n}\n.style__picture___33lmx.style__show___2gnB6 {\n    opacity: 1;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"pictures": "style__pictures___3HFbl",
 	"picture": "style__picture___33lmx",
-	"show": "style__show___2gnB6",
-	"zoom-in": "style__zoom-in___2i0LU"
+	"show": "style__show___2gnB6"
 };
 
 /***/ }),
@@ -4618,10 +4617,22 @@ class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     constructor(props) {
         super(props);
 
+        this.resetInterval = () => {
+            if (this.intervalId) {
+                clearInterval(this.intervalId);
+            }
+            this.intervalId = setInterval(this.goToNextPicture, 10000);
+        };
+
         this.goToNextPicture = () => {
             this.setState(({ currentPicture }) => ({
                 currentPicture: (currentPicture + 1) % this.props.pictures.length
             }));
+        };
+
+        this.handleClickOnPicture = () => {
+            this.goToNextPicture();
+            this.resetInterval();
         };
 
         this.state = {
@@ -4629,16 +4640,16 @@ class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         };
     }
     componentDidMount() {
-        setInterval(this.goToNextPicture, 8000);
+        this.resetInterval();
     }
 
     render() {
         const { pictures } = this.props;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, onClick: this.goToNextPicture, __source: {
+            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, onClick: this.handleClickOnPicture, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 24
+                    lineNumber: 34
                 },
                 __self: this
             },
@@ -4650,7 +4661,7 @@ class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 style: { backgroundImage: `url(${picture})` },
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 26
+                    lineNumber: 36
                 },
                 __self: this
             }))
