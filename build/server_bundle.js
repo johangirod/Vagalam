@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "53b0f60f8ed3e9e9d8af"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b586f9370b0e24ee1d92"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -4617,22 +4617,28 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Posts/Pictures/index.js
 class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     constructor(props) {
         super(props);
+
+        this.goToNextPicture = () => {
+            this.setState(({ currentPicture }) => ({
+                currentPicture: (currentPicture + 1) % this.props.pictures.length
+            }));
+        };
+
         this.state = {
             currentPicture: 0
         };
     }
     componentDidMount() {
-        setInterval(() => this.setState(({ currentPicture }) => ({
-            currentPicture: (currentPicture + 1) % this.props.pictures.length
-        })), 10000);
+        setInterval(this.goToNextPicture, 8000);
     }
+
     render() {
         const { pictures } = this.props;
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, __source: {
+            { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, onClick: this.goToNextPicture, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 25
+                    lineNumber: 24
                 },
                 __self: this
             },
@@ -4644,7 +4650,7 @@ class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 style: { backgroundImage: `url(${picture})` },
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 27
+                    lineNumber: 26
                 },
                 __self: this
             }))
