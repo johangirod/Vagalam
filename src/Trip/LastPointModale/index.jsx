@@ -19,7 +19,7 @@ const LastPointModale = ({ isOpened, visitorEmail }: PropType) => (
             <h3>Le blog s'arrête ici...</h3>
             <p>
                 Mais pas le voyage ! Ce blog est mis à jour en continu, n'hésites pas à revenir
-                d'ici quelques jours pour suivre les nouvelles aventures !
+                d'ici quelques jours pour suivre les nouvelles aventures.
             </p>
             {!visitorEmail ? (
                 <p>Tu peux aussi laisser ton email pour être prévenu quand il y a du nouveau.</p>

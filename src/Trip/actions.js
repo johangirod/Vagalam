@@ -1,6 +1,7 @@
 /* @flow */
 import type {
     GoToNextStepAction,
+    GoToPreviousStepAction,
     AddFetchedSleepLocationsAction,
     AddFetchedPointsOfInterestAction,
     NotifyAnimationEndAction,
@@ -11,6 +12,12 @@ import type {
 export function goToNextStep(): GoToNextStepAction {
     return {
         type: 'app/trip/GO_TO_NEXT_STEP',
+    };
+}
+
+export function goToPreviousStep(): GoToPreviousStepAction {
+    return {
+        type: 'app/trip/GO_TO_PREVIOUS_STEP',
     };
 }
 

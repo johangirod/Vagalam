@@ -78,6 +78,16 @@ function currentMapPointIdReducer(state: State, action: Action): State {
             ...state,
             currentMapPointId: nextMapPoint.id,
         };
+    case 'app/trip/GO_TO_PREVIOUS_STEP':
+        const previousMapPoint =
+                state.path[state.path.findIndex(({ id }) => id === state.currentMapPointId) - 1];
+        if (!previousMapPoint) {
+            return state;
+        }
+        return {
+            ...state,
+            currentMapPointId: previousMapPoint.id,
+        };
     default:
         return state;
     }
@@ -95,6 +105,11 @@ function userArrivedToLastPointReducer(state: State, action: Action): State {
                     !state.fetchingStatus.sleepLocations.nextFetchTrigger &&
                     !state.fetchingStatus.pointsOfInterest.nextFetchTrigger,
         };
+    case 'app/trip/GO_TO_PREVIOUS_STEP':
+        return {
+            ...state,
+            userArrivedToLastPoint: false,
+        };
     default:
         return state;
     }
@@ -103,6 +118,7 @@ function userArrivedToLastPointReducer(state: State, action: Action): State {
 function currentAnimationReducer(state: CurrentAnimationType = null, action: Action) {
     switch (action.type) {
     case 'app/trip/GO_TO_NEXT_STEP':
+    case 'app/trip/GO_TO_PREVIOUS_STEP':
         return 'Map';
     case 'app/trip/CURRENT_ANIMATION_ENDED':
         return null;

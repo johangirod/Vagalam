@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7e8c55c4e5d72dd0bfda"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d05e3ac12b30d9e7593f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -737,13 +737,15 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__details___2zN8J {\n    font-family: 'Crimson Text', serif;\n    font-size: 20px;\n}\n\n.style__press-space___1BylT {\n    -webkit-animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n            animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n}\n\n@-webkit-keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n", ""]);
+exports.push([module.i, ".style__details___2zN8J {\n    font-family: 'Crimson Text', serif;\n    font-size: 20px;\n}\n\n.style__press-space___1BylT {\n    -webkit-animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n            animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n}\n\n.style__previous___2uUOL,\n.style__next___21Vdo {\n    background: none;\n    cursor: pointer;\n    border: none;\n    transition: -webkit-transform 0.5s;\n    transition: transform 0.5s;\n    transition: transform 0.5s, -webkit-transform 0.5s;\n    padding: 12px;\n}\n\n.style__previous___2uUOL:disabled,\n.style__next___21Vdo:disabled {\n    cursor: no-drop;\n}\n\n.style__previous___2uUOL:not(:disabled):hover {\n    -webkit-transform: translateX(-3px);\n        -ms-transform: translateX(-3px);\n            transform: translateX(-3px);\n}\n\n.style__next___21Vdo:not(:disabled):hover {\n    -webkit-transform: translateX(+3px);\n        -ms-transform: translateX(+3px);\n            transform: translateX(+3px);\n}\n\n@-webkit-keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"details": "style__details___2zN8J",
 	"press-space": "style__press-space___1BylT",
-	"fade-in": "style__fade-in___tfnob"
+	"fade-in": "style__fade-in___tfnob",
+	"previous": "style__previous___2uUOL",
+	"next": "style__next___21Vdo"
 };
 
 /***/ }),
@@ -761,7 +763,7 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__modale___2VLn5 {\n    background-color: white;\n    padding: 32px;\n    max-width: 600px;\n}\n", ""]);
+exports.push([module.i, ".style__modale___2VLn5 {\n    background-color: white;\n    padding: 32px;\n    max-width: 600px;\n}\n\nh3 {\n    margin: 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3797,8 +3799,10 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ramda__ = __webpack_require__(/*! ramda */ 1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ramda___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_ramda__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__selectors__ = __webpack_require__(/*! ./selectors */ "./src/Trip/Details/selectors.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Details/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectors__ = __webpack_require__(/*! ../selectors */ "./src/Trip/selectors.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__actions__ = __webpack_require__(/*! ../actions */ "./src/Trip/actions.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Details/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__style_css__);
 var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Details/index.jsx',
     _this = this;
 
@@ -3809,34 +3813,75 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Details/index.jsx',
 
 
 
-const Details = ({ currentDayNumber }) => currentDayNumber ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+
+
+const Details = ({
+    currentDayNumber,
+    // eslint-disable-next-line no-shadow
+    goToPreviousStep,
+    // eslint-disable-next-line no-shadow
+    goToNextStep,
+    userArrivedToLastPoint
+}) => currentDayNumber ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'span',
-    { className: __WEBPACK_IMPORTED_MODULE_5__style_css___default.a.details, __source: {
+    { className: __WEBPACK_IMPORTED_MODULE_7__style_css___default.a.details, __source: {
             fileName: _jsxFileName,
-            lineNumber: 9
+            lineNumber: 26
         },
         __self: _this
     },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'button',
+        {
+            className: __WEBPACK_IMPORTED_MODULE_7__style_css___default.a.previous,
+            onClick: goToPreviousStep,
+            disabled: currentDayNumber === 1,
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 27
+            },
+            __self: _this
+        },
+        '<'
+    ),
+    ' ',
     'Jour ',
-    currentDayNumber
+    currentDayNumber,
+    ' ',
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'button',
+        { className: __WEBPACK_IMPORTED_MODULE_7__style_css___default.a.next, onClick: goToNextStep, disabled: userArrivedToLastPoint, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 35
+            },
+            __self: _this
+        },
+        '>'
+    )
 ) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'em',
-    { className: __WEBPACK_IMPORTED_MODULE_5__style_css___default.a['press-space'], __source: {
+    { className: __WEBPACK_IMPORTED_MODULE_7__style_css___default.a['press-space'], __source: {
             fileName: _jsxFileName,
-            lineNumber: 11
+            lineNumber: 40
         },
         __self: _this
     },
     ' Appuyez sur Espace pour commencer '
 );
 
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_ramda__["compose"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(__WEBPACK_IMPORTED_MODULE_4__selectors__["a" /* default */]), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_5__style_css___default.a))(Details));
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_ramda__["compose"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(state => ({
+    currentDayNumber: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_4__selectors__["a" /* currentDayNumberSelector */])(state),
+    userArrivedToLastPoint: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__selectors__["d" /* userArrivedToLastPointSelector */])(state)
+}), {
+    goToNextStep: __WEBPACK_IMPORTED_MODULE_6__actions__["a" /* goToNextStep */],
+    goToPreviousStep: __WEBPACK_IMPORTED_MODULE_6__actions__["b" /* goToPreviousStep */]
+}), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_7__style_css___default.a))(Details));
 
 /***/ }),
 
 /***/ "./src/Trip/Details/selectors.js":
-/* exports provided: default */
-/* exports used: default */
+/* exports provided: currentDayNumberSelector */
+/* exports used: currentDayNumberSelector */
 /*!***************************************!*\
   !*** ./src/Trip/Details/selectors.js ***!
   \***************************************/
@@ -3857,9 +3902,8 @@ const currentDayNumberSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE
     const lastSleepLocation = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ramda__["last"])(currentPath.filter(({ type }) => type === 'sleep_location'));
     return lastSleepLocation ? lastSleepLocation.dayNumber : null;
 });
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_reselect__["createStructuredSelector"])({
-    currentDayNumber: currentDayNumberSelector
-}));
+/* harmony export (immutable) */ __webpack_exports__["a"] = currentDayNumberSelector;
+
 
 /***/ }),
 
@@ -3975,7 +4019,7 @@ const LastPointModale = ({ isOpened, visitorEmail }) => __WEBPACK_IMPORTED_MODUL
                 },
                 __self: _this
             },
-            'Mais pas le voyage ! Ce blog est mis \xE0 jour en continu, n\'h\xE9sites pas \xE0 revenir d\'ici quelques jours pour suivre les nouvelles aventures !'
+            'Mais pas le voyage ! Ce blog est mis \xE0 jour en continu, n\'h\xE9sites pas \xE0 revenir d\'ici quelques jours pour suivre les nouvelles aventures.'
         ),
         !visitorEmail ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
@@ -4377,21 +4421,29 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     constructor(props) {
         super(props);
 
-        this.handleAnimatonEnd = () => {
-            this.setState({ isMapCurrentlyAnimated: false });
+        this.handleAnimationEnd = () => {
+            this.setState({ mapAnimation: null });
             // Waiting for marker to appear
             setTimeout(this.props.onAnimationEnd, 300);
         };
 
         this.state = {
-            isMapCurrentlyAnimated: false
+            mapAnimation: null
         };
     }
+
     componentWillReceiveProps(nextProps) {
-        if (nextProps.currentPath && this.props.currentPath && this.props.currentPath.length !== nextProps.currentPath.length) {
-            this.setState({ isMapCurrentlyAnimated: true });
+        if (!nextProps.currentPath || !this.props.currentPath) {
+            return;
+        }
+        if (this.props.currentPath.length < nextProps.currentPath.length) {
+            this.setState({ mapAnimation: 'FORWARD' });
+        }
+        if (this.props.currentPath.length > nextProps.currentPath.length) {
+            this.setState({ mapAnimation: 'BACKWARD' });
         }
     }
+
 
     render() {
         const { effects: { updateMap }, displayedTripLineString, currentPath, style } = this.props;
@@ -4412,7 +4464,7 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 movingMethod: 'easeTo',
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 80
+                    lineNumber: 86
                 },
                 __self: this
             },
@@ -4427,10 +4479,10 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                             precision: 1
                         })
                     },
-                    onRest: this.handleAnimatonEnd,
+                    onRest: this.handleAnimationEnd,
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 95
+                        lineNumber: 101
                     },
                     __self: this
                 },
@@ -4447,12 +4499,12 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 108
+                        lineNumber: 113
                     },
                     __self: this
                 }) : null
             ) : null,
-            currentPath.slice(0, this.state.isMapCurrentlyAnimated ? -1 : currentPath.length).map(mapPoint => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            currentPath.slice(0, this.state.mapAnimation === 'FORWARD' ? -1 : currentPath.length).map(mapPoint => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 Mapbox.Marker,
                 {
                     key: mapPoint.coordinates.join(),
@@ -4460,13 +4512,13 @@ class Map extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     anchor: 'center',
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 126
+                        lineNumber: 131
                     },
                     __self: this
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__MapPointMarker__["a" /* default */], { type: mapPoint.type, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 131
+                        lineNumber: 136
                     },
                     __self: this
                 })
@@ -4479,7 +4531,7 @@ Map.defaultProps = {
     style: {}
 };
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6_ramda__["compose"])(withMapZoomControl, __WEBPACK_IMPORTED_MODULE_7_freactal__["injectState"], __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5_react_redux__["connect"])(__WEBPACK_IMPORTED_MODULE_8__selectors__["a" /* default */], {
-    onAnimationEnd: __WEBPACK_IMPORTED_MODULE_9__actions__["b" /* notifyAnimationEnd */]
+    onAnimationEnd: __WEBPACK_IMPORTED_MODULE_9__actions__["c" /* notifyAnimationEnd */]
 }), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_11__style_css___default.a))(Map));
 
 /***/ }),
@@ -5058,8 +5110,8 @@ const isFullscreenPostDisplayedSelector = __webpack_require__.i(__WEBPACK_IMPORT
 /***/ }),
 
 /***/ "./src/Trip/actions.js":
-/* exports provided: goToNextStep, addFetchedSleepLocations, addFetchedPointsOfInterest, notifyAnimationEnd */
-/* exports used: goToNextStep, notifyAnimationEnd, addFetchedSleepLocations, addFetchedPointsOfInterest */
+/* exports provided: goToNextStep, goToPreviousStep, addFetchedSleepLocations, addFetchedPointsOfInterest, notifyAnimationEnd */
+/* exports used: goToNextStep, goToPreviousStep, notifyAnimationEnd, addFetchedSleepLocations, addFetchedPointsOfInterest */
 /*!*****************************!*\
   !*** ./src/Trip/actions.js ***!
   \*****************************/
@@ -5067,9 +5119,10 @@ const isFullscreenPostDisplayedSelector = __webpack_require__.i(__WEBPACK_IMPORT
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = goToNextStep;
-/* harmony export (immutable) */ __webpack_exports__["c"] = addFetchedSleepLocations;
-/* harmony export (immutable) */ __webpack_exports__["d"] = addFetchedPointsOfInterest;
-/* harmony export (immutable) */ __webpack_exports__["b"] = notifyAnimationEnd;
+/* harmony export (immutable) */ __webpack_exports__["b"] = goToPreviousStep;
+/* harmony export (immutable) */ __webpack_exports__["d"] = addFetchedSleepLocations;
+/* harmony export (immutable) */ __webpack_exports__["e"] = addFetchedPointsOfInterest;
+/* harmony export (immutable) */ __webpack_exports__["c"] = notifyAnimationEnd;
 
 
 function goToNextStep() {
@@ -5078,6 +5131,12 @@ function goToNextStep() {
     };
 }
 
+
+function goToPreviousStep() {
+    return {
+        type: 'app/trip/GO_TO_PREVIOUS_STEP'
+    };
+}
 
 function addFetchedSleepLocations(sleepLocations) {
     return {
@@ -5168,7 +5227,7 @@ const fetchSleepLocationsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observab
         postId: getPostId('sleep_location', apiSleepLocation),
         type: 'sleep_location'
     };
-})).then(__WEBPACK_IMPORTED_MODULE_11__actions__["c" /* addFetchedSleepLocations */]));
+})).then(__WEBPACK_IMPORTED_MODULE_11__actions__["d" /* addFetchedSleepLocations */]));
 
 const fetchPointOfInterestsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_9_prismic_io___default.a.api('http://vagalam.prismic.io/api').then(api => api.query(__WEBPACK_IMPORTED_MODULE_9_prismic_io___default.a.Predicates.at('document.type', 'point_of_interest'), {
     orderings: '[my.point_of_interest.datetime]',
@@ -5183,7 +5242,7 @@ const fetchPointOfInterestsAfter = id => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observ
         postId: getPostId('point_of_interest', apiPointOfInterest),
         type: 'point_of_interest'
     };
-})).then(__WEBPACK_IMPORTED_MODULE_11__actions__["d" /* addFetchedPointsOfInterest */]));
+})).then(__WEBPACK_IMPORTED_MODULE_11__actions__["e" /* addFetchedPointsOfInterest */]));
 
 const goToNextStepEpic = (action$, store) => __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].merge(action$.ofType('app/trip/GO_TO_NEXT_STEP'), action$.ofType('persist/REHYDRATE').filter(action => action.key === 'app::trip')).mergeMap(() => {
     const {
@@ -5257,8 +5316,11 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         };
 
         this.handleKeyDown = e => {
-            if (e.key === ' ') {
+            if (e.key === ' ' || e.key === 'ArrowRight') {
                 this.props.goToNextStep();
+            }
+            if (e.key === 'ArrowLeft') {
+                this.props.goToPreviousStep();
             }
         };
 
@@ -5267,10 +5329,15 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         };
     }
 
+    componentDidMount() {
+        window.addEventListener('keydown', this.handleKeyDown);
+    }
     componentWillReceiveProps({ isFullscreenPostDisplayed }) {
         this.setState({ isFullscreenPostDisplayed });
     }
-
+    componentWillUnmount() {
+        window.removeEventListener('keydown', this.handleKeyDown);
+    }
 
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -5280,52 +5347,51 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     'a',
                     { href: '/', className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.brand, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 51
+                            lineNumber: 61
                         },
                         __self: this
                     },
                     'Vagalam'
                 ),
-                bottom: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__Details__["a" /* default */], {
+                bottom: !this.state.isFullscreenPostDisplayed ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__Details__["a" /* default */], {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 55
+                        lineNumber: 65
                     },
                     __self: this
-                }),
-                onKeyDown: this.handleKeyDown,
+                }) : null,
                 frameBackgroundColor: this.state.isFullscreenPostDisplayed ? 'black' : 'white',
                 role: 'presentation',
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 49
+                    lineNumber: 59
                 },
                 __self: this
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Map__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 60
+                    lineNumber: 69
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Posts__["a" /* default */], { onClose: this.handlePostModaleClose, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 61
+                    lineNumber: 70
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__LastPointModale_index__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 62
+                    lineNumber: 71
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__shared_FullScreenModale_index__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 63
+                    lineNumber: 72
                 },
                 __self: this
             })
@@ -5335,7 +5401,7 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_ramda__["compose"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_react_redux__["connect"])(state => ({
     isFullscreenPostDisplayed: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__Posts_selectors__["a" /* isFullscreenPostDisplayedSelector */])(state)
-}), { goToNextStep: __WEBPACK_IMPORTED_MODULE_4__actions__["a" /* goToNextStep */] }), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_6__style_css___default.a))(Trip));
+}), { goToNextStep: __WEBPACK_IMPORTED_MODULE_4__actions__["a" /* goToNextStep */], goToPreviousStep: __WEBPACK_IMPORTED_MODULE_4__actions__["b" /* goToPreviousStep */] }), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_6__style_css___default.a))(Trip));
 
 /***/ }),
 
@@ -5414,6 +5480,14 @@ function currentMapPointIdReducer(state, action) {
             return _extends({}, state, {
                 currentMapPointId: nextMapPoint.id
             });
+        case 'app/trip/GO_TO_PREVIOUS_STEP':
+            const previousMapPoint = state.path[state.path.findIndex(({ id }) => id === state.currentMapPointId) - 1];
+            if (!previousMapPoint) {
+                return state;
+            }
+            return _extends({}, state, {
+                currentMapPointId: previousMapPoint.id
+            });
         default:
             return state;
     }
@@ -5426,6 +5500,10 @@ function userArrivedToLastPointReducer(state, action) {
             return _extends({}, state, {
                 userArrivedToLastPoint: !!lastMapPoint && state.currentMapPointId === lastMapPoint.id && !state.fetchingStatus.sleepLocations.nextFetchTrigger && !state.fetchingStatus.pointsOfInterest.nextFetchTrigger
             });
+        case 'app/trip/GO_TO_PREVIOUS_STEP':
+            return _extends({}, state, {
+                userArrivedToLastPoint: false
+            });
         default:
             return state;
     }
@@ -5434,6 +5512,7 @@ function userArrivedToLastPointReducer(state, action) {
 function currentAnimationReducer(state = null, action) {
     switch (action.type) {
         case 'app/trip/GO_TO_NEXT_STEP':
+        case 'app/trip/GO_TO_PREVIOUS_STEP':
             return 'Map';
         case 'app/trip/CURRENT_ANIMATION_ENDED':
             return null;

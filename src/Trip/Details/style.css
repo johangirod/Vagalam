@@ -7,6 +7,28 @@
     animation: fade-in 2s ease-in-out infinite alternate-reverse;
 }
 
+.previous,
+.next {
+    background: none;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.5s;
+    padding: 12px;
+}
+
+.previous:disabled,
+.next:disabled {
+    cursor: no-drop;
+}
+
+.previous:not(:disabled):hover {
+    transform: translateX(-3px);
+}
+
+.next:not(:disabled):hover {
+    transform: translateX(+3px);
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;

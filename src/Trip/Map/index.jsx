@@ -55,24 +55,30 @@ class Map extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isMapCurrentlyAnimated: false,
+            mapAnimation: null,
         };
     }
+    state: {
+        mapAnimation: 'FORWARD' | 'BACKWARD' | null,
+    };
     componentWillReceiveProps(nextProps) {
-        if (
-            nextProps.currentPath &&
-            this.props.currentPath &&
-            this.props.currentPath.length !== nextProps.currentPath.length
-        ) {
-            this.setState({ isMapCurrentlyAnimated: true });
+        if (!nextProps.currentPath || !this.props.currentPath) {
+            return;
+        }
+        if (this.props.currentPath.length < nextProps.currentPath.length) {
+            this.setState({ mapAnimation: 'FORWARD' });
+        }
+        if (this.props.currentPath.length > nextProps.currentPath.length) {
+            this.setState({ mapAnimation: 'BACKWARD' });
         }
     }
-    handleAnimatonEnd = () => {
-        this.setState({ isMapCurrentlyAnimated: false });
+    handleAnimationEnd = () => {
+        this.setState({ mapAnimation: null });
         // Waiting for marker to appear
         setTimeout(this.props.onAnimationEnd, 300);
     };
     props: PropType;
+
     render() {
         const { effects: { updateMap }, displayedTripLineString, currentPath, style } = this.props;
         const currentMapPoint = last(currentPath);
@@ -101,10 +107,9 @@ class Map extends Component {
                                 precision: 1,
                             }),
                         }}
-                        onRest={this.handleAnimatonEnd}
+                        onRest={this.handleAnimationEnd}
                     >
-                        {({ distance }) =>
-                            distance > 0 ? (
+                        {({ distance }) => distance > 0 ? (
                                 <Mapbox.GeoJSONLayer
                                     data={lineSliceAlong(displayedTripLineString, 0, distance)}
                                     lineLayout={{
@@ -121,7 +126,7 @@ class Map extends Component {
                     </Motion>
                 ) : null}
                 {currentPath
-                    .slice(0, this.state.isMapCurrentlyAnimated ? -1 : currentPath.length)
+                    .slice(0, this.state.mapAnimation === 'FORWARD' ? -1 : currentPath.length)
                     .map(mapPoint => (
                         <Mapbox.Marker
                             key={mapPoint.coordinates.join()}

@@ -58,12 +58,18 @@ export type GoToNextStepAction = {
     type: 'app/trip/GO_TO_NEXT_STEP',
 };
 
+export type GoToPreviousStepAction = {
+    type: 'app/trip/GO_TO_PREVIOUS_STEP',
+};
+
 export type NotifyAnimationEndAction = {
     type: 'app/trip/CURRENT_ANIMATION_ENDED',
 };
 
-export type Action = AddFetchedSleepLocationsAction
+export type Action =
+    | AddFetchedSleepLocationsAction
     | AddFetchedPointsOfInterestAction
     | GoToNextStepAction
+    | GoToPreviousStepAction
     | PostsAction
     | NotifyAnimationEndAction;
