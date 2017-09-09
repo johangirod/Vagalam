@@ -8,12 +8,23 @@ import Modale from '../../shared/ui-element/Modale';
 
 type PropType = {
     currentPost: ?Post,
+    onClose?: () => void,
+};
+const defaultProps = {
+    onClose: () => {},
 };
 
-const PostOverlay = ({ currentPost }: PropType) =>
-    (<Modale isOpened={!!currentPost} fullScreen={currentPost && !!currentPost.pictures.length}>
+const PostOverlay = ({ currentPost, onClose }: PropType) => (
+    <Modale
+        isOpened={!!currentPost}
+        fullScreen={currentPost && !!currentPost.pictures.length}
+        onClose={onClose}
+    >
         <Post {...currentPost} />
-    </Modale>);
+    </Modale>
+);
+
+PostOverlay.defaultProps = defaultProps;
 
 export default compose(
     connect(state => ({

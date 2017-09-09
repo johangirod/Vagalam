@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0f27458e299160bbad2a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7e8c55c4e5d72dd0bfda"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1133,11 +1133,11 @@ function toComment(sourceMap) {
 "use strict";
 
 
-var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 41);
+var _stringify = __webpack_require__(/*! babel-runtime/core-js/json/stringify */ 42);
 
 var _stringify2 = _interopRequireDefault(_stringify);
 
-var _slicedToArray2 = __webpack_require__(/*! babel-runtime/helpers/slicedToArray */ 42);
+var _slicedToArray2 = __webpack_require__(/*! babel-runtime/helpers/slicedToArray */ 43);
 
 var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
@@ -1267,29 +1267,29 @@ module.exports = insertCss;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env__ = __webpack_require__(/*! babel-preset-env */ 38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env__ = __webpack_require__(/*! babel-preset-env */ 39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_preset_env___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_preset_env__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react__ = __webpack_require__(/*! babel-preset-react */ 39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react__ = __webpack_require__(/*! babel-preset-react */ 40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_preset_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_preset_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__ = __webpack_require__(/*! babel-preset-stage-1 */ 40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__ = __webpack_require__(/*! babel-preset-stage-1 */ 41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_preset_stage_1__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__ = __webpack_require__(/*! babel-plugin-react-require */ 33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__ = __webpack_require__(/*! babel-plugin-react-require */ 34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_plugin_react_require__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__ = __webpack_require__(/*! babel-plugin-transform-export-default-name-forked */ 34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__ = __webpack_require__(/*! babel-plugin-transform-export-default-name-forked */ 35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_plugin_transform_export_default_name_forked__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__ = __webpack_require__(/*! babel-plugin-minify-replace */ 32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__ = __webpack_require__(/*! babel-plugin-minify-replace */ 33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_plugin_minify_replace__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__ = __webpack_require__(/*! babel-plugin-transform-node-env-inline */ 35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__ = __webpack_require__(/*! babel-plugin-transform-node-env-inline */ 36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_plugin_transform_node_env_inline__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__ = __webpack_require__(/*! babel-plugin-minify-dead-code-elimination */ 30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__ = __webpack_require__(/*! babel-plugin-minify-dead-code-elimination */ 31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_plugin_minify_dead_code_elimination__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__ = __webpack_require__(/*! babel-plugin-minify-guarded-expressions */ 31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__ = __webpack_require__(/*! babel-plugin-minify-guarded-expressions */ 32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_babel_plugin_minify_guarded_expressions__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__ = __webpack_require__(/*! babel-plugin-discard-module-references */ 29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__ = __webpack_require__(/*! babel-plugin-discard-module-references */ 30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_babel_plugin_discard_module_references__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-source */ 37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-source */ 38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_babel_plugin_transform_react_jsx_source__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-self */ 36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__ = __webpack_require__(/*! babel-plugin-transform-react-jsx-self */ 37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_babel_plugin_transform_react_jsx_self__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils__ = __webpack_require__(/*! ../utils */ "./node_modules/vitaminjs/config/utils/index.js");
 
@@ -1358,7 +1358,7 @@ module.exports = insertCss;
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = clientConfig;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__ = __webpack_require__(/*! lodash.mergewith */ 53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__ = __webpack_require__(/*! lodash.mergewith */ 54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_mergewith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_mergewith__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack__ = __webpack_require__(/*! webpack */ 12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_webpack___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_webpack__);
@@ -1413,21 +1413,21 @@ function clientConfig(options) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = config;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webpack__ = __webpack_require__(/*! webpack */ 12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webpack___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_webpack__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__ = __webpack_require__(/*! case-sensitive-paths-webpack-plugin */ 43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__ = __webpack_require__(/*! case-sensitive-paths-webpack-plugin */ 44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_case_sensitive_paths_webpack_plugin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__ = __webpack_require__(/*! react-dev-utils/WatchMissingNodeModulesPlugin */ 62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__ = __webpack_require__(/*! react-dev-utils/WatchMissingNodeModulesPlugin */ 63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dev_utils_WatchMissingNodeModulesPlugin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__ = __webpack_require__(/*! postcss-omit-import-tilde */ 58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__ = __webpack_require__(/*! postcss-omit-import-tilde */ 59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_postcss_omit_import_tilde__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import__ = __webpack_require__(/*! postcss-import */ 57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import__ = __webpack_require__(/*! postcss-import */ 58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_postcss_import___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_postcss_import__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url__ = __webpack_require__(/*! postcss-url */ 60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url__ = __webpack_require__(/*! postcss-url */ 61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_postcss_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_postcss_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__ = __webpack_require__(/*! postcss-cssnext */ 56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__ = __webpack_require__(/*! postcss-cssnext */ 57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_postcss_cssnext___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_postcss_cssnext__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__ = __webpack_require__(/*! postcss-browser-reporter */ 55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__ = __webpack_require__(/*! postcss-browser-reporter */ 56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_postcss_browser_reporter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter__ = __webpack_require__(/*! postcss-reporter */ 59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter__ = __webpack_require__(/*! postcss-reporter */ 60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_postcss_reporter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_postcss_reporter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_path__ = __webpack_require__(/*! path */ 15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_path___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_path__);
@@ -1752,11 +1752,11 @@ function concat(left, right) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose__ = __webpack_require__(/*! koa-compose */ 48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose__ = __webpack_require__(/*! koa-compose */ 49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_koa_compose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_koa_compose__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag__ = __webpack_require__(/*! koa-etag */ 50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag__ = __webpack_require__(/*! koa-etag */ 51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_etag___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_etag__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__ = __webpack_require__(/*! koa-conditional-get */ 49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__ = __webpack_require__(/*! koa-conditional-get */ 50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_conditional_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_koa_conditional_get__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__middlewares_errorHandler__ = __webpack_require__(/*! ./middlewares/errorHandler */ "./node_modules/vitaminjs/src/server/middlewares/errorHandler.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_modules_server_middlewares___ = __webpack_require__(/*! __app_modules__server_middlewares__ */ "./node_modules/vitaminjs/config/utils/emptyArray.js");
@@ -1803,7 +1803,7 @@ true && ((ctx, next) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape__ = __webpack_require__(/*! js-string-escape */ 46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape__ = __webpack_require__(/*! js-string-escape */ 47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_js_string_escape___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_js_string_escape__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router__ = __webpack_require__(/*! react-router */ 6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_router__);
@@ -2984,11 +2984,11 @@ const routesWithStore = typeof __WEBPACK_IMPORTED_MODULE_1__app_modules_routes__
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static__ = __webpack_require__(/*! koa-static */ 52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static__ = __webpack_require__(/*! koa-static */ 53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa_static___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa_static__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount__ = __webpack_require__(/*! koa-mount */ 51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount__ = __webpack_require__(/*! koa-mount */ 52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_koa_mount___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_koa_mount__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config__ = __webpack_require__(/*! ../../../config */ "./node_modules/vitaminjs/config/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__config__);
@@ -3070,7 +3070,7 @@ const reducers = __webpack_require__(/*! __app_modules__redux_reducers__ */ "./s
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom_server___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom_server__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet__ = __webpack_require__(/*! react-helmet */ 4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_helmet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_helmet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver__ = __webpack_require__(/*! react-resolver */ 63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver__ = __webpack_require__(/*! react-resolver */ 64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_resolver___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_react_resolver__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_modules_server_layout___ = __webpack_require__(/*! __app_modules__server_layout__ */ "./node_modules/vitaminjs/src/server/components/HTMLLayout.jsx");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config__ = __webpack_require__(/*! ../../config */ "./node_modules/vitaminjs/config/index.js");
@@ -3180,19 +3180,19 @@ const renderLayout = (_ref) => {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url__ = __webpack_require__(/*! url */ 23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_url___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_url__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(/*! koa */ 47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(/*! koa */ 48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(/*! express */ 44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express__ = __webpack_require__(/*! express */ 45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_express___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_express__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chalk__ = __webpack_require__(/*! chalk */ 9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_chalk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_chalk__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch__ = __webpack_require__(/*! node-fetch */ 54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch__ = __webpack_require__(/*! node-fetch */ 55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_node_fetch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_node_fetch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline__ = __webpack_require__(/*! readline */ 66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline__ = __webpack_require__(/*! readline */ 67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_readline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_readline__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__ = __webpack_require__(/*! http-graceful-shutdown */ 45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__ = __webpack_require__(/*! http-graceful-shutdown */ 46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_http_graceful_shutdown__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__appMiddleware__ = __webpack_require__(/*! ./appMiddleware */ "./node_modules/vitaminjs/src/server/appMiddleware.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__config__ = __webpack_require__(/*! ../../config */ "./node_modules/vitaminjs/config/index.js");
@@ -3470,9 +3470,9 @@ if (typeof window !== 'undefined' && typeof window.devToolsExtension !== 'undefi
 /* harmony export (immutable) */ __webpack_exports__["a"] = create;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(/*! redux */ 10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux__ = __webpack_require__(/*! react-router-redux */ 64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux__ = __webpack_require__(/*! react-router-redux */ 65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_redux___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_router_redux__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__(/*! redux-thunk */ 67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk__ = __webpack_require__(/*! redux-thunk */ 68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_redux_thunk___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_redux_thunk__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_modules_redux_enhancers___ = __webpack_require__(/*! __app_modules__redux_enhancers__ */ "./node_modules/vitaminjs/config/utils/emptyArray.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__devTools__ = __webpack_require__(/*! ./devTools */ "./node_modules/vitaminjs/src/shared/devTools.js");
@@ -4318,9 +4318,9 @@ const Marker = ({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_line_distance__ = __webpack_require__(/*! @turf/line-distance */ 25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_line_distance__ = __webpack_require__(/*! @turf/line-distance */ 26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_line_distance___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__turf_line_distance__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_line_slice_along__ = __webpack_require__(/*! @turf/line-slice-along */ 27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_line_slice_along__ = __webpack_require__(/*! @turf/line-slice-along */ 28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_line_slice_along___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__turf_line_slice_along__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_motion__ = __webpack_require__(/*! react-motion */ 18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_motion___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_react_motion__);
@@ -4497,13 +4497,13 @@ Map.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_reselect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_reselect__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ramda__ = __webpack_require__(/*! ramda */ 1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ramda___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ramda__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_helpers__ = __webpack_require__(/*! @turf/helpers */ 24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_helpers__ = __webpack_require__(/*! @turf/helpers */ 25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__turf_helpers___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__turf_helpers__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_meta__ = __webpack_require__(/*! @turf/meta */ 28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_meta__ = __webpack_require__(/*! @turf/meta */ 29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_meta___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__turf_meta__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__turf_line_slice__ = __webpack_require__(/*! @turf/line-slice */ 26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__turf_line_slice__ = __webpack_require__(/*! @turf/line-slice */ 27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__turf_line_slice___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__turf_line_slice__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__turf_bezier__ = __webpack_require__(/*! @turf/bezier */ 23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__turf_bezier__ = __webpack_require__(/*! @turf/bezier */ 24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__turf_bezier___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__turf_bezier__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__selectors__ = __webpack_require__(/*! ../selectors */ "./src/Trip/selectors.js");
 
@@ -4877,21 +4877,21 @@ function addFetchedPosts(posts) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_fromPromise__ = __webpack_require__(/*! rxjs/add/observable/fromPromise */ 20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__ = __webpack_require__(/*! rxjs/add/observable/of */ 70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__ = __webpack_require__(/*! rxjs/add/observable/of */ 71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_mergeMap__ = __webpack_require__(/*! rxjs/add/operator/mergeMap */ 21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_mergeMap__ = __webpack_require__(/*! rxjs/add/operator/mergeMap */ 22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_mergeMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(/*! rxjs/add/operator/map */ 74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime__ = __webpack_require__(/*! rxjs/add/operator/bufferTime */ 71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime__ = __webpack_require__(/*! rxjs/add/operator/bufferTime */ 72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_bufferTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__ = __webpack_require__(/*! rxjs/add/operator/do */ 72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__ = __webpack_require__(/*! rxjs/add/operator/do */ 73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prismic_io__ = __webpack_require__(/*! prismic.io */ 16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_prismic_io___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_prismic_io__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_prismic_dom__ = __webpack_require__(/*! prismic-dom */ 61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_prismic_dom__ = __webpack_require__(/*! prismic-dom */ 62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_prismic_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_prismic_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__actions__ = __webpack_require__(/*! ./actions */ "./src/Trip/Posts/actions.js");
 
@@ -4957,22 +4957,32 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Posts/index.jsx',
 
 
 
-const PostOverlay = ({ currentPost }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+const defaultProps = {
+    onClose: () => {}
+};
+
+const PostOverlay = ({ currentPost, onClose }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     __WEBPACK_IMPORTED_MODULE_5__shared_ui_element_Modale__["a" /* default */],
-    { isOpened: !!currentPost, fullScreen: currentPost && !!currentPost.pictures.length, __source: {
+    {
+        isOpened: !!currentPost,
+        fullScreen: currentPost && !!currentPost.pictures.length,
+        onClose: onClose,
+        __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 18
         },
         __self: _this
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Post__["a" /* default */], _extends({}, currentPost, {
         __source: {
             fileName: _jsxFileName,
-            lineNumber: 15
+            lineNumber: 23
         },
         __self: _this
     }))
 );
+
+PostOverlay.defaultProps = defaultProps;
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_ramda__["compose"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_react_redux__["connect"])(state => ({
     currentPost: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__selectors__["b" /* currentPostSelector */])(state)
@@ -5006,8 +5016,8 @@ function postsReducer(state = {}, action) {
 /***/ }),
 
 /***/ "./src/Trip/Posts/selectors.js":
-/* exports provided: currentPostSelector, hasFullScreenPostSelector */
-/* exports used: hasFullScreenPostSelector, currentPostSelector */
+/* exports provided: currentPostSelector, isFullscreenPostDisplayedSelector */
+/* exports used: isFullscreenPostDisplayedSelector, currentPostSelector */
 /*!*************************************!*\
   !*** ./src/Trip/Posts/selectors.js ***!
   \*************************************/
@@ -5041,8 +5051,8 @@ const currentPostSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_re
 /* harmony export (immutable) */ __webpack_exports__["b"] = currentPostSelector;
 
 
-const hasFullScreenPostSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_reselect__["createSelector"])(currentPostSelector, currentPost => currentPost && currentPost.pictures.length);
-/* harmony export (immutable) */ __webpack_exports__["a"] = hasFullScreenPostSelector;
+const isFullscreenPostDisplayedSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_reselect__["createSelector"])(currentPostSelector, currentPost => currentPost && currentPost.pictures.length);
+/* harmony export (immutable) */ __webpack_exports__["a"] = isFullscreenPostDisplayedSelector;
 
 
 /***/ }),
@@ -5104,17 +5114,17 @@ function notifyAnimationEnd() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_merge__ = __webpack_require__(/*! rxjs/add/operator/merge */ 75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_merge__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_mergeMap__ = __webpack_require__(/*! rxjs/add/operator/mergeMap */ 21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_mergeMap__ = __webpack_require__(/*! rxjs/add/operator/mergeMap */ 22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_mergeMap__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__ = __webpack_require__(/*! rxjs/add/operator/startWith */ 76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_startWith__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter__ = __webpack_require__(/*! rxjs/add/operator/filter */ 21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_filter__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_fromPromise__ = __webpack_require__(/*! rxjs/add/observable/fromPromise */ 20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_fromPromise__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_empty__ = __webpack_require__(/*! rxjs/add/observable/empty */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_empty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_empty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_merge__ = __webpack_require__(/*! rxjs/add/observable/merge */ 69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_merge__ = __webpack_require__(/*! rxjs/add/observable/merge */ 70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_merge__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_redux_observable__ = __webpack_require__(/*! redux-observable */ 7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_redux_observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_redux_observable__);
@@ -5239,15 +5249,28 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/index.jsx';
 
 // eslint-disable-next-line no-shadow
 class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
-    constructor(...args) {
-        var _temp;
+    constructor(props) {
+        super(props);
 
-        return _temp = super(...args), this.handleKeyDown = e => {
+        this.handlePostModaleClose = () => {
+            this.setState({ isFullscreenPostDisplayed: false });
+        };
+
+        this.handleKeyDown = e => {
             if (e.key === ' ') {
                 this.props.goToNextStep();
             }
-        }, _temp;
+        };
+
+        this.state = {
+            isFullscreenPostDisplayed: props.isFullscreenPostDisplayed
+        };
     }
+
+    componentWillReceiveProps({ isFullscreenPostDisplayed }) {
+        this.setState({ isFullscreenPostDisplayed });
+    }
+
 
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -5257,7 +5280,7 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     'a',
                     { href: '/', className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.brand, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 34
+                            lineNumber: 51
                         },
                         __self: this
                     },
@@ -5266,44 +5289,43 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 bottom: __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_12__Details__["a" /* default */], {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 38
+                        lineNumber: 55
                     },
                     __self: this
                 }),
                 onKeyDown: this.handleKeyDown,
-                frameBackgroundColor: this.props.hasFullScreenPost ? 'black' : 'white',
+                frameBackgroundColor: this.state.isFullscreenPostDisplayed ? 'black' : 'white',
                 role: 'presentation',
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 32
+                    lineNumber: 49
                 },
                 __self: this
             },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__Map__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 43
+                    lineNumber: 60
                 },
                 __self: this
             }),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Posts__["a" /* default */], {
-                __source: {
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__Posts__["a" /* default */], { onClose: this.handlePostModaleClose, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 44
+                    lineNumber: 61
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__LastPointModale_index__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 45
+                    lineNumber: 62
                 },
                 __self: this
             }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__shared_FullScreenModale_index__["a" /* default */], {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 46
+                    lineNumber: 63
                 },
                 __self: this
             })
@@ -5312,7 +5334,7 @@ class Trip extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_ramda__["compose"])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_react_redux__["connect"])(state => ({
-    hasFullScreenPost: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__Posts_selectors__["a" /* hasFullScreenPostSelector */])(state)
+    isFullscreenPostDisplayed: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__Posts_selectors__["a" /* isFullscreenPostDisplayedSelector */])(state)
 }), { goToNextStep: __WEBPACK_IMPORTED_MODULE_4__actions__["a" /* goToNextStep */] }), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_6__style_css___default.a))(Trip));
 
 /***/ }),
@@ -6020,7 +6042,7 @@ function suscribe(email) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_dom_AjaxObservable__ = __webpack_require__(/*! rxjs/observable/dom/AjaxObservable */ 77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_dom_AjaxObservable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_dom_AjaxObservable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_dom_ajax__ = __webpack_require__(/*! rxjs/add/observable/dom/ajax */ 68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_dom_ajax__ = __webpack_require__(/*! rxjs/add/observable/dom/ajax */ 69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_dom_ajax___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_dom_ajax__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_empty__ = __webpack_require__(/*! rxjs/add/observable/empty */ 19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_empty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_empty__);
@@ -6387,7 +6409,7 @@ const FrameLayout = (_ref = {}) => {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames__ = __webpack_require__(/*! classnames */ 13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_classnames__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_transition_group__ = __webpack_require__(/*! react-transition-group */ 65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_transition_group__ = __webpack_require__(/*! react-transition-group */ 66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_transition_group___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_transition_group__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css__ = __webpack_require__(/*! ./style.css */ "./src/shared/ui-element/Modale/style.css");
@@ -6744,6 +6766,17 @@ module.exports = require("rxjs/add/observable/fromPromise");
 
 /***/ 21:
 /* no static exports found */
+/*!*******************************************!*\
+  !*** external "rxjs/add/operator/filter" ***!
+  \*******************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs/add/operator/filter");
+
+/***/ }),
+
+/***/ 22:
+/* no static exports found */
 /*!*********************************************!*\
   !*** external "rxjs/add/operator/mergeMap" ***!
   \*********************************************/
@@ -6753,7 +6786,7 @@ module.exports = require("rxjs/add/operator/mergeMap");
 
 /***/ }),
 
-/***/ 22:
+/***/ 23:
 /* no static exports found */
 /* exports used: parse */
 /*!**********************!*\
@@ -6765,7 +6798,7 @@ module.exports = require("url");
 
 /***/ }),
 
-/***/ 23:
+/***/ 24:
 /* no static exports found */
 /* exports used: default */
 /*!*******************************!*\
@@ -6777,7 +6810,7 @@ module.exports = require("@turf/bezier");
 
 /***/ }),
 
-/***/ 24:
+/***/ 25:
 /* no static exports found */
 /* exports used: lineString */
 /*!********************************!*\
@@ -6789,7 +6822,7 @@ module.exports = require("@turf/helpers");
 
 /***/ }),
 
-/***/ 25:
+/***/ 26:
 /* no static exports found */
 /* exports used: default */
 /*!**************************************!*\
@@ -6801,7 +6834,7 @@ module.exports = require("@turf/line-distance");
 
 /***/ }),
 
-/***/ 26:
+/***/ 27:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -6813,7 +6846,7 @@ module.exports = require("@turf/line-slice");
 
 /***/ }),
 
-/***/ 27:
+/***/ 28:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************************!*\
@@ -6825,7 +6858,7 @@ module.exports = require("@turf/line-slice-along");
 
 /***/ }),
 
-/***/ 28:
+/***/ 29:
 /* no static exports found */
 /* exports used: coordAll */
 /*!*****************************!*\
@@ -6834,18 +6867,6 @@ module.exports = require("@turf/line-slice-along");
 /***/ (function(module, exports) {
 
 module.exports = require("@turf/meta");
-
-/***/ }),
-
-/***/ 29:
-/* no static exports found */
-/* exports used: default */
-/*!*********************************************************!*\
-  !*** external "babel-plugin-discard-module-references" ***!
-  \*********************************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-plugin-discard-module-references");
 
 /***/ }),
 
@@ -6864,6 +6885,18 @@ module.exports = require("prop-types");
 /***/ 30:
 /* no static exports found */
 /* exports used: default */
+/*!*********************************************************!*\
+  !*** external "babel-plugin-discard-module-references" ***!
+  \*********************************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("babel-plugin-discard-module-references");
+
+/***/ }),
+
+/***/ 31:
+/* no static exports found */
+/* exports used: default */
 /*!************************************************************!*\
   !*** external "babel-plugin-minify-dead-code-elimination" ***!
   \************************************************************/
@@ -6873,7 +6906,7 @@ module.exports = require("babel-plugin-minify-dead-code-elimination");
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************************!*\
@@ -6885,7 +6918,7 @@ module.exports = require("babel-plugin-minify-guarded-expressions");
 
 /***/ }),
 
-/***/ 32:
+/***/ 33:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************!*\
@@ -6897,7 +6930,7 @@ module.exports = require("babel-plugin-minify-replace");
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /* no static exports found */
 /* exports used: default */
 /*!*********************************************!*\
@@ -6909,7 +6942,7 @@ module.exports = require("babel-plugin-react-require");
 
 /***/ }),
 
-/***/ 34:
+/***/ 35:
 /* no static exports found */
 /* exports used: default */
 /*!********************************************************************!*\
@@ -6921,7 +6954,7 @@ module.exports = require("babel-plugin-transform-export-default-name-forked");
 
 /***/ }),
 
-/***/ 35:
+/***/ 36:
 /* no static exports found */
 /* exports used: default */
 /*!*********************************************************!*\
@@ -6933,7 +6966,7 @@ module.exports = require("babel-plugin-transform-node-env-inline");
 
 /***/ }),
 
-/***/ 36:
+/***/ 37:
 /* no static exports found */
 /* exports used: default */
 /*!********************************************************!*\
@@ -6945,7 +6978,7 @@ module.exports = require("babel-plugin-transform-react-jsx-self");
 
 /***/ }),
 
-/***/ 37:
+/***/ 38:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************************************!*\
@@ -6957,7 +6990,7 @@ module.exports = require("babel-plugin-transform-react-jsx-source");
 
 /***/ }),
 
-/***/ 38:
+/***/ 39:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -6966,18 +6999,6 @@ module.exports = require("babel-plugin-transform-react-jsx-source");
 /***/ (function(module, exports) {
 
 module.exports = require("babel-preset-env");
-
-/***/ }),
-
-/***/ 39:
-/* no static exports found */
-/* exports used: default */
-/*!*************************************!*\
-  !*** external "babel-preset-react" ***!
-  \*************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("babel-preset-react");
 
 /***/ }),
 
@@ -6996,6 +7017,18 @@ module.exports = require("react-helmet");
 /***/ 40:
 /* no static exports found */
 /* exports used: default */
+/*!*************************************!*\
+  !*** external "babel-preset-react" ***!
+  \*************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("babel-preset-react");
+
+/***/ }),
+
+/***/ 41:
+/* no static exports found */
+/* exports used: default */
 /*!***************************************!*\
   !*** external "babel-preset-stage-1" ***!
   \***************************************/
@@ -7005,7 +7038,7 @@ module.exports = require("babel-preset-stage-1");
 
 /***/ }),
 
-/***/ 41:
+/***/ 42:
 /* no static exports found */
 /* all exports used */
 /*!*******************************************************!*\
@@ -7017,7 +7050,7 @@ module.exports = require("babel-runtime/core-js/json/stringify");
 
 /***/ }),
 
-/***/ 42:
+/***/ 43:
 /* no static exports found */
 /* all exports used */
 /*!******************************************************!*\
@@ -7029,7 +7062,7 @@ module.exports = require("babel-runtime/helpers/slicedToArray");
 
 /***/ }),
 
-/***/ 43:
+/***/ 44:
 /* no static exports found */
 /* exports used: default */
 /*!******************************************************!*\
@@ -7041,7 +7074,7 @@ module.exports = require("case-sensitive-paths-webpack-plugin");
 
 /***/ }),
 
-/***/ 44:
+/***/ 45:
 /* no static exports found */
 /* exports used: default */
 /*!**************************!*\
@@ -7053,7 +7086,7 @@ module.exports = require("express");
 
 /***/ }),
 
-/***/ 45:
+/***/ 46:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************************!*\
@@ -7065,7 +7098,7 @@ module.exports = require("http-graceful-shutdown");
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -7077,7 +7110,7 @@ module.exports = require("js-string-escape");
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /* no static exports found */
 /* exports used: default */
 /*!**********************!*\
@@ -7089,7 +7122,7 @@ module.exports = require("koa");
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /* no static exports found */
 /* exports used: default */
 /*!******************************!*\
@@ -7098,18 +7131,6 @@ module.exports = require("koa");
 /***/ (function(module, exports) {
 
 module.exports = require("koa-compose");
-
-/***/ }),
-
-/***/ 49:
-/* no static exports found */
-/* exports used: default */
-/*!**************************************!*\
-  !*** external "koa-conditional-get" ***!
-  \**************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("koa-conditional-get");
 
 /***/ }),
 
@@ -7128,6 +7149,18 @@ module.exports = require("isomorphic-style-loader/lib/withStyles");
 /***/ 50:
 /* no static exports found */
 /* exports used: default */
+/*!**************************************!*\
+  !*** external "koa-conditional-get" ***!
+  \**************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("koa-conditional-get");
+
+/***/ }),
+
+/***/ 51:
+/* no static exports found */
+/* exports used: default */
 /*!***************************!*\
   !*** external "koa-etag" ***!
   \***************************/
@@ -7137,7 +7170,7 @@ module.exports = require("koa-etag");
 
 /***/ }),
 
-/***/ 51:
+/***/ 52:
 /* no static exports found */
 /* exports used: default */
 /*!****************************!*\
@@ -7149,7 +7182,7 @@ module.exports = require("koa-mount");
 
 /***/ }),
 
-/***/ 52:
+/***/ 53:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************!*\
@@ -7161,7 +7194,7 @@ module.exports = require("koa-static");
 
 /***/ }),
 
-/***/ 53:
+/***/ 54:
 /* no static exports found */
 /* exports used: default */
 /*!***********************************!*\
@@ -7173,7 +7206,7 @@ module.exports = require("lodash.mergewith");
 
 /***/ }),
 
-/***/ 54:
+/***/ 55:
 /* no static exports found */
 /* exports used: default */
 /*!*****************************!*\
@@ -7185,7 +7218,7 @@ module.exports = require("node-fetch");
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /* no static exports found */
 /* exports used: default */
 /*!*******************************************!*\
@@ -7197,7 +7230,7 @@ module.exports = require("postcss-browser-reporter");
 
 /***/ }),
 
-/***/ 56:
+/***/ 57:
 /* no static exports found */
 /* exports used: default */
 /*!**********************************!*\
@@ -7209,7 +7242,7 @@ module.exports = require("postcss-cssnext");
 
 /***/ }),
 
-/***/ 57:
+/***/ 58:
 /* no static exports found */
 /* exports used: default */
 /*!*********************************!*\
@@ -7221,7 +7254,7 @@ module.exports = require("postcss-import");
 
 /***/ }),
 
-/***/ 58:
+/***/ 59:
 /* no static exports found */
 /* exports used: default */
 /*!********************************************!*\
@@ -7230,18 +7263,6 @@ module.exports = require("postcss-import");
 /***/ (function(module, exports) {
 
 module.exports = require("postcss-omit-import-tilde");
-
-/***/ }),
-
-/***/ 59:
-/* no static exports found */
-/* exports used: default */
-/*!***********************************!*\
-  !*** external "postcss-reporter" ***!
-  \***********************************/
-/***/ (function(module, exports) {
-
-module.exports = require("postcss-reporter");
 
 /***/ }),
 
@@ -7260,6 +7281,18 @@ module.exports = require("react-router");
 /***/ 60:
 /* no static exports found */
 /* exports used: default */
+/*!***********************************!*\
+  !*** external "postcss-reporter" ***!
+  \***********************************/
+/***/ (function(module, exports) {
+
+module.exports = require("postcss-reporter");
+
+/***/ }),
+
+/***/ 61:
+/* no static exports found */
+/* exports used: default */
 /*!******************************!*\
   !*** external "postcss-url" ***!
   \******************************/
@@ -7269,7 +7302,7 @@ module.exports = require("postcss-url");
 
 /***/ }),
 
-/***/ 61:
+/***/ 62:
 /* no static exports found */
 /* exports used: default */
 /*!******************************!*\
@@ -7281,7 +7314,7 @@ module.exports = require("prismic-dom");
 
 /***/ }),
 
-/***/ 62:
+/***/ 63:
 /* no static exports found */
 /* exports used: default */
 /*!****************************************************************!*\
@@ -7293,7 +7326,7 @@ module.exports = require("react-dev-utils/WatchMissingNodeModulesPlugin");
 
 /***/ }),
 
-/***/ 63:
+/***/ 64:
 /* no static exports found */
 /* exports used: Resolver */
 /*!*********************************!*\
@@ -7305,7 +7338,7 @@ module.exports = require("react-resolver");
 
 /***/ }),
 
-/***/ 64:
+/***/ 65:
 /* no static exports found */
 /* exports used: routerReducer, routerMiddleware */
 /*!*************************************!*\
@@ -7317,7 +7350,7 @@ module.exports = require("react-router-redux");
 
 /***/ }),
 
-/***/ 65:
+/***/ 66:
 /* no static exports found */
 /* exports used: CSSTransitionGroup */
 /*!*****************************************!*\
@@ -7329,7 +7362,7 @@ module.exports = require("react-transition-group");
 
 /***/ }),
 
-/***/ 66:
+/***/ 67:
 /* no static exports found */
 /* exports used: default */
 /*!***************************!*\
@@ -7341,7 +7374,7 @@ module.exports = require("readline");
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /* no static exports found */
 /* exports used: default */
 /*!******************************!*\
@@ -7353,7 +7386,7 @@ module.exports = require("redux-thunk");
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /* no static exports found */
 /*!***********************************************!*\
   !*** external "rxjs/add/observable/dom/ajax" ***!
@@ -7361,17 +7394,6 @@ module.exports = require("redux-thunk");
 /***/ (function(module, exports) {
 
 module.exports = require("rxjs/add/observable/dom/ajax");
-
-/***/ }),
-
-/***/ 69:
-/* no static exports found */
-/*!********************************************!*\
-  !*** external "rxjs/add/observable/merge" ***!
-  \********************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("rxjs/add/observable/merge");
 
 /***/ }),
 
@@ -7389,6 +7411,17 @@ module.exports = require("redux-observable");
 
 /***/ 70:
 /* no static exports found */
+/*!********************************************!*\
+  !*** external "rxjs/add/observable/merge" ***!
+  \********************************************/
+/***/ (function(module, exports) {
+
+module.exports = require("rxjs/add/observable/merge");
+
+/***/ }),
+
+/***/ 71:
+/* no static exports found */
 /*!*****************************************!*\
   !*** external "rxjs/add/observable/of" ***!
   \*****************************************/
@@ -7398,7 +7431,7 @@ module.exports = require("rxjs/add/observable/of");
 
 /***/ }),
 
-/***/ 71:
+/***/ 72:
 /* no static exports found */
 /*!***********************************************!*\
   !*** external "rxjs/add/operator/bufferTime" ***!
@@ -7409,7 +7442,7 @@ module.exports = require("rxjs/add/operator/bufferTime");
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
 /* no static exports found */
 /*!***************************************!*\
   !*** external "rxjs/add/operator/do" ***!
@@ -7417,17 +7450,6 @@ module.exports = require("rxjs/add/operator/bufferTime");
 /***/ (function(module, exports) {
 
 module.exports = require("rxjs/add/operator/do");
-
-/***/ }),
-
-/***/ 73:
-/* no static exports found */
-/*!*******************************************!*\
-  !*** external "rxjs/add/operator/filter" ***!
-  \*******************************************/
-/***/ (function(module, exports) {
-
-module.exports = require("rxjs/add/operator/filter");
 
 /***/ }),
 

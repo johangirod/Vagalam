@@ -26,7 +26,7 @@ export const currentPostSelector: Selector<?Post> = createSelector(
     },
 );
 
-export const hasFullScreenPostSelector: Selector<Boolean> = createSelector(
+export const isFullscreenPostDisplayedSelector: Selector<Boolean> = createSelector(
     currentPostSelector,
     currentPost => currentPost && currentPost.pictures.length,
 );

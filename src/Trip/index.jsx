@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Component } from 'react';
 
 import { goToNextStep } from './actions';
-import { hasFullScreenPostSelector } from './Posts/selectors';
+import { isFullscreenPostDisplayedSelector } from './Posts/selectors';
 import s from './style.css';
 import Map from './Map';
 import CurrentPost from './Posts';
@@ -17,16 +17,33 @@ import Details from './Details';
 
 type PropType = {
     goToNextStep: () => {},
-    hasFullScreenPost: boolean,
+    isFullscreenPostDisplayed: boolean,
 };
 // eslint-disable-next-line no-shadow
 class Trip extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isFullscreenPostDisplayed: props.isFullscreenPostDisplayed,
+        };
+    }
+    state: {
+        isFullscreenPostDisplayed: boolean,
+    };
+    componentWillReceiveProps({ isFullscreenPostDisplayed }) {
+        this.setState({ isFullscreenPostDisplayed });
+    }
     props: PropType;
+
+    handlePostModaleClose = () => {
+        this.setState({ isFullscreenPostDisplayed: false });
+    };
     handleKeyDown = (e) => {
         if (e.key === ' ') {
             this.props.goToNextStep();
         }
     };
+
     render() {
         return (
             <FrameLayout
@@ -37,11 +54,11 @@ class Trip extends Component {
                 }
                 bottom={<Details />}
                 onKeyDown={this.handleKeyDown}
-                frameBackgroundColor={this.props.hasFullScreenPost ? 'black' : 'white'}
+                frameBackgroundColor={this.state.isFullscreenPostDisplayed ? 'black' : 'white'}
                 role="presentation"
             >
                 <Map />
-                <CurrentPost />
+                <CurrentPost onClose={this.handlePostModaleClose} />
                 <LastPointModale />
                 <FullScreenModale />
             </FrameLayout>
@@ -52,7 +69,7 @@ class Trip extends Component {
 export default compose(
     connect(
         state => ({
-            hasFullScreenPost: hasFullScreenPostSelector(state),
+            isFullscreenPostDisplayed: isFullscreenPostDisplayedSelector(state),
         }),
         { goToNextStep },
     ),
