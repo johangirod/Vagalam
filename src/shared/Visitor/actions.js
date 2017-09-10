@@ -1,5 +1,5 @@
 // @flow
-import type { EmailPreference, UpdateEmailPreferenceAction, SuscribeAction } from './types';
+import type { EmailPreference, UpdateEmailPreferenceAction, SubscribeAction } from './types';
 
 export function updateEmailPreference(
     emailPreference: EmailPreference,
@@ -10,9 +10,9 @@ export function updateEmailPreference(
     };
 }
 
-export function suscribe(email: string): SuscribeAction {
+export function subscribe(email: string): SubscribeAction {
     return {
-        type: 'app/visitor/SUSCRIBE',
+        type: 'app/visitor/SUBSCRIBE',
         email,
     };
 }

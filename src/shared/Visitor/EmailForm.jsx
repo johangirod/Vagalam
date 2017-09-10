@@ -4,7 +4,7 @@ import { withStyles } from 'vitaminjs';
 import { connect } from 'react-redux';
 import { Component } from 'react';
 import { compose } from 'ramda';
-import { updateEmailPreference, suscribe } from './actions';
+import { updateEmailPreference, subscribe } from './actions';
 import { emailSelector } from './selectors';
 import s from './style.css';
 import type { EmailPreference } from './types';
@@ -82,7 +82,7 @@ class EmailForm extends Component {
 
 export default compose(
     connect(state => ({ email: emailSelector(state) }), {
-        onVisitorSubmitEmail: suscribe,
+        onVisitorSubmitEmail: subscribe,
         onEmailPreferenceChange: updateEmailPreference,
     }),
     withStyles(s),

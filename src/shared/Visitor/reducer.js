@@ -3,7 +3,7 @@ import type { Action, State } from './types';
 
 let visitorReducer = function visitorReducer(state: State = null, action: Action) {
     switch (action.type) {
-    case 'app/visitor/SUSCRIBE':
+    case 'app/visitor/SUBSCRIBE':
         return {
             email: action.email,
             emailPreference: 'SOMETIMES',

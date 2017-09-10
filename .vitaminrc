@@ -3,5 +3,8 @@
     "redux": {
         "reducers": "./src/rootReducers",
         "middlewares": "./src/middlewares"
-    } 
+    },
+    "server": {
+        "middlewares": "./src/server/middlewares"
+    }
 }

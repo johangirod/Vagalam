@@ -11,8 +11,8 @@ export type UpdateEmailPreferenceAction = {
     type: 'app/visitor/UPDATE_EMAIL_PREFERENCE',
     emailPreference: EmailPreference,
 };
-export type SuscribeAction = {
-    type: 'app/visitor/SUSCRIBE',
+export type SubscribeAction = {
+    type: 'app/visitor/SUBSCRIBE',
     email: string,
 };
-export type Action = UpdateEmailPreferenceAction | SuscribeAction;
+export type Action = UpdateEmailPreferenceAction | SubscribeAction;
