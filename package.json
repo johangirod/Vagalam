@@ -16,6 +16,7 @@
         "dotenv": "^4.0.0",
         "flow-geojson": "^1.0.2",
         "freactal": "^1.1.0",
+        "if-env": "^1.0.0",
         "koa-router": "^7.2.1",
         "mailchimp-api-v3": "^1.7.0",
         "mapbox-gl": "^0.38.0",
@@ -36,9 +37,8 @@
         "vitaminjs": "https://github.com/johangirod/vitaminjs#master"
     },
     "scripts": {
-        "start": "vitamin start",
-        "build": "vitamin build",
-        "serve": "vitamin serve"
+        "start": "if-env NODE_ENV=production && vitamin serve || vitamin start",
+        "build": "vitamin build"
     },
     "devDependencies": {
         "babel-eslint": "^7.2.3",
@@ -49,5 +49,9 @@
         "eslint-plugin-jsx-a11y": "^5.1.1",
         "eslint-plugin-react": "^7.1.0",
         "flow-bin": "^0.51.0"
+    },
+    "engines": {
+        "yarn": "^0.28.1",
+        "node": "^8.3.0"
     }
 }

@@ -23,7 +23,7 @@ const getPostId: (string, any) => ?string = (type, apiResponse) => {
 };
 const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
     Observable.fromPromise(
-        Prismic.api('http://vagalam.prismic.io/api')
+        Prismic.api('https://vagalam.prismic.io/api')
             .then(api =>
                 api.query(Prismic.Predicates.at('document.type', 'sleep_location'), {
                     orderings: '[my.sleep_location.date]',
@@ -53,7 +53,7 @@ const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
 
 const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = id =>
     Observable.fromPromise(
-        Prismic.api('http://vagalam.prismic.io/api')
+        Prismic.api('https://vagalam.prismic.io/api')
             .then(api =>
                 api.query(Prismic.Predicates.at('document.type', 'point_of_interest'), {
                     orderings: '[my.point_of_interest.datetime]',

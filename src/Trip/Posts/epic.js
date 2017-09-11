@@ -19,7 +19,7 @@ const proxyWithGoogleImageResizer = pictureUrl =>
 
 function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
     return Observable.fromPromise(
-        Prismic.api('http://vagalam.prismic.io/api').then(api =>
+        Prismic.api('https://vagalam.prismic.io/api').then(api =>
             api.query(Prismic.Predicates.in('document.id', postIds), {}),
         ),
     )
@@ -30,13 +30,19 @@ function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
                 type: postApi.data['post.content'] ? 'Article' : 'Gallery',
                 title:
                     postApi.data['post.title'] &&
-                    PrismicDOM.RichText.asText(postApi.data['post.title'].value),
+                    PrismicDOM.RichText.asText(
+                        postApi.data['post.title'].value,
+                    ),
                 content:
                     postApi.data['post.content'] &&
-                    PrismicDOM.RichText.asHtml(postApi.data['post.content'].value),
+                    PrismicDOM.RichText.asHtml(
+                        postApi.data['post.content'].value,
+                    ),
                 pictures: postApi.data['post.pictures']
                     ? postApi.data['post.pictures'].value.map(value =>
-                          proxyWithGoogleImageResizer(value.picture.value.main.url),
+                          proxyWithGoogleImageResizer(
+                              value.picture.value.main.url,
+                          ),
                       )
                     : [],
             })),
@@ -52,7 +58,9 @@ const fetchPostsEpic: Epic<Action> = $action =>
             .ofType('app/trip/ADD_FETCHED_POINTS_OF_INTEREST')
             .map(({ pointsOfInterest }) => pointsOfInterest),
     )
-        .mergeMap(resources => Observable.of(...resources.map(({ postId }) => postId)))
+        .mergeMap(resources =>
+            Observable.of(...resources.map(({ postId }) => postId)),
+        )
         .filter(Boolean)
         // $FlowFixMe: rxJS flow typed API not up to date
         .bufferTime(2000, 2000, 10)

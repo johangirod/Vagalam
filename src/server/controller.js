@@ -16,7 +16,7 @@ const md5 = string =>
 export function suscribeVisitor(email: string) {
     return mailchimp.put(`lists/${MASTER_LIST_ID}/members/${md5(email)}`, {
         email_address: email,
-        status_if_new: 'pending',
+        status_if_new: 'subscribed',
         interests: {
             [emailFrequency.SOMETIMES]: true,
         },

@@ -1,5 +1,7 @@
 # App config
-src/config.js
+public/*
+!public/robot.txt
+build/
 
 # Logs
 logs
@@ -59,6 +61,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# Vitaminjs build files
-build/
