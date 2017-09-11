@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 
 import { last } from 'ramda';
 import { createSelector } from 'reselect';
@@ -29,4 +29,12 @@ export const currentPostSelector: Selector<?Post> = createSelector(
 export const isFullscreenPostDisplayedSelector: Selector<Boolean> = createSelector(
     currentPostSelector,
     currentPost => currentPost && currentPost.pictures.length,
+);
+
+export const picturesSelector: Selector<Array<Picture>> = createSelector(postsSelector, posts =>
+    Object.values(posts)
+        .map(post => post.pictures)
+        .filter(Boolean)
+        .map(x => console.log(x) || x)
+        .reduce((acc, value) => acc.concat(value), []),
 );

@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 
 import type { PostId } from '../types';
 
@@ -16,5 +16,5 @@ export type State = { [PostId]: Post };
 export type AddFetchedPostsAction = {
     type: 'app/trip/posts/ADD_FETCHED_POSTS',
     posts: Array<Post>,
-}
+};
 export type Action = AddFetchedPostsAction;
