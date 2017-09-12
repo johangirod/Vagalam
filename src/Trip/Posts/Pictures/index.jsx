@@ -1,3 +1,4 @@
+// @flow
 import { Component } from 'react';
 import { withStyles } from 'vitaminjs';
 import classnames from 'classnames';
@@ -25,6 +26,9 @@ class Pictures extends Component {
         }));
     };
     handleClickOnPicture = () => {
+        if (!this.props.isFullscreen) {
+            return;
+        }
         this.goToNextPicture();
         this.resetInterval();
     };
@@ -34,12 +38,16 @@ class Pictures extends Component {
             <div className={s.pictures} onClick={this.handleClickOnPicture}>
                 {pictures.map((picture, i) => (
                     <div
-                        className={classnames(s.picture, {
+                        className={classnames(s['picture-container'], {
                             [s.show]: this.state.currentPicture === i,
+                            [s.unique]: pictures.length === 1,
                         })}
                         key={picture}
-                        style={{ backgroundImage: `url(${picture})` }}
-                    />
+                    >
+                        <div className={s['picture-border']}>
+                            <img className={classnames(s.picture)} src={picture} />
+                        </div>
+                    </div>
                 ))}
             </div>
         );

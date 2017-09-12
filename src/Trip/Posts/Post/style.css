@@ -1,10 +1,10 @@
 article {
-    display: flex;
     height: 100%;
-    flex-direction: row;
-    justify-content: center;
     overflow: hidden;
-    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: black;
 }
 
 h1 {
@@ -12,18 +12,50 @@ h1 {
 }
 
 .pictures {
-    flex: 1;
+    will-change: width;
+    position: absolute;
+    width: calc((100vh - 42px) / (4896 / 3264));
+    transition: width 0.5s;
+    top: 0;
+    bottom: 0;
+    left: 0;
 }
 
-.content {
-    flex-shrink: 0;
-    overflow: auto;
+.pictures:not(.fullscreen):hover {
+    width: calc(0.9 * (100vh - 42px) / (4896 / 3264) + 10%);
+}
+.pictures.fullscreen {
+    width: 100%;
+}
+.pictures:not(.fullscreen):hover + .content-pictures {
+    transform: translateX(10%);
+    opacity: 0.5;
+    min-width: none;
+}
+.pictures.fullscreen + .content-pictures {
+    transform: translateX(90%);
+    opacity: 0;
+    min-width: none;
+}
+
+.content-pictures {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: calc(100% - ((100vh - 42px) / (4896 / 3264)));
+    transition: transform 0.5s, opacity 0.5s;
+    will-change: transform, opacity;
+}
+.content-alone {
+    align-self: center;
+}
+.content-alone,
+.content-pictures {
     padding: 16px 32px;
-    max-height: 100%;
-    z-index: 1;
-    flex: 1;
+    background: white;
+    overflow: auto;
 }
-
 .body {
     white-space: pre-line;
     line-height: 1.5em;

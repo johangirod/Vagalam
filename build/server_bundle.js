@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "935975ab76d887aec9a2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "aa926536120a4e73a8af"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -737,7 +737,7 @@ exports = module.exports = __webpack_require__(/*! ../../../~/css-loader/lib/css
 
 
 // module
-exports.push([module.i, ".style__details___2zN8J {\n    font-family: 'Crimson Text', serif;\n    font-size: 20px;\n}\n\n.style__press-space___1BylT {\n    -webkit-animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n            animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n}\n\n.style__previous___2uUOL,\n.style__next___21Vdo {\n    background: none;\n    cursor: pointer;\n    border: none;\n    transition: -webkit-transform 0.5s;\n    transition: transform 0.5s;\n    transition: transform 0.5s, -webkit-transform 0.5s;\n    padding: 12px;\n}\n\n.style__previous___2uUOL:disabled,\n.style__next___21Vdo:disabled {\n    cursor: no-drop;\n}\n\n.style__previous___2uUOL:not(:disabled):hover {\n    -webkit-transform: translateX(-3px);\n        -ms-transform: translateX(-3px);\n            transform: translateX(-3px);\n}\n\n.style__next___21Vdo:not(:disabled):hover {\n    -webkit-transform: translateX(+3px);\n        -ms-transform: translateX(+3px);\n            transform: translateX(+3px);\n}\n\n@-webkit-keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n", ""]);
+exports.push([module.i, ".style__details___2zN8J {\n    font-family: 'Crimson Text', serif;\n    font-size: 20px;\n}\n\n.style__press-space___1BylT {\n    -webkit-animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n            animation: style__fade-in___tfnob 2s ease-in-out infinite alternate-reverse;\n}\n\n.style__previous___2uUOL,\n.style__next___21Vdo {\n    background: none;\n    cursor: pointer;\n    border: none;\n    transition: -webkit-transform 0.5s;\n    transition: transform 0.5s;\n    transition: transform 0.5s, -webkit-transform 0.5s;\n    padding: 9px;\n}\n\n.style__previous___2uUOL:disabled,\n.style__next___21Vdo:disabled {\n    cursor: no-drop;\n}\n\n.style__previous___2uUOL:not(:disabled):hover {\n    -webkit-transform: translateX(-3px);\n        -ms-transform: translateX(-3px);\n            transform: translateX(-3px);\n}\n\n.style__next___21Vdo:not(:disabled):hover {\n    -webkit-transform: translateX(+3px);\n        -ms-transform: translateX(+3px);\n            transform: translateX(+3px);\n}\n\n@-webkit-keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n\n@keyframes style__fade-in___tfnob {\n    0% {\n        opacity: 0;\n    }\n    100% {\n        opacity: 1;\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -830,13 +830,16 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n    height: 100%;\n}\n.style__picture___33lmx {\n    background-size: cover;\n    background-position: center;\n    cursor: pointer;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    /*animation: zoom-in 10s linear infinite alternate-reverse;*/\n    opacity: 0;\n    position: absolute;\n    transition: opacity 1s;\n}\n.style__picture___33lmx.style__show___2gnB6 {\n    opacity: 1;\n}\n", ""]);
+exports.push([module.i, ".style__pictures___3HFbl {\n    position: relative;\n    height: 100%;\n}\n.style__picture-container___3e7vr {\n    cursor: pointer;\n    position: absolute;\n    opacity: 0;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    transition: opacity 0.7s;\n    will-change: opacity;\n}\n.style__picture-container___3e7vr.style__show___2gnB6 {\n    opacity: 1;\n}\n.style__picture-container___3e7vr.style__unique___HQ1ql {\n    cursor: default;\n}\n.style__picture-border___MlvaI {\n    border: 2px solid white;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    overflow: hidden;\n    max-width: 100%;\n    height: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n}\n.style__picture___33lmx {\n    height: calc(100vh - 42px);\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"pictures": "style__pictures___3HFbl",
-	"picture": "style__picture___33lmx",
-	"show": "style__show___2gnB6"
+	"picture-container": "style__picture-container___3e7vr",
+	"show": "style__show___2gnB6",
+	"unique": "style__unique___HQ1ql",
+	"picture-border": "style__picture-border___MlvaI",
+	"picture": "style__picture___33lmx"
 };
 
 /***/ }),
@@ -854,12 +857,14 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, "article {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    height: 100%;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    overflow: hidden;\n    background-color: white;\n}\n\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n\n.style__pictures___4FB4g {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__content___2Li1p {\n    -ms-flex-negative: 0;\n        flex-shrink: 0;\n    overflow: auto;\n    padding: 16px 32px;\n    max-height: 100%;\n    z-index: 1;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.5em;\n}\n\np {\n    margin-bottom: 1em;\n}\n", ""]);
+exports.push([module.i, "article {\n    height: 100%;\n    overflow: hidden;\n    position: relative;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    background-color: black;\n}\n\nh1 {\n    font-family: 'Crimson Text', serif;\n}\n\n.style__pictures___4FB4g {\n    will-change: width;\n    position: absolute;\n    width: calc((100vh - 42px) / 1.5);\n    transition: width 0.5s;\n    top: 0;\n    bottom: 0;\n    left: 0;\n}\n\n.style__pictures___4FB4g:not(.style__fullscreen___1DdDb):hover {\n    width: calc(0.9 * (100vh - 42px) / 1.5 + 10%);\n}\n\n.style__pictures___4FB4g.style__fullscreen___1DdDb {\n    width: 100%;\n}\n\n.style__pictures___4FB4g:not(.style__fullscreen___1DdDb):hover + .style__content-pictures___1MtyB {\n    -webkit-transform: translateX(10%);\n        -ms-transform: translateX(10%);\n            transform: translateX(10%);\n    opacity: 0.5;\n    min-width: none;\n}\n\n.style__pictures___4FB4g.style__fullscreen___1DdDb + .style__content-pictures___1MtyB {\n    -webkit-transform: translateX(90%);\n        -ms-transform: translateX(90%);\n            transform: translateX(90%);\n    opacity: 0;\n    min-width: none;\n}\n\n.style__content-pictures___1MtyB {\n    position: absolute;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    width: calc(100% - ((100vh - 42px) / 1.5));\n    transition: opacity 0.5s, -webkit-transform 0.5s;\n    transition: transform 0.5s, opacity 0.5s;\n    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;\n    will-change: transform, opacity;\n}\n\n.style__content-alone___2Zp04 {\n    -ms-flex-item-align: center;\n        -ms-grid-row-align: center;\n        align-self: center;\n}\n\n.style__content-alone___2Zp04,\n.style__content-pictures___1MtyB {\n    padding: 16px 32px;\n    background: white;\n    overflow: auto;\n}\n\n.style__body___1twJ5 {\n    white-space: pre-line;\n    line-height: 1.5em;\n}\n\np {\n    margin-bottom: 1em;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"pictures": "style__pictures___4FB4g",
-	"content": "style__content___2Li1p",
+	"fullscreen": "style__fullscreen___1DdDb",
+	"content-pictures": "style__content-pictures___1MtyB",
+	"content-alone": "style__content-alone___2Zp04",
 	"body": "style__body___1twJ5"
 };
 
@@ -975,7 +980,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__layout___k4A_w {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    height: 100vh;\n    transition: background-color .5s;\n    padding: 0 48px;\n}\n\n.style__top___XdUbx,\n.style__bottom___4USFl {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    height: 48px;\n    -ms-flex-item-align: center;\n        align-self: center;\n}\n\n.style__inside___wwCOC {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    width: 100%;\n    -ms-flex-item-align: center;\n        -ms-grid-row-align: center;\n        align-self: center;\n    max-width: 150vh;\n    position: relative;\n}\n", ""]);
+exports.push([module.i, ".style__layout___k4A_w {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    height: 100vh;\n    transition: background-color 0.5s;\n    padding: 0 42px;\n}\n\n.style__top___XdUbx,\n.style__bottom___4USFl {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    height: 42px;\n    -ms-flex-item-align: center;\n        align-self: center;\n}\n\n.style__inside___wwCOC {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    width: 100%;\n    -ms-flex-item-align: center;\n        -ms-grid-row-align: center;\n        align-self: center;\n    max-width: calc((100vh - 42px) * 1.5);\n    position: relative;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -1000,7 +1005,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__overlay___1F4_X {\n    position: absolute;\n    z-index: 3;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n\n.style__close-button___1ow_E {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 16px;\n    z-index: 2;\n    border: none;\n    display: block;\n    font-size: large;\n    background-color: transparent;\n    cursor: pointer;\n}\n\n.style__close-button___1ow_E:hover {\n    font-weight: bold;\n}\n\n.style__fullscreen___1XD0i .style__close-button___1ow_E {\n    right: -44px;\n    color: white;\n    top: -2px;\n}\n\n.style__modale___2ddo9 {\n    position: relative;\n    max-width: 600px;\n    max-height: 100%;\n    border: 1px solid black;\n}\n\n.style__fullscreen___1XD0i {\n    max-width: none;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    border: 2px solid white;\n    width: 100%;\n}\n\n.style__enter___1TsM6 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n}\n\n.style__enter-active___cOvkb {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n    transition: opacity 0.8s, -webkit-transform 0.8s;\n    transition: opacity 0.8s, transform 0.8s;\n    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;\n}\n\n.style__leave___24Fs2 {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n}\n\n.style__leave-active___3bda8 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n    transition: opacity 0.5s, -webkit-transform 0.5s;\n    transition: opacity 0.5s, transform 0.5s;\n    transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;\n}\n", ""]);
+exports.push([module.i, ".style__overlay___1F4_X {\n    position: absolute;\n    z-index: 3;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n\n.style__close-button___1ow_E {\n    position: absolute;\n    top: 0;\n    right: 0;\n    padding: 15px;\n    z-index: 2;\n    border: none;\n    display: block;\n    font-size: large;\n    background-color: transparent;\n    cursor: pointer;\n}\n\n.style__close-button___1ow_E:hover {\n    font-weight: bold;\n}\n\n.style__fullscreen___1XD0i .style__close-button___1ow_E {\n    right: -42px;\n    color: white;\n}\n\n.style__modale___2ddo9 {\n    position: relative;\n    max-width: 600px;\n    max-height: 100%;\n    border: 1px solid black;\n}\n\n.style__fullscreen___1XD0i {\n    max-width: none;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    width: 100%;\n}\n\n.style__enter___1TsM6 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n}\n\n.style__enter-active___cOvkb {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n    transition: opacity 0.8s, -webkit-transform 0.8s;\n    transition: opacity 0.8s, transform 0.8s;\n    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;\n}\n\n.style__leave___24Fs2 {\n    opacity: 1;\n    -webkit-transform: scale(1);\n        -ms-transform: scale(1);\n            transform: scale(1);\n}\n\n.style__leave-active___3bda8 {\n    opacity: 0.01;\n    -webkit-transform: scale(0.01);\n        -ms-transform: scale(0.01);\n            transform: scale(0.01);\n    transition: opacity 0.5s, -webkit-transform 0.5s;\n    transition: opacity 0.5s, transform 0.5s;\n    transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -4683,6 +4688,9 @@ class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         };
 
         this.handleClickOnPicture = () => {
+            if (!this.props.isFullscreen) {
+                return;
+            }
             this.goToNextPicture();
             this.resetInterval();
         };
@@ -4701,22 +4709,40 @@ class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             'div',
             { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, onClick: this.handleClickOnPicture, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 34
+                    lineNumber: 38
                 },
                 __self: this
             },
-            pictures.map((picture, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
-                className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.picture, {
-                    [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.show]: this.state.currentPicture === i
-                }),
-                key: picture,
-                style: { backgroundImage: `url(${picture})` },
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 36
+            pictures.map((picture, i) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                {
+                    className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a['picture-container'], {
+                        [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.show]: this.state.currentPicture === i,
+                        [__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.unique]: pictures.length === 1
+                    }),
+                    key: picture,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 40
+                    },
+                    __self: this
                 },
-                __self: this
-            }))
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a['picture-border'], __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 47
+                        },
+                        __self: this
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a.picture), src: picture, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 48
+                        },
+                        __self: this
+                    })
+                )
+            ))
         );
     }
 }
@@ -4778,11 +4804,12 @@ class Pictures extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(/*! react */ 0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vitaminjs__ = __webpack_require__(/*! vitaminjs */ "./node_modules/vitaminjs/src/shared/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Pictures__ = __webpack_require__(/*! ../Pictures */ "./src/Trip/Posts/Pictures/index.jsx");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Posts/Post/style.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_css__);
-var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Posts/Post/index.jsx',
-    _this = this;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames__ = __webpack_require__(/*! classnames */ 14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_classnames__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Pictures__ = __webpack_require__(/*! ../Pictures */ "./src/Trip/Posts/Pictures/index.jsx");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css__ = __webpack_require__(/*! ./style.css */ "./src/Trip/Posts/Post/style.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__style_css__);
+var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Posts/Post/index.jsx';
 
 
 
@@ -4790,67 +4817,96 @@ var _jsxFileName = '/home/johan/Project/Vagalam/src/Trip/Posts/Post/index.jsx',
 
 
 
-const Post = ({ title, content, pictures }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'article',
-    {
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9
-        },
-        __self: _this
-    },
-    pictures.length ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.pictures, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 11
-            },
-            __self: _this
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Pictures__["a" /* default */], { pictures: pictures, __source: {
-                fileName: _jsxFileName,
-                lineNumber: 12
-            },
-            __self: _this
-        })
-    ) : null,
-    content ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        {
-            className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.content,
-            style: { alignSelf: pictures.length ? 'stretch' : 'center' },
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 17
-            },
-            __self: _this
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h1',
+
+class Post extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    constructor(props) {
+        super(props);
+
+        this.handleClickOnPictures = () => {
+            this.setState({ fullscreenPictures: true });
+        };
+
+        this.handleMouseEnterContent = () => {
+            this.setState({ fullscreenPictures: !this.props.content });
+        };
+
+        this.state = { fullscreenPictures: !props.content };
+    }
+
+    render() {
+        const { title, content, pictures } = this.props;
+
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'article',
             {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 21
+                    lineNumber: 25
                 },
-                __self: _this
+                __self: this
             },
-            title
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
-            className: __WEBPACK_IMPORTED_MODULE_3__style_css___default.a.body,
-            dangerouslySetInnerHTML: {
-                __html: content
-            },
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 24
-            },
-            __self: _this
-        })
-    ) : null
-);
+            pictures.length ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                {
+                    className: __WEBPACK_IMPORTED_MODULE_2_classnames___default()(__WEBPACK_IMPORTED_MODULE_4__style_css___default.a.pictures, {
+                        [__WEBPACK_IMPORTED_MODULE_4__style_css___default.a.fullscreen]: this.state.fullscreenPictures
+                    }),
+                    onClick: this.handleClickOnPictures,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 27
+                    },
+                    __self: this
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Pictures__["a" /* default */], {
+                    pictures: pictures,
+                    isFullscreen: this.state.fullscreenPictures,
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 33
+                    },
+                    __self: this
+                })
+            ) : null,
+            content ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                {
+                    onMouseEnter: this.handleMouseEnterContent,
+                    className: pictures.length ? __WEBPACK_IMPORTED_MODULE_4__style_css___default.a['content-pictures'] : __WEBPACK_IMPORTED_MODULE_4__style_css___default.a['content-alone'],
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 41
+                    },
+                    __self: this
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'h1',
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 45
+                        },
+                        __self: this
+                    },
+                    title
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', {
+                    className: __WEBPACK_IMPORTED_MODULE_4__style_css___default.a.body,
+                    dangerouslySetInnerHTML: {
+                        __html: content
+                    },
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 46
+                    },
+                    __self: this
+                })
+            ) : null
+        );
+    }
+}
 
-/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_3__style_css___default.a)(Post));
+/* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vitaminjs__["a" /* withStyles */])(__WEBPACK_IMPORTED_MODULE_4__style_css___default.a)(Post));
 
 /***/ }),
 
@@ -5002,7 +5058,8 @@ function addFetchedPosts(posts) {
 
 
 
-const proxyWithGoogleImageResizer = pictureUrl => `https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=${pictureUrl}&container=focus&resize_h=1080&refresh=31536000`;
+// @todo : not working 100% cases (maybe use node-sharp?)
+const proxyWithGoogleImageResizer = pictureUrl => `https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=${encodeURIComponent(pictureUrl)}&container=focus&resize_h=2160&refresh=3153600`;
 
 function fetchPosts(postIds) {
     return __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"].fromPromise(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.api('https://vagalam.prismic.io/api').then(api => api.query(__WEBPACK_IMPORTED_MODULE_8_prismic_io___default.a.Predicates.in('document.id', postIds), {}))).map(response => response.results).map(postsApi => postsApi.map(postApi => ({
@@ -5169,7 +5226,7 @@ const isFullscreenPostDisplayedSelector = __webpack_require__.i(__WEBPACK_IMPORT
 /* harmony export (immutable) */ __webpack_exports__["a"] = isFullscreenPostDisplayedSelector;
 
 
-const picturesSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_2__selectors__["a" /* postsSelector */], posts => Object.values(posts).map(post => post.pictures).filter(Boolean).map(x => console.log(x) || x).reduce((acc, value) => acc.concat(value), []));
+const picturesSelector = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_reselect__["createSelector"])(__WEBPACK_IMPORTED_MODULE_2__selectors__["a" /* postsSelector */], posts => Object.values(posts).map(post => post.pictures).filter(Boolean).reduce((acc, value) => acc.concat(value), []));
 /* harmony export (immutable) */ __webpack_exports__["c"] = picturesSelector;
 
 

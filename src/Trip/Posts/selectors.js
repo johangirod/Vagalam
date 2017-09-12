@@ -3,7 +3,7 @@
 import { last } from 'ramda';
 import { createSelector } from 'reselect';
 import type { Selector } from '../../rootTypes';
-import type { Post } from './types';
+import type { Post, Picture } from './types';
 import { postsSelector, currentPathSelector, currentAnimationSelector } from '../selectors';
 
 export const currentPostSelector: Selector<?Post> = createSelector(
@@ -35,6 +35,5 @@ export const picturesSelector: Selector<Array<Picture>> = createSelector(postsSe
     Object.values(posts)
         .map(post => post.pictures)
         .filter(Boolean)
-        .map(x => console.log(x) || x)
         .reduce((acc, value) => acc.concat(value), []),
 );

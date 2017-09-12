@@ -2,20 +2,36 @@
     position: relative;
     height: 100%;
 }
-.picture {
-    background-size: cover;
-    background-position: center;
+.picture-container {
     cursor: pointer;
+    position: absolute;
+    opacity: 0;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    /*animation: zoom-in 10s linear infinite alternate-reverse;*/
-    opacity: 0;
-    position: absolute;
-    transition: opacity 1s;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.7s;
+    will-change: opacity;
 }
 
-.picture.show {
+.picture-container.show {
     opacity: 1;
+}
+.picture-container.unique {
+    cursor: default;
+}
+.picture-border {
+    border: 2px solid white;
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.picture {
+    height: calc(100vh - 42px);
+    flex-shrink: 0;
 }

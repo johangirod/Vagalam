@@ -3,15 +3,15 @@
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    transition: background-color .5s;
-    padding: 0 48px;
+    transition: background-color 0.5s;
+    padding: 0 42px;
 }
 
 .top,
 .bottom {
     display: flex;
     align-items: center;
-    height: 48px;
+    height: 42px;
     align-self: center;
 }
 
@@ -19,6 +19,6 @@
     flex: 1;
     width: 100%;
     align-self: center;
-    max-width: calc(100vh * (4896 / 3264));
+    max-width: calc((100vh - 42px) * (4896 / 3264));
     position: relative;
 }
