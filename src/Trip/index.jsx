@@ -13,6 +13,7 @@ import CurrentPost from './Posts';
 import FrameLayout from '../shared/ui-element/FrameLayout';
 import FullScreenModale from '../shared/FullScreenModale/index';
 import LastPointModale from './LastPointModale/index';
+import MobileWarning from './MobileWarning/index';
 import Details from './Details';
 
 type PropType = {
@@ -70,6 +71,7 @@ class Trip extends Component {
                 <CurrentPost onClose={this.handlePostModaleClose} />
                 <LastPointModale />
                 <FullScreenModale />
+                <MobileWarning />
             </FrameLayout>
         );
     }

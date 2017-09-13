@@ -30,3 +30,6 @@
     border: none;
     font-family: inherit;
 }
+.submit:hover {
+    font-weight: bold;
+}

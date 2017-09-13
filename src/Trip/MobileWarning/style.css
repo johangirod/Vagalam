@@ -1,0 +1,28 @@
+.container {
+    position: fixed;
+    background-size: cover;
+    background-color: black;
+    background-position: center;
+    top: 42px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 16px;
+    padding-bottom: 0px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.continue {
+    border: none;
+    background: none;
+    font-size: small;
+    text-decoration: underline;
+    font-family: inherit;
+    color: white;
+}
+h2 {
+    font-size: 42px;
+}

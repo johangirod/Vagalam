@@ -13,12 +13,14 @@ type PropType = {
     fullScreen?: boolean,
     onClose?: () => void,
     isOpened?: boolean,
+    style?: { [string]: string },
 };
 
 class Modale extends Component {
     static defaultProps = {
         isOpened: true,
         fullScreen: false,
+        style: {},
         onClose: () => {},
     };
     constructor(props) {
@@ -51,7 +53,7 @@ class Modale extends Component {
         this.setState({ isOpened: false });
     };
     render() {
-        const { children, fullScreen } = this.props;
+        const { children, fullScreen, style } = this.props;
         return (
             <CSSTransitionGroup
                 transitionEnterTimeout={800}
@@ -63,20 +65,23 @@ class Modale extends Component {
                     leaveActive: s['leave-active'],
                 }}
             >
-                {this.state.isOpened
-                    ? <div role="presentation" className={s.overlay} onKeyDown={this.handleKeyDown}>
-                        <div className={classnames(s.modale, { [s.fullscreen]: fullScreen })}>
+                {this.state.isOpened ? (
+                    <div role="presentation" className={s.overlay} onKeyDown={this.handleKeyDown}>
+                        <div
+                            style={style}
+                            className={classnames(s.modale, { [s.fullscreen]: fullScreen })}
+                        >
                             <button
                                 className={s['close-button']}
                                 aria-label="Fermer"
                                 onClick={this.handleClose}
                             >
-                                  X
-                              </button>
+                                X
+                            </button>
                             {children}
                         </div>
                     </div>
-                    : null}
+                ) : null}
             </CSSTransitionGroup>
         );
     }

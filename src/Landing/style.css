@@ -15,7 +15,6 @@ section.header {
 }
 header {
     color: white;
-    font-family: 'Crimson Text', serif;
     flex: 1;
     z-index: 1;
     margin: 32px;
@@ -24,7 +23,7 @@ header {
 h1 {
     margin: 0;
     margin-bottom: 8px;
-    font-size: 82px;
+    font-size: 48px;
 }
 h2 {
     margin: 0;
