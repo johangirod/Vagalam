@@ -8,7 +8,7 @@ import s from './style.css';
 const MobileWarning = class extends Component {
     constructor(props) {
         super(props);
-        this.state = { show: typeof window !== 'undefined' && window.innerWidth <= 1000 };
+        this.state = { show: typeof window !== 'undefined' && window.innerWidth <= 820 };
     }
     handleContinue = () => {
         this.setState({ show: false });

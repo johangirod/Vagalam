@@ -22,7 +22,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "67cfaadc788b112cf964"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "83c943997999a393b7bc"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -713,7 +713,7 @@ exports = module.exports = __webpack_require__(/*! ../../~/css-loader/lib/css-ba
 
 
 // module
-exports.push([module.i, "section.style__header___La0Pw {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    height: 100%;\n    position: relative;\n}\n.style__background___2Myi_ {\n    background-size: cover;\n    background-position: center;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n}\nheader {\n    color: white;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    z-index: 1;\n    margin: 32px;\n}\nh1 {\n    margin: 0;\n    margin-bottom: 8px;\n    font-size: 48px;\n}\nh2 {\n    margin: 0;\n    font-size: 20px;\n}\n.style__cta___2Aax1 {\n    text-align: center;\n    -ms-flex-item-align: flex-center;\n        align-self: flex-center;\n    margin: 32px;\n    z-index: 1;\n}\n", ""]);
+exports.push([module.i, "section.style__header___La0Pw {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    height: 100%;\n    position: relative;\n}\n.style__background___2Myi_ {\n    background-size: cover;\n    background-position: center;\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n}\nheader {\n    color: white;\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n    z-index: 1;\n    margin: 32px;\n}\nh1 {\n    margin: 0;\n    margin-bottom: 8px;\n    font-size: 64px;\n}\nh2 {\n    margin: 0;\n    font-size: 20px;\n}\n.style__cta___2Aax1 {\n    text-align: center;\n    -ms-flex-item-align: flex-center;\n        align-self: flex-center;\n    margin: 32px;\n    z-index: 1;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -980,7 +980,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../~/css-loader/lib/
 
 
 // module
-exports.push([module.i, ".style__button___1Hi-V {\n    position: relative;\n    border-radius: 32px;\n    border: 2px solid white;\n    display: inline-block;\n    text-decoration: none;\n    cursor: pointer;\n    color: white;\n    font-size: large;\n    padding: 12px 32px;\n    font-weight: bold;\n    transition: border-color 1s;\n    background: black;\n    background-clip: padding-box;\n}\n.style__button___1Hi-V:hover {\n    border-color: transparent;\n}\n.style__button___1Hi-V::after {\n    position: absolute;\n    top: -2px;\n    bottom: -2px;\n    left: -2px;\n    right: -2px;\n    border-radius: 32px;\n    content: '';\n    z-index: -1;\n    background: linear-gradient(\n        45deg,\n        rgba(255, 0, 0, 1) 0%,\n        rgba(255, 255, 0, 1) 15%,\n        rgba(0, 255, 0, 1) 30%,\n        rgba(0, 255, 255, 1) 50%,\n        rgba(0, 0, 255, 1) 65%,\n        rgba(255, 0, 255, 1) 80%,\n        rgba(255, 0, 0, 1) 100%\n    );\n    -webkit-animation: style__hue-rotate___j9SqY 1s linear infinite;\n            animation: style__hue-rotate___j9SqY 1s linear infinite;\n}\n@-webkit-keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg);\n                filter: hue-rotate(0deg);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg);\n                filter: hue-rotate(360deg);\n    }\n}\n@keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg);\n                filter: hue-rotate(0deg);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg);\n                filter: hue-rotate(360deg);\n    }\n}\n", ""]);
+exports.push([module.i, ".style__button___1Hi-V {\n    position: relative;\n    border-radius: 32px;\n    border: 2px solid white;\n    display: inline-block;\n    text-decoration: none;\n    cursor: pointer;\n    color: white;\n    font-size: large;\n    padding: 12px 32px;\n    font-weight: bold;\n    transition: border-color 1s;\n    background: black;\n    background-clip: padding-box;\n}\n.style__button___1Hi-V:hover {\n    border-color: transparent;\n}\n.style__button___1Hi-V::after {\n    position: absolute;\n    top: -2px;\n    bottom: -2px;\n    left: -2px;\n    right: -2px;\n    border-radius: 32px;\n    content: '';\n    z-index: -1;\n    background: linear-gradient(\n        45deg,\n        rgba(255, 0, 0, 1) 0%,\n        rgba(255, 255, 0, 1) 15%,\n        rgba(0, 255, 0, 1) 30%,\n        rgba(0, 255, 255, 1) 50%,\n        rgba(0, 0, 255, 1) 65%,\n        rgba(255, 0, 255, 1) 80%,\n        rgba(255, 0, 0, 1) 100%\n    );\n    -webkit-animation: style__hue-rotate___j9SqY 3s linear infinite;\n            animation: style__hue-rotate___j9SqY 3s linear infinite;\n}\n@-webkit-keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"table\" tableValues=\"0 1\" /><feFuncG type=\"table\" tableValues=\"0 1\" /><feFuncB type=\"table\" tableValues=\"0 1\" /></feComponentTransfer></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg) invert(0%);\n                filter: hue-rotate(0deg) invert(0%);\n    }\n    50% {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"180\" /><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"table\" tableValues=\"0.3 0.7\" /><feFuncG type=\"table\" tableValues=\"0.3 0.7\" /><feFuncB type=\"table\" tableValues=\"0.3 0.7\" /></feComponentTransfer><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"linear\" slope=\"1.2\" /><feFuncG type=\"linear\" slope=\"1.2\" /><feFuncB type=\"linear\" slope=\"1.2\" /></feComponentTransfer></filter></svg>#filter');\n        -webkit-filter: hue-rotate(180deg) invert(30%) brightness(120%);\n                filter: hue-rotate(180deg) invert(30%) brightness(120%);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"table\" tableValues=\"0 1\" /><feFuncG type=\"table\" tableValues=\"0 1\" /><feFuncB type=\"table\" tableValues=\"0 1\" /></feComponentTransfer></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg) invert(0%);\n                filter: hue-rotate(360deg) invert(0%);\n    }\n}\n@keyframes style__hue-rotate___j9SqY {\n    from {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"0\" /><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"table\" tableValues=\"0 1\" /><feFuncG type=\"table\" tableValues=\"0 1\" /><feFuncB type=\"table\" tableValues=\"0 1\" /></feComponentTransfer></filter></svg>#filter');\n        -webkit-filter: hue-rotate(0deg) invert(0%);\n                filter: hue-rotate(0deg) invert(0%);\n    }\n    50% {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"180\" /><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"table\" tableValues=\"0.3 0.7\" /><feFuncG type=\"table\" tableValues=\"0.3 0.7\" /><feFuncB type=\"table\" tableValues=\"0.3 0.7\" /></feComponentTransfer><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"linear\" slope=\"1.2\" /><feFuncG type=\"linear\" slope=\"1.2\" /><feFuncB type=\"linear\" slope=\"1.2\" /></feComponentTransfer></filter></svg>#filter');\n        -webkit-filter: hue-rotate(180deg) invert(30%) brightness(120%);\n                filter: hue-rotate(180deg) invert(30%) brightness(120%);\n    }\n    to {\n        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns=\"http://www.w3.org/2000/svg\"><filter id=\"filter\"><feColorMatrix type=\"hueRotate\" color-interpolation-filters=\"sRGB\" values=\"360\" /><feComponentTransfer color-interpolation-filters=\"sRGB\"><feFuncR type=\"table\" tableValues=\"0 1\" /><feFuncG type=\"table\" tableValues=\"0 1\" /><feFuncB type=\"table\" tableValues=\"0 1\" /></feComponentTransfer></filter></svg>#filter');\n        -webkit-filter: hue-rotate(360deg) invert(0%);\n                filter: hue-rotate(360deg) invert(0%);\n    }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -3740,11 +3740,7 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
-                    {
-                        className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.cta,
-                        onMouseEnter: this.handleMouseEnter,
-                        onMouseOut: this.handleMouseOut,
-                        __source: {
+                    { className: __WEBPACK_IMPORTED_MODULE_6__style_css___default.a.cta, onMouseOut: this.handleMouseOut, __source: {
                             fileName: _jsxFileName,
                             lineNumber: 63
                         },
@@ -3752,9 +3748,13 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
                     },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_3__shared_ui_element_Button_Link__["a" /* default */],
-                        { registerRef: this.registerCTARef, href: '/voyage', __source: {
+                        {
+                            registerRef: this.registerCTARef,
+                            href: '/voyage',
+                            onMouseEnter: this.handleMouseEnter,
+                            __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 68
+                                lineNumber: 64
                             },
                             __self: this
                         },
@@ -4715,7 +4715,7 @@ const MobileWarning = class extends __WEBPACK_IMPORTED_MODULE_0_react__["Compone
             this.setState({ show: false });
         };
 
-        this.state = { show: typeof window !== 'undefined' && window.innerWidth <= 1000 };
+        this.state = { show: typeof window !== 'undefined' && window.innerWidth <= 820 };
     }
 
     render() {

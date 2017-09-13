@@ -60,12 +60,12 @@ class Landing extends Component {
                         <h1> \Vagalam\ </h1>
                         <h2> Le blog intéractif de mon tour du monde à vélo </h2>
                     </header>
-                    <div
-                        className={s.cta}
-                        onMouseEnter={this.handleMouseEnter}
-                        onMouseOut={this.handleMouseOut}
-                    >
-                        <LinkButton registerRef={this.registerCTARef} href="/voyage">
+                    <div className={s.cta} onMouseOut={this.handleMouseOut}>
+                        <LinkButton
+                            registerRef={this.registerCTARef}
+                            href="/voyage"
+                            onMouseEnter={this.handleMouseEnter}
+                        >
                             Parcourir le voyage
                         </LinkButton>
                     </div>
