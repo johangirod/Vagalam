@@ -15,7 +15,7 @@ h1 {
     will-change: width;
     position: absolute;
     width: calc((100vh - 42px) / (4896 / 3264));
-    transition: width 0.5s;
+    transition: width 0.6s;
     top: 0;
     bottom: 0;
     left: 0;
@@ -28,7 +28,7 @@ h1 {
     width: 100%;
 }
 .pictures:not(.fullscreen):hover + .content-pictures {
-    transform: translateX(10%);
+    transform: translateX(15%);
     opacity: 0.5;
     min-width: none;
 }
@@ -44,7 +44,7 @@ h1 {
     top: 0;
     bottom: 0;
     width: calc(100% - ((100vh - 42px) / (4896 / 3264)));
-    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.6s, opacity 0.6s;
     will-change: transform, opacity;
 }
 .content-alone {
