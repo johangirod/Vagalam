@@ -23,7 +23,8 @@
     cursor: default;
 }
 .picture-border {
-    border: 1px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
     display: flex;
     overflow: hidden;
     max-width: 100%;
