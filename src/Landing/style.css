@@ -23,11 +23,11 @@ header {
 h1 {
     margin: 0;
     margin-bottom: 8px;
-    font-size: 64px;
+    font-size: 3em;
 }
 h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 1.3em;
 }
 
 .cta {

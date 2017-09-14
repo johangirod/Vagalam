@@ -9,7 +9,7 @@
     color: black;
     font-family: 'Crimson Text', serif;
     font-weight: bold;
-    font-size: 22px;
+    font-size: x-large;
     transition: color 0.5s;
 }
 .brand::before {

@@ -3,7 +3,7 @@
     background-size: cover;
     background-color: black;
     background-position: center;
-    top: 42px;
+    top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -18,11 +18,11 @@
 .continue {
     border: none;
     background: none;
-    font-size: small;
+    font-size: 0.6em;
     text-decoration: underline;
     font-family: inherit;
     color: white;
 }
 h2 {
-    font-size: 42px;
+    font-size: 1.6em;
 }
