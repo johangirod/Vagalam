@@ -1,22 +1,20 @@
 /* @flow */
 
-import { Component } from 'react';
 import classnames from 'classnames';
 import { CSSTransitionGroup } from 'react-transition-group';
 import { withStyles } from 'vitaminjs';
 
-import type { Children } from 'react';
 import s from './style.css';
 
 type PropType = {
-    children: Children,
+    children: React.Node,
     fullScreen?: boolean,
     onClose?: () => void,
     isOpened?: boolean,
     style?: { [string]: string },
 };
 
-class Modale extends Component {
+class Modale extends React.Component {
     static defaultProps = {
         isOpened: true,
         fullScreen: false,

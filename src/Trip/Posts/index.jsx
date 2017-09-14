@@ -34,4 +34,4 @@ export default compose(
     connect(state => ({
         currentPost: currentPostSelector(state),
     })),
-)(PostOverlay);
+)((PostOverlay: React$StatelessFunctionalComponent<PropType>));

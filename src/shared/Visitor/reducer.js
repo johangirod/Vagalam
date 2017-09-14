@@ -33,7 +33,7 @@ if (IS_CLIENT) {
     );
 
     // @TODO workaround because redux-persist@v5 returns undefined if the config keys do not match
-    visitorReducer = (state, action) => {
+    visitorReducer = (state: State, action: Action) => {
         const newTripState = persistedVisitorReducer(state, action);
         return typeof newTripState === 'undefined' ? state : newTripState;
     };

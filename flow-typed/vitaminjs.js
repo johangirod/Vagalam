@@ -1,9 +1,9 @@
 //  @flow
-import type { React$Component } from 'react';
+import type { React$Component, React$StatelessFunctionalComponent } from 'react';
 
 type styleType = { [string]: string };
 type WithStyleConnector<P> = {
-    (component: StatelessComponent<P>): Class<React$Component<P>>,
+    (component: React$StatelessFunctionalComponent<P>): Class<React$Component<P>>,
     <Def, St>(component: Class<React$Component<Def, P, St>>): Class<React$Component<Def, P, St>>,
 };
 declare module 'vitaminjs' {

@@ -63,7 +63,9 @@ class FullScreenPopup extends Component {
             >
                 <div className={s.modale} role="presentation" onKeyDown={this.handleKeyDown}>
                     <p>
-                        Pour une meilleur experience, je conseille la navigation en plein écran.
+                        <strong>
+                            Pour une meilleur expérience, je conseille la navigation en plein écran.
+                        </strong>
                         Vous pourrez revenir en mode normal à tout moment en appuyant sur la touche{' '}
                         <i>Echap</i>.
                     </p>

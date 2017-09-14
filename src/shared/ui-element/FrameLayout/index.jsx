@@ -1,6 +1,5 @@
 /* @flow */
 import { withStyles } from 'vitaminjs';
-import type { Children } from 'react';
 import s from './style.css';
 
 type PropType = {
@@ -8,7 +7,7 @@ type PropType = {
     bottom: Element,
     frameBackgroundColor?: string,
     freeRatio?: boolean,
-    children: Children,
+    children: Node,
 };
 
 const FrameLayout = (

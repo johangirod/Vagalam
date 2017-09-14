@@ -1,4 +1,4 @@
-/* @flow */
+// @flow
 
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
 import { prop, nth, last, defaultTo, ascend } from 'ramda';
@@ -161,7 +161,7 @@ if (IS_CLIENT) {
         tripReducer,
     );
     // @TODO workaround because redux-persist@v5 returns undefined if the config keys do not match
-    tripReducer = (state, action) => {
+    tripReducer = (state: State, action: Action) => {
         const newTripState = persistedTripReducer(state, action);
         return typeof newTripState === 'undefined' ? state : newTripState;
     };
