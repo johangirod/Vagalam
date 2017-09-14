@@ -23,7 +23,7 @@ const Marker = ({
                 height: `${size}px`,
                 width: `${size}px`,
                 padding: `${size / 6}px`,
-                borderColor: zoom > 6 ? 'black' : 'transparent',
+                borderColor: zoom > 6 ? '#2d2f32' : 'transparent',
                 backgroundColor: '#fdfaf2',
             }}
             className={s.icon}

@@ -1,7 +1,10 @@
 import { withStyles } from 'vitaminjs';
 import Helmet from 'vitaminjs/react-helmet';
+
 import s from './style.global.css';
-import TopBar from './TopBar';
+import faviconApple from './apple-touch-icon.png';
+import favicon16 from './favicon-16x16.png';
+import favicon32 from './favicon-32x32.png';
 
 export default withStyles(s)(({ children }) => (
     <div>
@@ -18,9 +21,9 @@ export default withStyles(s)(({ children }) => (
                     href: 'https://fonts.googleapis.com/css?family=Crimson+Text|Lato',
                     rel: 'stylesheet',
                 },
-                { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-                { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-                { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+                { rel: 'apple-touch-icon', sizes: '180x180', href: faviconApple },
+                { rel: 'icon', type: 'image/png', sizes: '32x32', href: favicon32 },
+                { rel: 'icon', type: 'image/png', sizes: '16x16', href: favicon16 },
             ]}
             script={[
                 {

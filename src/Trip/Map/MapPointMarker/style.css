@@ -2,7 +2,7 @@
     animation: scale-in-center 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
         both;
     padding: 4px;
-    border: 1px black solid;
+    border: 1px #2d2f32 solid;
     border-radius: 100%;
     background-color: #fdfaf2;
     transition: height 0.3s, width 0.3s, padding 0.3s;

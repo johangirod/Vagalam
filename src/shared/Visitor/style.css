@@ -2,7 +2,7 @@
     z-index: 2;
 }
 .input {
-    border: 1px solid black;
+    border: 1px solid #2d2f32;
     height: 48px;
     font-size: 1.6em;
     padding: 4px 16px;
@@ -19,11 +19,11 @@
 .select {
     background: none;
     border: none;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed #2d2f32;
     padding-bottom: 1px;
 }
 .submit {
-    background-color: black;
+    background-color: #2d2f32;
     color: #fdfaf2;
     padding: 4px 8px;
     text-transform: uppercase;

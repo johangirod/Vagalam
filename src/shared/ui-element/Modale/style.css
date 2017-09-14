@@ -37,7 +37,7 @@
     position: relative;
     max-width: 600px;
     max-height: 100%;
-    border: 1px solid black;
+    border: 1px solid #2d2f32;
 }
 
 .fullscreen {

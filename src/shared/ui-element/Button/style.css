@@ -10,7 +10,7 @@
     padding: 12px 32px;
     font-weight: bold;
     transition: border-color 1s;
-    background: black;
+    background: #2d2f32;
     background-clip: padding-box;
 }
 .button:hover {
