@@ -1,6 +1,8 @@
 # App config
 public/*
 !public/robot.txt
+!public/favicon*
+!public/apple-touch-icon.png
 build/
 
 # Logs

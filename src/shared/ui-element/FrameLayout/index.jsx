@@ -15,7 +15,7 @@ const FrameLayout = (
         top,
         bottom,
         children,
-        frameBackgroundColor = 'white',
+        frameBackgroundColor = '#fdfaf2',
         freeRatio = false,
         ...otherProps
     }: PropType = {},

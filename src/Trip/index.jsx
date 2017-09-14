@@ -64,7 +64,7 @@ class Trip extends Component {
                     </a>
                 }
                 bottom={!this.state.isFullscreenPostDisplayed ? <Details /> : null}
-                frameBackgroundColor={this.state.isFullscreenPostDisplayed ? 'black' : 'white'}
+                frameBackgroundColor={this.state.isFullscreenPostDisplayed ? 'black' : '#fdfaf2'}
                 role="presentation"
             >
                 <Map />

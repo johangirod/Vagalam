@@ -4,7 +4,7 @@
     padding: 4px;
     border: 1px black solid;
     border-radius: 100%;
-    background-color: white;
+    background-color: #fdfaf2;
     transition: height 0.3s, width 0.3s, padding 0.3s;
 }
 /* ----------------------------------------------

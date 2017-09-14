@@ -117,7 +117,7 @@ class Map extends Component {
                                         'line-cap': 'round',
                                     }}
                                     linePaint={{
-                                        'line-color': 'white',
+                                        'line-color': '#fdfaf2',
                                         'line-opacity': 0.8,
                                         'line-width': 2,
                                     }}

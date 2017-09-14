@@ -14,7 +14,7 @@ section.header {
     right: 0;
 }
 header {
-    color: white;
+    color: #fdfaf2;
     flex: 1;
     z-index: 1;
     margin: 32px;

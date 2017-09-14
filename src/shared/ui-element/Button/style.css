@@ -1,11 +1,11 @@
 .button {
     position: relative;
     border-radius: 32px;
-    border: 2px solid white;
+    border: 2px solid #fdfaf2;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: #fdfaf2;
     font-size: 1.3em;
     padding: 12px 32px;
     font-weight: bold;

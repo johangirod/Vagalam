@@ -12,7 +12,7 @@
     z-index: 3;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #fdfaf2;
 }
 
 .continue {
@@ -21,7 +21,7 @@
     font-size: 0.6em;
     text-decoration: underline;
     font-family: inherit;
-    color: white;
+    color: #fdfaf2;
 }
 h2 {
     font-size: 1.6em;
