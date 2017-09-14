@@ -8,7 +8,7 @@ class Pictures extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentPicture: 0,
+            currentPictureIndex: 0,
         };
     }
     componentDidMount() {
@@ -21,8 +21,8 @@ class Pictures extends Component {
         this.intervalId = setInterval(this.goToNextPicture, 10000);
     };
     goToNextPicture = () => {
-        this.setState(({ currentPicture }) => ({
-            currentPicture: (currentPicture + 1) % this.props.pictures.length,
+        this.setState(({ currentPictureIndex }) => ({
+            currentPictureIndex: (currentPictureIndex + 1) % this.props.pictures.length,
         }));
     };
     handleClickOnPicture = () => {
@@ -39,16 +39,21 @@ class Pictures extends Component {
                 {pictures.map((picture, i) => (
                     <div
                         className={classnames(s['picture-container'], {
-                            [s.show]: this.state.currentPicture === i,
+                            [s.show]: this.state.currentPictureIndex === i,
                             [s.unique]: pictures.length === 1,
                         })}
-                        key={picture}
+                        key={picture.url}
                     >
                         <div className={s['picture-border']}>
-                            <img className={classnames(s.picture)} src={picture} />
+                            <img className={classnames(s.picture)} src={picture.url} />
                         </div>
                     </div>
                 ))}
+                {this.props.isFullscreen ? (
+                    <div className={s.caption}>
+                        {pictures[this.state.currentPictureIndex].caption}
+                    </div>
+                ) : null}
             </div>
         );
     }

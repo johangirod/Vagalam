@@ -2,7 +2,10 @@
 
 import type { PostId } from '../types';
 
-export opaque type Picture = string;
+export opaque type Picture = {
+    caption: string,
+    url: string,
+};
 
 export type Post = {
     +id: PostId,

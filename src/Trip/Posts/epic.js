@@ -38,9 +38,10 @@ function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
                     postApi.data['post.content'] &&
                     PrismicDOM.RichText.asHtml(postApi.data['post.content'].value),
                 pictures: postApi.data['post.pictures']
-                    ? postApi.data['post.pictures'].value.map(value =>
-                          proxyWithGoogleImageResizer(value.picture.value.main.url),
-                      )
+                    ? postApi.data['post.pictures'].value.map(value => ({
+                        url: proxyWithGoogleImageResizer(value.picture.value.main.url),
+                        caption: value.caption && PrismicDOM.RichText.asText(value.caption.value),
+                    }))
                     : [],
             })),
         );

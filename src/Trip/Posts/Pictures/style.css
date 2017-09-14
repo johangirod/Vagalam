@@ -23,7 +23,7 @@
     cursor: default;
 }
 .picture-border {
-    border: 2px solid white;
+    border: 1px solid white;
     display: flex;
     overflow: hidden;
     max-width: 100%;
@@ -34,4 +34,30 @@
 .picture {
     height: calc(100vh - 42px);
     flex-shrink: 0;
+}
+.caption {
+    position: absolute;
+    bottom: -42px;
+    font-family: 'Crimson Text', serif;
+    font-size: large;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+    color: white;
+    animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
