@@ -37,9 +37,8 @@
         "vitaminjs": "https://github.com/johangirod/vitaminjs#master"
     },
     "scripts": {
-        "preinstall": "npm install pm2 -g",
-        "start":
-            "if-env NODE_ENV=production && vitamin serve || pm2 start vitamin -i max --attach -- start",
+        "preinstall": "if-env NODE_ENV=production && npm install pm2 -g",
+        "start": "if-env NODE_ENV=production && pm2 start vitamin --attach -- serve || vitamin start",
         "build": "vitamin build"
     },
     "devDependencies": {
