@@ -109,7 +109,8 @@ class Map extends Component {
                         }}
                         onRest={this.handleAnimationEnd}
                     >
-                        {({ distance }) => distance > 0 ? (
+                        {({ distance }) =>
+                            distance > 0 ? (
                                 <Mapbox.GeoJSONLayer
                                     data={lineSliceAlong(displayedTripLineString, 0, distance)}
                                     lineLayout={{
@@ -122,7 +123,8 @@ class Map extends Component {
                                         'line-width': 2,
                                     }}
                                 />
-                            ) : null}
+                            ) : null
+                        }
                     </Motion>
                 ) : null}
                 {currentPath
