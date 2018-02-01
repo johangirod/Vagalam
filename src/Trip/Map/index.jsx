@@ -9,6 +9,7 @@ import lineSliceAlong from '@turf/line-slice-along';
 import { Motion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { compose, last } from 'ramda';
+// Todo remove freactal
 import { provideState, injectState, update } from 'freactal';
 import selectors from './selectors';
 import { notifyAnimationEnd } from '../actions';
@@ -91,6 +92,10 @@ class Map extends Component {
                 onMove={updateMap}
                 onStyleLoad={updateMap}
                 movingMethod="easeTo"
+                animationOptions={{
+                    ease: 1,
+                    duration: 1000,
+                }}
             >
                 {displayedTripLineString ? (
                     <Motion
@@ -124,7 +129,7 @@ class Map extends Component {
                 ) : null}
                 {currentPath
                     .slice(0, this.state.mapAnimation === 'FORWARD' ? -1 : currentPath.length)
-                    .map((mapPoint) => (
+                    .map(mapPoint => (
                         <Mapbox.Marker
                             key={mapPoint.coordinates.join()}
                             coordinates={mapPoint.coordinates}

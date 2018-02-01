@@ -34,7 +34,7 @@ class FullScreenPopup extends Component {
     constructor(props: PropType) {
         super(props);
         this.state = {
-            alreadyAsked: false,
+            alreadyAsked: process.env.NODE_ENV !== 'production',
             isFullScreen: IS_CLIENT && isFullScreen(),
         };
     }

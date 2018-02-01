@@ -20,6 +20,7 @@ export const currentPostSelector: Selector<?Post> = createSelector(
         }
         const currentPost = posts[currentMapPoint.postId];
         if (!currentPost) {
+            // TODO : handle waiting case
             throw new Error('The post id was not fetched');
         }
         return currentPost;
@@ -35,4 +36,5 @@ export const picturesSelector: Selector<Array<Picture>> = createSelector(postsSe
     (Object.values(posts): Array<$Values<posts>>)
         .map(post => post.pictures)
         .filter(Boolean)
-        .reduce((acc, value) => acc.concat(value), []));
+        .reduce((acc, value) => acc.concat(value), []),
+);

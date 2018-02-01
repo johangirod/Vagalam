@@ -5,14 +5,19 @@ import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/buffer';
 import 'rxjs/add/operator/bufferTime';
-import 'rxjs/add/operator/do';
+import { combineEpics } from 'redux-observable';
+
 import Prismic from 'prismic.io';
 import PrismicDOM from 'prismic-dom';
+import { last } from 'ramda';
 import type { Epic } from '../../rootTypes';
 import type { Action, Post } from './types';
+import { currentPostSelector } from './selectors';
 import type { PostId } from '../types';
 import { addFetchedPosts } from './actions';
+import { goToNextStep } from '../actions';
 
 // @todo : add srcset
 const proxyWithCloudinary = pictureUrl =>
@@ -62,4 +67,19 @@ const fetchPostsEpic: Epic<Action> = $action =>
         .mergeMap(fetchPosts)
         .map(addFetchedPosts);
 
-export default fetchPostsEpic;
+const continueToNextStepIfNoPostsEpic: Epic<Action> = (action$, store) =>
+    // CURRENT_ANIMATION_ENDED
+    action$
+        .ofType('app/trip/GO_TO_NEXT_STEP', 'app/trip/GO_TO_PREVIOUS_STEP')
+        .buffer(action$.ofType('app/trip/CURRENT_ANIMATION_ENDED'))
+        .map(last)
+        .map(action => {
+            if (!action || action.type === 'app/trip/GO_TO_PREVIOUS_STEP') {
+                return null;
+            }
+            const postIsDisplayed = !!currentPostSelector(store.getState());
+            return postIsDisplayed ? null : goToNextStep();
+        })
+        .filter(Boolean);
+
+export default combineEpics(continueToNextStepIfNoPostsEpic, fetchPostsEpic);
