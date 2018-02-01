@@ -2,7 +2,7 @@
     "name": "vagalam",
     "version": "0.0.0",
     "description": "Cycling around the world",
-    "author": "Johan Girod <johangirod@gmail.com> (https://vagalam.bike)",
+    "author": "Johan Girod <dev@vagalam.bike> (https://vagalam.bike)",
     "keywords": [],
     "dependencies": {
         "@turf/bezier": "^4.5.2",
@@ -40,7 +40,8 @@
     },
     "scripts": {
         "preinstall": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn global add pm2; fi",
-        "start": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
+        "start":
+            "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
         "start:prod": "pm2 start vitamin --attach -- serve",
         "build": "vitamin build",
         "lint": "eslint ./src"
