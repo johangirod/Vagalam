@@ -45,13 +45,9 @@ const withMapZoomControl = provideState({
 type PropType = {
     displayedTripLineString: ?LineString2D,
     currentPath: Array<MapPoint>,
-    style: ?{ [string]: string | 0 },
     onAnimationEnd: () => void,
 };
 class Map extends Component {
-    static defaultProps = {
-        style: {},
-    };
     constructor(props) {
         super(props);
         this.state = {
@@ -88,7 +84,6 @@ class Map extends Component {
                 containerStyle={{
                     height: '100%',
                     backgroundColor: '#2d2f32',
-                    ...style,
                 }}
                 zoom={INITIAL_ZOOM}
                 mapboxApiAccessToken={config.mapboxAccessToken}
@@ -129,7 +124,7 @@ class Map extends Component {
                 ) : null}
                 {currentPath
                     .slice(0, this.state.mapAnimation === 'FORWARD' ? -1 : currentPath.length)
-                    .map(mapPoint => (
+                    .map((mapPoint) => (
                         <Mapbox.Marker
                             key={mapPoint.coordinates.join()}
                             coordinates={mapPoint.coordinates}

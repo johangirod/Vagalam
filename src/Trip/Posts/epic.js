@@ -14,11 +14,9 @@ import type { Action, Post } from './types';
 import type { PostId } from '../types';
 import { addFetchedPosts } from './actions';
 
-// @todo : not working 100% cases (maybe use node-sharp?)
-const proxyWithGoogleImageResizer = pictureUrl =>
-    `https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=${encodeURIComponent(
-        pictureUrl,
-    )}&container=focus&resize_h=2160&refresh=3153600`;
+// @todo : add srcset
+const proxyWithCloudinary = pictureUrl =>
+    `https://res.cloudinary.com/vagalam/image/fetch/h_1080/${pictureUrl}`;
 
 function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
     return Observable.fromPromise(
@@ -39,9 +37,9 @@ function fetchPosts(postIds: Array<PostId>): Observable<Array<Post>> {
                     PrismicDOM.RichText.asHtml(postApi.data['post.content'].value),
                 pictures: postApi.data['post.pictures']
                     ? postApi.data['post.pictures'].value.map(value => ({
-                        url: proxyWithGoogleImageResizer(value.picture.value.main.url),
-                        caption: value.caption && PrismicDOM.RichText.asText(value.caption.value),
-                    }))
+                          url: proxyWithCloudinary(value.picture.value.main.url),
+                          caption: value.caption && PrismicDOM.RichText.asText(value.caption.value),
+                      }))
                     : [],
             })),
         );

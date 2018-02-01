@@ -13,6 +13,7 @@
         "@turf/meta": "^4.4.0",
         "classnames": "^2.2.5",
         "color-convert": "^1.9.0",
+        "d3-ease": "^1.0.3",
         "dotenv": "^4.0.0",
         "flow-geojson": "^1.0.2",
         "freactal": "^1.1.0",
@@ -24,9 +25,11 @@
         "prismic.io": "^3.5.7",
         "ramda": "^0.24.1",
         "react": "^15.4.2",
+        "react-map-gl": "^3.2.1",
         "react-mapbox-gl": "^2.1.0",
         "react-motion": "^0.5.0",
         "react-redux": "^5.0.5",
+        "react-sizeme": "^2.3.6",
         "react-transition-group": "1.x",
         "redux": "^3.7.2",
         "redux-observable": "^0.14.1",
@@ -36,10 +39,8 @@
         "vitaminjs": "https://github.com/johangirod/vitaminjs#master"
     },
     "scripts": {
-        "preinstall":
-            "if [[ ${NODE_ENV} == \"production\" ]]; then yarn global add pm2; fi",
-        "start":
-            "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin serve; fi",
+        "preinstall": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn global add pm2; fi",
+        "start": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
         "start:prod": "pm2 start vitamin --attach -- serve",
         "build": "vitamin build",
         "lint": "eslint ./src"

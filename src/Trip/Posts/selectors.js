@@ -35,5 +35,4 @@ export const picturesSelector: Selector<Array<Picture>> = createSelector(postsSe
     (Object.values(posts): Array<$Values<posts>>)
         .map(post => post.pictures)
         .filter(Boolean)
-        .reduce((acc, value) => acc.concat(value), []),
-);
+        .reduce((acc, value) => acc.concat(value), []));

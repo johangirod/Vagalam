@@ -21,18 +21,14 @@ export function goToPreviousStep(): GoToPreviousStepAction {
     };
 }
 
-export function addFetchedSleepLocations(
-    sleepLocations: Array<SleepLocation>,
-): AddFetchedSleepLocationsAction {
+export function addFetchedSleepLocations(sleepLocations: Array<SleepLocation>): AddFetchedSleepLocationsAction {
     return {
         type: 'app/trip/ADD_FETCHED_SLEEP_LOCATIONS',
         sleepLocations,
     };
 }
 
-export function addFetchedPointsOfInterest(
-    pointsOfInterest: Array<PointOfInterest>,
-): AddFetchedPointsOfInterestAction {
+export function addFetchedPointsOfInterest(pointsOfInterest: Array<PointOfInterest>): AddFetchedPointsOfInterestAction {
     return {
         type: 'app/trip/ADD_FETCHED_POINTS_OF_INTEREST',
         pointsOfInterest,

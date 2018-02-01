@@ -18,17 +18,13 @@ const suscribeEpic: Epic<Action> = $action =>
         .filter(() => false);
 
 const updateEmailPreferenceEpic: Epic<Action> = ($action, store) => $action
-        .ofType('app/visitor/UPDATE_EMAIL_PREFERENCE')
-        .mergeMap(({ emailPreference }) => {
-            const email = emailSelector(store.getState());
-            if (!email) {
-                return Observable.empty();
-            }
-            return ajaxPost(
-                `/on_visitor_preference_update/${encodeURIComponent(email)}/${encodeURIComponent(
-                    emailPreference,
-                )}`,
-            );
-        })
-        .filter(() => false);
+    .ofType('app/visitor/UPDATE_EMAIL_PREFERENCE')
+    .mergeMap(({ emailPreference }) => {
+        const email = emailSelector(store.getState());
+        if (!email) {
+            return Observable.empty();
+        }
+        return ajaxPost(`/on_visitor_preference_update/${encodeURIComponent(email)}/${encodeURIComponent(emailPreference)}`);
+    })
+    .filter(() => false);
 export default combineEpics(suscribeEpic, updateEmailPreferenceEpic);
