@@ -1,3 +1,5 @@
+@value lightBackgroundColor, darkBackgroundColor from '../../../constants.css';
+
 .overlay {
     position: absolute;
     z-index: 3;
@@ -30,14 +32,14 @@
 
 .fullscreen .close-button {
     right: -42px;
-    color: #fdfaf2;
+    color: lightBackgroundColor;
 }
 
 .modale {
     position: relative;
+    border: 1px solid darkBackgroundColor;
     max-width: 600px;
     max-height: 100%;
-    border: 1px solid #2d2f32;
 }
 
 .fullscreen {

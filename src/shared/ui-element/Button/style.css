@@ -1,16 +1,18 @@
+@value darkBackgroundColor, lightBackgroundColor from '../../../constants.css';
+
 .button {
     position: relative;
     border-radius: 32px;
-    border: 2px solid #fdfaf2;
+    border: 2px solid lightBackgroundColor;
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    color: #fdfaf2;
+    color: lightBackgroundColor;
     font-size: 1.3em;
     padding: 12px 32px;
     font-weight: bold;
     transition: border-color 1s;
-    background: #2d2f32;
+    background: darkBackgroundColor;
     background-clip: padding-box;
 }
 .button:hover {

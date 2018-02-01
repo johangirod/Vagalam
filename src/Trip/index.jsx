@@ -4,6 +4,7 @@ import { withStyles } from 'vitaminjs';
 import { compose } from 'ramda';
 import { connect } from 'react-redux';
 import { Component } from 'react';
+import styleConstants from '../constants.css';
 
 import { goToNextStep, goToPreviousStep } from './actions';
 import { isFullscreenPostDisplayedSelector } from './Posts/selectors';
@@ -46,7 +47,7 @@ class Trip extends Component {
     handlePostModaleClose = () => {
         this.setState({ isFullscreenPostDisplayed: false });
     };
-    handleKeyDown = (e) => {
+    handleKeyDown = e => {
         if (e.key === ' ' || e.key === 'ArrowRight') {
             this.props.goToNextStep();
         }
@@ -59,12 +60,24 @@ class Trip extends Component {
         return (
             <FrameLayout
                 top={
-                    <a href={'/'} className={s.brand}>
+                    <a
+                        href={'/'}
+                        className={s.brand}
+                        style={{
+                            color: this.state.isFullscreenPostDisplayed
+                                ? styleConstants.lightBackgroundColor
+                                : styleConstants.darkBackgroundColor,
+                        }}
+                    >
                         Vagalam
                     </a>
                 }
                 bottom={!this.state.isFullscreenPostDisplayed ? <Details /> : null}
-                frameBackgroundColor={this.state.isFullscreenPostDisplayed ? '#2d2f32' : '#fdfaf2'}
+                frameBackgroundColor={
+                    this.state.isFullscreenPostDisplayed
+                        ? styleConstants.darkBackgroundColor
+                        : styleConstants.lightBackgroundColor
+                }
                 role="presentation"
             >
                 <Map />

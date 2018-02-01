@@ -1,9 +1,11 @@
+@value darkBackgroundColor, lightBackgroundColor from '../../../constants.css';
+
 article {
     height: 100%;
     position: relative;
     display: flex;
     justify-content: center;
-    background-color: #2d2f32;
+    background-color: darkBackgroundColor;
 }
 
 h1 {
@@ -52,11 +54,11 @@ h1 {
 .content-alone,
 .content-pictures {
     padding: 16px 32px;
-    background: #fdfaf2;
+    background: lightBackgroundColor;
     overflow: auto;
 }
 .body {
-    #fdfaf2-space: pre-line;
+    /* space: pre-line; */
     line-height: 1.5em;
 }
 

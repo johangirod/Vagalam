@@ -1,3 +1,5 @@
+@value lightBackgroundColor from '../../../constants.css';
+
 .pictures {
     position: relative;
     height: 100%;
@@ -23,8 +25,7 @@
     cursor: default;
 }
 .picture-border {
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    border-radius: 2px;
+    border: 2px solid lightBackgroundColor;
     display: flex;
     overflow: hidden;
     max-width: 100%;
@@ -47,7 +48,7 @@
     justify-content: center;
     width: 100%;
     z-index: 2;
-    color: #fdfaf2;
+    color: lightBackgroundColor;
     animation: fade-in 2s;
 }
 
