@@ -2,6 +2,7 @@
 import { Component } from 'react';
 import { withStyles } from 'vitaminjs';
 import classnames from 'classnames';
+import { CSSTransitionGroup } from 'react-transition-group';
 import s from './style.css';
 
 class Pictures extends Component {
@@ -34,6 +35,7 @@ class Pictures extends Component {
     };
     render() {
         const { pictures } = this.props;
+        const currentPicture = pictures[this.state.currentPictureIndex];
         return (
             <div className={s.pictures} onClick={this.handleClickOnPicture}>
                 {pictures.map((picture, i) => (
@@ -45,14 +47,29 @@ class Pictures extends Component {
                         key={picture.url}
                     >
                         <div className={s['picture-border']}>
-                            <img className={classnames(s.picture)} src={picture.url} />
+                            <img
+                                className={classnames(s.picture)}
+                                src={picture.url}
+                                alt={picture.caption}
+                            />
                         </div>
                     </div>
                 ))}
                 {this.props.isFullscreen ? (
-                    <div className={s.caption}>
-                        {pictures[this.state.currentPictureIndex].caption}
-                    </div>
+                    <CSSTransitionGroup
+                        transitionEnterTimeout={300}
+                        transitionLeaveTimeout={100}
+                        transitionName={{
+                            enter: s.enter,
+                            enterActive: s['enter-active'],
+                            leave: s.leave,
+                            leaveActive: s['leave-active'],
+                        }}
+                    >
+                        <div className={s.caption} key={currentPicture.url}>
+                            {currentPicture.caption}
+                        </div>
+                    </CSSTransitionGroup>
                 ) : null}
             </div>
         );

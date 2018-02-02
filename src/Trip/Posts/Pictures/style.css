@@ -52,6 +52,23 @@
     animation: fade-in 2s;
 }
 
+.enter {
+    opacity: 0.01;
+}
+.enter-active {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.leave {
+    opacity: 1;
+}
+
+.leave-active {
+    opacity: 0.01;
+    transition: opacity 0.1s;
+}
+
 @keyframes fade-in {
     from {
         opacity: 0;
