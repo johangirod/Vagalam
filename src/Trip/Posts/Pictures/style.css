@@ -3,6 +3,7 @@
 .pictures {
     position: relative;
     height: 100%;
+    outline: 0;
 }
 .picture-container {
     cursor: pointer;
@@ -37,6 +38,38 @@
     height: calc(100vh - 42px);
     flex-shrink: 0;
 }
+
+.side-dots {
+    position: absolute;
+    left: -42px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    width: 42px;
+    animation: fade-in 2s;
+}
+.dot {
+    color: lightBackgroundColor;
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+.dot > * {
+    transition: transform 0.2s;
+}
+.dot.selected > *,
+.dot:hover > * {
+    transform: scale(1.5);
+}
+.dot.selected > * {
+    color: white;
+}
+
 .caption {
     position: absolute;
     bottom: -42px;
