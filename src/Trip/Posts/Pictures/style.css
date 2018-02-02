@@ -73,8 +73,6 @@
 .caption {
     position: absolute;
     bottom: -42px;
-    font-family: 'Crimson Text', serif;
-    font-size: large;
     height: 42px;
     display: flex;
     align-items: center;
