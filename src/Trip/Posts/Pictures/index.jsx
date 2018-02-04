@@ -5,6 +5,7 @@ import classnames from 'classnames';
 import { CSSTransitionGroup } from 'react-transition-group';
 import s from './style.css';
 import type { Picture } from '../types';
+
 type Props = {
     pictures: Array<Picture>,
     isFullscreen: boolean,

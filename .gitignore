@@ -66,3 +66,5 @@ typings/
 
 # config
 ./src/config.js
+
+flow-typed/

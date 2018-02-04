@@ -8,6 +8,7 @@
 .*/node_modules/redux-persist/.*
 .*/node_modules/react-motion/lib/Types.js.flow
 .*/node_modules/eslint-plugin-jsx-a11y/.*
+.*/node_modules/jsonlint-lines-primitives/*
 [include]
 
 [libs]

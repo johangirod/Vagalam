@@ -9,7 +9,7 @@ import s from './style.css';
 type PropType = {
     children: React.Node,
     fullScreen?: boolean,
-    onClose?: () => void,
+    onClose: () => void,
     isOpened?: boolean,
     style?: { [string]: string },
 };
@@ -41,7 +41,7 @@ class Modale extends React.Component {
         }
     }
     props: PropType;
-    handleKeyDown = (e: SyntheticKeyboardEvent) => {
+    handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
             this.handleClose();
         }
