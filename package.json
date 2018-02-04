@@ -38,11 +38,12 @@
         "redux-persist": "^5.6.9",
         "reselect": "^3.0.1",
         "rxjs": "5.x.x",
-        "vitaminjs": "https://github.com/johangirod/vitaminjs#master"
+        "vitaminjs": "1.3.0-rc2"
     },
     "scripts": {
         "preinstall": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn global add pm2; fi",
-        "start": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
+        "start":
+            "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
         "start:prod": "pm2 start vitamin --attach -- serve",
         "build": "vitamin build",
         "lint": "eslint ./src"

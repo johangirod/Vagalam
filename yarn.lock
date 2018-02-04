@@ -418,16 +418,6 @@ assert@^1.1.1:
   dependencies:
     util "0.10.3"
 
-assets-webpack-plugin@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/assets-webpack-plugin/-/assets-webpack-plugin-3.5.1.tgz#931ce0d66d42e88ed5e7f18d65522943c57a387d"
-  dependencies:
-    camelcase "^1.2.1"
-    escape-string-regexp "^1.0.3"
-    lodash.assign "^3.2.0"
-    lodash.merge "^3.3.2"
-    mkdirp "^0.5.1"
-
 ast-types-flow@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ast-types-flow/-/ast-types-flow-0.0.7.tgz#f70b735c6bca1a5c9c22d982c3e39e7feba3bdad"
@@ -1459,7 +1449,7 @@ callsites@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
 
-camelcase@^1.0.2, camelcase@^1.2.1:
+camelcase@^1.0.2:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-1.2.1.tgz#9bb5304d2e0b56698b2c758b08a3eaa9daa58a39"
 
@@ -2198,7 +2188,7 @@ escape-html@~1.0.1, escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
 
-escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.3, escape-string-regexp@^1.0.5:
+escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
@@ -3687,29 +3677,6 @@ lodash-es@^4.2.0, lodash-es@^4.2.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
 
-lodash._arraycopy@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash._arraycopy/-/lodash._arraycopy-3.0.0.tgz#76e7b7c1f1fb92547374878a562ed06a3e50f6e1"
-
-lodash._arrayeach@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash._arrayeach/-/lodash._arrayeach-3.0.0.tgz#bab156b2a90d3f1bbd5c653403349e5e5933ef9e"
-
-lodash._baseassign@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/lodash._baseassign/-/lodash._baseassign-3.2.0.tgz#8c38a099500f215ad09e59f1722fd0c52bfe0a4e"
-  dependencies:
-    lodash._basecopy "^3.0.0"
-    lodash.keys "^3.0.0"
-
-lodash._basecopy@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
-
-lodash._basefor@^3.0.0:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/lodash._basefor/-/lodash._basefor-3.0.3.tgz#7550b4e9218ef09fad24343b612021c79b4c20c2"
-
 lodash._baseisequal@^3.0.0:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/lodash._baseisequal/-/lodash._baseisequal-3.0.7.tgz#d8025f76339d29342767dcc887ce5cb95a5b51f1"
@@ -3722,33 +3689,13 @@ lodash._bindcallback@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash._bindcallback/-/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
 
-lodash._createassigner@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/lodash._createassigner/-/lodash._createassigner-3.1.1.tgz#838a5bae2fdaca63ac22dee8e19fa4e6d6970b11"
-  dependencies:
-    lodash._bindcallback "^3.0.0"
-    lodash._isiterateecall "^3.0.0"
-    lodash.restparam "^3.0.0"
-
 lodash._getnative@^3.0.0:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
 
-lodash._isiterateecall@^3.0.0:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/lodash._isiterateecall/-/lodash._isiterateecall-3.0.9.tgz#5203ad7ba425fae842460e696db9cf3e6aac057c"
-
 lodash._reinterpolate@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
-
-lodash.assign@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-3.2.0.tgz#3ce9f0234b4b2223e296b8fa0ac1fee8ebca64fa"
-  dependencies:
-    lodash._baseassign "^3.0.0"
-    lodash._createassigner "^3.0.0"
-    lodash.keys "^3.0.0"
 
 lodash.camelcase@^4.3.0:
   version "4.3.0"
@@ -3773,14 +3720,6 @@ lodash.isequal@^3.0.4:
     lodash._baseisequal "^3.0.0"
     lodash._bindcallback "^3.0.0"
 
-lodash.isplainobject@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-3.2.0.tgz#9a8238ae16b200432960cd7346512d0123fbf4c5"
-  dependencies:
-    lodash._basefor "^3.0.0"
-    lodash.isarguments "^3.0.0"
-    lodash.keysin "^3.0.0"
-
 lodash.istypedarray@^3.0.0:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/lodash.istypedarray/-/lodash.istypedarray-3.0.6.tgz#c9a477498607501d8e8494d283b87c39281cef62"
@@ -3793,40 +3732,13 @@ lodash.keys@^3.0.0:
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
 
-lodash.keysin@^3.0.0:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.keysin/-/lodash.keysin-3.0.8.tgz#22c4493ebbedb1427962a54b445b2c8a767fb47f"
-  dependencies:
-    lodash.isarguments "^3.0.0"
-    lodash.isarray "^3.0.0"
-
 lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
 
-lodash.merge@^3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-3.3.2.tgz#0d90d93ed637b1878437bb3e21601260d7afe994"
-  dependencies:
-    lodash._arraycopy "^3.0.0"
-    lodash._arrayeach "^3.0.0"
-    lodash._createassigner "^3.0.0"
-    lodash._getnative "^3.0.0"
-    lodash.isarguments "^3.0.0"
-    lodash.isarray "^3.0.0"
-    lodash.isplainobject "^3.0.0"
-    lodash.istypedarray "^3.0.0"
-    lodash.keys "^3.0.0"
-    lodash.keysin "^3.0.0"
-    lodash.toplainobject "^3.0.0"
-
 lodash.mergewith@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.0.tgz#150cf0a16791f5903b8891eab154609274bdea55"
-
-lodash.restparam@^3.0.0:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
 
 lodash.some@^4.6.0:
   version "4.6.0"
@@ -3844,13 +3756,6 @@ lodash.templatesettings@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.templatesettings/-/lodash.templatesettings-4.1.0.tgz#2b4d4e95ba440d915ff08bc899e4553666713316"
   dependencies:
     lodash._reinterpolate "~3.0.0"
-
-lodash.toplainobject@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/lodash.toplainobject/-/lodash.toplainobject-3.0.0.tgz#28790ad942d293d78aa663a07ecf7f52ca04198d"
-  dependencies:
-    lodash._basecopy "^3.0.0"
-    lodash.keysin "^3.0.0"
 
 lodash.uniq@^4.5.0:
   version "4.5.0"
@@ -6128,10 +6033,6 @@ strip-bom@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
 
-strip-json-comments-loader@0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/strip-json-comments-loader/-/strip-json-comments-loader-0.0.2.tgz#add6be37feeb8b7c610d8743230092d8eaf416a8"
-
 strip-json-comments@^2.0.1, strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
@@ -6504,11 +6405,10 @@ viewport-mercator-project@^5.0.0:
   dependencies:
     math.gl "^1.0.0"
 
-"vitaminjs@https://github.com/johangirod/vitaminjs#master":
-  version "1.2.1"
-  resolved "https://github.com/johangirod/vitaminjs#6d089f2b5aae6493964be9848f6e7a32dee45d6b"
+vitaminjs-build@vitaminjs-build:
+  version "1.3.0-rc1"
+  resolved "https://registry.yarnpkg.com/vitaminjs-build/-/vitaminjs-build-1.3.0-rc1.tgz#1de323756f2e074244a9dd18abd8daa86fec949f"
   dependencies:
-    assets-webpack-plugin "^3.5.1"
     babel-core "^6.24.1"
     babel-loader "^7.0.0"
     babel-plugin-discard-module-references "^1.1.2"
@@ -6528,23 +6428,11 @@ viewport-mercator-project@^5.0.0:
     chalk "^1.1.3"
     commander "^2.9.0"
     css-loader "^0.28.0"
-    cssnano "^3.10.0"
-    express "^4.15.2"
     file-loader "^0.11.1"
     friendly-errors-webpack-plugin "^1.6.1"
-    history "^3.2.1"
-    http-graceful-shutdown "^1.0.6"
     isomorphic-style-loader "^1.1.0 || ^2"
-    js-string-escape "^1.0.1"
     json-loader "^0.5.4"
-    koa "2.2.0"
-    koa-compose "^4.0.0"
-    koa-conditional-get "^2.0.0"
-    koa-etag "^3.0.0"
-    koa-mount "^2.0.0"
-    koa-static "^3.0.0"
     lodash.mergewith "^4.6.0"
-    node-fetch "^1.6.3"
     postcss-browser-reporter "^0.5.0"
     postcss-cssnext "^2.10.0"
     postcss-import "^9.1.0"
@@ -6553,8 +6441,38 @@ viewport-mercator-project@^5.0.0:
     postcss-reporter "^3.0.0"
     postcss-url "^6.0.4"
     progress "^2.0.0"
-    prop-types "^15.5.8"
     react-dev-utils "^0.5.2"
+    rimraf "^2.6.0"
+    serviceworker-webpack-plugin "^0.2.1"
+    strip-json-comments "^2.0.1"
+    url-loader "^0.5.7"
+    webpack "^2.4.1"
+    yaml-loader "^0.4.0"
+
+vitaminjs-runtime@vitaminjs-runtime:
+  version "1.3.0-rc2"
+  resolved "https://registry.yarnpkg.com/vitaminjs-runtime/-/vitaminjs-runtime-1.3.0-rc2.tgz#59f5bc5fc2a0adc13a1f078326fa9e068d049483"
+  dependencies:
+    chalk "^1.1.3"
+    express "^4.15.2"
+    history "^3.2.1"
+    http-graceful-shutdown "^1.0.6"
+    isomorphic-style-loader "^1.1.0 || ^2"
+    js-string-escape "^1.0.1"
+    koa "2.2.0"
+    koa-compose "^4.0.0"
+    koa-conditional-get "^2.0.0"
+    koa-etag "^3.0.0"
+    koa-mount "^2.0.0"
+    koa-static "^3.0.0"
+    node-fetch "^1.6.3"
+    prop-types "^15.5.8"
+    redux-thunk "^2.2.0"
+
+vitaminjs@1.3.0-rc2:
+  version "1.3.0-rc2"
+  resolved "https://registry.yarnpkg.com/vitaminjs/-/vitaminjs-1.3.0-rc2.tgz#342d86d0b19096fd1cca2f95dd4628a94b88299b"
+  dependencies:
     react-dom "^0.14.9 || ^15.3.0"
     react-helmet "^5.0.3"
     react-redux "^5.0.4"
@@ -6563,17 +6481,12 @@ viewport-mercator-project@^5.0.0:
     react-router-redux "^4.0.8"
     redbox-react "^1.3.6"
     redux "^3.6.0"
-    redux-thunk "^2.2.0"
-    rimraf "^2.6.0"
-    serviceworker-webpack-plugin "^0.2.1"
     source-map-support "^0.4.13"
-    strip-json-comments "^2.0.1"
-    strip-json-comments-loader "0.0.2"
-    url-loader "^0.5.7"
+    vitaminjs-build vitaminjs-build
+    vitaminjs-runtime vitaminjs-runtime
     webpack "^2.4.1"
     webpack-dev-middleware "^1.10.1"
     webpack-hot-middleware "^2.18.0"
-    yaml-loader "^0.4.0"
 
 vlq@^0.2.1:
   version "0.2.3"
