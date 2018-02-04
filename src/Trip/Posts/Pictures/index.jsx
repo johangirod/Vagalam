@@ -26,6 +26,9 @@ class Pictures extends Component<Props, State> {
         this.resetInterval();
         this.pictureDiv.focus();
     }
+    componentWillUnmount() {
+        clearInterval(this.intervalId);
+    }
     resetInterval = () => {
         if (this.intervalId) {
             clearInterval(this.intervalId);

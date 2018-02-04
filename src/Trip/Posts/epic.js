@@ -61,8 +61,7 @@ const fetchPostsEpic: Epic<Action> = $action =>
     )
         .mergeMap(resources => Observable.of(...resources.map(({ postId }) => postId)))
         .filter(Boolean)
-        // $FlowFixMe: rxJS flow typed API not up to date
-        .bufferTime(2000, 2000, 10)
+        .bufferTime(500, null, 10)
         .filter(postIds => postIds.length)
         .mergeMap(fetchPosts)
         .map(addFetchedPosts);
