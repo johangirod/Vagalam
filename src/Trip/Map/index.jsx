@@ -9,6 +9,7 @@ import lineSliceAlong from '@turf/line-slice-along';
 import { Motion, spring } from 'react-motion';
 import { connect } from 'react-redux';
 import { compose, last } from 'ramda';
+
 // Todo remove freactal
 import { provideState, injectState, update } from 'freactal';
 import selectors from './selectors';
@@ -47,6 +48,7 @@ type PropType = {
     displayedTripLineString: ?LineString2D,
     currentPath: Array<MapPoint>,
     onAnimationEnd: () => void,
+    effects: any,
 };
 class Map extends Component {
     constructor(props) {
@@ -77,7 +79,7 @@ class Map extends Component {
     props: PropType;
 
     render() {
-        const { effects: { updateMap }, displayedTripLineString, currentPath, style } = this.props;
+        const { effects: { updateMap }, displayedTripLineString, currentPath } = this.props;
         const currentMapPoint = last(currentPath);
         return (
             <Mapbox.Map

@@ -31,15 +31,18 @@ export type FetchingStatusState<TypeId> = {
     +lastFetchedId: ?TypeId,
 };
 
-export type CurrentAnimationType = 'Map' | 'Post' | null;
+export type CurrentAnimationType = 'Map' | 'Post' | 'None';
+
 export type State = {
     +posts: PostsState,
     +path: Array<MapPoint>,
+    // $FlowFixMe incomprehensible error, it doesn't work if the field is nullable...
     +currentMapPointId: ?MapPointId,
     +fetchingStatus: {
-        sleepLocations: FetchingStatusState<SleepLocationId>,
-        pointsOfInterest: FetchingStatusState<PointOfInterestId>,
+        +sleepLocations: FetchingStatusState<SleepLocationId>,
+        +pointsOfInterest: FetchingStatusState<PointOfInterestId>,
     },
+    // $FlowFixMe: couldn't figure out what the problem was
     +currentAnimation: CurrentAnimationType,
     +userArrivedToLastPoint: boolean,
 };

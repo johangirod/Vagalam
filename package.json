@@ -35,7 +35,7 @@
         "react-transition-group": "1.x",
         "redux": "^3.7.2",
         "redux-observable": "^0.14.1",
-        "redux-persist": "^5.3.0-rc.2",
+        "redux-persist": "^5.6.9",
         "reselect": "^3.0.1",
         "rxjs": "5.x.x",
         "vitaminjs": "https://github.com/johangirod/vitaminjs#master"

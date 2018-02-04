@@ -18,7 +18,7 @@ export const userArrivedToLastPointSelector: Selector<boolean> = pipe(
 );
 export const currentPathSelector: Selector<Array<MapPoint>> = createSelector(
     pathSelector,
-    ({ app: { trip: { currentMapPointId } } }) => currentMapPointId,
+    pipe(tripSelector, trip => trip.currentMapPointId),
     (path, currentMapPointId) => {
         const currentMapPointIndex = path.findIndex(({ id }) => id === currentMapPointId);
         return path.slice(0, currentMapPointIndex + 1);

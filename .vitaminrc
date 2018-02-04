@@ -7,8 +7,5 @@
     "server": {
         "middlewares": "./src/server/middlewares",
         "host": null
-    },
-    "webpack": {
-        "noParse": "(mapbox-gl)\\.js$"
     }
 }

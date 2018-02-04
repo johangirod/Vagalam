@@ -9,8 +9,10 @@ import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/merge';
 
-import { combineEpics } from 'redux-observable';
 import Prismic from 'prismic.io';
+import { combineEpics } from 'redux-observable';
+import { REHYDRATE } from 'redux-persist';
+import type { RehydrateAction } from 'redux-persist/src/types';
 
 import postsEpic from './Posts/epic';
 import type { Action, SleepLocationId, PointOfInterestId } from './types';
@@ -22,58 +24,66 @@ const getPostId: (string, any) => ?string = (type, apiResponse) => {
     return post ? post.value.document.id : null;
 };
 const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
-    Observable.fromPromise(Prismic.api('https://vagalam.prismic.io/api')
-        .then(api =>
-            api.query(Prismic.Predicates.at('document.type', 'sleep_location'), {
-                orderings: '[my.sleep_location.date]',
-                pageSize: 10,
-                after: id,
-            }))
-        .then(response =>
-            response.results.map((apiSleepLocation: any) => {
-                const { longitude, latitude } = apiSleepLocation.data[
-                    'sleep_location.location'
-                ].value;
-                const endOfDay = new Date(apiSleepLocation.data['sleep_location.date'].value);
-                endOfDay.setHours(23, 59, 59, 999);
-                return {
-                    date: endOfDay.toISOString(),
-                    dayNumber: apiSleepLocation.data['sleep_location.day_number'].value,
-                    coordinates: [longitude, latitude],
-                    id: apiSleepLocation.id,
-                    postId: getPostId('sleep_location', apiSleepLocation),
-                    type: 'sleep_location',
-                };
-            }))
-        .then(addFetchedSleepLocations));
+    Observable.fromPromise(
+        Prismic.api('https://vagalam.prismic.io/api')
+            .then(api =>
+                api.query(Prismic.Predicates.at('document.type', 'sleep_location'), {
+                    orderings: '[my.sleep_location.date]',
+                    pageSize: 10,
+                    after: id,
+                }),
+            )
+            .then(response =>
+                response.results.map((apiSleepLocation: any) => {
+                    const { longitude, latitude } = apiSleepLocation.data[
+                        'sleep_location.location'
+                    ].value;
+                    const endOfDay = new Date(apiSleepLocation.data['sleep_location.date'].value);
+                    endOfDay.setHours(23, 59, 59, 999);
+                    return {
+                        date: endOfDay.toISOString(),
+                        dayNumber: apiSleepLocation.data['sleep_location.day_number'].value,
+                        coordinates: [longitude, latitude],
+                        id: apiSleepLocation.id,
+                        postId: getPostId('sleep_location', apiSleepLocation),
+                        type: 'sleep_location',
+                    };
+                }),
+            )
+            .then(addFetchedSleepLocations),
+    );
 
 const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = id =>
-    Observable.fromPromise(Prismic.api('https://vagalam.prismic.io/api')
-        .then(api =>
-            api.query(Prismic.Predicates.at('document.type', 'point_of_interest'), {
-                orderings: '[my.point_of_interest.datetime]',
-                pageSize: 10,
-                after: id,
-            }))
-        .then(response =>
-            response.results.map((apiPointOfInterest: any) => {
-                const { longitude, latitude } = apiPointOfInterest.data[
-                    'point_of_interest.location'
-                ].value;
-                return {
-                    date: apiPointOfInterest.data['point_of_interest.datetime'].value,
-                    coordinates: [longitude, latitude],
-                    id: apiPointOfInterest.id,
-                    postId: getPostId('point_of_interest', apiPointOfInterest),
-                    type: 'point_of_interest',
-                };
-            }))
-        .then(addFetchedPointsOfInterest));
+    Observable.fromPromise(
+        Prismic.api('https://vagalam.prismic.io/api')
+            .then(api =>
+                api.query(Prismic.Predicates.at('document.type', 'point_of_interest'), {
+                    orderings: '[my.point_of_interest.datetime]',
+                    pageSize: 10,
+                    after: id,
+                }),
+            )
+            .then(response =>
+                response.results.map((apiPointOfInterest: any) => {
+                    const { longitude, latitude } = apiPointOfInterest.data[
+                        'point_of_interest.location'
+                    ].value;
+                    return {
+                        date: apiPointOfInterest.data['point_of_interest.datetime'].value,
+                        coordinates: [longitude, latitude],
+                        id: apiPointOfInterest.id,
+                        postId: getPostId('point_of_interest', apiPointOfInterest),
+                        type: 'point_of_interest',
+                    };
+                }),
+            )
+            .then(addFetchedPointsOfInterest),
+    );
 
-const goToNextStepEpic: Epic<Action> = (action$, store) =>
+const goToNextStepEpic: Epic<Action | RehydrateAction> = (action$, store) =>
     Observable.merge(
         action$.ofType('app/trip/GO_TO_NEXT_STEP'),
-        action$.ofType('persist/REHYDRATE').filter(action => action.key === 'app::trip'),
+        action$.ofType(REHYDRATE).filter(action => action.key === 'app::trip'),
     ).mergeMap(() => {
         const {
             currentMapPointId,

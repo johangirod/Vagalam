@@ -1,23 +1,24 @@
 // @flow
+
 import type { Action, State } from './types';
 
-let visitorReducer = function visitorReducer(state: State = null, action: Action) {
+let visitorReducer = function visitorReducer(state: State = {}, action: Action) {
     switch (action.type) {
-    case 'app/visitor/SUBSCRIBE':
-        return {
-            email: action.email,
-            emailPreference: 'SOMETIMES',
-        };
-    case 'app/visitor/UPDATE_EMAIL_PREFERENCE':
-        if (!state) {
+        case 'app/visitor/SUBSCRIBE':
+            return {
+                email: action.email,
+                emailPreference: 'SOMETIMES',
+            };
+        case 'app/visitor/UPDATE_EMAIL_PREFERENCE':
+            if (!state) {
+                return state;
+            }
+            return {
+                ...state,
+                emailPreference: action.emailPreference,
+            };
+        default:
             return state;
-        }
-        return {
-            ...state,
-            emailPreference: action.emailPreference,
-        };
-    default:
-        return state;
     }
 };
 

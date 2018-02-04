@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { compose } from 'ramda';
 import { userArrivedToLastPointSelector } from '../selectors';
 import Modale from '../../shared/ui-element/Modale';
+import type { State } from '../../rootTypes';
 import EmailForm from '../../shared/Visitor/EmailForm';
 import { emailSelector } from '../../shared/Visitor/selectors';
 import s from './style.css';
@@ -30,7 +31,7 @@ const LastPointModale = ({ isOpened, visitorEmail }: PropType) => (
 );
 
 export default compose(
-    connect(state => ({
+    connect((state: State): * => ({
         isOpened: userArrivedToLastPointSelector(state),
         visitorEmail: emailSelector(state),
     })),

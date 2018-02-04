@@ -4,8 +4,7 @@
 .*/node_modules/styled-components/src/.*
 .*/node_modules/mapbox-gl/src/.*
 .*/node_modules/unflowify/test/.*
-.*/node_modules/redux-persist/.*
-.*/node_modules/redux-persist/.*
+.*/node_modules/redux/.*
 .*/node_modules/react-motion/lib/Types.js.flow
 .*/node_modules/eslint-plugin-jsx-a11y/.*
 .*/node_modules/jsonlint-lines-primitives/*

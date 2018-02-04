@@ -2,9 +2,9 @@
 
 export type EmailPreference = 'SOMETIMES' | 'NEVER' | 'ALWAYS';
 
-export type State = ?{
-    +email: string,
-    +emailPreference: EmailPreference,
+export type State = {
+    +email?: string,
+    +emailPreference?: EmailPreference,
 };
 
 export type UpdateEmailPreferenceAction = {

@@ -4,6 +4,7 @@ import type { MiddlewareAPI as Store } from 'redux';
 
 import type { State as TripState, Action as TripAction } from './Trip/types';
 import type { State as VisitorState, Action as VisitorAction } from './shared/Visitor/types';
+import { type RehydrateAction } from 'redux-persist/src/types';
 
 export type State = {
     +app: {
@@ -12,7 +13,7 @@ export type State = {
     },
 };
 
-export type Action = TripAction | VisitorAction;
+export type Action = TripAction | VisitorAction | RehydrateAction;
 
 export type Selector<Type> = State => Type;
 
