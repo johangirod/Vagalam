@@ -12,7 +12,6 @@ import 'rxjs/add/observable/merge';
 import Prismic from 'prismic.io';
 import { combineEpics } from 'redux-observable';
 import { REHYDRATE } from 'redux-persist';
-import { pipe, map } from 'ramda';
 import type { RehydrateAction } from 'redux-persist/src/types';
 
 import postsEpic from './Posts/epic';
