@@ -2,7 +2,7 @@
 /* @flow */
 
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
-import { prop, nth, last, defaultTo, ascend } from 'ramda';
+import { prop, defaultTo, ascend } from 'ramda';
 import { combineReducers } from 'redux';
 
 import pipeReducers from '../shared/pipeReducers';
@@ -13,44 +13,11 @@ import type {
     FetchingStatusState,
     MapPoint,
     PointOfInterestId,
+    TransportId,
     CurrentAnimationType,
     State,
     SleepLocationId,
 } from './types';
-
-function pointsOfInterestFetchStatusReducer(
-    state: FetchingStatusState<PointOfInterestId> = { nextFetchTrigger: null, lastFetchedId: null },
-    action: Action,
-) {
-    switch (action.type) {
-        case 'app/trip/ADD_FETCHED_POINTS_OF_INTEREST':
-            const lastPlaceOfInterest = last(action.pointsOfInterest);
-            const penultimatePlaceOfInterest = nth(-2, action.pointsOfInterest);
-            return {
-                lastFetchedId: lastPlaceOfInterest && lastPlaceOfInterest.id,
-                nextFetchTrigger: penultimatePlaceOfInterest && penultimatePlaceOfInterest.id,
-            };
-        default:
-            return state;
-    }
-}
-
-function sleepLocationsFetchStatusReducer(
-    state: FetchingStatusState<SleepLocationId> = { nextFetchTrigger: null, lastFetchedId: null },
-    action: Action,
-) {
-    switch (action.type) {
-        case 'app/trip/ADD_FETCHED_SLEEP_LOCATIONS':
-            const lastSleepLocation = last(action.sleepLocations);
-            const penultimateSleepLocation = nth(-2, action.sleepLocations);
-            return {
-                lastFetchedId: lastSleepLocation && lastSleepLocation.id,
-                nextFetchTrigger: penultimateSleepLocation && penultimateSleepLocation.id,
-            };
-        default:
-            return state;
-    }
-}
 
 function pathReducer(state: Array<MapPoint> = [], action: Action): Array<MapPoint> {
     let newMapPoints;
@@ -97,7 +64,7 @@ function currentMapPointIdReducer(state: State, action: Action): State {
 function userArrivedToLastPointReducer(state: State, action: Action): State {
     switch (action.type) {
         case 'app/trip/GO_TO_NEXT_STEP':
-            const lastMapPoint = last(state.path);
+            const lastMapPoint = state.path[state.path.length - 1];
             return {
                 ...state,
                 userArrivedToLastPoint:
@@ -128,12 +95,57 @@ function currentAnimationReducer(state: CurrentAnimationType = 'None', action: A
     }
 }
 
+type MapPointEntity<I> = {
+    +id: I,
+};
+function newFetchStatusState<I>(
+    mapPoints: $ReadOnlyArray<MapPointEntity<I>>,
+): FetchingStatusState<I> {
+    const lastMapPoint = mapPoints[mapPoints.length - 1];
+    const penultimateMapPoint = mapPoints[mapPoints.length - 2];
+    return {
+        lastFetchedId: lastMapPoint ? lastMapPoint.id : null,
+        nextFetchTrigger: penultimateMapPoint ? penultimateMapPoint.id : null,
+    };
+}
+function pointsOfInterestFetchStatusReducer(
+    state: FetchingStatusState<PointOfInterestId> = { nextFetchTrigger: null, lastFetchedId: null },
+    action: Action,
+): FetchingStatusState<PointOfInterestId> {
+    if (action.type !== 'app/trip/ADD_FETCHED_POINTS_OF_INTEREST') {
+        return state;
+    }
+    return newFetchStatusState(action.pointsOfInterest);
+}
+
+function sleepLocationsFetchStatusReducer(
+    state: FetchingStatusState<SleepLocationId> = { nextFetchTrigger: null, lastFetchedId: null },
+    action: Action,
+): FetchingStatusState<SleepLocationId> {
+    if (action.type !== 'app/trip/ADD_FETCHED_SLEEP_LOCATIONS') {
+        return state;
+    }
+    return newFetchStatusState(action.sleepLocations);
+}
+
+function transportsFetchStatusReducer(
+    state: FetchingStatusState<TransportId> = { nextFetchTrigger: null, lastFetchedId: null },
+    action: Action,
+): FetchingStatusState<TransportId> {
+    if (action.type !== 'app/trip/ADD_FETCHED_TRANSPORTS') {
+        return state;
+    }
+    return newFetchStatusState(action.transports);
+}
+
 const fetchingStatusReducer = combineReducers({
     sleepLocations: sleepLocationsFetchStatusReducer,
     pointsOfInterest: pointsOfInterestFetchStatusReducer,
+    transports: transportsFetchStatusReducer,
 });
 
-const rootReducer = combineReducers({
+// $FlowFixMe...
+const rootReducer: (State, Action) => State = combineReducers({
     posts: postsReducer,
     path: pathReducer,
     currentMapPointId: defaultTo(null),
@@ -142,10 +154,10 @@ const rootReducer = combineReducers({
     userArrivedToLastPoint: defaultTo(false),
 });
 
-let tripReducer: (State, Action) => State = pipeReducers(
+let tripReducer = pipeReducers(
+    rootReducer,
     userArrivedToLastPointReducer,
     currentMapPointIdReducer,
-    rootReducer,
 );
 
 if (IS_CLIENT) {

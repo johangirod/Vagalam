@@ -41,8 +41,7 @@
     },
     "scripts": {
         "preinstall": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn global add pm2; fi",
-        "start":
-            "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
+        "start": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
         "start:prod": "pm2 start vitamin --attach -- serve",
         "build": "vitamin build",
         "lint": "eslint ./src"
@@ -57,7 +56,7 @@
         "eslint-plugin-import": "^2.7.0",
         "eslint-plugin-jsx-a11y": "^6.0.3",
         "eslint-plugin-react": "^7.1.0",
-        "flow-bin": "^0.64.0",
+        "flow-bin": "^0.65.0",
         "prettier": "^1.10.2",
         "prop-types": "^15.6.0"
     },

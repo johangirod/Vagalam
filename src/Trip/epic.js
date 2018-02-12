@@ -15,9 +15,13 @@ import { REHYDRATE } from 'redux-persist';
 import type { RehydrateAction } from 'redux-persist/src/types';
 
 import postsEpic from './Posts/epic';
-import type { Action, SleepLocationId, PointOfInterestId, MapPointId } from './types';
+import type { Action, SleepLocationId, PointOfInterestId, TransportId, MapPointId } from './types';
 import type { Epic } from '../rootTypes';
-import { addFetchedPointsOfInterest, addFetchedSleepLocations } from './actions';
+import {
+    addFetchedPointsOfInterest,
+    addFetchedSleepLocations,
+    addFetchedTransports,
+} from './actions';
 
 const fetchMapPoints = (type: string, ordering: string, id: ?MapPointId): Observable<Object> =>
     Observable.fromPromise(
@@ -37,17 +41,24 @@ const getPostId: (string, any) => ?string = (type, apiResponse) => {
     return post ? post.value.document.id : null;
 };
 
+const toArrayCoordinate = ({
+    longitude,
+    latitude,
+}: {
+    longitude: string,
+    latitude: string,
+}): [string, string] => [longitude, latitude];
+
 const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
     fetchMapPoints('sleep_location', 'date', id)
         .map(results =>
             results.map(result => {
-                const { longitude, latitude } = result['sleep_location.location'].value;
                 const endOfDay = new Date(result['sleep_location.date'].value);
                 endOfDay.setHours(23, 59, 59, 999);
                 return {
                     date: endOfDay.toISOString(),
                     dayNumber: result['sleep_location.day_number'].value,
-                    coordinates: [longitude, latitude],
+                    coordinates: toArrayCoordinate(result['sleep_location.location'].value),
                     id: result.id,
                     postId: getPostId('sleep_location', result),
                     type: 'sleep_location',
@@ -59,18 +70,42 @@ const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
 const fetchPointOfInterestsAfter: (?PointOfInterestId) => Observable<Action> = id =>
     fetchMapPoints('point_of_interest', 'datetime', id)
         .map(results =>
-            results.map(result => {
-                const { longitude, latitude } = result['point_of_interest.location'].value;
-                return {
-                    date: result['point_of_interest.datetime'].value,
-                    coordinates: [longitude, latitude],
-                    id: result.id,
-                    postId: getPostId('point_of_interest', result),
-                    type: 'point_of_interest',
-                };
-            }),
+            results.map(result => ({
+                date: result['point_of_interest.datetime'].value,
+                coordinates: toArrayCoordinate(result['point_of_interest.location'].value),
+                id: result.id,
+                postId: getPostId('point_of_interest', result),
+                type: 'point_of_interest',
+            })),
         )
         .map(addFetchedPointsOfInterest);
+
+const fetchTransportsAfter: (?TransportId) => Observable<Action> = id =>
+    fetchMapPoints('transport', 'start_datetime', id)
+        .map(results =>
+            results
+                .map(result => {
+                    const baseTransport = {
+                        id: result.id,
+                        type: 'transport',
+                        postId: null,
+                    };
+                    const startTransport = {
+                        date: result['transport.start_datetime'].value,
+                        coordinates: toArrayCoordinate(result['transport.start_location'].value),
+                        status: 'start',
+                        ...baseTransport,
+                    };
+                    const endTransport = {
+                        date: result['transport.end_datetime'].value,
+                        coordinates: toArrayCoordinate(result['transport.end_location'].value),
+                        status: 'end',
+                    };
+                    return [startTransport, endTransport];
+                })
+                .reduce((arr, transports) => [...arr, ...transports], []),
+        )
+        .map(addFetchedTransports);
 
 const goToNextStepEpic: Epic<Action | RehydrateAction> = (action$, store) =>
     Observable.merge(
@@ -79,7 +114,7 @@ const goToNextStepEpic: Epic<Action | RehydrateAction> = (action$, store) =>
     ).mergeMap(() => {
         const {
             currentMapPointId,
-            fetchingStatus: { sleepLocations, pointsOfInterest },
+            fetchingStatus: { sleepLocations, pointsOfInterest, transports },
         } = store.getState().app.trip;
         const request$Array = [];
         if (sleepLocations.nextFetchTrigger === currentMapPointId) {
@@ -87,6 +122,9 @@ const goToNextStepEpic: Epic<Action | RehydrateAction> = (action$, store) =>
         }
         if (pointsOfInterest.nextFetchTrigger === currentMapPointId) {
             request$Array.push(fetchPointOfInterestsAfter(pointsOfInterest.lastFetchedId));
+        }
+        if (transports.nextFetchTrigger === currentMapPointId) {
+            request$Array.push(fetchTransportsAfter(transports.lastFetchedId));
         }
         return Observable.merge(...request$Array);
     });

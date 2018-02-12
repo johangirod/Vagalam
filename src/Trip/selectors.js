@@ -7,7 +7,7 @@ import type { MapPoint, CurrentAnimationType } from './types';
 import type { State as PostsState } from './Posts/types';
 
 export const postsSelector: Selector<PostsState> = pipe(tripSelector, trip => trip.posts);
-export const pathSelector: Selector<Array<MapPoint>> = pipe(tripSelector, trip => trip.path);
+export const pathSelector: Selector<Array<MapPoint>> = pipe(tripSelector, trip => [...trip.path]);
 export const currentAnimationSelector: Selector<CurrentAnimationType> = pipe(
     tripSelector,
     trip => trip.currentAnimation,

@@ -6,16 +6,17 @@ export type Coordinates = [number, number];
 export type PostId = string;
 export opaque type SleepLocationId = string;
 export opaque type PointOfInterestId = string;
+export opaque type TransportId = string;
 
+export type MapPointId = PointOfInterestId | SleepLocationId | TransportId;
 export type SleepLocation = {
     +id: SleepLocationId,
     +date: string,
     +coordinates: Coordinates,
-    +dayNumber: number,
     +postId: ?PostId,
+    +dayNumber: number,
     +type: 'sleep_location',
 };
-
 export type PointOfInterest = {
     +id: PointOfInterestId,
     +date: string,
@@ -23,24 +24,34 @@ export type PointOfInterest = {
     +postId: ?PostId,
     +type: 'point_of_interest',
 };
+export type Transport = {
+    +id: TransportId,
+    +date: string,
+    +coordinates: Coordinates,
+    +postId: null,
+    +type: 'transport',
+    +status: 'start' | 'end',
+    +postId: null,
+};
 
-export type MapPoint = PointOfInterest | SleepLocation;
-export type MapPointId = PointOfInterestId | SleepLocationId;
-export type FetchingStatusState<TypeId> = {
-    +nextFetchTrigger: ?MapPointId,
-    +lastFetchedId: ?TypeId,
+export type MapPoint = PointOfInterest | SleepLocation | Transport;
+
+export type FetchingStatusState<IdType> = {
+    +nextFetchTrigger: ?IdType,
+    +lastFetchedId: ?IdType,
 };
 
 export type CurrentAnimationType = 'Map' | 'Post' | 'None';
 
 export type State = {
     +posts: PostsState,
-    +path: Array<MapPoint>,
+    +path: $ReadOnlyArray<MapPoint>,
     // $FlowFixMe incomprehensible error, it doesn't work if the field is nullable...
     +currentMapPointId: ?MapPointId,
     +fetchingStatus: {
         +sleepLocations: FetchingStatusState<SleepLocationId>,
         +pointsOfInterest: FetchingStatusState<PointOfInterestId>,
+        +transports: FetchingStatusState<TransportId>,
     },
     // $FlowFixMe: couldn't figure out what the problem was
     +currentAnimation: CurrentAnimationType,
@@ -50,6 +61,11 @@ export type State = {
 export type AddFetchedSleepLocationsAction = {
     type: 'app/trip/ADD_FETCHED_SLEEP_LOCATIONS',
     sleepLocations: Array<SleepLocation>,
+};
+
+export type AddFetchedTransportsAction = {
+    type: 'app/trip/ADD_FETCHED_TRANSPORTS',
+    transports: Array<Transport>,
 };
 
 export type AddFetchedPointsOfInterestAction = {
@@ -72,6 +88,7 @@ export type NotifyAnimationEndAction = {
 export type Action =
     | AddFetchedSleepLocationsAction
     | AddFetchedPointsOfInterestAction
+    | AddFetchedTransportsAction
     | GoToNextStepAction
     | GoToPreviousStepAction
     | PostsAction
