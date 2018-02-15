@@ -49,11 +49,10 @@ export type State = {
     // $FlowFixMe incomprehensible error, it doesn't work if the field is nullable...
     +currentMapPointId: ?MapPointId,
     +fetchingStatus: {
-        +sleepLocations: FetchingStatusState<SleepLocationId>,
-        +pointsOfInterest: FetchingStatusState<PointOfInterestId>,
-        +transports: FetchingStatusState<TransportId>,
+        sleepLocations: FetchingStatusState<SleepLocationId>,
+        pointsOfInterest: FetchingStatusState<PointOfInterestId>,
+        transports: FetchingStatusState<TransportId>,
     },
-    // $FlowFixMe: couldn't figure out what the problem was
     +currentAnimation: CurrentAnimationType,
     +userArrivedToLastPoint: boolean,
 };

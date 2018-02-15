@@ -1,4 +1,3 @@
-// $FlowFixMe: couldn't figure out what the problem was
 /* @flow */
 
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
@@ -19,7 +18,10 @@ import type {
     SleepLocationId,
 } from './types';
 
-function pathReducer(state: Array<MapPoint> = [], action: Action): Array<MapPoint> {
+function pathReducer(
+    state: $ReadOnlyArray<MapPoint> = [],
+    action: Action,
+): $ReadOnlyArray<MapPoint> {
     let newMapPoints;
     switch (action.type) {
         case 'app/trip/ADD_FETCHED_POINTS_OF_INTEREST':
@@ -144,7 +146,6 @@ const fetchingStatusReducer = combineReducers({
     transports: transportsFetchStatusReducer,
 });
 
-// $FlowFixMe...
 const rootReducer: (State, Action) => State = combineReducers({
     posts: postsReducer,
     path: pathReducer,
