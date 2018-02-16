@@ -1,6 +1,6 @@
 /* @flow */
 import { createSelector } from 'reselect';
-import { pipe } from 'ramda';
+import { pipe, equals } from 'ramda';
 import type { Selector } from '../rootTypes';
 import { tripSelector } from '../rootSelectors';
 import type { MapPoint, CurrentAnimationType } from './types';
@@ -18,9 +18,9 @@ export const userArrivedToLastPointSelector: Selector<boolean> = pipe(
 );
 export const currentPathSelector: Selector<Array<MapPoint>> = createSelector(
     pathSelector,
-    pipe(tripSelector, trip => trip.currentMapPointId),
-    (path, currentMapPointId) => {
-        const currentMapPointIndex = path.findIndex(({ id }) => id === currentMapPointId);
+    pipe(tripSelector, trip => trip.currentMapPoint),
+    (path, currentMapPoint) => {
+        const currentMapPointIndex = path.findIndex(equals(currentMapPoint));
         return path.slice(0, currentMapPointIndex + 1);
     },
 );

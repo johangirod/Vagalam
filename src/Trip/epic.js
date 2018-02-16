@@ -85,9 +85,20 @@ const fetchTransportsAfter: (?TransportId) => Observable<Action> = id =>
         .map(results =>
             results
                 .map(result => {
+                    if (
+                        result['transport.start_datetime'].value >
+                        result['transport.end_datetime'].value
+                    ) {
+                        console.error(
+                            'API error: transport start date in ulterior to its end date',
+                            result,
+                        );
+                        return [];
+                    }
                     const baseTransport = {
                         id: result.id,
                         type: 'transport',
+                        transportType: result['transport.type'].value,
                         postId: null,
                     };
                     const startTransport = {
@@ -100,6 +111,7 @@ const fetchTransportsAfter: (?TransportId) => Observable<Action> = id =>
                         date: result['transport.end_datetime'].value,
                         coordinates: toArrayCoordinate(result['transport.end_location'].value),
                         status: 'end',
+                        ...baseTransport,
                     };
                     return [startTransport, endTransport];
                 })
@@ -113,9 +125,10 @@ const goToNextStepEpic: Epic<Action | RehydrateAction> = (action$, store) =>
         action$.ofType(REHYDRATE).filter(action => action.key === 'app::trip'),
     ).mergeMap(() => {
         const {
-            currentMapPointId,
+            currentMapPoint,
             fetchingStatus: { sleepLocations, pointsOfInterest, transports },
         } = store.getState().app.trip;
+        const currentMapPointId = currentMapPoint && currentMapPoint.id;
         const request$Array = [];
         if (sleepLocations.nextFetchTrigger === currentMapPointId) {
             request$Array.push(fetchSleepLocationsAfter(sleepLocations.lastFetchedId));

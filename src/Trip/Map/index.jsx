@@ -1,21 +1,16 @@
 /* @flow */
 
-import type { LineString2D } from 'flow-geojson';
-
 import { withStyles } from 'vitaminjs';
-import { Component } from 'react';
-import lineDistance from '@turf/line-distance';
-import lineSliceAlong from '@turf/line-slice-along';
-import { Motion, spring } from 'react-motion';
+import { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import { compose, last } from 'ramda';
+import { compose } from 'ramda';
 
 // Todo remove freactal
 import { provideState, injectState, update } from 'freactal';
 import selectors from './selectors';
 import { notifyAnimationEnd } from '../actions';
-import type { MapPoint } from '../types';
-import MapPointMarker from './MapPointMarker';
+import type { Coordinates } from '../types';
+import type { TripFeatureCollection } from './types';
 import s from './style.css';
 import config from '../../config';
 
@@ -45,102 +40,51 @@ const withMapZoomControl = provideState({
     },
 });
 type PropType = {
-    displayedTripLineString: ?LineString2D,
-    currentPath: Array<MapPoint>,
-    onAnimationEnd: () => void,
+    currentTripFeatures: TripFeatureCollection,
+    mapCenterCoordinates: ?Coordinates,
     effects: any,
 };
-class Map extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            mapAnimation: null,
-        };
-    }
-    state: {
-        mapAnimation: 'FORWARD' | 'BACKWARD' | null,
-    };
-    componentWillReceiveProps(nextProps) {
-        if (!nextProps.currentPath || !this.props.currentPath) {
-            return;
-        }
-        if (this.props.currentPath.length < nextProps.currentPath.length) {
-            this.setState({ mapAnimation: 'FORWARD' });
-        }
-        if (this.props.currentPath.length > nextProps.currentPath.length) {
-            this.setState({ mapAnimation: 'BACKWARD' });
-        }
-    }
-    handleAnimationEnd = () => {
-        this.setState({ mapAnimation: null });
-        // Waiting for marker to appear
-        setTimeout(this.props.onAnimationEnd, 300);
-    };
+class Map extends PureComponent<PropType> {
     props: PropType;
 
     render() {
-        const { effects: { updateMap }, displayedTripLineString, currentPath } = this.props;
-        const currentMapPoint = last(currentPath);
+        const { effects: { updateMap }, currentTripFeatures, mapCenterCoordinates } = this.props;
+
+        console.log(mapCenterCoordinates, currentTripFeatures);
         return (
-            <Mapbox.Map
-                center={currentMapPoint ? currentMapPoint.coordinates : [2.3738311, 48.8841141]}
-                containerStyle={{
-                    height: '100%',
-                    backgroundColor: '#2d2f32',
-                }}
-                zoom={INITIAL_ZOOM}
-                mapboxApiAccessToken={config.mapboxAccessToken}
-                style={STYLE_URL}
-                onMove={updateMap}
-                onStyleLoad={updateMap}
-                movingMethod="easeTo"
-                animationOptions={{
-                    ease: 1,
-                    duration: 1000,
-                }}
-            >
-                {displayedTripLineString ? (
-                    <Motion
-                        defaultStyle={{ distance: 0 }}
-                        style={{
-                            distance: spring(lineDistance(displayedTripLineString), {
-                                stiffness: 170,
-                                damping: 55,
-                                precision: 1,
-                            }),
+            !!mapCenterCoordinates && (
+                <Mapbox.Map
+                    center={mapCenterCoordinates}
+                    containerStyle={{
+                        height: '100%',
+                        backgroundColor: '#2d2f32',
+                    }}
+                    zoom={INITIAL_ZOOM}
+                    mapboxApiAccessToken={config.mapboxAccessToken}
+                    style={STYLE_URL}
+                    onMove={updateMap}
+                    onStyleLoad={updateMap}
+                    movingMethod="easeTo"
+                    animationOptions={{
+                        ease: 1,
+                        duration: 1000,
+                    }}
+                >
+                    {' '}
+                    <Mapbox.GeoJSONLayer
+                        data={currentTripFeatures}
+                        lineLayout={{
+                            'line-join': 'round',
+                            'line-cap': 'round',
                         }}
-                        onRest={this.handleAnimationEnd}
-                    >
-                        {({ distance }) =>
-                            distance > 0 ? (
-                                <Mapbox.GeoJSONLayer
-                                    data={lineSliceAlong(displayedTripLineString, 0, distance)}
-                                    lineLayout={{
-                                        'line-join': 'round',
-                                        'line-cap': 'round',
-                                    }}
-                                    linePaint={{
-                                        'line-color': '#fdfaf2',
-                                        'line-opacity': 0.8,
-                                        'line-width': 2,
-                                    }}
-                                />
-                            ) : null
-                        }
-                    </Motion>
-                ) : null}
-                {currentPath
-                    .slice(0, this.state.mapAnimation === 'FORWARD' ? -1 : currentPath.length)
-                    .map(mapPoint => (
-                        <Mapbox.Marker
-                            key={mapPoint.coordinates.join()}
-                            coordinates={mapPoint.coordinates}
-                            anchor="center"
-                        >
-                            <MapPointMarker type={mapPoint.type} />
-                        </Mapbox.Marker>
-                    ))}
-            </Mapbox.Map>
+                        linePaint={{
+                            'line-color': '#fdfaf2',
+                            'line-opacity': 0.8,
+                            'line-width': 2,
+                        }}
+                    />
+                </Mapbox.Map>
+            )
         );
     }
 }

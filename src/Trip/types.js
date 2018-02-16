@@ -24,12 +24,15 @@ export type PointOfInterest = {
     +postId: ?PostId,
     +type: 'point_of_interest',
 };
+
+export type TransportTypes = 'BOAT' | 'TRAIN' | 'PLANE' | 'BUS' | 'CAR';
 export type Transport = {
     +id: TransportId,
     +date: string,
     +coordinates: Coordinates,
     +postId: null,
     +type: 'transport',
+    +transportType: TransportTypes,
     +status: 'start' | 'end',
     +postId: null,
 };
@@ -47,7 +50,7 @@ export type State = {
     +posts: PostsState,
     +path: $ReadOnlyArray<MapPoint>,
     // $FlowFixMe incomprehensible error, it doesn't work if the field is nullable...
-    +currentMapPointId: ?MapPointId,
+    +currentMapPoint: ?MapPoint,
     +fetchingStatus: {
         sleepLocations: FetchingStatusState<SleepLocationId>,
         pointsOfInterest: FetchingStatusState<PointOfInterestId>,

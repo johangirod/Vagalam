@@ -1,7 +1,7 @@
 /* @flow */
 
 // $FlowFixMe: ramda flow typed API not up to date (ascend not present)
-import { prop, defaultTo, ascend } from 'ramda';
+import { prop, defaultTo, equals, ascend } from 'ramda';
 import { combineReducers } from 'redux';
 
 import pipeReducers from '../shared/pipeReducers';
@@ -30,33 +30,36 @@ function pathReducer(
         case 'app/trip/ADD_FETCHED_SLEEP_LOCATIONS':
             newMapPoints = action.sleepLocations;
             break;
+        case 'app/trip/ADD_FETCHED_TRANSPORTS':
+            newMapPoints = action.transports;
+            break;
         default:
             return state;
     }
     return state.concat(newMapPoints).sort(ascend(prop('date')));
 }
 
-function currentMapPointIdReducer(state: State, action: Action): State {
+function currentMapPointReducer(state: State, action: Action): State {
     switch (action.type) {
         case 'app/trip/GO_TO_NEXT_STEP':
             const nextMapPoint =
-                state.path[state.path.findIndex(({ id }) => id === state.currentMapPointId) + 1];
+                state.path[state.path.findIndex(equals(state.currentMapPoint)) + 1];
             if (!nextMapPoint) {
                 return state;
             }
             return {
                 ...state,
-                currentMapPointId: nextMapPoint.id,
+                currentMapPoint: nextMapPoint,
             };
         case 'app/trip/GO_TO_PREVIOUS_STEP':
             const previousMapPoint =
-                state.path[state.path.findIndex(({ id }) => id === state.currentMapPointId) - 1];
+                state.path[state.path.findIndex(equals(state.currentMapPoint)) - 1];
             if (!previousMapPoint) {
                 return state;
             }
             return {
                 ...state,
-                currentMapPointId: previousMapPoint.id,
+                currentMapPoint: previousMapPoint,
             };
         default:
             return state;
@@ -104,10 +107,10 @@ function newFetchStatusState<I>(
     mapPoints: $ReadOnlyArray<MapPointEntity<I>>,
 ): FetchingStatusState<I> {
     const lastMapPoint = mapPoints[mapPoints.length - 1];
-    const penultimateMapPoint = mapPoints[mapPoints.length - 2];
+    const fetchTriggerPoint = mapPoints[mapPoints.length - 3];
     return {
         lastFetchedId: lastMapPoint ? lastMapPoint.id : null,
-        nextFetchTrigger: penultimateMapPoint ? penultimateMapPoint.id : null,
+        nextFetchTrigger: fetchTriggerPoint ? fetchTriggerPoint.id : null,
     };
 }
 function pointsOfInterestFetchStatusReducer(
@@ -149,17 +152,13 @@ const fetchingStatusReducer = combineReducers({
 const rootReducer: (State, Action) => State = combineReducers({
     posts: postsReducer,
     path: pathReducer,
-    currentMapPointId: defaultTo(null),
+    currentMapPoint: defaultTo(null),
     fetchingStatus: fetchingStatusReducer,
     currentAnimation: currentAnimationReducer,
     userArrivedToLastPoint: defaultTo(false),
 });
 
-let tripReducer = pipeReducers(
-    rootReducer,
-    userArrivedToLastPointReducer,
-    currentMapPointIdReducer,
-);
+let tripReducer = pipeReducers(rootReducer, userArrivedToLastPointReducer, currentMapPointReducer);
 
 if (IS_CLIENT) {
     const storage = require('redux-persist/es/storage').default;

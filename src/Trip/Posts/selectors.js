@@ -21,7 +21,8 @@ export const currentPostSelector: Selector<?Post> = createSelector(
         const currentPost = posts[currentMapPoint.postId];
         if (!currentPost) {
             // TODO : handle waiting case
-            throw new Error('The post id was not fetched');
+            console.error('The post id was not fetched');
+            return null;
         }
         return currentPost;
     },
