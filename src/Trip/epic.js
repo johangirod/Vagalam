@@ -98,7 +98,7 @@ const fetchTransportsAfter: (?TransportId) => Observable<Action> = id =>
                     const baseTransport = {
                         id: result.id,
                         type: 'transport',
-                        transportType: result['transport.type'].value,
+                        transportType: result['transport.type'].value.toUpperCase(),
                         postId: null,
                     };
                     const startTransport = {

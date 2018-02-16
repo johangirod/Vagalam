@@ -8,8 +8,8 @@ export type TripFeature = {
         type: 'LineString',
         coordinates: Array<Coordinates>,
     },
-    property: {
-        transportType?: TransportTypes,
+    properties: {
+        transportType: TransportTypes | 'BIKE',
     },
 };
 

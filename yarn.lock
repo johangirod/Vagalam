@@ -113,12 +113,6 @@
     "@turf/helpers" "^5.1.5"
     "@turf/invariant" "^5.1.5"
 
-"@turf/bezier@^4.5.2":
-  version "4.7.3"
-  resolved "https://registry.yarnpkg.com/@turf/bezier/-/bezier-4.7.3.tgz#34bdd8e96f22726aad1f35683173882cf616be48"
-  dependencies:
-    "@turf/helpers" "^4.7.3"
-
 "@turf/destination@^4.7.3":
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/@turf/destination/-/destination-4.7.3.tgz#f1ea3bb3705cf52fed135a7917d49336e47b8d2e"
@@ -133,13 +127,17 @@
     "@turf/helpers" "^4.7.3"
     "@turf/invariant" "^4.7.3"
 
-"@turf/helpers@4.7.3", "@turf/helpers@^4.4.0", "@turf/helpers@^4.7.3":
+"@turf/helpers@4.7.3", "@turf/helpers@^4.7.3":
   version "4.7.3"
   resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-4.7.3.tgz#bc312ac43cab3c532a483151c4c382c5649429e9"
 
 "@turf/helpers@^5.1.5":
   version "5.1.5"
   resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-5.1.5.tgz#153405227ab933d004a5bb9641a9ed999fcbe0cf"
+
+"@turf/helpers@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@turf/helpers/-/helpers-6.0.1.tgz#625112616159e519033dc5d24c094ccbce7a457f"
 
 "@turf/invariant@^4.7.3":
   version "4.7.3"
@@ -193,7 +191,7 @@
     "@turf/helpers" "^4.7.3"
     "@turf/point-on-line" "^4.7.3"
 
-"@turf/meta@^4.4.0", "@turf/meta@^4.6.0", "@turf/meta@^4.7.3":
+"@turf/meta@^4.6.0", "@turf/meta@^4.7.3":
   version "4.7.4"
   resolved "https://registry.yarnpkg.com/@turf/meta/-/meta-4.7.4.tgz#6de2f1e9890b8f64b669e4b47c09b20893063977"
 

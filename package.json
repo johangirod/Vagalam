@@ -6,6 +6,7 @@
     "keywords": [],
     "dependencies": {
         "@turf/bezier-spline": "^5.1.5",
+        "@turf/helpers": "^6.0.1",
         "@turf/line-distance": "^4.5.2",
         "@turf/line-slice": "^4.4.0",
         "@turf/line-slice-along": "^4.5.2",
@@ -39,8 +40,7 @@
     },
     "scripts": {
         "preinstall": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn global add pm2; fi",
-        "start":
-            "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
+        "start": "if [[ ${NODE_ENV} == \"production\" ]]; then yarn start:prod; else vitamin start; fi",
         "start:prod": "pm2 start vitamin --attach -- serve",
         "build": "vitamin build",
         "lint": "eslint ./src"

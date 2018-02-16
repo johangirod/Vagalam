@@ -2,19 +2,20 @@
 
 import { createSelector, createStructuredSelector } from 'reselect';
 import bezierSpline from '@turf/bezier-spline';
-
+import { point } from '@turf/helpers';
+import lineSlice from '@turf/line-slice';
 import type { TransportTypes, MapPoint, Coordinates } from '../types';
 import type { TripFeature, TripFeatureCollection } from './types';
-import { currentPathSelector } from '../selectors';
+import { pathSelector, currentPathSelector } from '../selectors';
 import type { Selector } from '../../rootTypes';
 
-const newTripFeature = (transportType?: TransportTypes): TripFeature => ({
+const newTripFeature = (transportType: TransportTypes | 'BIKE'): TripFeature => ({
     type: 'Feature',
     geometry: {
         type: 'LineString',
         coordinates: [],
     },
-    property: {
+    properties: {
         transportType,
     },
 });
@@ -27,7 +28,7 @@ const pathToFeatureCollection = (path: Array<MapPoint>): Array<TripFeature> => {
         ) => {
             if (currentMapPoint.type === 'transport') {
                 const newTripLine = newTripFeature(
-                    ...(currentMapPoint.status === 'start' ? [currentMapPoint.transportType] : []),
+                    currentMapPoint.status === 'start' ? currentMapPoint.transportType : 'BIKE',
                 );
                 if (!currentTripLine) {
                     return [tripLines, currentTripLine];
@@ -37,7 +38,7 @@ const pathToFeatureCollection = (path: Array<MapPoint>): Array<TripFeature> => {
                 return [[...tripLines, currentTripLine], newTripLine];
             }
             if (!currentTripLine) {
-                currentTripLine = newTripFeature(); // eslint-disable-line
+                currentTripLine = newTripFeature('BIKE'); // eslint-disable-line
             }
             currentTripLine.geometry.coordinates.push(currentMapPoint.coordinates);
             return [tripLines, currentTripLine];
@@ -59,8 +60,9 @@ const smoothLine = (tripLine: TripFeature): TripFeature => {
         sharpness: 0.6,
     });
 };
-const currentTripFeaturesSelector: Selector<TripFeatureCollection> = createSelector(
-    currentPathSelector,
+
+const tripSmoothLineSelector: Selector<TripFeatureCollection> = createSelector(
+    pathSelector,
     path => {
         const tripFeatures = {
             type: 'FeatureCollection',
@@ -68,6 +70,36 @@ const currentTripFeaturesSelector: Selector<TripFeatureCollection> = createSelec
         };
         tripFeatures.features = tripFeatures.features.map(smoothLine);
         return tripFeatures;
+    },
+);
+
+const currentTripLineSelector: Selector<TripFeatureCollection> = createSelector(
+    currentPathSelector,
+    currentPath => ({
+        type: 'FeatureCollection',
+        features: pathToFeatureCollection(currentPath),
+    }),
+);
+const currentTripFeaturesSelector: Selector<TripFeatureCollection> = createSelector(
+    tripSmoothLineSelector,
+    currentTripLineSelector,
+    currentPathSelector,
+    (smoothTrip, currentTrip, currentPath) => {
+        if (!currentTrip.features.length) {
+            return currentTrip;
+        }
+        const lastSmoothLine = smoothTrip.features[currentTrip.features.length - 1];
+        const newLastSmoothLine = lineSlice(
+            point(lastSmoothLine.geometry.coordinates[0]),
+            point(currentPath[currentPath.length - 1].coordinates),
+            lastSmoothLine,
+        );
+        const currentSmoothTrip = {
+            ...smoothTrip,
+            features: smoothTrip.features.slice(0, currentTrip.features.length),
+        };
+        currentSmoothTrip.features[currentSmoothTrip.features.length - 1] = newLastSmoothLine;
+        return currentSmoothTrip;
     },
 );
 

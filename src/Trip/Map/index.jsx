@@ -49,8 +49,6 @@ class Map extends PureComponent<PropType> {
 
     render() {
         const { effects: { updateMap }, currentTripFeatures, mapCenterCoordinates } = this.props;
-
-        console.log(mapCenterCoordinates, currentTripFeatures);
         return (
             !!mapCenterCoordinates && (
                 <Mapbox.Map
@@ -70,17 +68,25 @@ class Map extends PureComponent<PropType> {
                         duration: 1000,
                     }}
                 >
-                    {' '}
                     <Mapbox.GeoJSONLayer
                         data={currentTripFeatures}
+                        id="bicycle"
                         lineLayout={{
                             'line-join': 'round',
                             'line-cap': 'round',
                         }}
                         linePaint={{
-                            'line-color': '#fdfaf2',
+                            'line-color': {
+                                property: 'transportType',
+                                type: 'categorical',
+                                stops: [['BIKE', '#fdfaf2'], ['BOAT', '#07a']],
+                            },
                             'line-opacity': 0.8,
-                            'line-width': 2,
+                            'line-width': {
+                                property: 'transportType',
+                                type: 'categorical',
+                                stops: [['BIKE', 2], ['BOAT', 1]],
+                            },
                         }}
                     />
                 </Mapbox.Map>
