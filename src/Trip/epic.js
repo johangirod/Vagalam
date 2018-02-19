@@ -49,6 +49,8 @@ const toArrayCoordinate = ({
     latitude: string,
 }): [string, string] => [longitude, latitude];
 
+// TODO: SLEEP LOCATION DATE CAN BE DURING THE FOLLOWING DAY IF I SLEPT AT 3 PM
+// TODO: WHAT ABOUT TIMEZONE??????
 const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
     fetchMapPoints('sleep_location', 'date', id)
         .map(results =>

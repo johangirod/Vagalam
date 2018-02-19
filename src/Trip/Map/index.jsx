@@ -7,6 +7,7 @@ import { compose } from 'ramda';
 
 // Todo remove freactal
 import { provideState, injectState, update } from 'freactal';
+import TripAnimation from './TripAnimation';
 import selectors from './selectors';
 import { notifyAnimationEnd } from '../actions';
 import type { Coordinates } from '../types';
@@ -41,6 +42,7 @@ const withMapZoomControl = provideState({
 });
 type PropType = {
     currentTripFeatures: TripFeatureCollection,
+    onAnimationEnd: () => void,
     mapCenterCoordinates: ?Coordinates,
     effects: any,
 };
@@ -48,48 +50,57 @@ class Map extends PureComponent<PropType> {
     props: PropType;
 
     render() {
-        const { effects: { updateMap }, currentTripFeatures, mapCenterCoordinates } = this.props;
+        const {
+            effects: { updateMap },
+            currentTripFeatures,
+            mapCenterCoordinates,
+            onAnimationEnd,
+        } = this.props;
         return (
             !!mapCenterCoordinates && (
-                <Mapbox.Map
-                    center={mapCenterCoordinates}
-                    containerStyle={{
-                        height: '100%',
-                        backgroundColor: '#2d2f32',
-                    }}
-                    zoom={INITIAL_ZOOM}
-                    mapboxApiAccessToken={config.mapboxAccessToken}
-                    style={STYLE_URL}
-                    onMove={updateMap}
-                    onStyleLoad={updateMap}
-                    movingMethod="easeTo"
-                    animationOptions={{
-                        ease: 1,
-                        duration: 1000,
-                    }}
-                >
-                    <Mapbox.GeoJSONLayer
-                        data={currentTripFeatures}
-                        id="bicycle"
-                        lineLayout={{
-                            'line-join': 'round',
-                            'line-cap': 'round',
-                        }}
-                        linePaint={{
-                            'line-color': {
-                                property: 'transportType',
-                                type: 'categorical',
-                                stops: [['BIKE', '#fdfaf2'], ['BOAT', '#07a']],
-                            },
-                            'line-opacity': 0.8,
-                            'line-width': {
-                                property: 'transportType',
-                                type: 'categorical',
-                                stops: [['BIKE', 2], ['BOAT', 1]],
-                            },
-                        }}
-                    />
-                </Mapbox.Map>
+                <TripAnimation trip={currentTripFeatures} onAnimationEnd={onAnimationEnd}>
+                    {animatedTrip => (
+                        <Mapbox.Map
+                            center={mapCenterCoordinates}
+                            containerStyle={{
+                                height: '100%',
+                                backgroundColor: '#2d2f32',
+                            }}
+                            zoom={INITIAL_ZOOM}
+                            mapboxApiAccessToken={config.mapboxAccessToken}
+                            style={STYLE_URL}
+                            onMove={updateMap}
+                            onStyleLoad={updateMap}
+                            movingMethod="easeTo"
+                            animationOptions={{
+                                ease: 1,
+                                duration: 1000,
+                            }}
+                        >
+                            <Mapbox.GeoJSONLayer
+                                data={animatedTrip}
+                                id="bicycle"
+                                lineLayout={{
+                                    'line-join': 'round',
+                                    'line-cap': 'round',
+                                }}
+                                linePaint={{
+                                    'line-color': {
+                                        property: 'transportType',
+                                        type: 'categorical',
+                                        stops: [['BIKE', '#fdfaf2'], ['BOAT', '#07a']],
+                                    },
+                                    'line-opacity': 0.8,
+                                    'line-width': {
+                                        property: 'transportType',
+                                        type: 'categorical',
+                                        stops: [['BIKE', 2], ['BOAT', 1]],
+                                    },
+                                }}
+                            />
+                        </Mapbox.Map>
+                    )}
+                </TripAnimation>
             )
         );
     }
