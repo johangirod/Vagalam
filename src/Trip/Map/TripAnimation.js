@@ -152,14 +152,14 @@ class TripAnimation extends PureComponent<Props, State> {
 
     props: Props;
     render() {
-        if (!this.state.staticTrip || !this.state.animatedTrip) {
+        const { staticTrip, animatedTrip, distance } = this.state;
+        if (!staticTrip || !animatedTrip || !distance) {
             return this.props.children(this.props.trip, {
                 type: 'FeatureCollection',
                 features: [],
             });
         }
-        const animatedTrip = truncateTrip(this.state.animatedTrip, this.state.distance);
-        return this.props.children(this.state.staticTrip, animatedTrip);
+        return this.props.children(staticTrip, truncateTrip(animatedTrip, distance));
     }
 }
 

@@ -2,13 +2,14 @@
 import { connect } from 'react-redux';
 import { withStyles } from 'vitaminjs';
 import { compose } from 'ramda';
-import { currentDayNumberSelector } from './selectors';
+import { currentDayNumberSelector, currentDayDateStringSelector } from './selectors';
 import { userArrivedToLastPointSelector } from '../selectors';
 import { goToPreviousStep, goToNextStep } from '../actions';
 import s from './style.css';
 
 type PropType = {
     currentDayNumber: ?number,
+    currentDayDateString: ?string,
     userArrivedToLastPoint: boolean,
     goToPreviousStep: () => void,
     goToNextStep: () => void,
@@ -16,13 +17,14 @@ type PropType = {
 
 const Details = ({
     currentDayNumber,
+    currentDayDateString,
     // eslint-disable-next-line no-shadow
     goToPreviousStep,
     // eslint-disable-next-line no-shadow
     goToNextStep,
     userArrivedToLastPoint,
 }: PropType) =>
-    currentDayNumber ? (
+    currentDayNumber && currentDayDateString ? (
         <span className={s.details}>
             <button
                 className={s.previous}
@@ -31,7 +33,7 @@ const Details = ({
             >
                 &lt;
             </button>{' '}
-            Jour {currentDayNumber}{' '}
+            {currentDayDateString} / jour {currentDayNumber}
             <button className={s.next} onClick={goToNextStep} disabled={userArrivedToLastPoint}>
                 &gt;
             </button>
@@ -44,6 +46,7 @@ export default compose(
     connect(
         state => ({
             currentDayNumber: currentDayNumberSelector(state),
+            currentDayDateString: currentDayDateStringSelector(state),
             userArrivedToLastPoint: userArrivedToLastPointSelector(state),
         }),
         {

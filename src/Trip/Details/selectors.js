@@ -15,3 +15,16 @@ export const currentDayNumberSelector: Selector<?number> = createSelector(
         return sleepLocation ? sleepLocation.dayNumber : null;
     },
 );
+
+export const currentDayDateStringSelector: Selector<?string> = createSelector(
+    currentPathSelector,
+    currentPath => {
+        if (!currentPath.length) {
+            return null;
+        }
+        return new Date(currentPath[currentPath.length - 1].date).toLocaleDateString('fr-fr', {
+            month: 'long',
+            day: 'numeric',
+        });
+    },
+);
