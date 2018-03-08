@@ -36,10 +36,10 @@ const fetchMapPoints = (type: string, ordering: string, id: ?MapPointId): Observ
         response.results.map(apiMapPoint => ({ ...apiMapPoint.data, id: apiMapPoint.id })),
     );
 
-const getPostId: (string, any) => ?string = (type, apiResponse) => {
-    const post = apiResponse[`${type}.post`];
+function getPostId(type: string, apiResponse: any, postKeyName: string = 'post'): ?string {
+    const post = apiResponse[`${type}.${postKeyName}`];
     return post ? post.value.document.id : null;
-};
+}
 
 const toArrayCoordinate = ({
     longitude,
@@ -50,7 +50,7 @@ const toArrayCoordinate = ({
 }): [string, string] => [longitude, latitude];
 
 // TODO: SLEEP LOCATION DATE CAN BE DURING THE FOLLOWING DAY IF I SLEPT AT 3 PM
-// TODO: WHAT ABOUT TIMEZONE??????
+// TODO: WHAT ABOUT TIMEZONE??????s
 const fetchSleepLocationsAfter: (?SleepLocationId) => Observable<Action> = id =>
     fetchMapPoints('sleep_location', 'date', id)
         .map(results =>
@@ -101,18 +101,19 @@ const fetchTransportsAfter: (?TransportId) => Observable<Action> = id =>
                         id: result.id,
                         type: 'transport',
                         transportType: result['transport.type'].value.toUpperCase(),
-                        postId: null,
                     };
                     const startTransport = {
                         date: result['transport.start_datetime'].value,
                         coordinates: toArrayCoordinate(result['transport.start_location'].value),
                         status: 'start',
+                        postId: getPostId('transport', result, 'begin_post'),
                         ...baseTransport,
                     };
                     const endTransport = {
                         date: result['transport.end_datetime'].value,
                         coordinates: toArrayCoordinate(result['transport.end_location'].value),
                         status: 'end',
+                        postId: getPostId('transport', result, 'end_post'),
                         ...baseTransport,
                     };
                     return [startTransport, endTransport];
